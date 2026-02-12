@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Clock, MapPin } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
+import RegisterModal from "@/components/ui/RegisterModal";
 
 const events = [
   {
@@ -60,11 +61,18 @@ const filters = ["All Events", "Vaarta", "Prasang", "Varnam"];
 
 export default function EventsTimeline() {
   const [activeFilter, setActiveFilter] = useState("All Events");
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState<typeof events[0] | null>(null);
 
   const filteredEvents =
     activeFilter === "All Events"
       ? events
       : events.filter((e) => e.program === activeFilter);
+
+  const openRegister = (event: typeof events[0]) => {
+    setSelectedEvent(event);
+    setModalOpen(true);
+  };
 
   return (
     <section id="events" data-section="events" style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}>
@@ -199,15 +207,15 @@ export default function EventsTimeline() {
                     <span className="flex items-center" style={{ gap: "0.4rem" }}><Clock size={14} color="#cd5c5c" /> {event.time}</span>
                     <span className="flex items-center" style={{ gap: "0.4rem" }}><MapPin size={14} color="#cd5c5c" /> {event.venue}</span>
                   </div>
-                  <a
-                    href="#register"
-                    className="inline-block text-white font-semibold"
+                  <button
+                    onClick={() => openRegister(event)}
+                    className="inline-block text-white font-semibold cursor-pointer"
                     style={{
                       padding: "0.5rem 1.2rem",
                       backgroundColor: "#cd5c5c",
                       fontSize: "0.8rem",
                       letterSpacing: "0.5px",
-                      textDecoration: "none",
+                      border: "none",
                       transition: "all 0.3s ease",
                     }}
                     onMouseEnter={(e) => {
@@ -218,13 +226,24 @@ export default function EventsTimeline() {
                     }}
                   >
                     Register Now
-                  </a>
+                  </button>
                 </div>
               </div>
             </FadeInSection>
           ))}
         </div>
       </div>
+
+      {/* Registration Modal */}
+      {selectedEvent && (
+        <RegisterModal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          eventTitle={selectedEvent.title}
+          eventDate={`${selectedEvent.month} ${selectedEvent.day}, ${selectedEvent.year}`}
+          eventVenue={selectedEvent.venue}
+        />
+      )}
     </section>
   );
 }
