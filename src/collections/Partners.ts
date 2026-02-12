@@ -1,0 +1,22 @@
+import type { CollectionConfig } from "payload";
+
+export const Partners: CollectionConfig = {
+  slug: "partners",
+  admin: {
+    useAsTitle: "name",
+  },
+  fields: [
+    { name: "name", type: "text", required: true },
+    { name: "logo", type: "upload", relationTo: "media" },
+    { name: "website", type: "text" },
+    {
+      name: "tier",
+      type: "select",
+      options: [
+        { label: "Gold", value: "gold" },
+        { label: "Silver", value: "silver" },
+        { label: "Bronze", value: "bronze" },
+      ],
+    },
+  ],
+};
