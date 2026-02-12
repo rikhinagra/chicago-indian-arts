@@ -43,6 +43,9 @@ export default function Navbar() {
       const el = document.querySelector(href);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        // Navigate to homepage with hash if section not found on current page
+        window.location.href = "/" + href;
       }
     } else {
       window.location.href = href;
