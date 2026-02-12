@@ -680,10 +680,6 @@ img {
     padding: 0 1.2rem 2.5rem !important;
   }
 
-  [data-section="vaarta-image"] > div > div {
-    height: 300px !important;
-  }
-
   [data-section="vaarta-quote"] {
     padding: 2.5rem 1.2rem !important;
   }
@@ -743,6 +739,10 @@ img {
 
   [data-section="prasang-gallery-grid"] {
     grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  [data-section="prasang-gallery-grid"] > div > div > div {
+    height: 250px !important;
   }
 
   /* Varnam */
@@ -1017,10 +1017,6 @@ img {
     padding: 0 1rem 2rem !important;
   }
 
-  [data-section="vaarta-image"] > div > div {
-    height: 220px !important;
-  }
-
   [data-section="vaarta-quote"] {
     padding: 2rem 1rem !important;
   }
@@ -1073,8 +1069,8 @@ img {
     grid-template-columns: 1fr !important;
   }
 
-  [data-section="prasang-gallery-grid"] > div > div {
-    height: 240px !important;
+  [data-section="prasang-gallery-grid"] > div > div > div {
+    height: 220px !important;
   }
 
   /* Varnam */

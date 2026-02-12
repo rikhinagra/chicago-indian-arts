@@ -53,6 +53,13 @@ export default function VarnamPage() {
             style={{ objectPosition: "center center" }}
             priority
           />
+          {/* Left-side gradient for text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 35%, transparent 65%)",
+            }}
+          />
         </div>
 
         <div

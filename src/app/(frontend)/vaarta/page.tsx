@@ -45,12 +45,19 @@ export default function VaartaPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/vaarta-banner_iqbglp.webp"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770921094/vaarta-banner_k406zd.webp"
             alt="Vaarta Literature Festival"
             fill
             className="object-cover"
-            style={{ objectPosition: "center center" }}
+            style={{ objectPosition: "center 85%" }}
             priority
+          />
+          {/* Left-side gradient for text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 35%, transparent 65%)",
+            }}
           />
         </div>
 
@@ -225,21 +232,22 @@ export default function VaartaPage() {
       >
         <FadeInSection>
           <div
-            className="relative overflow-hidden"
             style={{
-              maxWidth: "1100px",
+              maxWidth: "900px",
               marginLeft: "auto",
               marginRight: "auto",
-              height: "500px",
               borderRadius: "4px",
               boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+              overflow: "hidden",
             }}
           >
             <Image
-              src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/vaarta01_fzhght.webp"
+              src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770921509/vaarta01_aaajid.webp"
               alt="Vaarta Literature Festival Gathering"
-              fill
-              className="object-cover"
+              width={1920}
+              height={1080}
+              className="w-full"
+              style={{ display: "block", height: "auto" }}
               sizes="(max-width: 768px) 100vw, 1100px"
             />
           </div>

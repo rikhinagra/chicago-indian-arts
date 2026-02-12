@@ -35,7 +35,7 @@ const objectives = [
 
 const galleryImages = [
   {
-    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909162/prasang01_zb7a7p.webp",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770922635/prasang05_kjeayi.webp",
     alt: "Prasang Fashion Event",
   },
   {
@@ -70,6 +70,13 @@ export default function PrasangPage() {
             className="object-cover"
             style={{ objectPosition: "center center" }}
             priority
+          />
+          {/* Left-side gradient for text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 35%, transparent 65%)",
+            }}
           />
         </div>
 
@@ -403,12 +410,6 @@ export default function PrasangPage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 50vw, 25vw"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background: "linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%)",
-                    }}
                   />
                 </div>
               </FadeInSection>
