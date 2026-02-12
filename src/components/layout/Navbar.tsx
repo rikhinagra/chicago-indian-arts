@@ -3,19 +3,26 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+
+const programLinks = [
+  { label: "Vaarta", subtitle: "Literature Festival", href: "/vaarta" },
+  { label: "Prasang", subtitle: "Fashion Innovation", href: "/prasang" },
+  { label: "Varnam", subtitle: "Photography & Wildlife", href: "/varnam" },
+];
 
 const navLinks = [
-  { label: "Programs", href: "#programs" },
   { label: "Events", href: "#events" },
   { label: "Highlights", href: "#highlights" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
 ];
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [programsOpen, setProgramsOpen] = useState(false);
+  const [mobileProgramsOpen, setMobileProgramsOpen] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -31,6 +38,7 @@ export default function Navbar() {
 
   const scrollToSection = (href: string) => {
     setIsMobileOpen(false);
+    setMobileProgramsOpen(false);
     if (href.startsWith("#")) {
       const el = document.querySelector(href);
       if (el) {
@@ -63,6 +71,88 @@ export default function Navbar() {
 
           {/* Desktop Links */}
           <ul className="hidden lg:flex items-center" style={{ gap: "2rem", listStyle: "none" }}>
+            {/* Programs Dropdown */}
+            <li
+              className="relative"
+              onMouseEnter={() => setProgramsOpen(true)}
+              onMouseLeave={() => setProgramsOpen(false)}
+            >
+              <button
+                className="text-[0.85rem] font-medium tracking-[0.5px] transition-colors duration-300 cursor-pointer flex items-center"
+                style={{ color: scrolled ? "#2d2d2d" : "#ffffff", gap: "0.3rem" }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.color = scrolled ? "#2d2d2d" : "#ffffff")
+                }
+              >
+                Programs
+                <ChevronDown
+                  size={14}
+                  style={{
+                    transition: "transform 0.3s ease",
+                    transform: programsOpen ? "rotate(180deg)" : "rotate(0deg)",
+                  }}
+                />
+              </button>
+
+              {/* Dropdown Menu */}
+              <AnimatePresence>
+                {programsOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 8 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute"
+                    style={{
+                      top: "100%",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      paddingTop: "0.75rem",
+                      minWidth: "220px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        backgroundColor: "#ffffff",
+                        boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
+                        border: "1px solid rgba(0,0,0,0.06)",
+                        overflow: "hidden",
+                      }}
+                    >
+                      {programLinks.map((program) => (
+                        <Link
+                          key={program.label}
+                          href={program.href}
+                          className="block"
+                          style={{
+                            padding: "0.85rem 1.2rem",
+                            textDecoration: "none",
+                            transition: "all 0.2s ease",
+                            borderBottom: "1px solid rgba(0,0,0,0.04)",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor = "rgba(212,175,55,0.08)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "transparent";
+                          }}
+                        >
+                          <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.15rem" }}>
+                            {program.label}
+                          </div>
+                          <div style={{ fontSize: "0.72rem", color: "#999" }}>
+                            {program.subtitle}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </li>
+
+            {/* Other Nav Links */}
             {navLinks.map((link) => (
               <li key={link.label}>
                 <button
@@ -132,12 +222,78 @@ export default function Navbar() {
             </button>
 
             <ul className="flex flex-col items-center" style={{ gap: "2rem", listStyle: "none" }}>
+              {/* Programs with sub-links on mobile */}
+              <motion.li
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0 }}
+                className="text-center"
+              >
+                <button
+                  onClick={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                  className="font-heading font-light cursor-pointer flex items-center"
+                  style={{
+                    color: "rgba(255,255,255,0.85)",
+                    fontSize: "1.8rem",
+                    letterSpacing: "1px",
+                    background: "none",
+                    border: "none",
+                    transition: "color 0.3s ease",
+                    gap: "0.5rem",
+                  }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
+                >
+                  Programs
+                  <ChevronDown
+                    size={20}
+                    style={{
+                      transition: "transform 0.3s ease",
+                      transform: mobileProgramsOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                  />
+                </button>
+
+                <AnimatePresence>
+                  {mobileProgramsOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      style={{ overflow: "hidden", marginTop: "1rem" }}
+                    >
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                        {programLinks.map((program) => (
+                          <Link
+                            key={program.label}
+                            href={program.href}
+                            onClick={() => setIsMobileOpen(false)}
+                            style={{
+                              color: "rgba(255,255,255,0.6)",
+                              fontSize: "1.1rem",
+                              textDecoration: "none",
+                              transition: "color 0.3s ease",
+                            }}
+                            onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+                            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
+                          >
+                            {program.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.li>
+
+              {/* Other Nav Links */}
               {navLinks.map((link, i) => (
                 <motion.li
                   key={link.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: (i + 1) * 0.1 }}
                 >
                   <button
                     onClick={() => scrollToSection(link.href)}
@@ -157,6 +313,7 @@ export default function Navbar() {
                   </button>
                 </motion.li>
               ))}
+
               <motion.li
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
