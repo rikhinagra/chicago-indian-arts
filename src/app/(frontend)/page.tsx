@@ -8,7 +8,6 @@ import FeaturedSpeakers from "@/components/home/FeaturedSpeakers";
 import SponsorsSection from "@/components/home/SponsorsSection";
 import NewsletterSignup from "@/components/home/NewsletterSignup";
 import StatsCounters from "@/components/home/StatsCounters";
-import FounderSection from "@/components/home/FounderSection";
 import CTASection from "@/components/home/CTASection";
 
 export default function HomePage() {
@@ -24,7 +23,6 @@ export default function HomePage() {
       <SponsorsSection />
       <NewsletterSignup />
       <StatsCounters />
-      <FounderSection />
       <CTASection />
     </>
   );

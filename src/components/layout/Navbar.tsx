@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Programs", href: "#programs" },
   { label: "Events", href: "#events" },
   { label: "Highlights", href: "#highlights" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -36,6 +36,8 @@ export default function Navbar() {
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
       }
+    } else {
+      window.location.href = href;
     }
   };
 
