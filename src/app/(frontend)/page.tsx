@@ -6,9 +6,6 @@ import EventsTimeline from "@/components/home/EventsTimeline";
 import HighlightsGallery from "@/components/home/HighlightsGallery";
 import FeaturedSpeakers from "@/components/home/FeaturedSpeakers";
 import SponsorsSection from "@/components/home/SponsorsSection";
-import NewsletterSignup from "@/components/home/NewsletterSignup";
-import StatsCounters from "@/components/home/StatsCounters";
-import CTASection from "@/components/home/CTASection";
 
 export default function HomePage() {
   return (
@@ -21,9 +18,6 @@ export default function HomePage() {
       <HighlightsGallery />
       <FeaturedSpeakers />
       <SponsorsSection />
-      <NewsletterSignup />
-      <StatsCounters />
-      <CTASection />
     </>
   );
 }
