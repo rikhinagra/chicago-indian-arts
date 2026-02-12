@@ -59,33 +59,19 @@ export default function PrasangPage() {
       <section
         data-section="prasang-hero"
         className="relative overflow-hidden flex items-center"
-        style={{
-          minHeight: "75vh",
-          background: "linear-gradient(135deg, #1a1a1a 0%, #2d1a24 50%, #1a1a1a 100%)",
-        }}
+        style={{ minHeight: "75vh" }}
       >
         {/* Background Image */}
-        <div className="absolute inset-0" style={{ opacity: 0.25 }}>
+        <div className="absolute inset-0">
           <Image
             src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang-banner_fmrvsn.webp"
             alt="Prasang Fashion Innovation"
             fill
             className="object-cover"
+            style={{ objectPosition: "center center" }}
             priority
           />
         </div>
-        {/* Decorative radial */}
-        <div
-          className="absolute"
-          style={{
-            bottom: "-20%",
-            left: "-10%",
-            width: "600px",
-            height: "600px",
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(205,92,92,0.1) 0%, transparent 70%)",
-          }}
-        />
 
         <div
           className="relative z-10"
@@ -103,14 +89,15 @@ export default function PrasangPage() {
               className="inline-flex items-center"
               style={{
                 gap: "0.5rem",
-                color: "rgba(255,255,255,0.6)",
+                color: "rgba(255,255,255,0.8)",
                 fontSize: "0.85rem",
                 textDecoration: "none",
                 marginBottom: "2rem",
                 transition: "color 0.3s ease",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
             >
               <ArrowLeft size={16} />
               Back to Home
@@ -118,12 +105,13 @@ export default function PrasangPage() {
 
             <div
               style={{
-                fontSize: "0.75rem",
+                fontSize: "0.8rem",
                 fontWeight: 600,
                 letterSpacing: "3px",
                 textTransform: "uppercase",
                 color: "#d4af37",
-                marginBottom: "1rem",
+                marginBottom: "1.2rem",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
             >
               Fashion Innovation
@@ -137,6 +125,7 @@ export default function PrasangPage() {
                 lineHeight: 1.05,
                 color: "#ffffff",
                 marginBottom: "1.5rem",
+                textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)",
               }}
             >
               PRASANG
@@ -147,10 +136,11 @@ export default function PrasangPage() {
               style={{
                 fontSize: "1.25rem",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.85)",
+                color: "rgba(255,255,255,0.95)",
                 maxWidth: "600px",
                 marginBottom: "0.8rem",
                 fontStyle: "italic",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
               Threads of India, Spirit of Chicago
@@ -160,9 +150,10 @@ export default function PrasangPage() {
               style={{
                 fontSize: "1rem",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.7)",
+                color: "rgba(255,255,255,0.95)",
                 maxWidth: "550px",
                 marginBottom: "2rem",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
               Celebrating fashion as emotion, grace, and expression through

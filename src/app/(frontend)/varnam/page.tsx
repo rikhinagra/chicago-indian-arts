@@ -41,33 +41,19 @@ export default function VarnamPage() {
       <section
         data-section="varnam-hero"
         className="relative overflow-hidden flex items-center"
-        style={{
-          minHeight: "75vh",
-          background: "linear-gradient(135deg, #1a1a1a 0%, #0d1f12 50%, #1a1a1a 100%)",
-        }}
+        style={{ minHeight: "75vh" }}
       >
         {/* Background Image */}
-        <div className="absolute inset-0" style={{ opacity: 0.3 }}>
+        <div className="absolute inset-0">
           <Image
             src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/varnam-banner_oqy2nj.webp"
             alt="Varnam Photography & Wildlife"
             fill
             className="object-cover"
+            style={{ objectPosition: "center center" }}
             priority
           />
         </div>
-        {/* Decorative radial */}
-        <div
-          className="absolute"
-          style={{
-            top: "-20%",
-            left: "-15%",
-            width: "600px",
-            height: "600px",
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%)",
-          }}
-        />
 
         <div
           className="relative z-10"
@@ -85,14 +71,15 @@ export default function VarnamPage() {
               className="inline-flex items-center"
               style={{
                 gap: "0.5rem",
-                color: "rgba(255,255,255,0.6)",
+                color: "rgba(255,255,255,0.8)",
                 fontSize: "0.85rem",
                 textDecoration: "none",
                 marginBottom: "2rem",
                 transition: "color 0.3s ease",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
             >
               <ArrowLeft size={16} />
               Back to Home
@@ -100,12 +87,13 @@ export default function VarnamPage() {
 
             <div
               style={{
-                fontSize: "0.75rem",
+                fontSize: "0.8rem",
                 fontWeight: 600,
                 letterSpacing: "3px",
                 textTransform: "uppercase",
                 color: "#d4af37",
-                marginBottom: "1rem",
+                marginBottom: "1.2rem",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
               }}
             >
               Photography &amp; Wildlife
@@ -119,6 +107,7 @@ export default function VarnamPage() {
                 lineHeight: 1.05,
                 color: "#ffffff",
                 marginBottom: "1.5rem",
+                textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)",
               }}
             >
               VARNAM
@@ -129,10 +118,11 @@ export default function VarnamPage() {
               style={{
                 fontSize: "1.25rem",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.85)",
+                color: "rgba(255,255,255,0.95)",
                 maxWidth: "600px",
                 marginBottom: "0.8rem",
                 fontStyle: "italic",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
               An Ode to Photography and Visual Arts
@@ -142,9 +132,10 @@ export default function VarnamPage() {
               style={{
                 fontSize: "1rem",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.7)",
+                color: "rgba(255,255,255,0.95)",
                 maxWidth: "550px",
                 marginBottom: "2rem",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
               Empowering photographers, conservationists, and storytellers to
