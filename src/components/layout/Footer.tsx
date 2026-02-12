@@ -12,7 +12,7 @@ const programLinks = [
 
 const orgLinks = [
   { label: "About Us", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Contact", href: "/contact" },
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/volunteer" },
 ];
