@@ -153,7 +153,7 @@ export default function VolunteerPage() {
               marginBottom: "3rem",
             }}
           >
-            {volunteerRoles.map((role, index) => {
+            {volunteerRoles.map((role) => {
               const Icon = role.icon;
               return (
                 <FadeInSection key={role.title}>
