@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Instagram, Facebook, Twitter } from "lucide-react";
 
 const programLinks = [
   { label: "Vaarta", href: "#" },
@@ -18,10 +18,9 @@ const orgLinks = [
 ];
 
 const socialLinks = [
-  { label: "Instagram", href: "#", icon: Instagram },
-  { label: "Facebook", href: "#", icon: Facebook },
-  { label: "Twitter", href: "#", icon: Twitter },
-  { label: "LinkedIn", href: "#", icon: Linkedin },
+  { label: "Instagram", href: "https://www.instagram.com/chicagoindianarts", icon: Instagram },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61587009930194", icon: Facebook },
+  { label: "Twitter", href: "https://x.com/chiIndianArts", icon: Twitter },
 ];
 
 function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
