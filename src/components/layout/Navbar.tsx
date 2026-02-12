@@ -81,11 +81,7 @@ export default function Navbar() {
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
             <Link
-              href="#register"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("#register");
-              }}
+              href="/donate"
               className="hidden sm:inline-block font-semibold uppercase transition-all duration-300 hover:-translate-y-px"
               style={{
                 backgroundColor: "#cd5c5c",
@@ -97,7 +93,7 @@ export default function Navbar() {
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1a1a1a")}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
             >
-              Register
+              Donate
             </Link>
 
             <button
@@ -164,9 +160,10 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <button
-                  onClick={() => scrollToSection("#register")}
-                  className="uppercase font-semibold cursor-pointer"
+                <Link
+                  href="/donate"
+                  onClick={() => setIsMobileOpen(false)}
+                  className="uppercase font-semibold"
                   style={{
                     backgroundColor: "#cd5c5c",
                     color: "#ffffff",
@@ -176,12 +173,14 @@ export default function Navbar() {
                     border: "none",
                     marginTop: "1rem",
                     transition: "background-color 0.3s ease",
+                    textDecoration: "none",
+                    display: "inline-block",
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
                 >
-                  Register Now
-                </button>
+                  Donate
+                </Link>
               </motion.li>
             </ul>
           </motion.div>

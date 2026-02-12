@@ -162,6 +162,22 @@ img {
     grid-template-columns: 1fr 1fr !important;
     gap: 2.5rem !important;
   }
+
+  [data-section="donate-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+
+  [data-section="donate-hero"] h1 {
+    font-size: 2.8rem !important;
+  }
+
+  [data-section="donate-main"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  [data-section="donate-grid"] {
+    gap: 3rem !important;
+  }
 }
 
 /* Mobile: ≤768px */
@@ -324,6 +340,23 @@ img {
     flex-direction: column !important;
     align-items: flex-start !important;
   }
+
+  [data-section="donate-hero"] {
+    padding: 7rem 1.2rem 3rem !important;
+  }
+
+  [data-section="donate-hero"] h1 {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="donate-main"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="donate-grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
 }
 
 /* Small Mobile: ≤480px */
@@ -424,5 +457,17 @@ img {
   [data-section="founder-image"] {
     height: 350px !important;
     max-width: 280px !important;
+  }
+
+  [data-section="donate-hero"] {
+    padding: 6.5rem 1rem 2.5rem !important;
+  }
+
+  [data-section="donate-hero"] h1 {
+    font-size: 1.8rem !important;
+  }
+
+  [data-section="donate-main"] {
+    padding: 2rem 1rem !important;
   }
 }
