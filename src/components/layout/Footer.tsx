@@ -7,7 +7,7 @@ const programLinks = [
   { label: "Vaarta", href: "#" },
   { label: "Prasang", href: "#" },
   { label: "Varnam", href: "#" },
-  { label: "Register", href: "#" },
+  { label: "Register", href: "/register" },
 ];
 
 const orgLinks = [

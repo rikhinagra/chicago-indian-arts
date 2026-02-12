@@ -133,7 +133,7 @@ export default function HeroSection() {
             <Button href="#events" variant="primary">
               View Events
             </Button>
-            <Button href="#register" variant="outline">
+            <Button href="/register" variant="outline">
               Register Now
             </Button>
           </div>

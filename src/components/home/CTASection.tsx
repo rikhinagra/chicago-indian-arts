@@ -34,7 +34,7 @@ export default function CTASection() {
           Join us in celebrating the richness of Indian arts and culture. Register now
           for our 2026 events and become part of our vibrant community.
         </p>
-        <Button href="#" variant="white">
+        <Button href="/register" variant="white">
           Register for Events
         </Button>
       </FadeInSection>
