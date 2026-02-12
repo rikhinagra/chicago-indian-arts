@@ -35,19 +35,19 @@ const objectives = [
 
 const galleryImages = [
   {
-    src: "https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/prasang01_zb7a7p.webp",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909162/prasang01_zb7a7p.webp",
     alt: "Prasang Fashion Event",
   },
   {
-    src: "https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/prasang02_zbqvuk.webp",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang02_zbqvuk.webp",
     alt: "Indian Fashion Showcase",
   },
   {
-    src: "https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/prasang03_qxyggx.webp",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang03_qxyggx.webp",
     alt: "Traditional Indian Textiles",
   },
   {
-    src: "https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/prasang04_z3gguq.webp",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang04_z3gguq.webp",
     alt: "Artisan Craftsmanship",
   },
 ];
@@ -67,7 +67,7 @@ export default function PrasangPage() {
         {/* Background Image */}
         <div className="absolute inset-0" style={{ opacity: 0.25 }}>
           <Image
-            src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/prasang-banner_fmrvsn.webp"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang-banner_fmrvsn.webp"
             alt="Prasang Fashion Innovation"
             fill
             className="object-cover"
@@ -258,7 +258,7 @@ export default function PrasangPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/prasang01_zb7a7p.webp"
+                src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909162/prasang01_zb7a7p.webp"
                 alt="Prasang Fashion Event"
                 fill
                 className="object-cover"

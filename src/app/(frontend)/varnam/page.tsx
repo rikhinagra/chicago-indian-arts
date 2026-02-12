@@ -23,12 +23,12 @@ const objectives = [
 
 const galleryImages = [
   {
-    src: "https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/varnam01_azulyi.webp",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/varnam01_azulyi.webp",
     alt: "Wildlife Photography",
     span: "lg-span-2",
   },
   {
-    src: "https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/varnam02_p9vfeh.webp",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909162/varnam02_p9vfeh.webp",
     alt: "Nature Photography",
     span: "lg-span-1",
   },
@@ -49,7 +49,7 @@ export default function VarnamPage() {
         {/* Background Image */}
         <div className="absolute inset-0" style={{ opacity: 0.3 }}>
           <Image
-            src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/varnam-banner_oqy2nj.webp"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/varnam-banner_oqy2nj.webp"
             alt="Varnam Photography & Wildlife"
             fill
             className="object-cover"
@@ -311,7 +311,7 @@ export default function VarnamPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/varnam01_azulyi.webp"
+                src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/varnam01_azulyi.webp"
                 alt="Varnam Wildlife Photography"
                 fill
                 className="object-cover"

@@ -48,7 +48,7 @@ export default function VaartaPage() {
         {/* Background Image */}
         <div className="absolute inset-0" style={{ opacity: 0.3 }}>
           <Image
-            src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/vaarta-banner_iqbglp.webp"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/vaarta-banner_iqbglp.webp"
             alt="Vaarta Literature Festival"
             fill
             className="object-cover"
@@ -245,7 +245,7 @@ export default function VaartaPage() {
             }}
           >
             <Image
-              src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/vaarta01_fzhght.webp"
+              src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/vaarta01_fzhght.webp"
               alt="Vaarta Literature Festival Gathering"
               fill
               className="object-cover"
