@@ -309,7 +309,7 @@ export default function VarnamPage() {
               }}
             >
               <Image
-                src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/varnam01_azulyi.webp"
+                src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770924161/varnam03_gxjgbb.webp"
                 alt="Varnam Wildlife Photography"
                 fill
                 className="object-cover"
@@ -485,62 +485,28 @@ export default function VarnamPage() {
             </div>
           </FadeInSection>
 
-          <div
-            data-section="varnam-gallery-grid"
-            className="grid grid-cols-1 lg:grid-cols-3"
-            style={{ gap: "1rem" }}
-          >
-            {/* Large image spanning 2 columns */}
-            <FadeInSection>
-              <div
-                className="group relative overflow-hidden lg:col-span-2"
-                style={{
-                  height: "450px",
-                  borderRadius: "4px",
-                  gridColumn: "span 2",
-                }}
-              >
-                <Image
-                  src={galleryImages[0].src}
-                  alt={galleryImages[0].alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 66vw"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: "linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 40%)",
-                  }}
-                />
-              </div>
-            </FadeInSection>
-
-            {/* Right column image */}
-            <FadeInSection delay={0.15}>
-              <div
-                className="group relative overflow-hidden"
-                style={{
-                  height: "450px",
-                  borderRadius: "4px",
-                }}
-              >
-                <Image
-                  src={galleryImages[1].src}
-                  alt={galleryImages[1].alt}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: "linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 40%)",
-                  }}
-                />
-              </div>
-            </FadeInSection>
-          </div>
+          <FadeInSection>
+            <div
+              style={{
+                maxWidth: "1000px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                borderRadius: "4px",
+                boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={galleryImages[0].src}
+                alt={galleryImages[0].alt}
+                width={1920}
+                height={1080}
+                className="w-full"
+                style={{ display: "block", height: "auto" }}
+                sizes="(max-width: 768px) 100vw, 1000px"
+              />
+            </div>
+          </FadeInSection>
         </div>
       </section>
 

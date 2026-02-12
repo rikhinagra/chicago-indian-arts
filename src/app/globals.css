@@ -792,13 +792,6 @@ img {
     gap: 2rem !important;
   }
 
-  [data-section="varnam-gallery-grid"] {
-    grid-template-columns: 1fr !important;
-  }
-
-  [data-section="varnam-gallery-grid"] > div:first-child > div {
-    grid-column: span 1 !important;
-  }
 }
 
 /* Small Mobile: ≤480px */
@@ -1110,8 +1103,4 @@ img {
     grid-template-columns: 1fr !important;
   }
 
-  [data-section="varnam-gallery-grid"] > div > div {
-    height: 250px !important;
-    grid-column: span 1 !important;
-  }
 }
