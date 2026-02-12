@@ -86,13 +86,7 @@ export default function Navbar() {
                 }
               >
                 Programs
-                <ChevronDown
-                  size={14}
-                  style={{
-                    transition: "transform 0.3s ease",
-                    transform: programsOpen ? "rotate(180deg)" : "rotate(0deg)",
-                  }}
-                />
+                <ChevronDown size={14} />
               </button>
 
               {/* Dropdown Menu */}
@@ -245,13 +239,7 @@ export default function Navbar() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
                 >
                   Programs
-                  <ChevronDown
-                    size={20}
-                    style={{
-                      transition: "transform 0.3s ease",
-                      transform: mobileProgramsOpen ? "rotate(180deg)" : "rotate(0deg)",
-                    }}
-                  />
+                  <ChevronDown size={20} />
                 </button>
 
                 <AnimatePresence>
