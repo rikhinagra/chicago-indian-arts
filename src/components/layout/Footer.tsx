@@ -4,9 +4,9 @@ import Link from "next/link";
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
 const programLinks = [
-  { label: "Vaarta", href: "#" },
-  { label: "Prasang", href: "#" },
-  { label: "Varnam", href: "#" },
+  { label: "Vaarta", href: "/vaarta" },
+  { label: "Prasang", href: "/prasang" },
+  { label: "Varnam", href: "/varnam" },
   { label: "Register", href: "/register" },
 ];
 

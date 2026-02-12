@@ -1,136 +1,330 @@
-import type { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft, BookOpen, Globe, Heart } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
-import Button from "@/components/ui/Button";
 
-export const metadata: Metadata = {
-  title: "Vaarta — Literature Festival | Chicago Indian Arts",
-  description:
-    "Vaarta is Chicago Indian Arts' signature literature festival celebrating India's storytelling traditions with authors, poets, and thought leaders.",
-};
-
-const schedule = [
+const highlights = [
   {
-    day: "Day 1 — March 15",
-    events: [
-      { time: "9:00 AM", title: "Opening Ceremony & Keynote Address" },
-      { time: "10:30 AM", title: "Panel: Contemporary Indian Literature" },
-      { time: "1:00 PM", title: "Poetry Readings & Performances" },
-      { time: "3:00 PM", title: "Book Launch: Featured Authors" },
-      { time: "5:00 PM", title: "Writing Workshop: Storytelling Traditions" },
-    ],
+    icon: Heart,
+    title: "A Heartfelt Welcome in the Midwest",
+    description:
+      "LitFest 2026 isn\u2019t just an event \u2014 it\u2019s a homecoming for the soul. A space where the Indian diaspora in the Midwest can reconnect with the language, rhythm, and emotion of their literary roots.",
   },
   {
-    day: "Day 2 — March 16",
-    events: [
-      { time: "9:00 AM", title: "Morning Raag — Readings with Chai" },
-      { time: "11:00 AM", title: "Panel: Diaspora Voices" },
-      { time: "1:30 PM", title: "Children's Literature Workshop" },
-      { time: "3:30 PM", title: "In Conversation: Author Spotlight" },
-      { time: "6:00 PM", title: "Literary Awards & Closing Ceremony" },
-    ],
+    icon: BookOpen,
+    title: "From Ancient Grantha to Modern Voices",
+    description:
+      "From the sacred verses of the Vedas to bold contemporary fiction, Vaarta celebrates the full arc of Indian literature \u2014 in all its languages, genres, and forms.",
   },
   {
-    day: "Day 3 — March 17",
-    events: [
-      { time: "10:00 AM", title: "Community Reading Circle" },
-      { time: "12:00 PM", title: "Panel: Future of Indian Publishing" },
-      { time: "2:30 PM", title: "Book Signing Marathon" },
-      { time: "4:00 PM", title: "Farewell Address & Networking" },
-    ],
+    icon: Globe,
+    title: "Weaving Connections Through Words",
+    description:
+      "Through panels, readings, and conversations, Vaarta bridges generations and geographies \u2014 connecting established authors with emerging voices, and local readers with global stories.",
   },
 ];
 
-const speakers = [
-  { name: "Priya Sharma", role: "Bestselling Author", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" },
-  { name: "Arjun Patel", role: "Poet & Performer", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
-  { name: "Kavita Nair", role: "Literary Critic", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" },
-  { name: "Sameer Roy", role: "Publisher & Editor", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" },
+const whyNow = [
+  "A growing diaspora hungry for authentic cultural connection and literary exchange.",
+  "A deep curiosity about India\u2019s evolving literary landscape \u2014 from ancient epics to modern storytelling.",
+  "A yearning for a platform where writers, readers, and dreamers can gather, listen, and be inspired.",
 ];
 
 export default function VaartaPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
+      <section
+        data-section="vaarta-hero"
+        className="relative overflow-hidden flex items-center"
+        style={{
+          minHeight: "75vh",
+          background: "linear-gradient(135deg, #1a1a1a 0%, #2d1810 50%, #1a1a1a 100%)",
+        }}
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0" style={{ opacity: 0.3 }}>
           <Image
-            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&q=80"
+            src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/vaarta-banner_iqbglp.webp"
             alt="Vaarta Literature Festival"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-dark/85 to-accent-terracotta/60" />
         </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-12 py-32 text-white">
+        {/* Decorative radial */}
+        <div
+          className="absolute"
+          style={{
+            top: "-30%",
+            right: "-10%",
+            width: "600px",
+            height: "600px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%)",
+          }}
+        />
+
+        <div
+          className="relative z-10"
+          style={{
+            maxWidth: "1400px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            padding: "10rem 3rem 5rem",
+            width: "100%",
+          }}
+        >
           <FadeInSection>
-            <div className="text-sm tracking-[3px] uppercase text-accent-gold mb-4 font-semibold">
+            <Link
+              href="/"
+              className="inline-flex items-center"
+              style={{
+                gap: "0.5rem",
+                color: "rgba(255,255,255,0.6)",
+                fontSize: "0.85rem",
+                textDecoration: "none",
+                marginBottom: "2rem",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
+            >
+              <ArrowLeft size={16} />
+              Back to Home
+            </Link>
+
+            <div
+              style={{
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                letterSpacing: "3px",
+                textTransform: "uppercase",
+                color: "#d4af37",
+                marginBottom: "1rem",
+              }}
+            >
               Literature Festival
             </div>
-            <h1 className="font-heading text-5xl lg:text-[6rem] font-light leading-[1.05] mb-6">
+
+            <h1
+              data-section="vaarta-hero-title"
+              className="font-heading font-light"
+              style={{
+                fontSize: "4.5rem",
+                lineHeight: 1.05,
+                color: "#ffffff",
+                marginBottom: "1.5rem",
+              }}
+            >
               VAARTA
             </h1>
-            <p className="text-lg lg:text-xl leading-relaxed max-w-[600px] mb-8 opacity-95">
-              Where India&apos;s rich storytelling traditions meet contemporary
-              voices. March 15-17, 2026 at the Chicago Cultural Center.
+
+            <p
+              data-section="vaarta-hero-subtitle"
+              style={{
+                fontSize: "1.25rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.85)",
+                maxWidth: "600px",
+                marginBottom: "0.8rem",
+                fontStyle: "italic",
+              }}
+            >
+              Where stories become bridges
             </p>
-            <Button href="/register" variant="primary">
-              Register Now
-            </Button>
+
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.7)",
+                maxWidth: "550px",
+                marginBottom: "2rem",
+              }}
+            >
+              Chicago Indian Literature Festival &mdash; Coming soon in May 2026
+            </p>
+
+            <Link
+              href="/register"
+              className="inline-block font-semibold uppercase"
+              style={{
+                backgroundColor: "#cd5c5c",
+                color: "#ffffff",
+                padding: "0.85rem 2.5rem",
+                fontSize: "0.85rem",
+                letterSpacing: "1px",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
+            >
+              Register Interest
+            </Link>
           </FadeInSection>
         </div>
       </section>
 
-      {/* About */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <FadeInSection className="max-w-[900px] mx-auto text-center">
-          <SectionTag>About Vaarta</SectionTag>
-          <h2 className="font-heading text-3xl lg:text-[3.5rem] font-light mb-8 text-primary-dark">
-            Stories That Shape Us
-          </h2>
-          <p className="text-lg leading-relaxed text-text-light mb-6">
-            Vaarta — meaning &quot;conversation&quot; in Hindi — is our flagship
-            literature festival. It brings together renowned authors, emerging voices,
-            poets, and literary thinkers for three days of panels, readings,
-            workshops, and cultural exchange.
-          </p>
-          <p className="text-lg leading-relaxed text-text-light">
-            From ancient epics to contemporary fiction, from the diaspora experience
-            to regional storytelling traditions, Vaarta celebrates every facet of
-            Indian literary heritage.
-          </p>
+      {/* About Vaarta */}
+      <section
+        data-section="vaarta-about"
+        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+      >
+        <div
+          style={{
+            maxWidth: "900px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+          }}
+        >
+          <FadeInSection>
+            <SectionTag>About Vaarta</SectionTag>
+            <h2
+              data-section="vaarta-heading"
+              className="font-heading font-light"
+              style={{
+                fontSize: "2.8rem",
+                lineHeight: 1.3,
+                marginBottom: "1.5rem",
+                color: "#1a1a1a",
+              }}
+            >
+              Stories &amp; Conversations
+            </h2>
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.9,
+                color: "#666666",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Vaarta means stories and conversations. Indian literature has been
+              passed down through many generations through various forms &mdash;
+              from ancient scriptures and epics to modern novels and poetry.
+              This literary heritage is vast and encompasses multiple languages,
+              genres, and traditions, reflecting the diverse cultures and philosophies
+              of the Indian subcontinent.
+            </p>
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.9,
+                color: "#666666",
+              }}
+            >
+              Through Vaarta, we aim to celebrate, preserve, and share this incredible
+              literary tradition with the people of Chicago and the Midwest &mdash;
+              creating a space where words connect hearts across continents.
+            </p>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Featured Image */}
+      <section
+        data-section="vaarta-image"
+        style={{ padding: "0 3rem 5rem", backgroundColor: "#ffffff" }}
+      >
+        <FadeInSection>
+          <div
+            className="relative overflow-hidden"
+            style={{
+              maxWidth: "1100px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              height: "500px",
+              borderRadius: "4px",
+              boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+            }}
+          >
+            <Image
+              src="https://res.cloudinary.com/dmyg3crgm/image/upload/v1749905879/vaarta01_fzhght.webp"
+              alt="Vaarta Literature Festival Gathering"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1100px"
+            />
+          </div>
         </FadeInSection>
       </section>
 
-      {/* Schedule */}
-      <section className="py-24 px-6 lg:px-12 bg-cream">
-        <div className="max-w-[1200px] mx-auto">
-          <FadeInSection className="text-center mb-16">
-            <SectionTag>Schedule</SectionTag>
-            <h2 className="font-heading text-3xl lg:text-[3.5rem] font-light text-primary-dark">
-              Festival Program
-            </h2>
+      {/* Why LitFest 2026 */}
+      <section
+        data-section="vaarta-why"
+        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+      >
+        <div
+          style={{
+            maxWidth: "1000px",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          <FadeInSection>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <SectionTag>Our Heart&apos;s Calling</SectionTag>
+              <h2
+                data-section="vaarta-heading"
+                className="font-heading font-light"
+                style={{
+                  fontSize: "2.5rem",
+                  lineHeight: 1.3,
+                  color: "#1a1a1a",
+                  marginBottom: "1rem",
+                }}
+              >
+                Why LitFest 2026 Matters Now, More Than Ever
+              </h2>
+            </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {schedule.map((day, di) => (
-              <FadeInSection key={day.day} delay={di * 0.15}>
-                <div className="bg-white p-8">
-                  <h3 className="font-heading text-2xl font-semibold mb-6 text-primary-dark border-b-2 border-accent-gold pb-4">
-                    {day.day}
-                  </h3>
-                  <ul className="space-y-4">
-                    {day.events.map((event) => (
-                      <li key={event.time} className="flex gap-4">
-                        <span className="text-sm text-accent-gold font-semibold min-w-[80px]">
-                          {event.time}
-                        </span>
-                        <span className="text-sm text-text-dark">{event.title}</span>
-                      </li>
-                    ))}
-                  </ul>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            {whyNow.map((item, i) => (
+              <FadeInSection key={i} delay={i * 0.1}>
+                <div
+                  className="flex items-start"
+                  style={{
+                    gap: "1.2rem",
+                    padding: "1.5rem 2rem",
+                    backgroundColor: "#ffffff",
+                    borderLeft: "4px solid #d4af37",
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
+                  }}
+                >
+                  <div
+                    className="flex-shrink-0"
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      borderRadius: "50%",
+                      backgroundColor: "rgba(212,175,55,0.12)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#d4af37",
+                      fontSize: "0.85rem",
+                      fontWeight: 700,
+                      marginTop: "0.1rem",
+                    }}
+                  >
+                    {i + 1}
+                  </div>
+                  <p
+                    style={{
+                      fontSize: "1rem",
+                      lineHeight: 1.8,
+                      color: "#444444",
+                    }}
+                  >
+                    {item}
+                  </p>
                 </div>
               </FadeInSection>
             ))}
@@ -138,40 +332,216 @@ export default function VaartaPage() {
         </div>
       </section>
 
-      {/* Speakers */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <FadeInSection className="text-center mb-12">
-          <SectionTag>Speakers</SectionTag>
-          <h2 className="font-heading text-3xl lg:text-[3.5rem] font-light text-primary-dark">
-            Featured Authors & Speakers
-          </h2>
+      {/* Quote */}
+      <section
+        data-section="vaarta-quote"
+        style={{
+          padding: "4rem 3rem",
+          backgroundColor: "#1a1a1a",
+          textAlign: "center",
+        }}
+      >
+        <FadeInSection>
+          <div
+            style={{
+              maxWidth: "800px",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            <div
+              style={{
+                fontSize: "3rem",
+                color: "#d4af37",
+                marginBottom: "1rem",
+                fontFamily: "Georgia, serif",
+              }}
+            >
+              &ldquo;
+            </div>
+            <p
+              className="font-heading italic"
+              style={{
+                fontSize: "1.4rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Where there is literature, there is dialogue. Where there is
+              dialogue, there is understanding. And where there is understanding,
+              there is community.
+            </p>
+            <div
+              style={{
+                width: "60px",
+                height: "2px",
+                backgroundColor: "#d4af37",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            />
+          </div>
         </FadeInSection>
-        <div className="max-w-[1200px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {speakers.map((s, i) => (
-            <FadeInSection key={s.name} delay={i * 0.1} className="text-center">
-              <div className="w-36 h-36 rounded-full overflow-hidden mx-auto mb-4 border-4 border-cream shadow-md">
-                <Image src={s.image} alt={s.name} width={150} height={150} className="w-full h-full object-cover" />
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-primary-dark">{s.name}</h3>
-              <p className="text-sm text-accent-terracotta">{s.role}</p>
-            </FadeInSection>
-          ))}
+      </section>
+
+      {/* Highlights */}
+      <section
+        data-section="vaarta-highlights"
+        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          <FadeInSection>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <SectionTag>What Awaits You</SectionTag>
+              <h2
+                data-section="vaarta-heading"
+                className="font-heading font-light"
+                style={{
+                  fontSize: "2.5rem",
+                  lineHeight: 1.3,
+                  color: "#1a1a1a",
+                }}
+              >
+                The Vaarta Experience
+              </h2>
+            </div>
+          </FadeInSection>
+
+          <div
+            data-section="vaarta-highlights-grid"
+            className="grid grid-cols-1 md:grid-cols-3"
+            style={{ gap: "2rem" }}
+          >
+            {highlights.map((item, i) => (
+              <FadeInSection key={item.title} delay={i * 0.15}>
+                <div
+                  style={{
+                    padding: "2.5rem 2rem",
+                    backgroundColor: "#faf8f3",
+                    borderTop: "3px solid #d4af37",
+                    transition: "all 0.3s ease",
+                    height: "100%",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "rgba(205,92,92,0.1)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "1.5rem",
+                    }}
+                  >
+                    <item.icon size={22} style={{ color: "#cd5c5c" }} />
+                  </div>
+                  <h3
+                    className="font-heading"
+                    style={{
+                      fontSize: "1.3rem",
+                      fontWeight: 600,
+                      color: "#1a1a1a",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.92rem",
+                      lineHeight: 1.8,
+                      color: "#666666",
+                    }}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 lg:px-12 bg-primary-dark text-white text-center">
-        <FadeInSection className="max-w-[700px] mx-auto">
-          <h2 className="font-heading text-3xl lg:text-5xl font-light mb-6">
-            Join Vaarta 2026
-          </h2>
-          <p className="text-lg leading-relaxed mb-10 opacity-90">
-            Be part of the conversation. Register today to secure your spot at
-            Chicago&apos;s premier Indian literature festival.
-          </p>
-          <Button href="/register" variant="primary">
-            Register Now
-          </Button>
+      <section
+        data-section="vaarta-cta"
+        style={{
+          padding: "5rem 3rem",
+          background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
+          textAlign: "center",
+        }}
+      >
+        <FadeInSection>
+          <div
+            style={{
+              maxWidth: "700px",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            <h2
+              className="font-heading font-light"
+              style={{
+                fontSize: "2.5rem",
+                lineHeight: 1.3,
+                color: "#ffffff",
+                marginBottom: "1rem",
+              }}
+            >
+              Be Part of the Story
+            </h2>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                marginBottom: "2rem",
+              }}
+            >
+              Register your interest for Vaarta 2026 &mdash; Chicago&apos;s first
+              Indian Literature Festival. Coming May 2026.
+            </p>
+            <Link
+              href="/register"
+              className="inline-block font-semibold uppercase"
+              style={{
+                backgroundColor: "#ffffff",
+                color: "#1a1a1a",
+                padding: "0.85rem 2.5rem",
+                fontSize: "0.85rem",
+                letterSpacing: "1px",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#1a1a1a";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#ffffff";
+                e.currentTarget.style.color = "#1a1a1a";
+              }}
+            >
+              Register Now
+            </Link>
+          </div>
         </FadeInSection>
       </section>
     </>

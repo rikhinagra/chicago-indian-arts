@@ -266,6 +266,104 @@ img {
   [data-section="about-cta"] {
     padding: 3.5rem 2rem !important;
   }
+
+  /* Vaarta */
+  [data-section="vaarta-hero"] {
+    min-height: 65vh !important;
+  }
+
+  [data-section="vaarta-hero"] > div:last-child {
+    padding: 8rem 2rem 4rem !important;
+  }
+
+  [data-section="vaarta-hero-title"] {
+    font-size: 3.5rem !important;
+  }
+
+  [data-section="vaarta-about"],
+  [data-section="vaarta-image"],
+  [data-section="vaarta-why"],
+  [data-section="vaarta-highlights"],
+  [data-section="vaarta-cta"] {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  [data-section="vaarta-quote"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  [data-section="vaarta-heading"] {
+    font-size: 2.2rem !important;
+  }
+
+  /* Prasang */
+  [data-section="prasang-hero"] {
+    min-height: 65vh !important;
+  }
+
+  [data-section="prasang-hero"] > div:last-child {
+    padding: 8rem 2rem 4rem !important;
+  }
+
+  [data-section="prasang-hero-title"] {
+    font-size: 3.5rem !important;
+  }
+
+  [data-section="prasang-about"],
+  [data-section="prasang-objectives"],
+  [data-section="prasang-gallery"],
+  [data-section="prasang-cta"] {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  [data-section="prasang-quote"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  [data-section="prasang-heading"] {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="prasang-about-grid"] {
+    gap: 3rem !important;
+  }
+
+  /* Varnam */
+  [data-section="varnam-hero"] {
+    min-height: 65vh !important;
+  }
+
+  [data-section="varnam-hero"] > div:last-child {
+    padding: 8rem 2rem 4rem !important;
+  }
+
+  [data-section="varnam-hero-title"] {
+    font-size: 3.5rem !important;
+  }
+
+  [data-section="varnam-mission"],
+  [data-section="varnam-about"],
+  [data-section="varnam-objectives"],
+  [data-section="varnam-gallery"],
+  [data-section="varnam-cta"] {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  [data-section="varnam-quote"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  [data-section="varnam-heading"] {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="varnam-mission-grid"],
+  [data-section="varnam-about-grid"] {
+    gap: 3rem !important;
+  }
 }
 
 /* Mobile: ≤768px */
@@ -553,6 +651,154 @@ img {
   [data-section="about-cta"] h2 {
     font-size: 2rem !important;
   }
+
+  /* Vaarta */
+  [data-section="vaarta-hero"] {
+    min-height: 60vh !important;
+  }
+
+  [data-section="vaarta-hero"] > div:last-child {
+    padding: 7rem 1.2rem 3rem !important;
+  }
+
+  [data-section="vaarta-hero-title"] {
+    font-size: 2.8rem !important;
+  }
+
+  [data-section="vaarta-hero-subtitle"] {
+    font-size: 1.05rem !important;
+  }
+
+  [data-section="vaarta-about"],
+  [data-section="vaarta-why"],
+  [data-section="vaarta-highlights"],
+  [data-section="vaarta-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="vaarta-image"] {
+    padding: 0 1.2rem 2.5rem !important;
+  }
+
+  [data-section="vaarta-image"] > div > div {
+    height: 300px !important;
+  }
+
+  [data-section="vaarta-quote"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="vaarta-quote"] p {
+    font-size: 1.15rem !important;
+  }
+
+  [data-section="vaarta-heading"] {
+    font-size: 1.8rem !important;
+  }
+
+  [data-section="vaarta-highlights-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Prasang */
+  [data-section="prasang-hero"] {
+    min-height: 60vh !important;
+  }
+
+  [data-section="prasang-hero"] > div:last-child {
+    padding: 7rem 1.2rem 3rem !important;
+  }
+
+  [data-section="prasang-hero-title"] {
+    font-size: 2.8rem !important;
+  }
+
+  [data-section="prasang-hero-subtitle"] {
+    font-size: 1.05rem !important;
+  }
+
+  [data-section="prasang-about"],
+  [data-section="prasang-objectives"],
+  [data-section="prasang-gallery"],
+  [data-section="prasang-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="prasang-quote"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="prasang-quote"] p {
+    font-size: 1.15rem !important;
+  }
+
+  [data-section="prasang-heading"] {
+    font-size: 1.8rem !important;
+  }
+
+  [data-section="prasang-about-grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  [data-section="prasang-gallery-grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Varnam */
+  [data-section="varnam-hero"] {
+    min-height: 60vh !important;
+  }
+
+  [data-section="varnam-hero"] > div:last-child {
+    padding: 7rem 1.2rem 3rem !important;
+  }
+
+  [data-section="varnam-hero-title"] {
+    font-size: 2.8rem !important;
+  }
+
+  [data-section="varnam-hero-subtitle"] {
+    font-size: 1.05rem !important;
+  }
+
+  [data-section="varnam-mission"],
+  [data-section="varnam-about"],
+  [data-section="varnam-objectives"],
+  [data-section="varnam-gallery"],
+  [data-section="varnam-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="varnam-quote"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="varnam-quote"] p {
+    font-size: 1.15rem !important;
+  }
+
+  [data-section="varnam-heading"] {
+    font-size: 1.8rem !important;
+  }
+
+  [data-section="varnam-mission-grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  [data-section="varnam-about-grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  [data-section="varnam-gallery-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-section="varnam-gallery-grid"] > div:first-child > div {
+    grid-column: span 1 !important;
+  }
 }
 
 /* Small Mobile: ≤480px */
@@ -745,5 +991,131 @@ img {
 
   [data-section="about-cta"] h2 {
     font-size: 1.8rem !important;
+  }
+
+  /* Vaarta */
+  [data-section="vaarta-hero"] > div:last-child {
+    padding: 6.5rem 1rem 2.5rem !important;
+  }
+
+  [data-section="vaarta-hero-title"] {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="vaarta-hero-subtitle"] {
+    font-size: 0.95rem !important;
+  }
+
+  [data-section="vaarta-about"],
+  [data-section="vaarta-why"],
+  [data-section="vaarta-highlights"],
+  [data-section="vaarta-cta"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="vaarta-image"] {
+    padding: 0 1rem 2rem !important;
+  }
+
+  [data-section="vaarta-image"] > div > div {
+    height: 220px !important;
+  }
+
+  [data-section="vaarta-quote"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="vaarta-quote"] p {
+    font-size: 1rem !important;
+  }
+
+  [data-section="vaarta-heading"] {
+    font-size: 1.5rem !important;
+  }
+
+  /* Prasang */
+  [data-section="prasang-hero"] > div:last-child {
+    padding: 6.5rem 1rem 2.5rem !important;
+  }
+
+  [data-section="prasang-hero-title"] {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="prasang-hero-subtitle"] {
+    font-size: 0.95rem !important;
+  }
+
+  [data-section="prasang-about"],
+  [data-section="prasang-objectives"],
+  [data-section="prasang-gallery"],
+  [data-section="prasang-cta"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="prasang-quote"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="prasang-quote"] p {
+    font-size: 1rem !important;
+  }
+
+  [data-section="prasang-heading"] {
+    font-size: 1.5rem !important;
+  }
+
+  [data-section="prasang-objectives-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-section="prasang-gallery-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-section="prasang-gallery-grid"] > div > div {
+    height: 240px !important;
+  }
+
+  /* Varnam */
+  [data-section="varnam-hero"] > div:last-child {
+    padding: 6.5rem 1rem 2.5rem !important;
+  }
+
+  [data-section="varnam-hero-title"] {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="varnam-hero-subtitle"] {
+    font-size: 0.95rem !important;
+  }
+
+  [data-section="varnam-mission"],
+  [data-section="varnam-about"],
+  [data-section="varnam-objectives"],
+  [data-section="varnam-gallery"],
+  [data-section="varnam-cta"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="varnam-quote"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="varnam-quote"] p {
+    font-size: 1rem !important;
+  }
+
+  [data-section="varnam-heading"] {
+    font-size: 1.5rem !important;
+  }
+
+  [data-section="varnam-objectives-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-section="varnam-gallery-grid"] > div > div {
+    height: 250px !important;
+    grid-column: span 1 !important;
   }
 }
