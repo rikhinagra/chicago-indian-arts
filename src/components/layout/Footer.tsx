@@ -14,7 +14,7 @@ const orgLinks = [
   { label: "About Us", href: "#" },
   { label: "Contact", href: "#" },
   { label: "Donate", href: "/donate" },
-  { label: "Volunteer", href: "#" },
+  { label: "Volunteer", href: "/volunteer" },
 ];
 
 const socialLinks = [

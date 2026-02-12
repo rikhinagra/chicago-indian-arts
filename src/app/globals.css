@@ -194,6 +194,22 @@ img {
   [data-section="register-grid"] {
     gap: 3rem !important;
   }
+
+  [data-section="volunteer-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+
+  [data-section="volunteer-hero"] h1 {
+    font-size: 2.8rem !important;
+  }
+
+  [data-section="volunteer-roles"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  [data-section="volunteer-apply"] {
+    padding: 3rem 2rem !important;
+  }
 }
 
 /* Mobile: ≤768px */
@@ -390,6 +406,26 @@ img {
     grid-template-columns: 1fr !important;
     gap: 2.5rem !important;
   }
+
+  [data-section="volunteer-hero"] {
+    padding: 7rem 1.2rem 3rem !important;
+  }
+
+  [data-section="volunteer-hero"] h1 {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="volunteer-roles"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
+  [data-section="volunteer-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  [data-section="volunteer-apply"] {
+    padding: 2.5rem 1.2rem !important;
+  }
 }
 
 /* Small Mobile: ≤480px */
@@ -513,6 +549,22 @@ img {
   }
 
   [data-section="register-main"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="volunteer-hero"] {
+    padding: 6.5rem 1rem 2.5rem !important;
+  }
+
+  [data-section="volunteer-hero"] h1 {
+    font-size: 1.8rem !important;
+  }
+
+  [data-section="volunteer-roles"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="volunteer-apply"] {
     padding: 2rem 1rem !important;
   }
 }
