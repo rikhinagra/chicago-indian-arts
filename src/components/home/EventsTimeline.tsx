@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Clock, MapPin } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
@@ -195,8 +196,8 @@ export default function EventsTimeline() {
                     {event.description}
                   </p>
                   <div className="flex flex-wrap" style={{ gap: "1rem", fontSize: "0.8rem", color: "#666666", marginBottom: "0.8rem" }}>
-                    <span className="flex items-center" style={{ gap: "0.5rem" }}>&#9200; {event.time}</span>
-                    <span className="flex items-center" style={{ gap: "0.5rem" }}>&#128205; {event.venue}</span>
+                    <span className="flex items-center" style={{ gap: "0.4rem" }}><Clock size={14} color="#cd5c5c" /> {event.time}</span>
+                    <span className="flex items-center" style={{ gap: "0.4rem" }}><MapPin size={14} color="#cd5c5c" /> {event.venue}</span>
                   </div>
                   <a
                     href="#register"
