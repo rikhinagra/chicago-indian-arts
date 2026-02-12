@@ -1,207 +1,581 @@
-import type { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "motion/react";
+import { ArrowLeft, BookOpen, Users, Palette, Globe, Quote } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
-import Button from "@/components/ui/Button";
-
-export const metadata: Metadata = {
-  title: "About Us | Chicago Indian Arts",
-  description:
-    "Learn about Chicago Indian Arts — our mission, vision, and the team behind our three signature programs celebrating Indian cultural heritage.",
-};
 
 const objectives = [
   {
-    title: "Cultural Preservation",
+    icon: BookOpen,
+    title: "Where Stories Meet the Soul of India",
     description:
-      "Safeguarding and celebrating India's rich artistic traditions — from ancient literature to contemporary fashion and photography.",
+      "Curate and host an annual Literature and Film Festival that showcases Indian literary, cinematic and artistic excellence featuring local, national and international talent.",
   },
   {
-    title: "Community Building",
+    icon: Users,
+    title: "Rooted in Heritage, Alive in Chicago",
     description:
-      "Creating spaces where diverse communities in Chicago can connect through shared cultural experiences and artistic expression.",
+      "Create platforms for emerging and underrepresented voices within Indian diaspora, youth, artists through workshops, residencies and mentorship.",
   },
   {
-    title: "Artistic Innovation",
+    icon: Palette,
+    title: "Bridging Cultures, Inspiring Creators",
     description:
-      "Fostering the intersection of traditional Indian arts with contemporary creative practices, encouraging new forms of expression.",
+      "Preserve and promote classical, folk and contemporary Indian art forms making them accessible to the audience.",
   },
   {
-    title: "Education & Outreach",
+    icon: Globe,
+    title: "Celebrating Indian Arts, Creating Global Impact",
     description:
-      "Making Indian arts accessible through workshops, exhibitions, and public programs that educate and inspire audiences of all backgrounds.",
+      "Build an inclusive cultural archive that documents Indian-American experience in Chicago through verbal histories, publications and multimedia storytelling.",
   },
 ];
 
 const milestones = [
-  { year: "2021", title: "Founded", description: "Chicago Indian Arts was established with a vision to celebrate Indian culture." },
-  { year: "2022", title: "First Vaarta", description: "Our inaugural literature festival drew over 500 attendees." },
-  { year: "2023", title: "Prasang Launch", description: "Expanded into fashion with the launch of Prasang." },
-  { year: "2024", title: "Varnam Begins", description: "Photography & wildlife program added as our third pillar." },
-  { year: "2025", title: "Growing Impact", description: "Reached 10,000+ cumulative attendees across all programs." },
-  { year: "2026", title: "Looking Ahead", description: "Bigger events, new partnerships, and deeper community impact." },
+  { year: "2021", title: "Founded", description: "Chicago Indian Arts was established with a vision to celebrate Indian culture in the heart of Chicago." },
+  { year: "2022", title: "First Vaarta", description: "Our inaugural literature festival drew over 500 attendees and featured renowned Indian authors." },
+  { year: "2023", title: "Prasang Launch", description: "Expanded into fashion innovation with the launch of Prasang — showcasing Indian design." },
+  { year: "2024", title: "Varnam Begins", description: "Photography & wildlife program added as our third pillar celebrating visual storytelling." },
+  { year: "2025", title: "Growing Impact", description: "Reached 10,000+ cumulative attendees across all programs with national recognition." },
+  { year: "2026", title: "Looking Ahead", description: "Bigger events, new partnerships, and deeper community impact on the horizon." },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 px-6 lg:px-12 bg-cream">
-        <FadeInSection className="max-w-[1200px] mx-auto text-center">
-          <SectionTag>About Us</SectionTag>
-          <h1 className="font-heading text-4xl lg:text-[4.5rem] font-light leading-[1.1] mb-8 text-primary-dark">
-            Our Story
-          </h1>
-          <p className="text-lg lg:text-xl leading-relaxed text-text-light max-w-[800px] mx-auto">
-            Chicago Indian Arts is a non-profit organization dedicated to celebrating
-            and preserving the rich cultural heritage of India while fostering
-            meaningful connections within the Chicago community.
-          </p>
-        </FadeInSection>
+      {/* Hero Section */}
+      <section
+        data-section="about-hero"
+        className="relative overflow-hidden"
+        style={{
+          padding: "10rem 3rem 5rem",
+          background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
+        }}
+      >
+        {/* Decorative Elements */}
+        <div
+          className="absolute"
+          style={{
+            top: "-15%",
+            left: "-5%",
+            width: "400px",
+            height: "400px",
+            background: "radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%)",
+            borderRadius: "50%",
+          }}
+        />
+        <div
+          className="absolute"
+          style={{
+            bottom: "-10%",
+            right: "-5%",
+            width: "350px",
+            height: "350px",
+            background: "radial-gradient(circle, rgba(205,92,92,0.1) 0%, transparent 70%)",
+            borderRadius: "50%",
+          }}
+        />
+
+        <div
+          className="relative z-10"
+          style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
+        >
+          {/* Back Link */}
+          <Link
+            href="/"
+            className="inline-flex items-center"
+            style={{
+              color: "rgba(255,255,255,0.6)",
+              fontSize: "0.85rem",
+              textDecoration: "none",
+              marginBottom: "2rem",
+              transition: "color 0.3s ease",
+              gap: "0.5rem",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
+          >
+            <ArrowLeft size={16} />
+            Back to Home
+          </Link>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <SectionTag>About Us</SectionTag>
+            <h1
+              className="font-heading font-light"
+              style={{
+                fontSize: "3.5rem",
+                lineHeight: 1.15,
+                color: "#ffffff",
+                marginBottom: "1.2rem",
+              }}
+            >
+              Our <strong className="font-bold" style={{ color: "#d4af37" }}>Story</strong>
+            </h1>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.8,
+                color: "rgba(255,255,255,0.8)",
+                maxWidth: "650px",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              Chicago Indian Arts is a non-profit organization dedicated to celebrating
+              and preserving the rich cultural heritage of India while fostering
+              meaningful connections within the Chicago community.
+            </p>
+          </motion.div>
+        </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+      {/* Mission & Vision Section */}
+      <section
+        data-section="about-mission"
+        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+      >
+        <div
+          data-section="about-mission-grid"
+          style={{
+            maxWidth: "1200px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "4rem",
+          }}
+        >
           <FadeInSection>
             <SectionTag>Mission</SectionTag>
-            <h2 className="font-heading text-3xl lg:text-4xl font-light mb-6 text-primary-dark">
+            <h2
+              className="font-heading font-light"
+              style={{ fontSize: "2.2rem", lineHeight: 1.3, marginBottom: "1.2rem", color: "#1a1a1a" }}
+            >
               Bridging Cultures Through Arts
             </h2>
-            <p className="text-text-light leading-relaxed text-lg">
-              We create immersive cultural experiences that bring India&apos;s artistic
-              heritage to life in Chicago. Through literature, fashion, and
-              photography, we build bridges between communities and foster
-              understanding through the universal language of art.
+            <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#666" }}>
+              To educate, preserve and promote the rich tapestry of Indian arts, literature,
+              cinema, fashion, music and dance in the heart of Chicago empowering voices,
+              fostering cross cultural dialogue and building vibrant platforms for community
+              expression and creative exchange.
             </p>
           </FadeInSection>
-          <FadeInSection delay={0.2}>
+
+          <FadeInSection delay={0.15}>
             <SectionTag>Vision</SectionTag>
-            <h2 className="font-heading text-3xl lg:text-4xl font-light mb-6 text-primary-dark">
+            <h2
+              className="font-heading font-light"
+              style={{ fontSize: "2.2rem", lineHeight: 1.3, marginBottom: "1.2rem", color: "#1a1a1a" }}
+            >
               A World Connected by Art
             </h2>
-            <p className="text-text-light leading-relaxed text-lg">
-              We envision a future where Indian arts are celebrated globally, where
-              cultural exchange is the norm, and where every individual has access to
-              the transformative power of artistic expression.
+            <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#666" }}>
+              To be a leading cultural force that connects generations and communities through
+              transformative power of Indian art, stories and traditions re-imagined in a global
+              context, rooted in heritage and thriving in diversity.
             </p>
           </FadeInSection>
         </div>
       </section>
 
-      {/* Objectives */}
-      <section className="py-24 px-6 lg:px-12 bg-cream">
-        <FadeInSection className="max-w-[1400px] mx-auto">
-          <div className="text-center mb-16">
+      {/* Objectives Section */}
+      <section
+        data-section="about-objectives"
+        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+      >
+        <div style={{ maxWidth: "1200px", marginLeft: "auto", marginRight: "auto" }}>
+          <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
             <SectionTag>Objectives</SectionTag>
-            <h2 className="font-heading text-3xl lg:text-[3.5rem] font-light text-primary-dark">
+            <h2
+              className="font-heading font-light"
+              style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
+            >
               What Drives Us
             </h2>
+          </FadeInSection>
+
+          <div
+            data-section="about-objectives-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "1.5rem",
+            }}
+          >
+            {objectives.map((obj, i) => {
+              const Icon = obj.icon;
+              return (
+                <FadeInSection key={obj.title} delay={i * 0.1}>
+                  <div
+                    style={{
+                      padding: "2rem",
+                      backgroundColor: "#ffffff",
+                      border: "1px solid rgba(0,0,0,0.06)",
+                      transition: "all 0.3s ease",
+                      height: "100%",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(212,175,55,0.3)";
+                      e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.08)";
+                      e.currentTarget.style.transform = "translateY(-4px)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.borderColor = "rgba(0,0,0,0.06)";
+                      e.currentTarget.style.boxShadow = "none";
+                      e.currentTarget.style.transform = "translateY(0)";
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "50px",
+                        height: "50px",
+                        borderRadius: "50%",
+                        backgroundColor: "rgba(212,175,55,0.1)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        marginBottom: "1.2rem",
+                      }}
+                    >
+                      <Icon size={24} color="#d4af37" />
+                    </div>
+                    <h3
+                      className="font-heading"
+                      style={{ fontSize: "1.15rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.8rem" }}
+                    >
+                      {obj.title}
+                    </h3>
+                    <p style={{ fontSize: "0.9rem", lineHeight: 1.7, color: "#666" }}>
+                      {obj.description}
+                    </p>
+                  </div>
+                </FadeInSection>
+              );
+            })}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {objectives.map((obj, i) => (
-              <FadeInSection key={obj.title} delay={i * 0.1}>
-                <div className="bg-white p-8 lg:p-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  <h3 className="font-heading text-2xl font-semibold mb-4 text-primary-dark">
-                    {obj.title}
-                  </h3>
-                  <p className="text-text-light leading-relaxed">{obj.description}</p>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-        </FadeInSection>
+        </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-24 px-6 lg:px-12 bg-white">
-        <FadeInSection className="max-w-[1000px] mx-auto">
-          <div className="text-center mb-16">
+      {/* Timeline / Journey Section */}
+      <section
+        data-section="about-timeline"
+        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+      >
+        <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
+          <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
             <SectionTag>Journey</SectionTag>
-            <h2 className="font-heading text-3xl lg:text-[3.5rem] font-light text-primary-dark">
+            <h2
+              className="font-heading font-light"
+              style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
+            >
               Our Growth Story
             </h2>
-          </div>
-          <div className="relative">
-            <div className="absolute left-8 lg:left-1/2 top-0 bottom-0 w-0.5 bg-cream lg:-translate-x-1/2" />
+          </FadeInSection>
+
+          <div style={{ position: "relative" }}>
+            {/* Timeline Line */}
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: 0,
+                bottom: 0,
+                width: "2px",
+                backgroundColor: "#e0e0e0",
+                transform: "translateX(-50%)",
+              }}
+            />
+
             {milestones.map((m, i) => (
               <FadeInSection key={m.year} delay={i * 0.08}>
-                <div className="relative pl-20 lg:pl-0 mb-12 lg:grid lg:grid-cols-[1fr_60px_1fr] lg:gap-8">
-                  <div className={`lg:text-right ${i % 2 === 1 ? "lg:order-3 lg:text-left" : ""}`}>
-                    <div className="font-heading text-4xl font-bold text-accent-gold mb-2">
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr 60px 1fr",
+                    gap: "1.5rem",
+                    marginBottom: "2.5rem",
+                    position: "relative",
+                  }}
+                >
+                  {/* Left Content (even items) / Empty (odd items) */}
+                  <div
+                    style={{
+                      textAlign: i % 2 === 0 ? "right" : "left",
+                      order: i % 2 === 0 ? 1 : 3,
+                    }}
+                  >
+                    <div
+                      className="font-heading"
+                      style={{ fontSize: "2.2rem", fontWeight: 700, color: "#d4af37", marginBottom: "0.3rem" }}
+                    >
                       {m.year}
                     </div>
-                    <h3 className="font-heading text-xl font-semibold text-primary-dark mb-2">
+                    <h3
+                      className="font-heading"
+                      style={{ fontSize: "1.1rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.3rem" }}
+                    >
                       {m.title}
                     </h3>
-                    <p className="text-text-light text-sm">{m.description}</p>
+                    <p style={{ fontSize: "0.88rem", color: "#666", lineHeight: 1.6 }}>
+                      {m.description}
+                    </p>
                   </div>
-                  <div className="hidden lg:flex items-start justify-center pt-3 lg:order-2">
-                    <div className="w-4 h-4 bg-accent-terracotta rounded-full border-4 border-white shadow-[0_0_0_3px_var(--color-cream)]" />
+
+                  {/* Center Dot */}
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      justifyContent: "center",
+                      paddingTop: "0.6rem",
+                      order: 2,
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "16px",
+                        height: "16px",
+                        borderRadius: "50%",
+                        backgroundColor: "#cd5c5c",
+                        border: "4px solid #ffffff",
+                        boxShadow: "0 0 0 3px #faf8f3",
+                      }}
+                    />
                   </div>
-                  <div className={`hidden lg:block ${i % 2 === 1 ? "lg:order-1" : ""}`} />
-                  {/* Mobile dot */}
-                  <div className="absolute left-6 top-3 lg:hidden w-4 h-4 bg-accent-terracotta rounded-full border-4 border-white shadow-[0_0_0_3px_var(--color-cream)]" />
+
+                  {/* Empty side */}
+                  <div style={{ order: i % 2 === 0 ? 3 : 1 }} />
                 </div>
               </FadeInSection>
             ))}
           </div>
-        </FadeInSection>
+        </div>
       </section>
 
-      {/* Founder */}
-      <section className="py-24 px-6 lg:px-12 bg-cream">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Founder Section */}
+      <section
+        data-section="about-founder"
+        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+      >
+        <div
+          data-section="about-founder-grid"
+          style={{
+            maxWidth: "1200px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "4rem",
+            alignItems: "center",
+          }}
+        >
+          {/* Founder Image */}
           <FadeInSection>
-            <SectionTag>The Founder</SectionTag>
-            <h2 className="font-heading text-3xl lg:text-[3.5rem] font-light leading-[1.3] mb-8 text-primary-dark">
-              A Vision Born from Heritage
-            </h2>
-            <p className="text-lg leading-relaxed text-text-light mb-6">
-              The stories of India shaped who I am today. Growing up in Gujarat, I
-              learned about resilience, coexistence, and community through the stories
-              around me.
-            </p>
-            <p className="text-lg leading-relaxed text-text-light mb-6">
-              Chicago has since become home, given me friendship, inspiration, and
-              opportunity. Now, it&apos;s my turn to give back.
-            </p>
-            <div className="font-heading text-2xl italic text-accent-terracotta mt-8">
-              — Founder, Chicago Indian Arts
-            </div>
-          </FadeInSection>
-          <FadeInSection direction="right">
-            <div className="relative h-[450px] lg:h-[550px] overflow-hidden shadow-xl">
+            <div
+              className="relative overflow-hidden"
+              style={{
+                height: "550px",
+                maxWidth: "450px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                borderRadius: "4px",
+                boxShadow: "0 16px 48px rgba(0,0,0,0.15)",
+              }}
+            >
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
-                alt="Founder"
+                src="/images/founder.webp"
+                alt="Jigar Shah - Founder of Chicago Indian Arts"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                style={{ objectPosition: "top center", transition: "transform 0.5s ease" }}
+                sizes="(max-width: 1024px) 100vw, 450px"
+                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
               />
             </div>
           </FadeInSection>
+
+          {/* Founder Bio */}
+          <FadeInSection delay={0.15}>
+            <SectionTag>Meet the Founder</SectionTag>
+            <h2
+              className="font-heading font-light"
+              style={{ fontSize: "2.5rem", lineHeight: 1.3, marginBottom: "1.5rem", color: "#1a1a1a" }}
+            >
+              Where Ideas Meet Culture
+            </h2>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#666", marginBottom: "1.2rem" }}>
+              Jigar Shah is a visionary corporate executive and creative innovator. He is
+              known for transforming ideas into interactive and meaningful creations. He
+              has been a driving force in uplifting Chicago&apos;s Indian arts ecosystem for
+              over two decades building platforms, nurturing artists and shaping cultural dialogue.
+            </p>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#666", marginBottom: "1.2rem" }}>
+              He has successfully run and volunteered at community events, Chicago South Asian
+              Film Festival, and has served as advisory board to non-profits.
+            </p>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#666", marginBottom: "1.2rem" }}>
+              His mission is to bring people together to learn their stories, unlock their
+              potential and create a wave of arts &amp; culture in Chicago and across the globe.
+            </p>
+            <div
+              className="font-heading italic"
+              style={{ fontSize: "1.15rem", color: "#cd5c5c", marginTop: "1.5rem" }}
+            >
+              — Jigar Shah, Founder
+            </div>
+          </FadeInSection>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Founder Personal Message / Quote Section */}
       <section
-        className="py-24 px-6 lg:px-12 text-white text-center"
+        data-section="about-quote"
         style={{
-          background: "linear-gradient(135deg, var(--color-accent-terracotta) 0%, var(--color-accent-gold) 100%)",
+          padding: "5rem 3rem",
+          background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
         }}
       >
-        <FadeInSection className="max-w-[700px] mx-auto">
-          <h2 className="font-heading text-3xl lg:text-5xl font-light mb-6">
-            Join Our Community
-          </h2>
-          <p className="text-lg leading-relaxed mb-10 opacity-95">
-            Whether you&apos;re an artist, patron, or simply someone who loves Indian
-            culture — there&apos;s a place for you here.
-          </p>
-          <Button href="/register" variant="white">
-            Get Involved
-          </Button>
+        <FadeInSection>
+          <div
+            style={{
+              maxWidth: "800px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "2rem",
+              }}
+            >
+              <div
+                style={{
+                  width: "60px",
+                  height: "60px",
+                  borderRadius: "50%",
+                  backgroundColor: "rgba(212,175,55,0.15)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Quote size={28} color="#d4af37" />
+              </div>
+            </div>
+            <h3
+              className="font-heading"
+              style={{ fontSize: "1rem", fontWeight: 600, color: "#d4af37", marginBottom: "1.5rem", letterSpacing: "1.5px", textTransform: "uppercase" }}
+            >
+              A Message from the Founder
+            </h3>
+            <p
+              className="font-heading italic"
+              style={{
+                fontSize: "1.4rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                marginBottom: "1rem",
+              }}
+            >
+              The stories of India shaped who I am today. Growing up in Gujarat, I learned about
+              resilience, coexistence, and community through the stories around me.
+            </p>
+            <p
+              className="font-heading italic"
+              style={{
+                fontSize: "1.4rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                marginBottom: "1rem",
+              }}
+            >
+              Chicago has since become home, given me friendship, inspiration, and opportunity.
+              Now, it&apos;s my turn to give back.
+            </p>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.7)",
+                marginBottom: "2rem",
+              }}
+            >
+              Introducing the Chicago Indian Arts — a space for stories, ideas, and
+              cultures to meet and be shared.
+            </p>
+            <div style={{ fontSize: "0.9rem", color: "#d4af37", fontWeight: 600 }}>
+              — Jigar Shah
+            </div>
+          </div>
+        </FadeInSection>
+      </section>
+
+      {/* CTA Section */}
+      <section
+        data-section="about-cta"
+        style={{
+          padding: "5rem 3rem",
+          background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
+          textAlign: "center",
+        }}
+      >
+        <FadeInSection>
+          <div style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto" }}>
+            <h2
+              className="font-heading font-light"
+              style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#ffffff", marginBottom: "1rem" }}
+            >
+              Join Our Community
+            </h2>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.8,
+                color: "rgba(255,255,255,0.95)",
+                marginBottom: "2rem",
+              }}
+            >
+              Whether you&apos;re an artist, patron, or simply someone who loves Indian
+              culture — there&apos;s a place for you here.
+            </p>
+            <Link
+              href="/register"
+              style={{
+                display: "inline-block",
+                backgroundColor: "#ffffff",
+                color: "#1a1a1a",
+                padding: "1rem 2.5rem",
+                fontSize: "0.85rem",
+                fontWeight: 700,
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#1a1a1a";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#ffffff";
+                e.currentTarget.style.color = "#1a1a1a";
+              }}
+            >
+              Get Involved
+            </Link>
+          </div>
         </FadeInSection>
       </section>
     </>

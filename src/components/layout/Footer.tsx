@@ -11,7 +11,7 @@ const programLinks = [
 ];
 
 const orgLinks = [
-  { label: "About Us", href: "#" },
+  { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/volunteer" },
