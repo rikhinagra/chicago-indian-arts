@@ -7,7 +7,7 @@ export default function CTASection() {
       id="register" data-section="cta"
       className="text-white text-center relative overflow-hidden"
       style={{
-        padding: "5rem 3rem",
+        padding: "3rem 3rem",
         background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
       }}
     >

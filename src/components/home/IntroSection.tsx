@@ -3,7 +3,7 @@ import SectionTag from "@/components/ui/SectionTag";
 
 export default function IntroSection() {
   return (
-    <section data-section="intro" style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}>
+    <section data-section="intro" style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}>
       <FadeInSection className="text-center" style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
         <SectionTag>Our Mission</SectionTag>
         <h2

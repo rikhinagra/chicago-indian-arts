@@ -139,9 +139,9 @@ export default function ProgramsGrid() {
     <section
       id="programs"
       data-section="programs"
-      style={{ padding: "4rem 3rem 5rem", backgroundColor: "#faf8f3" }}
+      style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
     >
-      <FadeInSection className="text-center" style={{ marginBottom: "3rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
+      <FadeInSection className="text-center" style={{ marginBottom: "2rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
         <SectionTag>Our Programs</SectionTag>
         <h2
           data-section="section-heading" className="font-heading font-light"

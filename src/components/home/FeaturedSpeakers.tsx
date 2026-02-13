@@ -105,8 +105,8 @@ function SpeakerCard({
 
 export default function FeaturedSpeakers() {
   return (
-    <section data-section="featured" style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}>
-      <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
+    <section data-section="featured" style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}>
+      <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
         <SectionTag>2026 Lineup</SectionTag>
         <h2
           data-section="section-heading" className="font-heading font-light"

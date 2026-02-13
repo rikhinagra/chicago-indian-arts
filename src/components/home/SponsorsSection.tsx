@@ -79,7 +79,7 @@ const sponsors = [
 
 export default function SponsorsSection() {
   return (
-    <section data-section="sponsors" style={{ padding: "4rem 3rem", backgroundColor: "#faf8f3" }}>
+    <section data-section="sponsors" style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}>
       <FadeInSection className="text-center" style={{ maxWidth: "1400px", marginLeft: "auto", marginRight: "auto" }}>
         <h3
           className="uppercase"

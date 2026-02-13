@@ -75,9 +75,9 @@ export default function EventsTimeline() {
   };
 
   return (
-    <section id="events" data-section="events" style={{ padding: "4rem 3rem", backgroundColor: "#ffffff" }}>
+    <section id="events" data-section="events" style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}>
       <div style={{ maxWidth: "1400px", marginLeft: "auto", marginRight: "auto" }}>
-        <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
+        <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
           <SectionTag>Schedule</SectionTag>
           <h2
             data-section="section-heading" className="font-heading font-light"
@@ -88,7 +88,7 @@ export default function EventsTimeline() {
         </FadeInSection>
 
         {/* Filters */}
-        <FadeInSection className="flex justify-center flex-wrap" style={{ gap: "0.8rem", marginBottom: "3rem" }}>
+        <FadeInSection className="flex justify-center flex-wrap" style={{ gap: "0.8rem", marginBottom: "2rem" }}>
           {filters.map((filter) => (
             <button
               key={filter}
