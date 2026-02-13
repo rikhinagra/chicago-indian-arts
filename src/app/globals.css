@@ -441,8 +441,8 @@ img {
   }
 
   [data-section="nav-logo"] {
-    width: 200px !important;
-    height: 50px !important;
+    width: 240px !important;
+    height: 58px !important;
   }
 
   [data-section="hero-content"] {
@@ -857,8 +857,8 @@ img {
   }
 
   [data-section="nav-logo"] {
-    width: 160px !important;
-    height: 42px !important;
+    width: 200px !important;
+    height: 50px !important;
   }
 
   [data-section="footer-wrap"] {
