@@ -116,7 +116,22 @@ export default function Footer() {
           marginRight: "auto",
         }}
       >
-        <div>&copy; 2026 Chicago Indian Collective Arts. All rights reserved.</div>
+        <div>
+          <div>&copy; 2026 Chicago Indian Collective Arts. All rights reserved.</div>
+          <div style={{ marginTop: "0.4rem", fontSize: "0.75rem", opacity: 0.6 }}>
+            Designed & Developed by{" "}
+            <a
+              href="https://www.sachhsoft.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#d4af37", textDecoration: "none", transition: "opacity 0.3s ease" }}
+              onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.8"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
+            >
+              SachhSoft
+            </a>
+          </div>
+        </div>
         <div className="flex" style={{ gap: "1.5rem" }}>
           {socialLinks.map((link) => (
             <a
