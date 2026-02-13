@@ -65,13 +65,13 @@ export default function HighlightsGallery() {
         >
           {highlights.map((item, index) => (
             <SwiperSlide key={index} className="highlights-slide">
-              <div className="highlights-slide-inner">
+              <div className="highlights-slide-inner" style={{ aspectRatio: "1 / 1" }}>
                 <Image
                   src={item.image}
                   alt={item.title}
-                  width={600}
-                  height={400}
-                  className="highlights-slide-img"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 80vw, 400px"
                 />
                 <div
                   className="absolute bottom-0 left-0 right-0 text-white"

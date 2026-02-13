@@ -108,20 +108,13 @@ img {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
-  max-width: 600px;
+  max-width: 420px;
 }
 
 .highlights-slide-inner {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-}
-
-.highlights-slide-img {
-  width: 100% !important;
-  height: auto !important;
-  display: block;
-  border-radius: 10px;
 }
 
 /* Active slide glow effect */
