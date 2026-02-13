@@ -135,25 +135,7 @@ export default function EventsTimeline() {
           {filteredEvents.map((event, i) => {
             const isLeft = i % 2 === 1;
 
-            const dateBlock = (
-              <div style={{ paddingTop: "1rem", textAlign: isLeft ? "left" : "right" }}>
-                <div
-                  className="uppercase font-semibold"
-                  style={{ fontSize: "0.8rem", letterSpacing: "2px", color: "#d4af37" }}
-                >
-                  {event.month}
-                </div>
-                <div
-                  className="font-heading font-bold leading-none"
-                  style={{ fontSize: "2.2rem", color: "#1a1a1a" }}
-                >
-                  {event.day}
-                </div>
-                <div style={{ fontSize: "0.9rem", color: "#666666" }}>{event.year}</div>
-              </div>
-            );
-
-            const detailsBlock = (
+            const cardContent = (
               <div
                 className="rounded-lg"
                 style={{
@@ -173,12 +155,42 @@ export default function EventsTimeline() {
                   e.currentTarget.style.transform = "translateX(0)";
                 }}
               >
-                <div
-                  className="uppercase font-semibold"
-                  style={{ fontSize: "0.75rem", letterSpacing: "2px", color: "#cd5c5c", marginBottom: "0.5rem" }}
-                >
-                  {event.category}
+                {/* Date + Category row */}
+                <div className="flex items-center flex-wrap" style={{ gap: "1rem", marginBottom: "0.8rem" }}>
+                  <div
+                    className="flex items-center"
+                    style={{
+                      gap: "0.6rem",
+                      backgroundColor: "#ffffff",
+                      padding: "0.4rem 0.8rem",
+                      border: "1px solid rgba(0,0,0,0.06)",
+                      borderRadius: "4px",
+                    }}
+                  >
+                    <span
+                      className="font-heading font-bold"
+                      style={{ fontSize: "1.5rem", lineHeight: 1, color: "#1a1a1a" }}
+                    >
+                      {event.day}
+                    </span>
+                    <div>
+                      <div
+                        className="uppercase font-semibold"
+                        style={{ fontSize: "0.65rem", letterSpacing: "1.5px", color: "#d4af37", lineHeight: 1.2 }}
+                      >
+                        {event.month}
+                      </div>
+                      <div style={{ fontSize: "0.7rem", color: "#666666", lineHeight: 1.2 }}>{event.year}</div>
+                    </div>
+                  </div>
+                  <div
+                    className="uppercase font-semibold"
+                    style={{ fontSize: "0.75rem", letterSpacing: "2px", color: "#cd5c5c" }}
+                  >
+                    {event.category}
+                  </div>
                 </div>
+
                 <h3
                   className="font-heading font-semibold"
                   style={{ fontSize: "1.3rem", marginBottom: "0.6rem", color: "#1a1a1a" }}
@@ -215,58 +227,41 @@ export default function EventsTimeline() {
               </div>
             );
 
-            const markerBlock = (
-              <div className="hidden xl:flex items-start justify-center" style={{ paddingTop: "1.5rem" }}>
-                <div
-                  className="rounded-full z-10"
-                  style={{
-                    width: "20px",
-                    height: "20px",
-                    backgroundColor: "#cd5c5c",
-                    border: "4px solid #ffffff",
-                    boxShadow: "0 0 0 4px #e8e4de",
-                  }}
-                />
-              </div>
-            );
-
             return (
               <FadeInSection key={event.title} delay={i * 0.1}>
-                {/* Mobile: single column (date + details) */}
-                <div
-                  className="xl:hidden"
-                  style={{ marginBottom: "2.5rem" }}
-                >
-                  <div style={{ marginBottom: "0.5rem" }}>
-                    <div
-                      className="uppercase font-semibold"
-                      style={{ fontSize: "0.8rem", letterSpacing: "2px", color: "#d4af37" }}
-                    >
-                      {event.month}
-                    </div>
-                    <div
-                      className="font-heading font-bold leading-none"
-                      style={{ fontSize: "2.2rem", color: "#1a1a1a" }}
-                    >
-                      {event.day}
-                    </div>
-                    <div style={{ fontSize: "0.9rem", color: "#666666" }}>{event.year}</div>
-                  </div>
-                  {detailsBlock}
+                {/* Mobile: single column */}
+                <div className="xl:hidden" style={{ marginBottom: "2.5rem" }}>
+                  {cardContent}
                 </div>
 
-                {/* Desktop: alternating 3-column grid */}
+                {/* Desktop: alternating left-right with center dot */}
                 <div
                   className="hidden xl:grid"
                   style={{
-                    gridTemplateColumns: "1fr 80px 1fr",
+                    gridTemplateColumns: "1fr 40px 1fr",
                     gap: "1.5rem",
                     marginBottom: "3rem",
                   }}
                 >
-                  {isLeft ? detailsBlock : dateBlock}
-                  {markerBlock}
-                  {isLeft ? dateBlock : detailsBlock}
+                  {/* Left side */}
+                  <div>{isLeft ? cardContent : null}</div>
+
+                  {/* Center marker */}
+                  <div className="flex justify-center" style={{ paddingTop: "1.5rem" }}>
+                    <div
+                      className="rounded-full z-10"
+                      style={{
+                        width: "16px",
+                        height: "16px",
+                        backgroundColor: "#cd5c5c",
+                        border: "3px solid #ffffff",
+                        boxShadow: "0 0 0 3px #e8e4de",
+                      }}
+                    />
+                  </div>
+
+                  {/* Right side */}
+                  <div>{isLeft ? null : cardContent}</div>
                 </div>
               </FadeInSection>
             );
