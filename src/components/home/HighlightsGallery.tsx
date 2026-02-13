@@ -1,10 +1,14 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 const highlights = [
   { title: "Vaarta 2025", caption: "Author Panel Discussion", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" },
@@ -17,51 +21,10 @@ const highlights = [
   { title: "Closing Ceremony", caption: "Gala Dinner 2025", image: "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=600&q=80" },
 ];
 
-function HighlightItem({
-  item,
-  index,
-}: {
-  item: (typeof highlights)[0];
-  index: number;
-}) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: index * 0.08 }}
-      className="group relative overflow-hidden cursor-pointer"
-      style={{ height: "240px" }}
-    >
-      <Image
-        src={item.image}
-        alt={item.title}
-        fill
-        className="object-cover transition-transform duration-500 group-hover:scale-110"
-        sizes="(max-width: 768px) 50vw, 25vw"
-      />
-      <div
-        data-section="highlight-overlay"
-        className="absolute bottom-0 left-0 right-0 text-white"
-        style={{
-          padding: "1.2rem",
-          background: "linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent)",
-        }}
-      >
-        <h4 style={{ fontSize: "0.9rem", fontWeight: 600, marginBottom: "0.2rem" }}>{item.title}</h4>
-        <p style={{ fontSize: "0.75rem", opacity: 0.9 }}>{item.caption}</p>
-      </div>
-    </motion.div>
-  );
-}
-
 export default function HighlightsGallery() {
   return (
-    <section id="highlights" data-section="highlights" style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}>
-      <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
+    <section id="highlights" data-section="highlights" style={{ padding: "5rem 0 4rem", backgroundColor: "#faf8f3", overflow: "hidden" }}>
+      <FadeInSection className="text-center" style={{ marginBottom: "2rem", padding: "0 3rem" }}>
         <SectionTag>Memories</SectionTag>
         <h2
           data-section="section-heading" className="font-heading font-light"
@@ -71,10 +34,59 @@ export default function HighlightsGallery() {
         </h2>
       </FadeInSection>
 
-      <div data-section="highlights-grid" className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4" style={{ gap: "1.5rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
-        {highlights.map((item, i) => (
-          <HighlightItem key={item.title} item={item} index={i} />
-        ))}
+      <div className="highlights-carousel-wrapper">
+        <Swiper
+          modules={[EffectCoverflow, Autoplay, Pagination]}
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={1.6}
+          loop={true}
+          speed={800}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 80,
+            depth: 200,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            320: { slidesPerView: 1.4 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2.5 },
+          }}
+          className="highlights-swiper"
+        >
+          {highlights.map((item, index) => (
+            <SwiperSlide key={index} className="highlights-slide">
+              <div className="highlights-slide-inner">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={600}
+                  height={400}
+                  className="highlights-slide-img"
+                />
+                <div
+                  className="absolute bottom-0 left-0 right-0 text-white"
+                  style={{
+                    padding: "1.2rem",
+                    background: "linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent)",
+                  }}
+                >
+                  <h4 style={{ fontSize: "0.9rem", fontWeight: 600, marginBottom: "0.2rem" }}>{item.title}</h4>
+                  <p style={{ fontSize: "0.75rem", opacity: 0.9 }}>{item.caption}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

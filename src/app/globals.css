@@ -90,6 +90,71 @@ img {
 }
 
 
+/* Highlights Carousel */
+.highlights-carousel-wrapper {
+  margin-top: 2rem;
+  padding: 0 0 1rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlights-swiper {
+  width: 100%;
+  padding-bottom: 45px !important;
+}
+
+.highlights-slide {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  max-width: 600px;
+}
+
+.highlights-slide-inner {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.highlights-slide-img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Active slide glow effect */
+.highlights-swiper .swiper-slide-active .highlights-slide-inner {
+  box-shadow: 0 30px 70px rgba(10, 31, 68, 0.35);
+}
+
+/* Remove Swiper's default dark shadow overlay on side slides */
+.highlights-swiper .swiper-slide-shadow-left,
+.highlights-swiper .swiper-slide-shadow-right {
+  display: none !important;
+}
+
+/* Pagination dots */
+.highlights-swiper .swiper-pagination {
+  bottom: 0px !important;
+}
+
+.highlights-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #1a1a1a;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.highlights-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #d4af37;
+  width: 30px;
+  border-radius: 5px;
+}
+
 /* ============================================
    RESPONSIVE BREAKPOINTS
    Refined proportional scaling
@@ -103,10 +168,6 @@ img {
 
   [data-section="stats-grid"] {
     grid-template-columns: repeat(2, 1fr) !important;
-  }
-
-  [data-section="highlights-grid"] {
-    grid-template-columns: repeat(3, 1fr) !important;
   }
 
   [data-section="event-item"] {
@@ -427,10 +488,6 @@ img {
     grid-template-columns: 1fr !important;
   }
 
-  [data-section="highlights-grid"] {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-
   [data-section="featured-grid"] {
     grid-template-columns: repeat(2, 1fr) !important;
     justify-items: center !important;
@@ -470,10 +527,6 @@ img {
   [data-section="footer-bottom"] {
     flex-direction: column !important;
     gap: 0.8rem !important;
-  }
-
-  [data-section="highlight-overlay"] {
-    transform: translateY(0) !important;
   }
 
   [data-section="newsletter-form"] {
@@ -809,6 +862,11 @@ img {
     padding: 2rem 1rem 1rem !important;
   }
 
+  .highlights-carousel-wrapper {
+    margin-top: 2rem;
+    padding: 1rem 0 3rem;
+  }
+
   [data-section="hero-content"] {
     padding: 0 1rem !important;
   }
@@ -823,10 +881,6 @@ img {
 
   [data-section="section-heading"] {
     font-size: 1.5rem !important;
-  }
-
-  [data-section="highlights-grid"] {
-    grid-template-columns: 1fr !important;
   }
 
   [data-section="featured-grid"] {
