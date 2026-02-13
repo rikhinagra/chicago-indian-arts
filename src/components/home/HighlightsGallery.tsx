@@ -23,8 +23,8 @@ const highlights = [
 
 export default function HighlightsGallery() {
   return (
-    <section id="highlights" data-section="highlights" style={{ padding: "5rem 0 4rem", backgroundColor: "#faf8f3", overflow: "hidden" }}>
-      <FadeInSection className="text-center" style={{ marginBottom: "2rem", padding: "0 3rem" }}>
+    <section id="highlights" data-section="highlights" style={{ padding: "3rem 0 2.5rem", backgroundColor: "#faf8f3", overflow: "hidden" }}>
+      <FadeInSection className="text-center" style={{ marginBottom: "1.5rem", padding: "0 3rem" }}>
         <SectionTag>Memories</SectionTag>
         <h2
           data-section="section-heading" className="font-heading font-light"
@@ -76,12 +76,12 @@ export default function HighlightsGallery() {
                 <div
                   className="absolute bottom-0 left-0 right-0 text-white"
                   style={{
-                    padding: "1.2rem",
-                    background: "linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent)",
+                    padding: "1.5rem 1.2rem 1.2rem",
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%)",
                   }}
                 >
-                  <h4 style={{ fontSize: "0.9rem", fontWeight: 600, marginBottom: "0.2rem" }}>{item.title}</h4>
-                  <p style={{ fontSize: "0.75rem", opacity: 0.9 }}>{item.caption}</p>
+                  <h4 style={{ fontSize: "0.95rem", fontWeight: 700, marginBottom: "0.2rem", textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}>{item.title}</h4>
+                  <p style={{ fontSize: "0.78rem", opacity: 0.95, textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}>{item.caption}</p>
                 </div>
               </div>
             </SwiperSlide>
