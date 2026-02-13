@@ -47,7 +47,7 @@ export default function VolunteerPage() {
         data-section="volunteer-hero"
         className="relative overflow-hidden"
         style={{
-          padding: "10rem 3rem 5rem",
+          padding: "10rem 3rem 3rem",
           background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
         }}
       >
@@ -125,7 +125,7 @@ export default function VolunteerPage() {
       {/* Available Roles Section */}
       <section
         data-section="volunteer-roles"
-        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           style={{ maxWidth: "1000px", marginLeft: "auto", marginRight: "auto" }}
@@ -213,7 +213,7 @@ export default function VolunteerPage() {
       {/* How to Apply Section */}
       <section
         data-section="volunteer-apply"
-        style={{ padding: "4rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto", textAlign: "center" }}

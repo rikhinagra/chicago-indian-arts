@@ -140,7 +140,7 @@ export default function DonatePage() {
         data-section="donate-hero"
         className="relative overflow-hidden"
         style={{
-          padding: "10rem 3rem 5rem",
+          padding: "10rem 3rem 3rem",
           background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
         }}
       >
@@ -229,7 +229,7 @@ export default function DonatePage() {
       {/* Main Donation Section */}
       <section
         data-section="donate-main"
-        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           data-section="donate-grid"

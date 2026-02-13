@@ -86,7 +86,7 @@ export default function PrasangPage() {
             maxWidth: "1400px",
             marginLeft: "auto",
             marginRight: "auto",
-            padding: "10rem 3rem 5rem",
+            padding: "10rem 3rem 3rem",
             width: "100%",
           }}
         >
@@ -191,7 +191,7 @@ export default function PrasangPage() {
       {/* About Prasang */}
       <section
         data-section="prasang-about"
-        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           data-section="prasang-about-grid"
@@ -270,7 +270,7 @@ export default function PrasangPage() {
       {/* Objectives */}
       <section
         data-section="prasang-objectives"
-        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           style={{
@@ -364,7 +364,7 @@ export default function PrasangPage() {
       {/* Gallery */}
       <section
         data-section="prasang-gallery"
-        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           style={{
@@ -422,7 +422,7 @@ export default function PrasangPage() {
       <section
         data-section="prasang-quote"
         style={{
-          padding: "4rem 3rem",
+          padding: "3rem 3rem",
           backgroundColor: "#1a1a1a",
           textAlign: "center",
         }}
@@ -475,7 +475,7 @@ export default function PrasangPage() {
       <section
         data-section="prasang-cta"
         style={{
-          padding: "5rem 3rem",
+          padding: "3rem 3rem",
           background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
           textAlign: "center",
         }}

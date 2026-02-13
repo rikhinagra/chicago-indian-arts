@@ -67,7 +67,7 @@ export default function VaartaPage() {
             maxWidth: "1400px",
             marginLeft: "auto",
             marginRight: "auto",
-            padding: "10rem 3rem 5rem",
+            padding: "10rem 3rem 3rem",
             width: "100%",
           }}
         >
@@ -171,7 +171,7 @@ export default function VaartaPage() {
       {/* About Vaarta */}
       <section
         data-section="vaarta-about"
-        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           style={{
@@ -228,7 +228,7 @@ export default function VaartaPage() {
       {/* Featured Image */}
       <section
         data-section="vaarta-image"
-        style={{ padding: "0 3rem 5rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "0 3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <FadeInSection>
           <div
@@ -257,7 +257,7 @@ export default function VaartaPage() {
       {/* Why LitFest 2026 */}
       <section
         data-section="vaarta-why"
-        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           style={{
@@ -335,7 +335,7 @@ export default function VaartaPage() {
       <section
         data-section="vaarta-quote"
         style={{
-          padding: "4rem 3rem",
+          padding: "3rem 3rem",
           backgroundColor: "#1a1a1a",
           textAlign: "center",
         }}
@@ -387,7 +387,7 @@ export default function VaartaPage() {
       {/* Highlights */}
       <section
         data-section="vaarta-highlights"
-        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           style={{
@@ -482,7 +482,7 @@ export default function VaartaPage() {
       <section
         data-section="vaarta-cta"
         style={{
-          padding: "5rem 3rem",
+          padding: "3rem 3rem",
           background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
           textAlign: "center",
         }}
