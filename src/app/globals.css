@@ -89,10 +89,6 @@ img {
   transition: opacity 0.3s ease;
 }
 
-/* Highlight overlay - show on hover (desktop) */
-.group:hover [data-section="highlight-overlay"] {
-  transform: translateY(0) !important;
-}
 
 /* ============================================
    RESPONSIVE BREAKPOINTS

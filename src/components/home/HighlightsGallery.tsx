@@ -49,8 +49,6 @@ function HighlightItem({
         style={{
           padding: "1.2rem",
           background: "linear-gradient(to top, rgba(26, 26, 26, 0.9), transparent)",
-          transform: "translateY(100%)",
-          transition: "transform 0.3s ease",
         }}
       >
         <h4 style={{ fontSize: "0.9rem", fontWeight: 600, marginBottom: "0.2rem" }}>{item.title}</h4>
