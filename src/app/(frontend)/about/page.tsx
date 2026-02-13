@@ -51,7 +51,7 @@ export default function AboutPage() {
         data-section="about-hero"
         className="relative overflow-hidden"
         style={{
-          padding: "10rem 3rem 5rem",
+          padding: "10rem 3rem 3rem",
           background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
         }}
       >
@@ -140,7 +140,7 @@ export default function AboutPage() {
       {/* Mission & Vision Section */}
       <section
         data-section="about-mission"
-        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           data-section="about-mission-grid"
@@ -189,10 +189,10 @@ export default function AboutPage() {
       {/* Objectives Section */}
       <section
         data-section="about-objectives"
-        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div style={{ maxWidth: "1200px", marginLeft: "auto", marginRight: "auto" }}>
-          <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
+          <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
             <SectionTag>Objectives</SectionTag>
             <h2
               className="font-heading font-light"
@@ -267,10 +267,10 @@ export default function AboutPage() {
       {/* Timeline / Journey Section */}
       <section
         data-section="about-timeline"
-        style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
-          <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
+          <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
             <SectionTag>Journey</SectionTag>
             <h2
               className="font-heading font-light"
@@ -363,7 +363,7 @@ export default function AboutPage() {
       {/* Founder Section */}
       <section
         data-section="about-founder"
-        style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           data-section="about-founder-grid"
@@ -440,7 +440,7 @@ export default function AboutPage() {
       <section
         data-section="about-quote"
         style={{
-          padding: "5rem 3rem",
+          padding: "3rem 3rem",
           background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
         }}
       >
@@ -457,7 +457,7 @@ export default function AboutPage() {
               style={{
                 display: "flex",
                 justifyContent: "center",
-                marginBottom: "2rem",
+                marginBottom: "1.5rem",
               }}
             >
               <div
@@ -526,7 +526,7 @@ export default function AboutPage() {
       <section
         data-section="about-cta"
         style={{
-          padding: "5rem 3rem",
+          padding: "3rem 3rem",
           background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
           textAlign: "center",
         }}
