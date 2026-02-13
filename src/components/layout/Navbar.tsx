@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
@@ -64,12 +65,29 @@ export default function Navbar() {
       >
         <div data-section="nav-container" className="flex justify-between items-center" style={{ padding: "1rem 3rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
           {/* Logo */}
-          <Link
-            href="/"
-            className="font-heading font-semibold text-[1.1rem] tracking-[2px] transition-colors duration-300"
-            style={{ color: scrolled ? "#1a1a1a" : "#ffffff" }}
-          >
-            CHICAGO INDIAN ARTS
+          <Link href="/" className="relative" style={{ display: "block", height: "75px", width: "340px" }}>
+            <Image
+              src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770980107/CIA-logo-white_gaxtwl.webp"
+              alt="Chicago Indian Arts"
+              fill
+              className="object-contain transition-opacity duration-300"
+              style={{
+                objectPosition: "left center",
+                opacity: scrolled ? 0 : 1,
+              }}
+              priority
+            />
+            <Image
+              src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770979601/CIA-logo-black_snmlaz.webp"
+              alt="Chicago Indian Arts"
+              fill
+              className="object-contain transition-opacity duration-300"
+              style={{
+                objectPosition: "left center",
+                opacity: scrolled ? 1 : 0,
+              }}
+              priority
+            />
           </Link>
 
           {/* Desktop Links */}
