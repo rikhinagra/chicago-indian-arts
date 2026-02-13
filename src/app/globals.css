@@ -440,6 +440,11 @@ img {
     padding: 0.8rem 1.2rem !important;
   }
 
+  [data-section="nav-logo"] {
+    width: 200px !important;
+    height: 50px !important;
+  }
+
   [data-section="hero-content"] {
     padding: 0 1.2rem !important;
   }
@@ -849,6 +854,11 @@ img {
   [data-section="founder"],
   [data-section="cta"] {
     padding: 2rem 1rem !important;
+  }
+
+  [data-section="nav-logo"] {
+    width: 160px !important;
+    height: 42px !important;
   }
 
   [data-section="footer-wrap"] {

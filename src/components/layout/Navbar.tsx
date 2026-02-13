@@ -65,7 +65,7 @@ export default function Navbar() {
       >
         <div data-section="nav-container" className="flex justify-between items-center" style={{ padding: "1rem 3rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
           {/* Logo */}
-          <Link href="/" className="relative" style={{ display: "block", height: "75px", width: "340px" }}>
+          <Link href="/" data-section="nav-logo" className="relative" style={{ display: "block", height: "75px", width: "340px" }}>
             <Image
               src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770980107/CIA-logo-white_gaxtwl.webp"
               alt="Chicago Indian Arts"
