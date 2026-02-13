@@ -13,12 +13,12 @@ export default function HomePage() {
     <>
       <HeroSection />
       <EventsTicker />
-      <IntroSection />
       <ProgramsGrid />
       <EventsTimeline />
       <HighlightsGallery />
       <FeaturedSpeakers />
       <SponsorsSection />
+      <IntroSection />
       <CTASection />
     </>
   );
