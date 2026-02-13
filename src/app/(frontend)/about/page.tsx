@@ -382,8 +382,8 @@ export default function AboutPage() {
             <div
               className="relative overflow-hidden"
               style={{
-                height: "420px",
-                maxWidth: "380px",
+                height: "485px",
+                maxWidth: "415px",
                 marginLeft: "auto",
                 marginRight: "auto",
                 borderRadius: "16px",

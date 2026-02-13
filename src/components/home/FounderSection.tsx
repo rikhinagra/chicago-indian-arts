@@ -51,8 +51,8 @@ export default function FounderSection() {
           <div
             data-section="founder-image" className="group relative overflow-hidden"
             style={{
-              height: "420px",
-              maxWidth: "380px",
+              height: "485px",
+              maxWidth: "415px",
               marginLeft: "auto",
               marginRight: "auto",
               borderRadius: "16px",
