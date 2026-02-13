@@ -75,7 +75,7 @@ export default function EventsTimeline() {
   };
 
   return (
-    <section id="events" data-section="events" style={{ padding: "5rem 3rem", backgroundColor: "#ffffff" }}>
+    <section id="events" data-section="events" style={{ padding: "4rem 3rem", backgroundColor: "#ffffff" }}>
       <div style={{ maxWidth: "1400px", marginLeft: "auto", marginRight: "auto" }}>
         <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
           <SectionTag>Schedule</SectionTag>
@@ -230,7 +230,7 @@ export default function EventsTimeline() {
             return (
               <FadeInSection key={event.title} delay={i * 0.1}>
                 {/* Mobile: single column */}
-                <div className="xl:hidden" style={{ marginBottom: "2.5rem" }}>
+                <div className="xl:hidden" style={{ marginBottom: "1.5rem" }}>
                   {cardContent}
                 </div>
 
@@ -239,15 +239,15 @@ export default function EventsTimeline() {
                   className="hidden xl:grid"
                   style={{
                     gridTemplateColumns: "1fr 40px 1fr",
-                    gap: "1.5rem",
-                    marginBottom: "3rem",
+                    gap: "1rem",
+                    marginBottom: "1rem",
                   }}
                 >
                   {/* Left side */}
                   <div>{isLeft ? cardContent : null}</div>
 
                   {/* Center marker */}
-                  <div className="flex justify-center" style={{ paddingTop: "1.5rem" }}>
+                  <div className="flex justify-center" style={{ paddingTop: "1rem" }}>
                     <div
                       className="rounded-full z-10"
                       style={{
