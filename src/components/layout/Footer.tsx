@@ -116,7 +116,7 @@ export default function Footer() {
           marginRight: "auto",
         }}
       >
-        <div>
+        <div className="text-center sm:text-left">
           <div>&copy; 2026 Chicago Indian Collective Arts. All rights reserved.</div>
           <div style={{ marginTop: "0.4rem", fontSize: "0.75rem", opacity: 0.6 }}>
             Designed & Developed by{" "}
