@@ -380,12 +380,13 @@ export default function AboutPage() {
           {/* Founder Image */}
           <FadeInSection>
             <div
-              className="relative overflow-hidden rounded-full"
+              className="relative overflow-hidden"
               style={{
-                width: "400px",
-                height: "400px",
+                height: "550px",
+                maxWidth: "450px",
                 marginLeft: "auto",
                 marginRight: "auto",
+                borderRadius: "16px",
                 boxShadow: "0 16px 48px rgba(0,0,0,0.15)",
               }}
             >

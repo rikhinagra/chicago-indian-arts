@@ -49,12 +49,13 @@ export default function FounderSection() {
         {/* Image */}
         <FadeInSection direction="right">
           <div
-            data-section="founder-image" className="group relative overflow-hidden rounded-full"
+            data-section="founder-image" className="group relative overflow-hidden"
             style={{
-              width: "400px",
-              height: "400px",
+              height: "550px",
+              maxWidth: "450px",
               marginLeft: "auto",
               marginRight: "auto",
+              borderRadius: "16px",
               boxShadow: "0 16px 48px rgba(0,0,0,0.15)",
             }}
           >
