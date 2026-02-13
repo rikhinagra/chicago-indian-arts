@@ -129,108 +129,148 @@ export default function EventsTimeline() {
           {/* Center line (desktop) */}
           <div
             data-section="timeline-line" className="hidden xl:block absolute left-1/2 top-0 bottom-0 -translate-x-1/2"
-            style={{ width: "2px", backgroundColor: "#faf8f3" }}
+            style={{ width: "2px", backgroundColor: "#e8e4de" }}
           />
 
-          {filteredEvents.map((event, i) => (
-            <FadeInSection key={event.title} delay={i * 0.1}>
-              <div
-                data-section="event-item" className="grid grid-cols-1 xl:grid-cols-[1fr_80px_1fr]"
-                style={{ gap: "1.5rem", marginBottom: "3rem" }}
-              >
-                {/* Date */}
-                <div data-date className="xl:text-right" style={{ paddingTop: "1rem" }}>
-                  <div
-                    className="uppercase font-semibold"
-                    style={{ fontSize: "0.8rem", letterSpacing: "2px", color: "#d4af37" }}
-                  >
-                    {event.month}
-                  </div>
-                  <div
-                    className="font-heading font-bold leading-none"
-                    style={{ fontSize: "2.2rem", color: "#1a1a1a" }}
-                  >
-                    {event.day}
-                  </div>
-                  <div style={{ fontSize: "0.9rem", color: "#666666" }}>{event.year}</div>
-                </div>
+          {filteredEvents.map((event, i) => {
+            const isLeft = i % 2 === 1;
 
-                {/* Marker (desktop) */}
-                <div data-marker className="hidden xl:flex items-start justify-center" style={{ paddingTop: "1.5rem" }}>
-                  <div
-                    className="rounded-full z-10"
-                    style={{
-                      width: "20px",
-                      height: "20px",
-                      backgroundColor: "#cd5c5c",
-                      border: "4px solid #ffffff",
-                      boxShadow: "0 0 0 4px #faf8f3",
-                    }}
-                  />
-                </div>
-
-                {/* Details */}
+            const dateBlock = (
+              <div style={{ paddingTop: "1rem", textAlign: isLeft ? "left" : "right" }}>
                 <div
-                  className="rounded-lg"
+                  className="uppercase font-semibold"
+                  style={{ fontSize: "0.8rem", letterSpacing: "2px", color: "#d4af37" }}
+                >
+                  {event.month}
+                </div>
+                <div
+                  className="font-heading font-bold leading-none"
+                  style={{ fontSize: "2.2rem", color: "#1a1a1a" }}
+                >
+                  {event.day}
+                </div>
+                <div style={{ fontSize: "0.9rem", color: "#666666" }}>{event.year}</div>
+              </div>
+            );
+
+            const detailsBlock = (
+              <div
+                className="rounded-lg"
+                style={{
+                  padding: "1.5rem",
+                  backgroundColor: "#faf8f3",
+                  transition: "all 0.3s ease",
+                  textAlign: "left",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ffffff";
+                  e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)";
+                  e.currentTarget.style.transform = isLeft ? "translateX(-8px)" : "translateX(8px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#faf8f3";
+                  e.currentTarget.style.boxShadow = "none";
+                  e.currentTarget.style.transform = "translateX(0)";
+                }}
+              >
+                <div
+                  className="uppercase font-semibold"
+                  style={{ fontSize: "0.75rem", letterSpacing: "2px", color: "#cd5c5c", marginBottom: "0.5rem" }}
+                >
+                  {event.category}
+                </div>
+                <h3
+                  className="font-heading font-semibold"
+                  style={{ fontSize: "1.3rem", marginBottom: "0.6rem", color: "#1a1a1a" }}
+                >
+                  {event.title}
+                </h3>
+                <p style={{ color: "#666666", lineHeight: 1.7, marginBottom: "0.8rem", fontSize: "0.9rem" }}>
+                  {event.description}
+                </p>
+                <div className="flex flex-wrap" style={{ gap: "1rem", fontSize: "0.8rem", color: "#666666", marginBottom: "0.8rem" }}>
+                  <span className="flex items-center" style={{ gap: "0.4rem" }}><Clock size={14} color="#cd5c5c" /> {event.time}</span>
+                  <span className="flex items-center" style={{ gap: "0.4rem" }}><MapPin size={14} color="#cd5c5c" /> {event.venue}</span>
+                </div>
+                <button
+                  onClick={() => openRegister(event)}
+                  className="inline-block text-white font-semibold cursor-pointer"
                   style={{
-                    padding: "1.5rem",
-                    backgroundColor: "#faf8f3",
+                    padding: "0.5rem 1.2rem",
+                    backgroundColor: "#cd5c5c",
+                    fontSize: "0.8rem",
+                    letterSpacing: "0.5px",
+                    border: "none",
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#ffffff";
-                    e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,0,0,0.1)";
-                    e.currentTarget.style.transform = "translateX(8px)";
+                    e.currentTarget.style.backgroundColor = "#1a1a1a";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "#faf8f3";
-                    e.currentTarget.style.boxShadow = "none";
-                    e.currentTarget.style.transform = "translateX(0)";
+                    e.currentTarget.style.backgroundColor = "#cd5c5c";
                   }}
                 >
-                  <div
-                    className="uppercase font-semibold"
-                    style={{ fontSize: "0.75rem", letterSpacing: "2px", color: "#cd5c5c", marginBottom: "0.5rem" }}
-                  >
-                    {event.category}
-                  </div>
-                  <h3
-                    className="font-heading font-semibold"
-                    style={{ fontSize: "1.3rem", marginBottom: "0.6rem", color: "#1a1a1a" }}
-                  >
-                    {event.title}
-                  </h3>
-                  <p style={{ color: "#666666", lineHeight: 1.7, marginBottom: "0.8rem", fontSize: "0.9rem" }}>
-                    {event.description}
-                  </p>
-                  <div className="flex flex-wrap" style={{ gap: "1rem", fontSize: "0.8rem", color: "#666666", marginBottom: "0.8rem" }}>
-                    <span className="flex items-center" style={{ gap: "0.4rem" }}><Clock size={14} color="#cd5c5c" /> {event.time}</span>
-                    <span className="flex items-center" style={{ gap: "0.4rem" }}><MapPin size={14} color="#cd5c5c" /> {event.venue}</span>
-                  </div>
-                  <button
-                    onClick={() => openRegister(event)}
-                    className="inline-block text-white font-semibold cursor-pointer"
-                    style={{
-                      padding: "0.5rem 1.2rem",
-                      backgroundColor: "#cd5c5c",
-                      fontSize: "0.8rem",
-                      letterSpacing: "0.5px",
-                      border: "none",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "#1a1a1a";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "#cd5c5c";
-                    }}
-                  >
-                    Register Now
-                  </button>
-                </div>
+                  Register Now
+                </button>
               </div>
-            </FadeInSection>
-          ))}
+            );
+
+            const markerBlock = (
+              <div className="hidden xl:flex items-start justify-center" style={{ paddingTop: "1.5rem" }}>
+                <div
+                  className="rounded-full z-10"
+                  style={{
+                    width: "20px",
+                    height: "20px",
+                    backgroundColor: "#cd5c5c",
+                    border: "4px solid #ffffff",
+                    boxShadow: "0 0 0 4px #e8e4de",
+                  }}
+                />
+              </div>
+            );
+
+            return (
+              <FadeInSection key={event.title} delay={i * 0.1}>
+                {/* Mobile: single column (date + details) */}
+                <div
+                  className="xl:hidden"
+                  style={{ marginBottom: "2.5rem" }}
+                >
+                  <div style={{ marginBottom: "0.5rem" }}>
+                    <div
+                      className="uppercase font-semibold"
+                      style={{ fontSize: "0.8rem", letterSpacing: "2px", color: "#d4af37" }}
+                    >
+                      {event.month}
+                    </div>
+                    <div
+                      className="font-heading font-bold leading-none"
+                      style={{ fontSize: "2.2rem", color: "#1a1a1a" }}
+                    >
+                      {event.day}
+                    </div>
+                    <div style={{ fontSize: "0.9rem", color: "#666666" }}>{event.year}</div>
+                  </div>
+                  {detailsBlock}
+                </div>
+
+                {/* Desktop: alternating 3-column grid */}
+                <div
+                  className="hidden xl:grid"
+                  style={{
+                    gridTemplateColumns: "1fr 80px 1fr",
+                    gap: "1.5rem",
+                    marginBottom: "3rem",
+                  }}
+                >
+                  {isLeft ? detailsBlock : dateBlock}
+                  {markerBlock}
+                  {isLeft ? dateBlock : detailsBlock}
+                </div>
+              </FadeInSection>
+            );
+          })}
         </div>
       </div>
 
