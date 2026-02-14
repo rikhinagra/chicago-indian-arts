@@ -137,10 +137,29 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Our Mission — Bridging Cultures */}
+      <section data-section="intro" style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}>
+        <FadeInSection className="text-center" style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
+          <SectionTag>Our Mission</SectionTag>
+          <h2
+            data-section="section-heading" className="font-heading font-light"
+            style={{ fontSize: "2.5rem", lineHeight: 1.3, marginBottom: "1.5rem", color: "#1a1a1a" }}
+          >
+            Bridging Cultures Through Arts
+          </h2>
+          <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#666666" }}>
+            Chicago Indian Arts is dedicated to celebrating and preserving the rich
+            cultural heritage of India while fostering meaningful connections within the
+            Chicago community. Through our innovative programs, we create spaces where
+            tradition meets contemporary expression.
+          </p>
+        </FadeInSection>
+      </section>
+
       {/* Mission & Vision Section */}
       <section
         data-section="about-mission"
-        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           data-section="about-mission-grid"
@@ -267,7 +286,7 @@ export default function AboutPage() {
       {/* Timeline / Journey Section */}
       <section
         data-section="about-timeline"
-        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
           <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
@@ -360,88 +379,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section
-        data-section="about-founder"
-        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
-      >
-        <div
-          data-section="about-founder-grid"
-          style={{
-            maxWidth: "1200px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "4rem",
-            alignItems: "center",
-          }}
-        >
-          {/* Founder Image */}
-          <FadeInSection>
-            <div
-              className="relative overflow-hidden"
-              style={{
-                height: "485px",
-                maxWidth: "415px",
-                marginLeft: "auto",
-                marginRight: "auto",
-                borderRadius: "16px",
-                boxShadow: "0 16px 48px rgba(0,0,0,0.15)",
-              }}
-            >
-              <Image
-                src="/images/founder.webp"
-                alt="Jigar Shah - Founder of Chicago Indian Arts"
-                fill
-                className="object-cover"
-                style={{ objectPosition: "top center", transition: "transform 0.5s ease" }}
-                sizes="(max-width: 1024px) 100vw, 450px"
-                onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-                onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-              />
-            </div>
-          </FadeInSection>
-
-          {/* Founder Bio */}
-          <FadeInSection delay={0.15}>
-            <SectionTag>Meet the Founder</SectionTag>
-            <h2
-              className="font-heading font-light"
-              style={{ fontSize: "2.5rem", lineHeight: 1.3, marginBottom: "1.5rem", color: "#1a1a1a" }}
-            >
-              Where Ideas Meet Culture
-            </h2>
-            <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#666", marginBottom: "1.2rem" }}>
-              Jigar Shah is a visionary corporate executive and creative innovator. He is
-              known for transforming ideas into interactive and meaningful creations. He
-              has been a driving force in uplifting Chicago&apos;s Indian arts ecosystem for
-              over two decades building platforms, nurturing artists and shaping cultural dialogue.
-            </p>
-            <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#666", marginBottom: "1.2rem" }}>
-              He has successfully run and volunteered at community events, Chicago South Asian
-              Film Festival, and has served as advisory board to non-profits.
-            </p>
-            <p style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#666", marginBottom: "1.2rem" }}>
-              His mission is to bring people together to learn their stories, unlock their
-              potential and create a wave of arts &amp; culture in Chicago and across the globe.
-            </p>
-            <div
-              className="font-heading italic"
-              style={{ fontSize: "1.15rem", color: "#cd5c5c", marginTop: "1.5rem" }}
-            >
-              — Jigar Shah, Founder
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
+      {/* Founder Section — Hidden for now, can be re-enabled later */}
 
       {/* Founder Personal Message / Quote Section */}
       <section
         data-section="about-quote"
         style={{
           padding: "3rem 3rem",
-          background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)",
+          backgroundColor: "#faf8f3",
         }}
       >
         <FadeInSection>
@@ -485,7 +430,7 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.4rem",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.9)",
+                color: "#1a1a1a",
                 marginBottom: "1rem",
               }}
             >
@@ -497,7 +442,7 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.4rem",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.9)",
+                color: "#1a1a1a",
                 marginBottom: "1rem",
               }}
             >
@@ -508,15 +453,40 @@ export default function AboutPage() {
               style={{
                 fontSize: "1.05rem",
                 lineHeight: 1.7,
-                color: "rgba(255,255,255,0.7)",
+                color: "#666",
                 marginBottom: "2rem",
               }}
             >
               Introducing the Chicago Indian Arts — a space for stories, ideas, and
               cultures to meet and be shared.
             </p>
-            <div style={{ fontSize: "0.9rem", color: "#d4af37", fontWeight: 600 }}>
-              — Jigar Shah
+            <div
+              className="relative overflow-hidden"
+              style={{
+                width: "100px",
+                height: "100px",
+                borderRadius: "50%",
+                marginLeft: "auto",
+                marginRight: "auto",
+                marginBottom: "1rem",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                border: "3px solid rgba(212,175,55,0.2)",
+              }}
+            >
+              <Image
+                src="/images/founder.webp"
+                alt="Jigar Shah"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "top center" }}
+                sizes="100px"
+              />
+            </div>
+            <div className="font-heading font-semibold" style={{ fontSize: "1.2rem", color: "#1a1a1a", marginBottom: "0.4rem" }}>
+              Jigar Shah
+            </div>
+            <div style={{ fontSize: "0.8rem", color: "#cd5c5c", letterSpacing: "0.5px" }}>
+              Founder
             </div>
           </div>
         </FadeInSection>
