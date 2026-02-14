@@ -575,7 +575,7 @@ img {
   }
 
   [data-section="donate-hero"] {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="donate-hero"] h1 {
@@ -592,7 +592,7 @@ img {
   }
 
   [data-section="register-hero"] {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="register-hero"] h1 {
@@ -609,7 +609,7 @@ img {
   }
 
   [data-section="volunteer-hero"] {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="volunteer-hero"] h1 {
@@ -629,7 +629,7 @@ img {
   }
 
   [data-section="contact-hero"] {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="contact-hero"] h1 {
@@ -646,7 +646,7 @@ img {
   }
 
   [data-section="about-hero"] {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="about-hero"] h1 {
@@ -705,7 +705,7 @@ img {
   }
 
   [data-section="vaarta-hero"] > div:last-child {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="vaarta-hero-title"] {
@@ -749,7 +749,7 @@ img {
   }
 
   [data-section="prasang-hero"] > div:last-child {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="prasang-hero-title"] {
@@ -798,7 +798,7 @@ img {
   }
 
   [data-section="varnam-hero"] > div:last-child {
-    padding: 8.5rem 1.2rem 3rem !important;
+    padding: 9rem 1.2rem 3rem !important;
   }
 
   [data-section="varnam-hero-title"] {
@@ -857,8 +857,8 @@ img {
   }
 
   [data-section="nav-logo"] {
-    width: 160px !important;
-    height: 42px !important;
+    width: 200px !important;
+    height: 50px !important;
   }
 
   [data-section="footer-wrap"] {
@@ -948,7 +948,7 @@ img {
   }
 
   [data-section="donate-hero"] {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="donate-hero"] h1 {
@@ -960,7 +960,7 @@ img {
   }
 
   [data-section="register-hero"] {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="register-hero"] h1 {
@@ -972,7 +972,7 @@ img {
   }
 
   [data-section="volunteer-hero"] {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="volunteer-hero"] h1 {
@@ -988,7 +988,7 @@ img {
   }
 
   [data-section="contact-hero"] {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="contact-hero"] h1 {
@@ -1000,7 +1000,7 @@ img {
   }
 
   [data-section="about-hero"] {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="about-hero"] h1 {
@@ -1041,7 +1041,7 @@ img {
 
   /* Vaarta */
   [data-section="vaarta-hero"] > div:last-child {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="vaarta-hero-title"] {
@@ -1077,7 +1077,7 @@ img {
 
   /* Prasang */
   [data-section="prasang-hero"] > div:last-child {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="prasang-hero-title"] {
@@ -1121,7 +1121,7 @@ img {
 
   /* Varnam */
   [data-section="varnam-hero"] > div:last-child {
-    padding: 8rem 1rem 2.5rem !important;
+    padding: 9rem 1rem 2.5rem !important;
   }
 
   [data-section="varnam-hero-title"] {
