@@ -446,7 +446,7 @@ img {
   }
 
   [data-section="hero-content"] {
-    padding: 0 1.2rem !important;
+    padding: 5rem 1.2rem 0 !important;
   }
 
   [data-section="hero-title"] {
@@ -871,7 +871,7 @@ img {
   }
 
   [data-section="hero-content"] {
-    padding: 0 1rem !important;
+    padding: 6rem 1rem 0 !important;
   }
 
   [data-section="hero-title"] {
