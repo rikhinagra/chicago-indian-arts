@@ -100,7 +100,11 @@ export default function Navbar() {
             >
               <button
                 className="text-[0.85rem] font-medium tracking-[0.5px] transition-colors duration-300 cursor-pointer flex items-center"
-                style={{ color: scrolled ? "#2d2d2d" : "#ffffff", gap: "0.3rem" }}
+                style={{
+                  color: scrolled ? "#2d2d2d" : "#ffffff",
+                  gap: "0.3rem",
+                  textShadow: scrolled ? "none" : "0 1px 8px rgba(0,0,0,0.7)",
+                }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
                 onMouseLeave={(e) =>
                   (e.currentTarget.style.color = scrolled ? "#2d2d2d" : "#ffffff")
@@ -173,7 +177,10 @@ export default function Navbar() {
                 <button
                   onClick={() => scrollToSection(link.href)}
                   className="text-[0.85rem] font-medium tracking-[0.5px] transition-colors duration-300 cursor-pointer"
-                  style={{ color: scrolled ? "#2d2d2d" : "#ffffff" }}
+                  style={{
+                    color: scrolled ? "#2d2d2d" : "#ffffff",
+                    textShadow: scrolled ? "none" : "0 1px 8px rgba(0,0,0,0.7)",
+                  }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
                   onMouseLeave={(e) =>
                     (e.currentTarget.style.color = scrolled ? "#2d2d2d" : "#ffffff")
@@ -206,7 +213,10 @@ export default function Navbar() {
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
               className="lg:hidden transition-colors duration-300"
-              style={{ color: scrolled ? "#1a1a1a" : "#ffffff" }}
+              style={{
+                color: scrolled ? "#1a1a1a" : "#ffffff",
+                filter: scrolled ? "none" : "drop-shadow(0 1px 4px rgba(0,0,0,0.7))",
+              }}
               aria-label="Toggle menu"
             >
               <Menu size={24} />
