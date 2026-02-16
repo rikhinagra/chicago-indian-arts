@@ -45,7 +45,7 @@ export default function VaartaPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770921094/vaarta-banner_k406zd.webp"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1771240956/vaarta-banner_bdvgi3.webp"
             alt="Vaarta Literature Festival"
             fill
             className="object-cover"
