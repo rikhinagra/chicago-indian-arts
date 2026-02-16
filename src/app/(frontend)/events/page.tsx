@@ -7,27 +7,11 @@ import SectionTag from "@/components/ui/SectionTag";
 const events = [
   {
     program: "Vaarta",
-    title: "Vaarta Literature Festival — Day 1",
+    title: "Vaarta Literature Festival",
     date: "March 15, 2026",
     time: "9:00 AM - 6:00 PM",
     venue: "Chicago Cultural Center",
-    description: "Opening ceremony, keynote address, panel discussions on contemporary Indian literature, and storytelling traditions.",
-  },
-  {
-    program: "Vaarta",
-    title: "Vaarta Literature Festival — Day 2",
-    date: "March 16, 2026",
-    time: "9:00 AM - 8:00 PM",
-    venue: "Chicago Cultural Center",
-    description: "Poetry sessions, book launches, intimate conversations with authors, writing workshops, and literary masterclasses.",
-  },
-  {
-    program: "Vaarta",
-    title: "Vaarta Literature Festival — Day 3",
-    date: "March 17, 2026",
-    time: "10:00 AM - 5:00 PM",
-    venue: "Chicago Cultural Center",
-    description: "Community readings, publishing panels, book signing marathon, and farewell networking event.",
+    description: "Opening ceremony, keynote address, panel discussions on contemporary Indian literature, storytelling traditions, poetry sessions, book launches, and writing workshops.",
   },
   {
     program: "Prasang",

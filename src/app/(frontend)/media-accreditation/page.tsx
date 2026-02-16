@@ -23,7 +23,7 @@ type FormData = z.infer<typeof schema>;
 
 const mediaTypes = ["Print", "Television", "Digital / Online", "Radio", "Podcast", "Photography"];
 const events = [
-  "Vaarta Literature Festival (March 15-17)",
+  "Vaarta Literature Festival (March 15)",
   "Prasang Fashion Innovation Show (May 20)",
   "Varnam Photography Exhibition (August 10-12)",
   "All Events",

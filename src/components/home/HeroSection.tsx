@@ -119,13 +119,13 @@ export default function HeroSection() {
             data-section="hero-label" className="uppercase font-semibold"
             style={{ color: "#d4af37", fontSize: "0.8rem", letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 10px rgba(0,0,0,0.8)" }}
           >
-            Vaarta 2026 &middot; March 15-17
+            Vaarta 2026 &middot; March 15
           </div>
 
           {/* Main Heading */}
           <h1 data-section="hero-title" className="font-heading font-light" style={{ fontSize: "3.5rem", lineHeight: 1.15, marginBottom: "1.2rem", maxWidth: "800px", textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)" }}>
-            Where Stories,{" "}
-            <strong className="font-bold">Fashion &amp; Art Converge</strong>
+            Indian Voices,{" "}
+            <strong className="font-bold">New Ground.</strong>
           </h1>
 
           {/* Subtitle */}
