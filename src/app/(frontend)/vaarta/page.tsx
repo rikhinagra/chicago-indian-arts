@@ -11,25 +11,25 @@ const highlights = [
     icon: Heart,
     title: "A Heartfelt Welcome in the Midwest",
     description:
-      "LitFest 2026 isn\u2019t just an event \u2014 it\u2019s a homecoming for the soul. A space where the Indian diaspora in the Midwest can reconnect with the language, rhythm, and emotion of their literary roots.",
+      "LitFest 2026 isn\u2019t just an event, it\u2019s a homecoming for the soul. A space where the Indian diaspora in the Midwest can reconnect with the language, rhythm, and emotion of their literary roots.",
   },
   {
     icon: BookOpen,
     title: "From Ancient Grantha to Modern Voices",
     description:
-      "From the sacred verses of the Vedas to bold contemporary fiction, Vaarta celebrates the full arc of Indian literature \u2014 in all its languages, genres, and forms.",
+      "From the sacred verses of the Vedas to bold contemporary fiction, Vaarta celebrates the full arc of Indian literature in all its languages, genres, and forms.",
   },
   {
     icon: Globe,
     title: "Weaving Connections Through Words",
     description:
-      "Through panels, readings, and conversations, Vaarta bridges generations and geographies \u2014 connecting established authors with emerging voices, and local readers with global stories.",
+      "Through panels, readings, and conversations, Vaarta bridges generations and geographies, connecting established authors with emerging voices, and local readers with global stories.",
   },
 ];
 
 const whyNow = [
   "A growing diaspora hungry for authentic cultural connection and literary exchange.",
-  "A deep curiosity about India\u2019s evolving literary landscape \u2014 from ancient epics to modern storytelling.",
+  "A deep curiosity about India\u2019s evolving literary landscape, from ancient epics to modern storytelling.",
   "A yearning for a platform where writers, readers, and dreamers can gather, listen, and be inspired.",
 ];
 
@@ -144,7 +144,7 @@ export default function VaartaPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Chicago Indian Literature Festival &mdash; Coming soon in May 2026
+              Chicago Indian Literature Festival. Coming soon in May 2026
             </p>
 
             <Link
@@ -204,7 +204,7 @@ export default function VaartaPage() {
               }}
             >
               Vaarta means stories and conversations. Indian literature has been
-              passed down through many generations through various forms &mdash;
+              passed down through many generations through various forms,
               from ancient scriptures and epics to modern novels and poetry.
               This literary heritage is vast and encompasses multiple languages,
               genres, and traditions, reflecting the diverse cultures and philosophies
@@ -218,7 +218,7 @@ export default function VaartaPage() {
               }}
             >
               Through Vaarta, we aim to celebrate, preserve, and share this incredible
-              literary tradition with the people of Chicago and the Midwest &mdash;
+              literary tradition with the people of Chicago and the Midwest,
               creating a space where words connect hearts across continents.
             </p>
           </FadeInSection>
@@ -279,7 +279,7 @@ export default function VaartaPage() {
                   marginBottom: "1rem",
                 }}
               >
-                Why LitFest 2026 Matters Now, More Than Ever
+                Why Chicago Indian Lit Fest Matters
               </h2>
             </div>
           </FadeInSection>
@@ -514,7 +514,7 @@ export default function VaartaPage() {
                 marginBottom: "2rem",
               }}
             >
-              Register your interest for Vaarta 2026 &mdash; Chicago&apos;s first
+              Register your interest for Vaarta 2026, Chicago&apos;s first
               Indian Literature Festival. Coming May 2026.
             </p>
             <Link

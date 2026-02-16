@@ -227,7 +227,7 @@ export default function PrasangPage() {
               }}
             >
               Prasang is all about emotions, grace, and expression through textures
-              and craftsmanship. It is all about generational nostalgia &mdash;
+              and craftsmanship. It is all about generational nostalgia,
               silhouettes that tell stories, hand embroidery that carries legacy,
               and the rich Indian tapestry that inspires the world.
             </p>
@@ -240,7 +240,7 @@ export default function PrasangPage() {
               }}
             >
               From runway moments to artisan stories, Prasang celebrates fashion
-              not just as a style but as a culture you can wear &mdash; uplifting
+              not just as a style but as a culture you can wear, uplifting
               artisans and emerging talent from across India.
             </p>
           </FadeInSection>
@@ -454,7 +454,7 @@ export default function PrasangPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Fashion is not just what you wear &mdash; it&apos;s the stories woven
+              Fashion is not just what you wear. It&apos;s the stories woven
               into every thread, the heritage stitched into every seam, and the
               culture expressed through every silhouette.
             </p>
@@ -507,7 +507,7 @@ export default function PrasangPage() {
                 marginBottom: "2rem",
               }}
             >
-              Be part of Prasang &mdash; as a designer, artisan, sponsor, or guest.
+              Be part of Prasang as a designer, artisan, sponsor, or guest.
               Experience Indian fashion like never before.
             </p>
             <Link

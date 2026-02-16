@@ -227,7 +227,7 @@ export default function VarnamPage() {
               >
                 To become a leading global platform that connects India and the
                 world through transformative wildlife and environmental photography
-                &mdash; fostering awareness, inspiring conservation, and celebrating
+                while fostering awareness, inspiring conservation, and celebrating
                 the beauty of the natural world through the art of the lens.
               </p>
             </div>
@@ -274,7 +274,7 @@ export default function VarnamPage() {
                 }}
               >
                 To celebrate, preserve, and amplify the visual stories of India&apos;s
-                wildlife, landscapes, and environmental heritage &mdash; building bridges
+                wildlife, landscapes, and environmental heritage, building bridges
                 between photographers, communities, and nature lovers worldwide through
                 the power of imagery.
               </p>
@@ -355,7 +355,7 @@ export default function VarnamPage() {
               }}
             >
               Through curated exhibitions, installations, and artist-led conversations,
-              Varnam transforms the way we see wildlife and the natural world &mdash;
+              Varnam transforms the way we see wildlife and the natural world,
               inviting viewers to look closer, feel deeper, and act with purpose.
             </p>
           </FadeInSection>

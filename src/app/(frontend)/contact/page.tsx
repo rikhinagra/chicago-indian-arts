@@ -238,7 +238,7 @@ export default function ContactPage() {
             alignItems: "start",
           }}
         >
-          {/* Left Column — Contact Form */}
+          {/* Left Column - Contact Form */}
           <FadeInSection>
             <form onSubmit={handleSubmit}>
               {/* Name */}
@@ -435,7 +435,7 @@ export default function ContactPage() {
             </form>
           </FadeInSection>
 
-          {/* Right Column — Contact Info & Details */}
+          {/* Right Column - Contact Info & Details */}
           <FadeInSection>
             {/* Contact Information Cards */}
             <div style={{ marginBottom: "2.5rem" }}>
@@ -544,11 +544,11 @@ export default function ContactPage() {
                   }}
                 >
                   <h4 style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.4rem" }}>
-                    I&apos;m an artist — can I participate?
+                    I&apos;m an artist, can I participate?
                   </h4>
                   <p style={{ fontSize: "0.85rem", color: "#666", lineHeight: 1.6 }}>
                     We love working with artists. Reach out with your portfolio and let us know
-                    which program interests you — Vaarta, Prasang, or Varnam.
+                    which program interests you: Vaarta, Prasang, or Varnam.
                   </p>
                 </div>
                 <div
@@ -584,7 +584,7 @@ export default function ContactPage() {
                 </span>
               </div>
               <p style={{ fontSize: "0.88rem", color: "#666", lineHeight: 1.7 }}>
-                Whether it&apos;s feedback, a collaboration idea, or a simple hello — every
+                Whether it&apos;s feedback, a collaboration idea, or a simple hello, every
                 message matters to us. Our team personally reviews and responds to each inquiry.
               </p>
             </div>

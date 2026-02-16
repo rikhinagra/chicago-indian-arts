@@ -24,7 +24,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     meta: {
-      titleSuffix: " — Chicago Indian Arts Admin",
+      titleSuffix: " | Chicago Indian Arts Admin",
     },
   },
   collections: [

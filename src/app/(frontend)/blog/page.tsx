@@ -37,7 +37,7 @@ const posts = [
   {
     slug: "community-impact-report-2025",
     title: "2025 Community Impact Report",
-    excerpt: "Looking back at a year of cultural celebration — the numbers, stories, and moments that defined 2025.",
+    excerpt: "Looking back at a year of cultural celebration: the numbers, stories, and moments that defined 2025.",
     date: "December 1, 2025",
     category: "Community",
     image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80",

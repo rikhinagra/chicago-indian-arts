@@ -247,7 +247,7 @@ export default function RegisterPage() {
             alignItems: "start",
           }}
         >
-          {/* Left Column — Registration Form */}
+          {/* Left Column - Registration Form */}
           <FadeInSection>
             <form onSubmit={handleSubmit}>
               {/* Name */}
@@ -497,7 +497,7 @@ export default function RegisterPage() {
             </form>
           </FadeInSection>
 
-          {/* Right Column — Benefits & Images */}
+          {/* Right Column - Benefits & Images */}
           <FadeInSection>
             {/* Why Join */}
             <div style={{ marginBottom: "2.5rem" }}>

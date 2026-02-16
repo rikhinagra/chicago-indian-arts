@@ -34,7 +34,7 @@ const volunteerRoles = [
   },
   {
     title: "General Volunteer",
-    description: "Available for any role needed — from greeting guests to helping with setup and teardown.",
+    description: "Available for any role needed, from greeting guests to helping with setup and teardown.",
     icon: Heart,
   },
 ];
@@ -115,7 +115,7 @@ export default function VolunteerPage() {
               }}
             >
               Be part of something meaningful. We&apos;re always looking for passionate
-              volunteers to help bring our cultural events to life. No experience necessary —
+              volunteers to help bring our cultural events to life. No experience necessary,
               just enthusiasm and a love for the arts.
             </p>
           </motion.div>

@@ -27,7 +27,7 @@ const orgLinks = [
 
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/chicagoindianarts", icon: Instagram },
-  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61587009930194", icon: Facebook },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61588363585494", icon: Facebook },
   { label: "X", href: "https://x.com/chiIndianArts", icon: XIcon },
 ];
 

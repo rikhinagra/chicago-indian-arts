@@ -243,7 +243,7 @@ export default function DonatePage() {
             alignItems: "start",
           }}
         >
-          {/* Left Column — Donation Form */}
+          {/* Left Column - Donation Form */}
           <FadeInSection>
             <form onSubmit={handleSubmit}>
               {/* Amount Selection */}
@@ -393,7 +393,7 @@ export default function DonatePage() {
                     Cover the processing fee (3.2%) so 100% goes to the arts
                     {currentAmount > 0 && (
                       <span style={{ color: "#666", display: "block", fontSize: "0.8rem", marginTop: "0.2rem" }}>
-                        +${(currentAmount * 0.032).toFixed(2)} fee — Total: ${totalAmount.toFixed(2)}
+                        +${(currentAmount * 0.032).toFixed(2)} fee | Total: ${totalAmount.toFixed(2)}
                       </span>
                     )}
                   </span>
@@ -504,7 +504,7 @@ export default function DonatePage() {
             </form>
           </FadeInSection>
 
-          {/* Right Column — Impact & Images */}
+          {/* Right Column - Impact & Images */}
           <FadeInSection>
             {/* Your Impact */}
             <div style={{ marginBottom: "3rem" }}>
@@ -619,7 +619,7 @@ export default function DonatePage() {
                 community. Every contribution helps us bring stories, art, and traditions to life.&rdquo;
               </p>
               <p style={{ fontSize: "0.8rem", color: "#d4af37", fontWeight: 600 }}>
-                — Jigar Shah, Founder
+                Jigar Shah, Founder
               </p>
             </div>
           </FadeInSection>

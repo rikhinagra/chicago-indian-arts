@@ -4,7 +4,7 @@ import Link from "next/link";
 import FadeInSection from "@/components/ui/FadeInSection";
 import { ArrowLeft } from "lucide-react";
 
-// Static placeholder for blog posts — will be driven by Payload CMS
+// Static placeholder for blog posts - will be driven by Payload CMS
 const posts: Record<string, { title: string; date: string; category: string; image: string; content: string[] }> = {
   "vaarta-2026-lineup-announced": {
     title: "Vaarta 2026 Lineup Announced",
@@ -14,7 +14,7 @@ const posts: Record<string, { title: string; date: string; category: string; ima
     content: [
       "We are thrilled to announce the featured authors and speakers for Vaarta 2026, our third annual literature festival celebrating India's rich storytelling traditions.",
       "This year's lineup includes National Book Award winner Priya Sharma, acclaimed poet Arjun Patel, literary critic Kavita Nair, and publisher Sameer Roy, among many other distinguished voices.",
-      "The three-day festival will feature panel discussions, poetry readings, book launches, writing workshops, and intimate conversations with authors — all set against the stunning backdrop of the Chicago Cultural Center.",
+      "The three-day festival will feature panel discussions, poetry readings, book launches, writing workshops, and intimate conversations with authors, all set against the stunning backdrop of the Chicago Cultural Center.",
       "Early bird registration is now open. Don't miss this celebration of Indian literature and storytelling.",
     ],
   },

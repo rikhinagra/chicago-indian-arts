@@ -37,7 +37,7 @@ const objectives = [
 const milestones = [
   { year: "2021", title: "Founded", description: "Chicago Indian Arts was established with a vision to celebrate Indian culture in the heart of Chicago." },
   { year: "2022", title: "First Vaarta", description: "Our inaugural literature festival drew over 500 attendees and featured renowned Indian authors." },
-  { year: "2023", title: "Prasang Launch", description: "Expanded into fashion innovation with the launch of Prasang — showcasing Indian design." },
+  { year: "2023", title: "Prasang Launch", description: "Expanded into fashion innovation with the launch of Prasang, showcasing Indian design." },
   { year: "2024", title: "Varnam Begins", description: "Photography & wildlife program added as our third pillar celebrating visual storytelling." },
   { year: "2025", title: "Growing Impact", description: "Reached 10,000+ cumulative attendees across all programs with national recognition." },
   { year: "2026", title: "Looking Ahead", description: "Bigger events, new partnerships, and deeper community impact on the horizon." },
@@ -137,7 +137,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Mission — Bridging Cultures */}
+      {/* Our Mission - Bridging Cultures */}
       <section data-section="intro" style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}>
         <FadeInSection className="text-center" style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
           <SectionTag>Our Mission</SectionTag>
@@ -379,7 +379,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder Section — Hidden for now, can be re-enabled later */}
+      {/* Founder Section - Hidden for now, can be re-enabled later */}
 
       {/* Founder Personal Message / Quote Section */}
       <section
@@ -457,7 +457,7 @@ export default function AboutPage() {
                 marginBottom: "2rem",
               }}
             >
-              Introducing the Chicago Indian Arts — a space for stories, ideas, and
+              Introducing the Chicago Indian Arts, a space for stories, ideas, and
               cultures to meet and be shared.
             </p>
             <div
@@ -518,7 +518,7 @@ export default function AboutPage() {
               }}
             >
               Whether you&apos;re an artist, patron, or simply someone who loves Indian
-              culture — there&apos;s a place for you here.
+              culture, there&apos;s a place for you here.
             </p>
             <Link
               href="/register"

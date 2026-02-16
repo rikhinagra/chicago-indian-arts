@@ -25,7 +25,7 @@ export default function FounderSection() {
             Jigar Shah is a visionary corporate executive and creative innovator,
             known for transforming ideas into interactive and meaningful creations.
             He has been a driving force in uplifting Chicago&apos;s Indian arts
-            ecosystem for over two decades — building platforms, nurturing artists,
+            ecosystem for over two decades, building platforms, nurturing artists,
             and shaping cultural dialogue.
           </p>
           <p data-section="founder-text" style={{ fontSize: "0.95rem", lineHeight: 1.8, color: "#666666", marginBottom: "1.2rem" }}>
@@ -42,7 +42,7 @@ export default function FounderSection() {
             className="font-heading italic"
             style={{ fontSize: "1.15rem", color: "#cd5c5c", marginTop: "1.5rem" }}
           >
-            — Jigar Shah, Founder
+            Jigar Shah, Founder
           </div>
         </FadeInSection>
 
