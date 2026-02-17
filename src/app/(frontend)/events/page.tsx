@@ -8,7 +8,7 @@ const events = [
   {
     program: "Vaarta",
     title: "Vaarta Literature Festival",
-    date: "March 15, 2026",
+    date: "May 30, 2026",
     time: "9:00 AM - 6:00 PM",
     venue: "Chicago Cultural Center",
     description: "Opening ceremony, keynote address, panel discussions on contemporary Indian literature, storytelling traditions, poetry sessions, book launches, and writing workshops.",

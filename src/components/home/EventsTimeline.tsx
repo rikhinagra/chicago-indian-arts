@@ -8,8 +8,8 @@ import RegisterModal from "@/components/ui/RegisterModal";
 
 const events = [
   {
-    month: "March",
-    day: "15",
+    month: "May",
+    day: "30",
     year: "2026",
     category: "Vaarta · Literature",
     title: "Vaarta Literature Festival",

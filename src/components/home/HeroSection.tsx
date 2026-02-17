@@ -33,7 +33,7 @@ export default function HeroSection() {
 
   useEffect(() => {
     function update() {
-      const eventDate = new Date("March 15, 2026 09:00:00").getTime();
+      const eventDate = new Date("May 30, 2026 09:00:00").getTime();
       const now = Date.now();
       const distance = eventDate - now;
 
@@ -119,7 +119,7 @@ export default function HeroSection() {
             data-section="hero-label" className="uppercase font-semibold"
             style={{ color: "#d4af37", fontSize: "0.8rem", letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 10px rgba(0,0,0,0.8)" }}
           >
-            Vaarta 2026 &middot; March 15
+            Vaarta 2026 &middot; May 30
           </div>
 
           {/* Main Heading */}
