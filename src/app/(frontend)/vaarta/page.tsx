@@ -144,7 +144,7 @@ export default function VaartaPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Chicago Indian Literature Festival. Coming soon in May 2026
+              Chicago Indian Literature Festival. May 30, 2026
             </p>
 
             <Link
@@ -515,7 +515,7 @@ export default function VaartaPage() {
               }}
             >
               Register your interest for Vaarta 2026, Chicago&apos;s first
-              Indian Literature Festival. Coming May 2026.
+              Indian Literature Festival. May 30, 2026.
             </p>
             <Link
               href="/register"
