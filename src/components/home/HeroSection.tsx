@@ -8,8 +8,8 @@ function CountdownItem({ value, label }: { value: number; label: string }) {
   return (
     <div data-section="countdown-item" className="text-center relative" style={{ padding: "1rem 1.5rem", minWidth: "85px" }}>
       <div
-        data-section="countdown-number" className="font-heading font-light leading-none text-white"
-        style={{ textShadow: "0 2px 12px rgba(212,175,55,0.4)", fontSize: "2.8rem", marginBottom: "0.5rem" }}
+        data-section="countdown-number" className="leading-none text-white"
+        style={{ fontFamily: "var(--font-montserrat), 'Montserrat', sans-serif", fontWeight: 300, textShadow: "0 2px 12px rgba(212,175,55,0.4)", fontSize: "2.8rem", marginBottom: "0.5rem" }}
       >
         {String(value).padStart(2, "0")}
       </div>
