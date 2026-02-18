@@ -53,14 +53,26 @@ export default function ContactPage() {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email || !subject || message.length < 10) return;
     setIsSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitted(true);
-    setIsSubmitting(false);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, subject, message }),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -432,6 +444,12 @@ export default function ContactPage() {
                   </>
                 )}
               </button>
+
+              {error && (
+                <p style={{ color: "#cd5c5c", fontSize: "0.85rem", marginTop: "0.75rem", textAlign: "center" }}>
+                  {error}
+                </p>
+              )}
             </form>
           </FadeInSection>
 

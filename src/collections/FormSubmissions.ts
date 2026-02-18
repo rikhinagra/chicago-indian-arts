@@ -14,6 +14,7 @@ export const FormSubmissions: CollectionConfig = {
         { label: "Contact", value: "contact" },
         { label: "Registration", value: "registration" },
         { label: "Donation", value: "donation" },
+        { label: "Volunteer", value: "volunteer" },
         { label: "Media Accreditation", value: "media" },
         { label: "Newsletter", value: "newsletter" },
       ],

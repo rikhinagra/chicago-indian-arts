@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -37,6 +38,15 @@ const impactItems = [
 ];
 
 export default function DonatePage() {
+  return (
+    <Suspense>
+      <DonateContent />
+    </Suspense>
+  );
+}
+
+function DonateContent() {
+  const searchParams = useSearchParams();
   const [selectedAmount, setSelectedAmount] = useState<number | null>(50);
   const [customAmount, setCustomAmount] = useState("");
   const [frequency, setFrequency] = useState("one-time");
@@ -45,10 +55,26 @@ export default function DonatePage() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+  const [donatedAmount, setDonatedAmount] = useState<number | null>(null);
 
   const currentAmount = selectedAmount || parseInt(customAmount) || 0;
   const feeAmount = coverFee ? Math.round(currentAmount * 0.032 * 100) / 100 : 0;
   const totalAmount = currentAmount + feeAmount;
+
+  // Handle Stripe redirect back
+  useEffect(() => {
+    if (searchParams.get("success") === "true") {
+      const amountFromUrl = searchParams.get("amount");
+      if (amountFromUrl) {
+        setDonatedAmount(parseFloat(amountFromUrl));
+      }
+      setSubmitted(true);
+    }
+    if (searchParams.get("canceled") === "true") {
+      setError("Donation was canceled. You can try again whenever you're ready.");
+    }
+  }, [searchParams]);
 
   const selectPreset = (amount: number) => {
     setSelectedAmount(amount);
@@ -64,9 +90,30 @@ export default function DonatePage() {
     e.preventDefault();
     if (currentAmount < 1 || !name || !email) return;
     setIsSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitted(true);
-    setIsSubmitting(false);
+    setError("");
+    try {
+      const res = await fetch("/api/donate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email,
+          amount: currentAmount,
+          frequency,
+          coverFee,
+          total: totalAmount,
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url; // Redirect to Stripe Checkout
+      } else {
+        throw new Error(data.error || "No checkout URL returned");
+      }
+    } catch {
+      setError("Something went wrong. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -105,7 +152,7 @@ export default function DonatePage() {
             Thank You for Your Generosity
           </h1>
           <p style={{ fontSize: "1.05rem", lineHeight: 1.8, color: "#666", marginBottom: "2rem" }}>
-            Your generous donation of <strong style={{ color: "#d4af37" }}>${totalAmount.toFixed(2)}</strong> helps
+            Your generous donation of <strong style={{ color: "#d4af37" }}>${(donatedAmount ?? totalAmount).toFixed(2)}</strong> helps
             us continue celebrating and preserving Indian cultural heritage. You&apos;ll receive a
             tax receipt via email shortly.
           </p>
@@ -501,6 +548,12 @@ export default function DonatePage() {
                   ? `Donate $${totalAmount.toFixed(2)}`
                   : "Select an Amount"}
               </button>
+
+              {error && (
+                <p style={{ color: "#cd5c5c", fontSize: "0.85rem", marginTop: "0.75rem", textAlign: "center" }}>
+                  {error}
+                </p>
+              )}
             </form>
           </FadeInSection>
 

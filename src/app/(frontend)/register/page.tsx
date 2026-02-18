@@ -54,6 +54,7 @@ export default function RegisterPage() {
   const [hearAbout, setHearAbout] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   const toggleInterest = (id: string) => {
     setInterests((prev) =>
@@ -65,9 +66,20 @@ export default function RegisterPage() {
     e.preventDefault();
     if (!name || !email) return;
     setIsSubmitting(true);
-    await new Promise((r) => setTimeout(r, 1500));
-    setSubmitted(true);
-    setIsSubmitting(false);
+    setError("");
+    try {
+      const res = await fetch("/api/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, phone, city, interests, hearAbout }),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -494,6 +506,12 @@ export default function RegisterPage() {
               >
                 {isSubmitting ? "Registering..." : "Join the Community"}
               </button>
+
+              {error && (
+                <p style={{ color: "#cd5c5c", fontSize: "0.85rem", marginTop: "0.75rem", textAlign: "center" }}>
+                  {error}
+                </p>
+              )}
             </form>
           </FadeInSection>
 
