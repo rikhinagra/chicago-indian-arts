@@ -107,7 +107,7 @@ function ProgramCard({
               letterSpacing: "2px",
               color: "#d4af37",
               marginBottom: "0.5rem",
-              textShadow: "0 1px 4px rgba(0,0,0,0.8)",
+              textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.9)",
             }}
           >
             {program.type}
