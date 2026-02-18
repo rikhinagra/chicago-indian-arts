@@ -83,7 +83,7 @@ function ProgramCard({
       }}
     >
       {/* Image */}
-      <div className="overflow-hidden relative">
+      <Link href={program.href} className="overflow-hidden relative" style={{ display: "block" }}>
         <Image
           src={program.image}
           alt={program.name}
@@ -122,7 +122,7 @@ function ProgramCard({
             {program.name}
           </h3>
         </div>
-      </div>
+      </Link>
 
       {/* Content */}
       <div style={{ padding: "1.5rem" }}>

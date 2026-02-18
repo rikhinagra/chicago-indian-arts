@@ -25,18 +25,19 @@ export default function RegisterModal({
   const [persons, setPersons] = useState("1");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !email || !phone) return;
     setIsSubmitting(true);
+    setSubmitError("");
 
     try {
-      const response = await fetch("https://formspree.io/f/xpwdqkpa", {
+      const response = await fetch("/api/event-registration", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          _subject: `New Registration: ${eventTitle}`,
           name,
           email,
           phone,
@@ -49,9 +50,11 @@ export default function RegisterModal({
 
       if (response.ok) {
         setSubmitted(true);
+      } else {
+        setSubmitError("Something went wrong. Please try again.");
       }
     } catch {
-      setSubmitted(true);
+      setSubmitError("Something went wrong. Please try again.");
     }
 
     setIsSubmitting(false);
@@ -65,6 +68,7 @@ export default function RegisterModal({
       setPhone("");
       setPersons("1");
       setSubmitted(false);
+      setSubmitError("");
     }, 300);
   };
 
@@ -356,6 +360,13 @@ export default function RegisterModal({
                     By registering, you agree to be contacted by our team with event details and updates.
                     Your information will not be shared with third parties.
                   </p>
+
+                  {/* Error message */}
+                  {submitError && (
+                    <p style={{ fontSize: "0.85rem", color: "#cd5c5c", marginBottom: "1rem", textAlign: "center" }}>
+                      {submitError}
+                    </p>
+                  )}
 
                   {/* Submit */}
                   <button

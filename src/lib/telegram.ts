@@ -1,4 +1,4 @@
-type FormType = "contact" | "registration" | "donation" | "volunteer";
+type FormType = "contact" | "registration" | "event-registration" | "donation" | "volunteer" | "media";
 
 interface TelegramPayload {
   type: FormType;
@@ -21,11 +21,14 @@ export async function sendTelegramNotification(
   const emoji: Record<FormType, string> = {
     contact: "\u2709\uFE0F",
     registration: "\uD83D\uDC64",
+    "event-registration": "\uD83C\uDFAB",
     donation: "\uD83D\uDCB0",
     volunteer: "\uD83E\uDD1D",
+    media: "\uD83D\uDCF0",
   };
 
-  const title = `${emoji[data.type]} New ${data.type.charAt(0).toUpperCase() + data.type.slice(1)} Submission`;
+  const typeLabel = data.type === "event-registration" ? "Event Registration" : data.type.charAt(0).toUpperCase() + data.type.slice(1);
+  const title = `${emoji[data.type]} New ${typeLabel} Submission`;
 
   let details = `*Name:* ${escapeMarkdown(data.name)}\n*Email:* ${escapeMarkdown(data.email)}`;
 
@@ -43,6 +46,17 @@ export async function sendTelegramNotification(
       details += `\n*Interests:* ${escapeMarkdown(String(Array.isArray(data.interests) ? data.interests.join(", ") : data.interests))}`;
     if (data.hearAbout)
       details += `\n*How Heard:* ${escapeMarkdown(String(data.hearAbout))}`;
+  } else if (data.type === "event-registration") {
+    if (data.phone)
+      details += `\n*Phone:* ${escapeMarkdown(String(data.phone))}`;
+    if (data.persons)
+      details += `\n*Persons:* ${escapeMarkdown(String(data.persons))}`;
+    if (data.event)
+      details += `\n*Event:* ${escapeMarkdown(String(data.event))}`;
+    if (data.date)
+      details += `\n*Date:* ${escapeMarkdown(String(data.date))}`;
+    if (data.venue)
+      details += `\n*Venue:* ${escapeMarkdown(String(data.venue))}`;
   } else if (data.type === "donation") {
     details += `\n*Amount:* $${data.total || data.amount}`;
     details += `\n*Frequency:* ${escapeMarkdown(String(data.frequency || "one-time"))}`;
@@ -57,6 +71,21 @@ export async function sendTelegramNotification(
       details += `\n*Experience:* ${escapeMarkdown(String(data.experience))}`;
     if (data.message)
       details += `\n*Message:* ${escapeMarkdown(String(data.message))}`;
+  } else if (data.type === "media") {
+    if (data.organization)
+      details += `\n*Organization:* ${escapeMarkdown(String(data.organization))}`;
+    if (data.designation)
+      details += `\n*Designation:* ${escapeMarkdown(String(data.designation))}`;
+    if (data.phone)
+      details += `\n*Phone:* ${escapeMarkdown(String(data.phone))}`;
+    if (data.mediaType)
+      details += `\n*Media Type:* ${escapeMarkdown(String(data.mediaType))}`;
+    if (data.event)
+      details += `\n*Event:* ${escapeMarkdown(String(data.event))}`;
+    if (data.portfolioUrl)
+      details += `\n*Portfolio:* ${escapeMarkdown(String(data.portfolioUrl))}`;
+    if (data.coveragePlan)
+      details += `\n*Coverage Plan:* ${escapeMarkdown(String(data.coveragePlan))}`;
   }
 
   const message = `${title}\n\n${details}`;
@@ -77,5 +106,5 @@ export async function sendTelegramNotification(
 }
 
 function escapeMarkdown(text: string): string {
-  return text.replace(/[_*[\]()~`>#+\-=|{}.!]/g, "\\$&");
+  return text.replace(/[_*`[]/g, "\\$&");
 }

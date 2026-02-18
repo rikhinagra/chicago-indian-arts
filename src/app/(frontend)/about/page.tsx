@@ -35,11 +35,11 @@ const objectives = [
 ];
 
 const milestones = [
-  { year: "2021", title: "Founded", description: "Chicago Indian Arts was established with a vision to celebrate Indian culture in the heart of Chicago." },
-  { year: "2022", title: "First Vaarta", description: "Our inaugural literature festival drew over 500 attendees and featured renowned Indian authors." },
-  { year: "2023", title: "Prasang Launch", description: "Expanded into fashion innovation with the launch of Prasang, showcasing Indian design." },
-  { year: "2024", title: "Varnam Begins", description: "Photography & wildlife program added as our third pillar celebrating visual storytelling." },
-  { year: "2025", title: "Growing Impact", description: "Reached 10,000+ cumulative attendees across all programs with national recognition." },
+  { year: "2025", title: "Founded", description: "Chicago Indian Arts was established with a vision to celebrate Indian culture in the heart of Chicago." },
+  { year: "2026", title: "First Vaarta", description: "Our inaugural literature festival drew over 500 attendees and featured renowned Indian authors." },
+  { year: "2026", title: "Prasang Launch", description: "Expanded into fashion innovation with the launch of Prasang, showcasing Indian design." },
+  { year: "2026", title: "Varnam Begins", description: "Photography & wildlife program added as our third pillar celebrating visual storytelling." },
+  { year: "2026", title: "Growing Impact", description: "Reached 10,000+ cumulative attendees across all programs with national recognition." },
   { year: "2026", title: "Looking Ahead", description: "Bigger events, new partnerships, and deeper community impact on the horizon." },
 ];
 

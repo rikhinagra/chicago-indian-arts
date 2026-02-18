@@ -261,6 +261,21 @@ img {
     gap: 3rem !important;
   }
 
+  [data-section="privacy-hero"],
+  [data-section="terms-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+
+  [data-section="privacy-hero"] h1,
+  [data-section="terms-hero"] h1 {
+    font-size: 2.8rem !important;
+  }
+
+  [data-section="privacy-content"],
+  [data-section="terms-content"] {
+    padding: 3.5rem 2rem !important;
+  }
+
   [data-section="contact-hero"] {
     padding: 8rem 2rem 3.5rem !important;
   }
@@ -413,6 +428,70 @@ img {
   [data-section="varnam-mission-grid"],
   [data-section="varnam-about-grid"] {
     gap: 3rem !important;
+  }
+
+  /* Team Page */
+  [data-section="team-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+  [data-section="team-hero"] h1 {
+    font-size: 2.8rem !important;
+  }
+  [data-section="team-leadership"],
+  [data-section="team-board"] {
+    padding: 3.5rem 2rem !important;
+  }
+  [data-section="team-leadership-grid"] {
+    gap: 2rem !important;
+  }
+  [data-section="team-board-grid"] {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+  [data-section="team-cta"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  /* Partners Page */
+  [data-section="partners-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+  [data-section="partners-hero"] h1 {
+    font-size: 2.8rem !important;
+  }
+  [data-section="partners-main"] {
+    padding: 3.5rem 2rem !important;
+  }
+  [data-section="partners-grid"] {
+    gap: 2rem !important;
+  }
+  [data-section="partners-cta"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  /* Press Releases Page */
+  [data-section="press-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+  [data-section="press-hero"] h1 {
+    font-size: 2.8rem !important;
+  }
+  [data-section="press-main"] {
+    padding: 3.5rem 2rem !important;
+  }
+  [data-section="press-cta"] {
+    padding: 3.5rem 2rem !important;
+  }
+
+  /* Media Accreditation Page */
+  [data-section="accreditation-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+  [data-section="accreditation-hero"] h1 {
+    font-size: 2.8rem !important;
+  }
+  [data-section="accreditation-form"] {
+    padding: 3.5rem 2rem !important;
   }
 }
 
@@ -633,6 +712,21 @@ img {
     grid-template-columns: 1fr !important;
   }
 
+  [data-section="privacy-hero"],
+  [data-section="terms-hero"] {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+
+  [data-section="privacy-hero"] h1,
+  [data-section="terms-hero"] h1 {
+    font-size: 2.2rem !important;
+  }
+
+  [data-section="privacy-content"],
+  [data-section="terms-content"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+
   [data-section="contact-hero"] {
     padding: 10.5rem 1.2rem 3rem !important;
   }
@@ -844,6 +938,84 @@ img {
     gap: 2rem !important;
   }
 
+  /* Team Page */
+  [data-section="team-hero"] {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+  [data-section="team-hero"] h1 {
+    font-size: 2.2rem !important;
+  }
+  [data-section="team-leadership"],
+  [data-section="team-board"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="team-leadership-grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  [data-section="team-board-grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+  [data-section="team-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="team-cta"] h2 {
+    font-size: 2rem !important;
+  }
+
+  /* Partners Page */
+  [data-section="partners-hero"] {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+  [data-section="partners-hero"] h1 {
+    font-size: 2.2rem !important;
+  }
+  [data-section="partners-main"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="partners-grid"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.5rem !important;
+  }
+  [data-section="partners-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="partners-cta"] h2 {
+    font-size: 2rem !important;
+  }
+
+  /* Press Releases Page */
+  [data-section="press-hero"] {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+  [data-section="press-hero"] h1 {
+    font-size: 2.2rem !important;
+  }
+  [data-section="press-main"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="press-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="press-cta"] h2 {
+    font-size: 2rem !important;
+  }
+
+  /* Media Accreditation Page */
+  [data-section="accreditation-hero"] {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+  [data-section="accreditation-hero"] h1 {
+    font-size: 2.2rem !important;
+  }
+  [data-section="accreditation-form"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="accreditation-form-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
 }
 
 /* Small Mobile: ≤480px */
@@ -985,6 +1157,21 @@ img {
   }
 
   [data-section="volunteer-form"] {
+    padding: 2rem 1rem !important;
+  }
+
+  [data-section="privacy-hero"],
+  [data-section="terms-hero"] {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+
+  [data-section="privacy-hero"] h1,
+  [data-section="terms-hero"] h1 {
+    font-size: 1.8rem !important;
+  }
+
+  [data-section="privacy-content"],
+  [data-section="terms-content"] {
     padding: 2rem 1rem !important;
   }
 
@@ -1155,6 +1342,75 @@ img {
 
   [data-section="varnam-objectives-grid"] {
     grid-template-columns: 1fr !important;
+  }
+
+  /* Team Page */
+  [data-section="team-hero"] {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+  [data-section="team-hero"] h1 {
+    font-size: 1.8rem !important;
+  }
+  [data-section="team-leadership"],
+  [data-section="team-board"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="team-board-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-section="team-cta"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="team-cta"] h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Partners Page */
+  [data-section="partners-hero"] {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+  [data-section="partners-hero"] h1 {
+    font-size: 1.8rem !important;
+  }
+  [data-section="partners-main"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="partners-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-section="partners-cta"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="partners-cta"] h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Press Releases Page */
+  [data-section="press-hero"] {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+  [data-section="press-hero"] h1 {
+    font-size: 1.8rem !important;
+  }
+  [data-section="press-main"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="press-cta"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="press-cta"] h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Media Accreditation Page */
+  [data-section="accreditation-hero"] {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+  [data-section="accreditation-hero"] h1 {
+    font-size: 1.8rem !important;
+  }
+  [data-section="accreditation-form"] {
+    padding: 2rem 1rem !important;
   }
 
 }

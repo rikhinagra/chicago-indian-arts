@@ -20,9 +20,16 @@ const programLinks = [
 
 const orgLinks = [
   { label: "About Us", href: "/about" },
+  { label: "Our Team", href: "/team" },
+  { label: "Community Partners", href: "/community-partners" },
   { label: "Contact", href: "/contact" },
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/volunteer" },
+];
+
+const pressMediaLinks = [
+  { label: "Media Accreditation", href: "/media-accreditation" },
+  { label: "Press Releases", href: "/press-releases" },
 ];
 
 const socialLinks = [
@@ -79,7 +86,7 @@ export default function Footer() {
         </div>
 
         {/* Links Group - Programs & Organization closer together */}
-        <div data-section="footer-links" className="flex flex-col sm:flex-row" style={{ gap: "5rem" }}>
+        <div data-section="footer-links" className="flex flex-col sm:flex-row" style={{ gap: "3rem" }}>
           {/* Programs */}
           <div>
             <h4 style={{ fontSize: "0.8rem", marginBottom: "1.2rem", fontWeight: 600, letterSpacing: "1px", color: "#d4af37" }}>
@@ -107,6 +114,20 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          {/* Press & Media */}
+          <div>
+            <h4 style={{ fontSize: "0.8rem", marginBottom: "1.2rem", fontWeight: 600, letterSpacing: "1px", color: "#d4af37" }}>
+              Press & Media
+            </h4>
+            <ul style={{ listStyle: "none" }}>
+              {pressMediaLinks.map((link) => (
+                <li key={link.label} style={{ marginBottom: "0.8rem" }}>
+                  <FooterLink href={link.href}>{link.label}</FooterLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -126,6 +147,33 @@ export default function Footer() {
       >
         <div className="text-center sm:text-left">
           <div>&copy; 2026 Chicago Indian Collective Arts. All rights reserved.</div>
+          <div style={{ marginTop: "0.5rem", fontSize: "0.78rem" }}>
+            <Link
+              href="/privacy-policy"
+              style={{
+                color: "rgba(255,255,255,0.5)",
+                textDecoration: "none",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+            >
+              Privacy Policy
+            </Link>
+            <span style={{ color: "rgba(255,255,255,0.3)", margin: "0 0.5rem" }}>|</span>
+            <Link
+              href="/terms"
+              style={{
+                color: "rgba(255,255,255,0.5)",
+                textDecoration: "none",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+            >
+              Terms & Conditions
+            </Link>
+          </div>
           <div style={{ marginTop: "0.4rem", fontSize: "0.75rem", opacity: 0.6 }}>
             Designed & Developed by{" "}
             <a
