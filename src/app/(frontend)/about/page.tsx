@@ -314,7 +314,7 @@ export default function AboutPage() {
             />
 
             {milestones.map((m, i) => (
-              <FadeInSection key={m.year} delay={i * 0.08}>
+              <FadeInSection key={m.title} delay={i * 0.08}>
                 <div
                   style={{
                     display: "grid",
