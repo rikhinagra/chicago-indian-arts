@@ -132,8 +132,8 @@ export default function HeroSection() {
           <p data-section="hero-subtitle"
             style={{ color: "rgba(255,255,255,0.95)", fontSize: "1.05rem", lineHeight: 1.7, maxWidth: "650px", marginBottom: "1.8rem", textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)" }}
           >
-            Experience the vibrant tapestry of India&apos;s cultural heritage through
-            our three signature programs: literature, fashion, and photography.
+            Experience the vibrant tapestry of Indian and South Asian cultural heritage
+            through our three signature programs: literature, fashion, and photography.
           </p>
 
           {/* Countdown */}

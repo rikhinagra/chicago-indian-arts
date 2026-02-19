@@ -5,8 +5,25 @@ import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
 export const metadata: Metadata = {
-  title: "Blog & News | Chicago Indian Arts",
-  description: "Latest news, articles, and stories from Chicago Indian Arts.",
+  title: "Blog & News — Indian Arts, Culture & Events in Chicago",
+  description:
+    "Latest news, articles, and stories from Chicago Indian Arts. Read about Indian and South Asian cultural events, literature festivals, fashion shows, and art exhibitions in Chicago.",
+  keywords: [
+    "Chicago Indian Arts blog",
+    "Indian arts news Chicago",
+    "Indian cultural events blog",
+    "South Asian arts news",
+    "Indian festival updates Chicago",
+  ],
+  openGraph: {
+    title: "Blog & News — Chicago Indian Arts",
+    description:
+      "Latest news, articles, and stories about Indian and South Asian cultural events in Chicago.",
+    url: "https://www.chicagoindianarts.org/blog",
+  },
+  alternates: {
+    canonical: "https://www.chicagoindianarts.org/blog",
+  },
 };
 
 const posts = [

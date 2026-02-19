@@ -17,33 +17,68 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Chicago Indian Arts | Celebrating Culture Through Literature, Fashion & Photography",
+  metadataBase: new URL("https://www.chicagoindianarts.org"),
+  title: {
+    default:
+      "Chicago Indian Arts | Indian Cultural Events, Literature, Fashion & Photography in Chicago",
+    template: "%s | Chicago Indian Arts",
+  },
   description:
-    "Chicago Indian Arts celebrates Indian cultural heritage through three signature programs: Vaarta (Literature), Prasang (Fashion), and Varnam (Photography & Wildlife). Join our vibrant community.",
+    "Chicago Indian Arts is a nonprofit celebrating Indian and South Asian cultural heritage through Vaarta (Literature Festival), Prasang (Fashion), and Varnam (Photography). Join Chicago's premier Indian cultural events.",
   keywords: [
     "Chicago Indian Arts",
+    "Indian arts Chicago",
+    "Chicago Indian arts",
+    "Indian cultural events Chicago",
+    "South Asian events Chicago",
+    "South Asian arts Chicago",
+    "Indian literature festival Chicago",
+    "Indian film festival Chicago",
+    "Indian fashion shows Chicago",
+    "Indian art exhibitions Chicago",
+    "Indian diaspora Chicago",
+    "Indian cultural organization Chicago",
+    "Indian community events Chicago",
+    "Indian arts nonprofit Chicago",
     "Vaarta",
     "Prasang",
     "Varnam",
-    "Indian culture",
-    "literature festival",
-    "fashion show",
-    "photography exhibition",
-    "Chicago arts",
+    "Indian arts Los Angeles",
+    "Indian cultural events Los Angeles",
   ],
   openGraph: {
-    title: "Chicago Indian Arts | Celebrating Culture Through Literature, Fashion & Photography",
+    title:
+      "Chicago Indian Arts | Indian Cultural Events in Chicago",
     description:
-      "Experience the vibrant tapestry of India's cultural heritage through our three signature programs.",
+      "Experience Indian and South Asian culture through literature festivals, fashion shows, and photography exhibitions. Join Chicago's premier Indian cultural events.",
     siteName: "Chicago Indian Arts",
     locale: "en_US",
     type: "website",
+    url: "https://www.chicagoindianarts.org",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp",
+        width: 1200,
+        height: 630,
+        alt: "Chicago Indian Arts - Celebrating Indian and South Asian Culture",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Chicago Indian Arts",
     description:
-      "Celebrating Indian cultural heritage through Literature, Fashion & Photography.",
+      "Celebrating Indian and South Asian cultural heritage through Literature, Fashion & Photography in Chicago.",
+    images: [
+      "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://www.chicagoindianarts.org",
   },
 };
 

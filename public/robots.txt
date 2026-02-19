@@ -5,7 +5,7 @@ Disallow: /admin
 Disallow: /api
 
 # Host
-Host: http://localhost:3000
+Host: https://www.chicagoindianarts.org
 
 # Sitemaps
-Sitemap: http://localhost:3000/sitemap.xml
+Sitemap: https://www.chicagoindianarts.org/sitemap.xml

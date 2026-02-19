@@ -6,10 +6,16 @@ import HighlightsGallery from "@/components/home/HighlightsGallery";
 import FeaturedSpeakers from "@/components/home/FeaturedSpeakers";
 import SponsorsSection from "@/components/home/SponsorsSection";
 import CTASection from "@/components/home/CTASection";
+import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export default function HomePage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.chicagoindianarts.org" },
+        ]}
+      />
       <HeroSection />
       <EventsTicker />
       <ProgramsGrid />

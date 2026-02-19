@@ -28,8 +28,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    detail: "(312) 555-0190",
-    href: "tel:+13125550190",
+    detail: "+1 (949) 331-6815",
+    href: "tel:+19493316815",
   },
   {
     icon: MapPin,

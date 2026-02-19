@@ -130,8 +130,8 @@ export default function AboutPage() {
               }}
             >
               Chicago Indian Arts is a non-profit organization dedicated to celebrating
-              and preserving the rich cultural heritage of India while fostering
-              meaningful connections within the Chicago community.
+              and preserving the rich cultural heritage of India and South Asia while
+              fostering meaningful connections within the Chicago community.
             </p>
           </motion.div>
         </div>
