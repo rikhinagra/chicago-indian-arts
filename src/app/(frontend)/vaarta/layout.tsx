@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: "https://www.chicagoindianarts.org/vaarta",
     images: [
       {
-        url: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp",
+        url: "https://res.cloudinary.com/dom3oj7ya/image/upload/b_rgb:1a1a1a,c_lpad,w_1200,h_630/v1770980107/CIA-logo-white_gaxtwl.webp",
         width: 1200,
         height: 630,
         alt: "Vaarta — Indian Literature Festival by Chicago Indian Arts",
@@ -50,7 +50,7 @@ export default function VaartaLayout({
         startDate="2026-05-30"
         endDate="2026-05-30"
         location="Chicago Cultural Center"
-        image="https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp"
+        image="https://res.cloudinary.com/dom3oj7ya/image/upload/b_rgb:1a1a1a,c_lpad,w_1200,h_630/v1770980107/CIA-logo-white_gaxtwl.webp"
         url="https://www.chicagoindianarts.org/vaarta"
       />
       <BreadcrumbJsonLd

@@ -57,10 +57,10 @@ export const metadata: Metadata = {
     url: "https://www.chicagoindianarts.org",
     images: [
       {
-        url: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp",
+        url: "https://res.cloudinary.com/dom3oj7ya/image/upload/b_rgb:1a1a1a,c_lpad,w_1200,h_630/v1770980107/CIA-logo-white_gaxtwl.webp",
         width: 1200,
         height: 630,
-        alt: "Chicago Indian Arts - Celebrating Indian and South Asian Culture",
+        alt: "Chicago Indian Arts - Indian Cultural Events, Literature, Fashion and Photography in Chicago",
       },
     ],
   },
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     description:
       "Celebrating Indian and South Asian cultural heritage through Literature, Fashion & Photography in Chicago.",
     images: [
-      "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp",
+      "https://res.cloudinary.com/dom3oj7ya/image/upload/b_rgb:1a1a1a,c_lpad,w_1200,h_630/v1770980107/CIA-logo-white_gaxtwl.webp",
     ],
   },
   robots: {
