@@ -174,13 +174,47 @@ export default function HeroSection() {
           </div>
 
           {/* CTA Buttons */}
-          <div data-section="hero-buttons" className="flex flex-wrap" style={{ gap: "1rem" }}>
-            <Button href="#events" variant="primary">
-              View Events
-            </Button>
-            <Button href="/register" variant="outline">
-              Register Now
-            </Button>
+          <div data-section="hero-buttons" className="inline-flex flex-col items-center" style={{ gap: "1rem" }}>
+            <div className="flex flex-row" style={{ gap: "1rem" }}>
+              <Button href="#events" variant="primary">
+                View Events
+              </Button>
+              <Button href="/register" variant="outline">
+                Register Now
+              </Button>
+            </div>
+            <a
+              href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeYv3wmGMDA4Q9NN_4vlVHWvvrFAS2jjGrMd4utVl3aDSXD1g/viewform?usp=dialog"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: "0.75rem 2rem",
+                fontSize: "0.82rem",
+                fontWeight: 600,
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                display: "inline-block",
+                textDecoration: "none",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+                backgroundColor: "rgba(0,0,0,0.4)",
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                color: "#d4af37",
+                border: "1.5px solid #d4af37",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#d4af37";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(0,0,0,0.4)";
+                e.currentTarget.style.color = "#d4af37";
+              }}
+            >
+              Call for Submissions
+            </a>
           </div>
         </motion.div>
       </div>
