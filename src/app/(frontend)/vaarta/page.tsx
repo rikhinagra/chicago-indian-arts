@@ -45,8 +45,8 @@ export default function VaartaPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1771240956/vaarta-banner_bdvgi3.webp"
-            alt="Vaarta Literature Festival"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1771595679/vaarta-indian-literature-festival-chicago-banner_xt0bjj.webp"
+            alt="Vaarta Indian Literature Festival Chicago 2026 - Celebrating Indian authors, poetry, and storytelling traditions in the Midwest"
             fill
             className="object-cover"
             style={{ objectPosition: "center 85%" }}
