@@ -17,7 +17,7 @@ export default function HomePage() {
         ]}
       />
       <HeroSection />
-      <EventsTicker />
+      {/* <EventsTicker /> — Hidden for now, will re-enable later if needed */}
       <ProgramsGrid />
       <EventsTimeline />
       <HighlightsGallery />

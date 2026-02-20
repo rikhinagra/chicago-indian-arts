@@ -16,7 +16,7 @@ const events = [
   {
     program: "Prasang",
     title: "Prasang Fashion Innovation Show",
-    date: "May 20, 2026",
+    date: "July 2026",
     time: "6:00 PM - 10:00 PM",
     venue: "Navy Pier Grand Ballroom",
     description: "Runway presentations showcasing traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
@@ -24,7 +24,7 @@ const events = [
   {
     program: "Varnam",
     title: "Varnam Photography Exhibition Opening",
-    date: "August 10, 2026",
+    date: "TBD",
     time: "5:00 PM - 9:00 PM",
     venue: "Art Institute of Chicago",
     description: "Grand opening of our annual photography exhibition featuring works from renowned photographers capturing Indian culture and wildlife.",
@@ -32,7 +32,7 @@ const events = [
   {
     program: "Varnam",
     title: "Varnam Wildlife Conservation Talk",
-    date: "August 11, 2026",
+    date: "TBD",
     time: "2:00 PM - 5:00 PM",
     venue: "Art Institute of Chicago",
     description: "Panel discussion with wildlife photographers and conservationists on the role of photography in environmental advocacy.",
@@ -40,7 +40,7 @@ const events = [
   {
     program: "Varnam",
     title: "Photography Masterclass",
-    date: "August 12, 2026",
+    date: "TBD",
     time: "10:00 AM - 4:00 PM",
     venue: "Art Institute of Chicago",
     description: "Hands-on photography workshop covering landscape, portrait, and wildlife techniques with professional photographers.",

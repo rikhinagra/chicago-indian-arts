@@ -20,8 +20,8 @@ const events = [
     program: "Vaarta",
   },
   {
-    month: "May",
-    day: "20",
+    month: "July",
+    day: "",
     year: "2026",
     category: "Prasang · Fashion",
     title: "Prasang Fashion Innovation Show",
@@ -32,9 +32,9 @@ const events = [
     program: "Prasang",
   },
   {
-    month: "August",
-    day: "10",
-    year: "2026",
+    month: "TBD",
+    day: "",
+    year: "",
     category: "Varnam · Photography",
     title: "Varnam Photography Exhibition Opening",
     description:

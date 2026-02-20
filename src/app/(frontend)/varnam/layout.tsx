@@ -47,8 +47,8 @@ export default function VarnamLayout({
       <EventJsonLd
         name="Varnam — Indian Art & Photography Exhibition"
         description="Chicago's Indian and South Asian art and photography exhibition featuring stunning visual storytelling, wildlife photography, and cultural art."
-        startDate="2026-08-10"
-        endDate="2026-08-10"
+        startDate="2026-01-01"
+        endDate="2026-12-31"
         location="Art Institute of Chicago"
         image="https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp"
         url="https://www.chicagoindianarts.org/varnam"

@@ -47,8 +47,8 @@ export default function PrasangLayout({
       <EventJsonLd
         name="Prasang — Indian Fashion & Textile Showcase"
         description="Indian and South Asian fashion, textiles, and design showcased in Chicago featuring stunning runway shows and cultural fashion."
-        startDate="2026-05-20"
-        endDate="2026-05-20"
+        startDate="2026-07-01"
+        endDate="2026-07-31"
         location="Navy Pier"
         image="https://res.cloudinary.com/dom3oj7ya/image/upload/c_fill,w_1200,h_630/v1770978211/vaarta_fvuwu8.webp"
         url="https://www.chicagoindianarts.org/prasang"

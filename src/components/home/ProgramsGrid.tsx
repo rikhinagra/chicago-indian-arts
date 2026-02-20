@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import SectionTag from "@/components/ui/SectionTag";
@@ -11,7 +11,8 @@ const programs = [
   {
     name: "VAARTA",
     type: "Literature Festival",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1770978211/vaarta_fvuwu8.webp",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1771593351/vaarta-indian-literature-festival-chicago_uiuoys.webp",
+    alt: "Vaarta Indian Literature Festival Chicago - Authors and poets celebrating South Asian storytelling traditions",
     description:
       "A landmark event showcasing India's rich storytelling traditions with renowned authors, poets, and thought leaders from around the world.",
     highlights: [
@@ -25,7 +26,8 @@ const programs = [
   {
     name: "PRASANG",
     type: "Fashion Innovation",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1770978207/prasang_qpkvit.webp",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1771593350/prasang-indian-fashion-innovation-chicago_ltzxxj.webp",
+    alt: "Prasang Indian Fashion Innovation Chicago - Traditional and contemporary Indian designer runway showcase",
     description:
       "Vibrant runway shows featuring traditional and contemporary Indian fashion from top designers, celebrating textile heritage and innovation.",
     highlights: [
@@ -39,7 +41,8 @@ const programs = [
   {
     name: "VARNAM",
     type: "Photography & Wildlife",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1770978211/varnam_tbtrv1.webp",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1771593351/varnam-photography-wildlife-exhibition-chicago_yqh1wj.webp",
+    alt: "Varnam Photography and Wildlife Exhibition Chicago - Visual storytelling capturing Indian culture and nature",
     description:
       "A space where images become stories and perspectives come alive, bringing together creators who capture culture, wildlife, and the world through the lens.",
     highlights: [
@@ -55,9 +58,15 @@ const programs = [
 function ProgramCard({
   program,
   index,
+  isBlurred,
+  onHoverStart,
+  onHoverEnd,
 }: {
   program: (typeof programs)[0];
   index: number;
+  isBlurred: boolean;
+  onHoverStart: () => void;
+  onHoverEnd: () => void;
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -72,12 +81,16 @@ function ProgramCard({
       style={{
         backgroundColor: "#ffffff",
         transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+        filter: isBlurred ? "blur(3px)" : "none",
+        opacity: isBlurred ? 0.6 : 1,
       }}
       onMouseEnter={(e) => {
+        onHoverStart();
         e.currentTarget.style.transform = "translateY(-12px)";
         e.currentTarget.style.boxShadow = "0 16px 48px rgba(0,0,0,0.15)";
       }}
       onMouseLeave={(e) => {
+        onHoverEnd();
         e.currentTarget.style.transform = "translateY(0)";
         e.currentTarget.style.boxShadow = "none";
       }}
@@ -86,7 +99,7 @@ function ProgramCard({
       <Link href={program.href} className="overflow-hidden relative" style={{ display: "block" }}>
         <Image
           src={program.image}
-          alt={program.name}
+          alt={program.alt}
           width={980}
           height={600}
           className="w-full transition-transform duration-500 group-hover:scale-[1.05]"
@@ -154,6 +167,16 @@ function ProgramCard({
 }
 
 export default function ProgramsGrid() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1280);
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop);
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
+
   return (
     <section
       id="programs"
@@ -172,7 +195,14 @@ export default function ProgramsGrid() {
 
       <div data-section="programs-grid" className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3" style={{ gap: "2rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
         {programs.map((program, i) => (
-          <ProgramCard key={program.name} program={program} index={i} />
+          <ProgramCard
+            key={program.name}
+            program={program}
+            index={i}
+            isBlurred={isDesktop && hoveredIndex !== null && hoveredIndex !== i}
+            onHoverStart={() => setHoveredIndex(i)}
+            onHoverEnd={() => setHoveredIndex(null)}
+          />
         ))}
       </div>
     </section>

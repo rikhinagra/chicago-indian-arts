@@ -23,12 +23,12 @@ function CountdownItem({ value, label }: { value: number; label: string }) {
 const heroVideos = [
   "https://res.cloudinary.com/dom3oj7ya/video/upload/v1770836588/Ornate_Indian_Palace_Corridor_Video_xwh2yc.mp4",
   "https://res.cloudinary.com/dom3oj7ya/video/upload/v1771221862/peacock-video_qosgc7.mp4",
+  "https://res.cloudinary.com/dom3oj7ya/video/upload/v1771592584/chicago-skyline-indian-arts-cultural-event_eqfcyx.mp4",
 ];
 
 export default function HeroSection() {
   const [activeVideo, setActiveVideo] = useState(0);
-  const videoRef0 = useRef<HTMLVideoElement>(null);
-  const videoRef1 = useRef<HTMLVideoElement>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0 });
 
   useEffect(() => {
@@ -54,26 +54,28 @@ export default function HeroSection() {
   const handleVideoEnd = useCallback((index: number) => {
     const nextIndex = (index + 1) % heroVideos.length;
     setActiveVideo(nextIndex);
-    const nextRef = nextIndex === 0 ? videoRef0 : videoRef1;
-    if (nextRef.current) {
-      nextRef.current.currentTime = 0;
-      nextRef.current.play();
+    const nextRef = videoRefs.current[nextIndex];
+    if (nextRef) {
+      nextRef.currentTime = 0;
+      nextRef.play();
     }
   }, []);
 
   useEffect(() => {
-    const ref0 = videoRef0.current;
-    const ref1 = videoRef1.current;
+    const handlers: (() => void)[] = [];
+    const refs = videoRefs.current;
 
-    const onEnd0 = () => handleVideoEnd(0);
-    const onEnd1 = () => handleVideoEnd(1);
-
-    if (ref0) ref0.addEventListener("ended", onEnd0);
-    if (ref1) ref1.addEventListener("ended", onEnd1);
+    heroVideos.forEach((_, i) => {
+      const ref = refs[i];
+      if (ref) {
+        const handler = () => handleVideoEnd(i);
+        ref.addEventListener("ended", handler);
+        handlers.push(() => ref.removeEventListener("ended", handler));
+      }
+    });
 
     return () => {
-      if (ref0) ref0.removeEventListener("ended", onEnd0);
-      if (ref1) ref1.removeEventListener("ended", onEnd1);
+      handlers.forEach((cleanup) => cleanup());
     };
   }, [handleVideoEnd]);
 
@@ -84,10 +86,17 @@ export default function HeroSection() {
         {heroVideos.map((src, i) => (
           <video
             key={src}
-            ref={i === 0 ? videoRef0 : videoRef1}
+            ref={(el) => { videoRefs.current[i] = el; }}
             autoPlay={i === 0}
             muted
             playsInline
+            aria-label={
+              i === 0
+                ? "Ornate Indian palace corridor showcasing South Asian architecture"
+                : i === 1
+                  ? "Vibrant peacock displaying feathers symbolizing Indian cultural beauty"
+                  : "Chicago skyline representing the city home of Indian arts and cultural events"
+            }
             className="absolute inset-0 w-full h-full object-cover"
             style={{
               objectPosition: "center center",

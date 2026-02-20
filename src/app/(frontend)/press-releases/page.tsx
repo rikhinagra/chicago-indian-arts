@@ -30,9 +30,9 @@ const pressReleases = [
   },
   {
     date: "October 2025",
-    title: "Varnam Photography Exhibition Dates Confirmed for 2026",
+    title: "Varnam Photography Exhibition Announced for 2026",
     excerpt:
-      "The third edition of Varnam, our photography and wildlife exhibition, has been confirmed for August 2026. Submissions for featured photographers are now open.",
+      "The third edition of Varnam, our photography and wildlife exhibition, is confirmed for 2026. Exact dates will be announced soon. Submissions for featured photographers are now open.",
     link: "#",
   },
 ];

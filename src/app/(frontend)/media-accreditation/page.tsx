@@ -41,8 +41,8 @@ const mediaTypes = [
 
 const events = [
   "Vaarta Literature Festival (May 30)",
-  "Prasang Fashion Innovation Show (May 20)",
-  "Varnam Photography Exhibition (August 10-12)",
+  "Prasang Fashion Innovation Show (July 2026)",
+  "Varnam Photography Exhibition (TBD)",
   "All Events",
 ];
 

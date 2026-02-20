@@ -26,7 +26,7 @@ const posts: Record<string, { title: string; date: string; category: string; ima
     content: [
       "Prasang 2026 is dedicated to showcasing the next generation of Indian fashion designers who are redefining the intersection of tradition and modernity.",
       "This year, we are spotlighting five emerging designers whose work bridges heritage craftsmanship with contemporary aesthetics. From handloom reimagined to sustainable luxury, these designers represent the future of Indian fashion.",
-      "Join us on May 20 at the Navy Pier Grand Ballroom for an evening of stunning runway presentations, designer meet-and-greets, and a fashion networking mixer.",
+      "Join us in July 2026 at the Navy Pier Grand Ballroom for an evening of stunning runway presentations, designer meet-and-greets, and a fashion networking mixer.",
     ],
   },
 };

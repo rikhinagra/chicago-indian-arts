@@ -1,7 +1,7 @@
 const tickerItems = [
   "Vaarta Literature Festival | May 30, 2026",
-  "Prasang Fashion Show | May 20, 2026",
-  "Varnam Photography Exhibition | August 10-12, 2026",
+  "Prasang Fashion Show | July 2026",
+  "Varnam Photography Exhibition | TBD",
   "Early Bird Registration Now Open",
 ];
 
