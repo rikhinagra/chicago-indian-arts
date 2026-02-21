@@ -207,19 +207,18 @@ export default function HeroSection() {
                 textAlign: "center",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
-                backgroundColor: "rgba(0,0,0,0.4)",
-                backdropFilter: "blur(10px)",
-                WebkitBackdropFilter: "blur(10px)",
-                color: "#d4af37",
-                border: "1.5px solid #d4af37",
+                backgroundColor: "#cd5c5c",
+                color: "#ffffff",
+                border: "none",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#d4af37";
+                e.currentTarget.style.backgroundColor = "#b84e4e";
                 e.currentTarget.style.color = "#ffffff";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(0,0,0,0.4)";
-                e.currentTarget.style.color = "#d4af37";
+                e.currentTarget.style.backgroundColor = "#cd5c5c";
+                e.currentTarget.style.color = "#ffffff";
               }}
             >
               Call for Submissions
