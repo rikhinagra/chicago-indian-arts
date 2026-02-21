@@ -116,7 +116,7 @@ function ProgramCard({
           <div
             className="uppercase font-semibold"
             style={{
-              fontSize: "0.75rem",
+              fontSize: "0.95rem",
               letterSpacing: "2px",
               color: "#d4af37",
               marginBottom: "0.5rem",

@@ -93,7 +93,7 @@ export default function VaartaPage() {
 
             <div
               style={{
-                fontSize: "0.8rem",
+                fontSize: "1rem",
                 fontWeight: 600,
                 letterSpacing: "3px",
                 textTransform: "uppercase",

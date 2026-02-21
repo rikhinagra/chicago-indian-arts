@@ -23,7 +23,7 @@ function CountdownItem({ value, label }: { value: number; label: string }) {
 const heroVideos = [
   "https://res.cloudinary.com/dom3oj7ya/video/upload/v1771592584/chicago-skyline-indian-arts-cultural-event_eqfcyx.mp4",
   "https://res.cloudinary.com/dom3oj7ya/video/upload/v1770836588/Ornate_Indian_Palace_Corridor_Video_xwh2yc.mp4",
-  "https://res.cloudinary.com/dom3oj7ya/video/upload/v1770836584/Peacock_s_Palace_Garden_Dance_lm5ccm.mp4",
+  "https://res.cloudinary.com/dom3oj7ya/video/upload/v1771221862/peacock-video_qosgc7.mp4",
 ];
 
 export default function HeroSection() {
@@ -126,7 +126,7 @@ export default function HeroSection() {
           {/* Event Label */}
           <div
             data-section="hero-label" className="uppercase font-semibold"
-            style={{ color: "#d4af37", fontSize: "0.8rem", letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)" }}
+            style={{ color: "#d4af37", fontSize: "1rem", letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)" }}
           >
             Vaarta 2026 &middot; May 30
           </div>
