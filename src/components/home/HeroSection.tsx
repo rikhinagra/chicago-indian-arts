@@ -21,9 +21,9 @@ function CountdownItem({ value, label }: { value: number; label: string }) {
 }
 
 const heroVideos = [
-  "https://res.cloudinary.com/dom3oj7ya/video/upload/v1770836588/Ornate_Indian_Palace_Corridor_Video_xwh2yc.mp4",
-  "https://res.cloudinary.com/dom3oj7ya/video/upload/v1771221862/peacock-video_qosgc7.mp4",
   "https://res.cloudinary.com/dom3oj7ya/video/upload/v1771592584/chicago-skyline-indian-arts-cultural-event_eqfcyx.mp4",
+  "https://res.cloudinary.com/dom3oj7ya/video/upload/v1770836588/Ornate_Indian_Palace_Corridor_Video_xwh2yc.mp4",
+  "https://res.cloudinary.com/dom3oj7ya/video/upload/v1770836584/Peacock_s_Palace_Garden_Dance_lm5ccm.mp4",
 ];
 
 export default function HeroSection() {
