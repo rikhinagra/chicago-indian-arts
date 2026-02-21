@@ -142,7 +142,7 @@ export default function AboutPage() {
         <FadeInSection className="text-center" style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
           <SectionTag>Our Mission</SectionTag>
           <h2
-            data-section="section-heading" className="font-heading font-light"
+            data-section="section-heading" className="font-heading font-semibold"
             style={{ fontSize: "2.5rem", lineHeight: 1.3, marginBottom: "1.5rem", color: "#1a1a1a" }}
           >
             Bridging Cultures Through Arts
@@ -175,7 +175,7 @@ export default function AboutPage() {
           <FadeInSection>
             <SectionTag>Mission</SectionTag>
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{ fontSize: "2.2rem", lineHeight: 1.3, marginBottom: "1.2rem", color: "#1a1a1a" }}
             >
               Bridging Cultures Through Arts
@@ -191,7 +191,7 @@ export default function AboutPage() {
           <FadeInSection delay={0.15}>
             <SectionTag>Vision</SectionTag>
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{ fontSize: "2.2rem", lineHeight: 1.3, marginBottom: "1.2rem", color: "#1a1a1a" }}
             >
               A World Connected by Art
@@ -214,7 +214,7 @@ export default function AboutPage() {
           <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
             <SectionTag>Objectives</SectionTag>
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
             >
               What Drives Us
@@ -292,7 +292,7 @@ export default function AboutPage() {
           <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
             <SectionTag>Journey</SectionTag>
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
             >
               Our Growth Story
@@ -504,7 +504,7 @@ export default function AboutPage() {
         <FadeInSection>
           <div style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto" }}>
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#ffffff", marginBottom: "1rem" }}
             >
               Join Our Community

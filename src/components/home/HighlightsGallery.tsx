@@ -27,7 +27,7 @@ export default function HighlightsGallery() {
       <FadeInSection className="text-center" style={{ marginBottom: "1.5rem", padding: "0 3rem" }}>
         <SectionTag>Memories</SectionTag>
         <h2
-          data-section="section-heading" className="font-heading font-light"
+          data-section="section-heading" className="font-heading font-semibold"
           style={{ fontSize: "2.5rem", marginBottom: "0.8rem", color: "#1a1a1a" }}
         >
           Past Event Highlights

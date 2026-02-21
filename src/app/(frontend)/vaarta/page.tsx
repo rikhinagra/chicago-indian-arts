@@ -185,7 +185,7 @@ export default function VaartaPage() {
             <SectionTag>About Vaarta</SectionTag>
             <h2
               data-section="vaarta-heading"
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{
                 fontSize: "2.8rem",
                 lineHeight: 1.3,
@@ -271,7 +271,7 @@ export default function VaartaPage() {
               <SectionTag>Our Heart&apos;s Calling</SectionTag>
               <h2
                 data-section="vaarta-heading"
-                className="font-heading font-light"
+                className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
                   lineHeight: 1.3,
@@ -401,7 +401,7 @@ export default function VaartaPage() {
               <SectionTag>What Awaits You</SectionTag>
               <h2
                 data-section="vaarta-heading"
-                className="font-heading font-light"
+                className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
                   lineHeight: 1.3,
@@ -496,7 +496,7 @@ export default function VaartaPage() {
             }}
           >
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{
                 fontSize: "2.5rem",
                 lineHeight: 1.3,

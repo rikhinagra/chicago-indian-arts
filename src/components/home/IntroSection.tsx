@@ -7,7 +7,7 @@ export default function IntroSection() {
       <FadeInSection className="text-center" style={{ maxWidth: "800px", marginLeft: "auto", marginRight: "auto" }}>
         <SectionTag>Our Mission</SectionTag>
         <h2
-          data-section="section-heading" className="font-heading font-light"
+          data-section="section-heading" className="font-heading font-semibold"
           style={{ fontSize: "2.5rem", lineHeight: 1.3, marginBottom: "1.5rem", color: "#1a1a1a" }}
         >
           Bridging Cultures Through Arts

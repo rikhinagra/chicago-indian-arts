@@ -208,7 +208,7 @@ export default function PrasangPage() {
             <SectionTag>About Prasang</SectionTag>
             <h2
               data-section="prasang-heading"
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{
                 fontSize: "2.5rem",
                 lineHeight: 1.3,
@@ -284,7 +284,7 @@ export default function PrasangPage() {
               <SectionTag>Our Vision</SectionTag>
               <h2
                 data-section="prasang-heading"
-                className="font-heading font-light"
+                className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
                   lineHeight: 1.3,
@@ -378,7 +378,7 @@ export default function PrasangPage() {
               <SectionTag>Gallery</SectionTag>
               <h2
                 data-section="prasang-heading"
-                className="font-heading font-light"
+                className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
                   lineHeight: 1.3,
@@ -489,7 +489,7 @@ export default function PrasangPage() {
             }}
           >
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{
                 fontSize: "2.5rem",
                 lineHeight: 1.3,

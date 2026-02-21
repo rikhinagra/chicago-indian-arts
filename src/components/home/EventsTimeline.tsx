@@ -68,7 +68,7 @@ export default function EventsTimeline() {
         <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
           <SectionTag>Schedule</SectionTag>
           <h2
-            data-section="section-heading" className="font-heading font-light"
+            data-section="section-heading" className="font-heading font-semibold"
             style={{ fontSize: "2.5rem", marginBottom: "0.8rem", color: "#1a1a1a" }}
           >
             Upcoming Events Calendar

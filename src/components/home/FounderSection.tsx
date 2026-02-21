@@ -16,7 +16,7 @@ export default function FounderSection() {
         <FadeInSection>
           <SectionTag>Meet the Founder</SectionTag>
           <h2
-            data-section="founder-heading" className="font-heading font-light"
+            data-section="founder-heading" className="font-heading font-semibold"
             style={{ fontSize: "2.5rem", lineHeight: 1.3, marginBottom: "1.5rem", color: "#1a1a1a" }}
           >
             Where Ideas Meet Culture

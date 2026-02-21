@@ -323,7 +323,7 @@ export default function VarnamPage() {
             <SectionTag>About Varnam</SectionTag>
             <h2
               data-section="varnam-heading"
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{
                 fontSize: "2.5rem",
                 lineHeight: 1.3,
@@ -379,7 +379,7 @@ export default function VarnamPage() {
               <SectionTag>What We Do</SectionTag>
               <h2
                 data-section="varnam-heading"
-                className="font-heading font-light"
+                className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
                   lineHeight: 1.3,
@@ -473,7 +473,7 @@ export default function VarnamPage() {
               <SectionTag>Featured Works</SectionTag>
               <h2
                 data-section="varnam-heading"
-                className="font-heading font-light"
+                className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
                   lineHeight: 1.3,
@@ -581,7 +581,7 @@ export default function VarnamPage() {
             }}
           >
             <h2
-              className="font-heading font-light"
+              className="font-heading font-semibold"
               style={{
                 fontSize: "2.5rem",
                 lineHeight: 1.3,

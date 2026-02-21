@@ -25,7 +25,7 @@ export default function CTASection() {
 
       <FadeInSection className="relative z-10" style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto", textAlign: "center" }}>
         <h2
-          data-section="cta-heading" className="font-heading font-light"
+          data-section="cta-heading" className="font-heading font-semibold"
           style={{ fontSize: "2.8rem", lineHeight: 1.2, marginBottom: "1.2rem", color: "#ffffff" }}
         >
           Be Part of the Story

@@ -21,7 +21,7 @@ export default function NewsletterSignup() {
     >
       <FadeInSection className="text-center" style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto" }}>
         <h2
-          data-section="newsletter-heading" className="font-heading font-light"
+          data-section="newsletter-heading" className="font-heading font-semibold"
           style={{ fontSize: "2.2rem", marginBottom: "0.8rem", color: "#ffffff" }}
         >
           Stay Connected

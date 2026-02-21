@@ -109,7 +109,7 @@ export default function FeaturedSpeakers() {
       <FadeInSection className="text-center" style={{ marginBottom: "2rem" }}>
         <SectionTag>2026 Lineup</SectionTag>
         <h2
-          data-section="section-heading" className="font-heading font-light"
+          data-section="section-heading" className="font-heading font-semibold"
           style={{
             fontSize: "2.5rem",
             marginBottom: "0.8rem",

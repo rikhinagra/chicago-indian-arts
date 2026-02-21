@@ -8,8 +8,8 @@ export default function SectionTag({ children, className = "" }: SectionTagProps
     <div
       className={className}
       style={{
-        fontSize: "0.75rem",
-        fontWeight: 600,
+        fontSize: "0.9rem",
+        fontWeight: 800,
         letterSpacing: "2px",
         textTransform: "uppercase" as const,
         marginBottom: "0.8rem",

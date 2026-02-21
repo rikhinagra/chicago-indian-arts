@@ -186,7 +186,7 @@ export default function ProgramsGrid() {
       <FadeInSection className="text-center" style={{ marginBottom: "2rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
         <SectionTag>Our Programs</SectionTag>
         <h2
-          data-section="section-heading" className="font-heading font-light"
+          data-section="section-heading" className="font-heading font-semibold"
           style={{ fontSize: "2.5rem", marginBottom: "0.8rem", color: "#1a1a1a" }}
         >
           Three Pillars of Cultural Excellence
