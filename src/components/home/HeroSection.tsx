@@ -81,6 +81,15 @@ export default function HeroSection() {
 
   return (
     <section className="h-screen relative flex items-center overflow-hidden">
+      {/* Mobile-only hero padding override */}
+      <style>{`
+        @media (max-width: 639px) {
+          [data-section="hero-content"] {
+            padding-left: 1.25rem !important;
+            padding-right: 1.25rem !important;
+          }
+        }
+      `}</style>
       {/* Background Videos - Carousel */}
       <div className="absolute inset-0">
         {heroVideos.map((src, i) => (
@@ -184,7 +193,7 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div data-section="hero-buttons" className="inline-flex flex-col items-center" style={{ gap: "1rem" }}>
-            <div className="flex flex-row" style={{ gap: "1rem" }}>
+            <div className="flex flex-row gap-2 sm:gap-4">
               <Button href="#events" variant="primary">
                 View Events
               </Button>
@@ -197,7 +206,7 @@ export default function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                padding: "0.75rem 2rem",
+                padding: "0.75rem 1.5rem",
                 fontSize: "0.82rem",
                 fontWeight: 600,
                 letterSpacing: "1px",

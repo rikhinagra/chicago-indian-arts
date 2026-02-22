@@ -48,7 +48,7 @@ export default function Button({
   const styles = variantStyles[variant];
   const currentStyle: CSSProperties = {
     ...(isHovered ? { ...styles.base, ...styles.hover } : styles.base),
-    padding: "0.75rem 2rem",
+    padding: "0.75rem 1.5rem",
     fontSize: "0.82rem",
     fontWeight: 600,
     letterSpacing: "1px",
