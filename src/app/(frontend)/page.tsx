@@ -20,9 +20,9 @@ export default function HomePage() {
       {/* <EventsTicker /> — Hidden for now, will re-enable later if needed */}
       <ProgramsGrid />
       <EventsTimeline />
-      <HighlightsGallery />
-      <FeaturedSpeakers />
-      <SponsorsSection />
+      {/* <HighlightsGallery /> — Hidden for now, will re-enable when real content is available */}
+      {/* <FeaturedSpeakers /> — Hidden for now, will re-enable when real content is available */}
+      {/* <SponsorsSection /> — Hidden for now, will re-enable when real content is available */}
       <CTASection />
     </>
   );
