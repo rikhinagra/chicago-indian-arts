@@ -293,6 +293,70 @@ function DonateContent() {
           {/* Left Column - Donation Form */}
           <FadeInSection>
             <form onSubmit={handleSubmit}>
+              {/* Name & Email */}
+              <div style={{ marginBottom: "2rem" }}>
+                <h3
+                  className="font-heading"
+                  style={{ fontSize: "1.3rem", color: "#1a1a1a", marginBottom: "1rem", fontWeight: 500 }}
+                >
+                  Your Information
+                </h3>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
+                  <div>
+                    <label
+                      style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "#2d2d2d", marginBottom: "0.4rem", letterSpacing: "0.5px" }}
+                    >
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Your full name"
+                      required
+                      style={{
+                        width: "100%",
+                        padding: "0.85rem 1rem",
+                        border: "2px solid #e0e0e0",
+                        fontSize: "0.9rem",
+                        outline: "none",
+                        transition: "border-color 0.3s ease",
+                        backgroundColor: "#ffffff",
+                        boxSizing: "border-box",
+                      }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = "#d4af37")}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = "#e0e0e0")}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "#2d2d2d", marginBottom: "0.4rem", letterSpacing: "0.5px" }}
+                    >
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="you@email.com"
+                      required
+                      style={{
+                        width: "100%",
+                        padding: "0.85rem 1rem",
+                        border: "2px solid #e0e0e0",
+                        fontSize: "0.9rem",
+                        outline: "none",
+                        transition: "border-color 0.3s ease",
+                        backgroundColor: "#ffffff",
+                        boxSizing: "border-box",
+                      }}
+                      onFocus={(e) => (e.currentTarget.style.borderColor = "#d4af37")}
+                      onBlur={(e) => (e.currentTarget.style.borderColor = "#e0e0e0")}
+                    />
+                  </div>
+                </div>
+              </div>
+
               {/* Amount Selection */}
               <div style={{ marginBottom: "2rem" }}>
                 <h3
@@ -445,70 +509,6 @@ function DonateContent() {
                     )}
                   </span>
                 </label>
-              </div>
-
-              {/* Name & Email */}
-              <div style={{ marginBottom: "2rem" }}>
-                <h3
-                  className="font-heading"
-                  style={{ fontSize: "1.3rem", color: "#1a1a1a", marginBottom: "1rem", fontWeight: 500 }}
-                >
-                  Your Information
-                </h3>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
-                  <div>
-                    <label
-                      style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "#2d2d2d", marginBottom: "0.4rem", letterSpacing: "0.5px" }}
-                    >
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      placeholder="Your full name"
-                      required
-                      style={{
-                        width: "100%",
-                        padding: "0.85rem 1rem",
-                        border: "2px solid #e0e0e0",
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        transition: "border-color 0.3s ease",
-                        backgroundColor: "#ffffff",
-                        boxSizing: "border-box",
-                      }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "#d4af37")}
-                      onBlur={(e) => (e.currentTarget.style.borderColor = "#e0e0e0")}
-                    />
-                  </div>
-                  <div>
-                    <label
-                      style={{ display: "block", fontSize: "0.8rem", fontWeight: 600, color: "#2d2d2d", marginBottom: "0.4rem", letterSpacing: "0.5px" }}
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="you@email.com"
-                      required
-                      style={{
-                        width: "100%",
-                        padding: "0.85rem 1rem",
-                        border: "2px solid #e0e0e0",
-                        fontSize: "0.9rem",
-                        outline: "none",
-                        transition: "border-color 0.3s ease",
-                        backgroundColor: "#ffffff",
-                        boxSizing: "border-box",
-                      }}
-                      onFocus={(e) => (e.currentTarget.style.borderColor = "#d4af37")}
-                      onBlur={(e) => (e.currentTarget.style.borderColor = "#e0e0e0")}
-                    />
-                  </div>
-                </div>
               </div>
 
               {/* Tax Info */}
