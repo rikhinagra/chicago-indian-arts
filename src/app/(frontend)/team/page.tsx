@@ -306,7 +306,7 @@ export default function TeamPage() {
         </FadeInSection>
       </section>
 
-      {/* Board Section */}
+      {/* Board Section — Hidden for now, will re-enable when real content is available
       <section
         data-section="team-board"
         style={{
@@ -437,6 +437,7 @@ export default function TeamPage() {
           </div>
         </FadeInSection>
       </section>
+      */}
 
       {/* CTA Section */}
       <section
