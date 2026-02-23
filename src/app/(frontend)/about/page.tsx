@@ -12,25 +12,25 @@ const objectives = [
     icon: BookOpen,
     title: "Where Stories Meet the Soul of India",
     description:
-      "Curate and host an annual Literature and Film Festival that showcases Indian literary, cinematic and artistic excellence featuring local, national and international talent.",
+      "Curating and hosting an annual Literature and Film Festival that showcases Indian literary, cinematic and artistic excellence featuring local, national and international talent.",
   },
   {
     icon: Users,
     title: "Rooted in Heritage, Alive in Chicago",
     description:
-      "Create platforms for emerging and underrepresented voices within Indian diaspora, youth, artists through workshops, residencies and mentorship.",
+      "Creating platforms for emerging and underrepresented voices within Indian diaspora, youth, artists through workshops, residencies and mentorship.",
   },
   {
     icon: Palette,
     title: "Bridging Cultures, Inspiring Creators",
     description:
-      "Preserve and promote classical, folk and contemporary Indian art forms making them accessible to the audience.",
+      "Preserving and promoting classical, folk and contemporary Indian art forms making them accessible to the audience.",
   },
   {
     icon: Globe,
     title: "Celebrating Indian Arts, Creating Global Impact",
     description:
-      "Build an inclusive cultural archive that documents Indian-American experience in Chicago through verbal histories, publications and multimedia storytelling.",
+      "Building an inclusive cultural archive that documents Indian-American experience in Chicago through verbal histories, publications and multimedia storytelling.",
   },
 ];
 
