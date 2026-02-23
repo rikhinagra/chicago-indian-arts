@@ -21,7 +21,7 @@ const programLinks = [
 const orgLinks = [
   { label: "About Us", href: "/about" },
   { label: "Our Team", href: "/team" },
-  { label: "Community Partners", href: "/community-partners" },
+  // { label: "Community Partners", href: "/community-partners" }, — Hidden for now
   { label: "Contact", href: "/contact" },
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/volunteer" },

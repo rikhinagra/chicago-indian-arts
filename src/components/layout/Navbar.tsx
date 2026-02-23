@@ -15,7 +15,7 @@ const programLinks = [
 const aboutLinks = [
   { label: "Our Story", subtitle: "Mission & Journey", href: "/about" },
   { label: "Our Team", subtitle: "Leadership & Board", href: "/team" },
-  { label: "Community Partners", subtitle: "Collaborations", href: "/community-partners" },
+  // { label: "Community Partners", subtitle: "Collaborations", href: "/community-partners" }, — Hidden for now
 ];
 
 const pressLinks = [
@@ -25,7 +25,7 @@ const pressLinks = [
 
 const navLinks = [
   { label: "Events", href: "#events" },
-  { label: "Highlights", href: "#highlights" },
+  // { label: "Highlights", href: "#highlights" }, — Hidden for now
 ];
 
 /* ── Reusable desktop dropdown ── */
