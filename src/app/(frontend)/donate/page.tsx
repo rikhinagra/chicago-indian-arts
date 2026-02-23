@@ -614,8 +614,8 @@ function DonateContent() {
                 style={{ height: "220px", width: "100%" }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80"
-                  alt="Community gathering at cultural event"
+                  src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1771831750/chicago-indian-arts-community-friends-celebrating_bex2fe.webp"
+                  alt="Friends celebrating together at a Chicago Indian Arts community gathering"
                   fill
                   className="object-cover"
                   style={{ transition: "transform 0.5s ease" }}
@@ -629,8 +629,8 @@ function DonateContent() {
                   style={{ height: "160px" }}
                 >
                   <Image
-                    src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80"
-                    alt="Cultural dance performance"
+                    src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1771831750/indian-arts-festival-outdoor-music-celebration-chicago_beemtl.webp"
+                    alt="Happy friends enjoying an outdoor Indian arts music festival in Chicago"
                     fill
                     className="object-cover"
                     style={{ transition: "transform 0.5s ease" }}
@@ -643,8 +643,8 @@ function DonateContent() {
                   style={{ height: "160px" }}
                 >
                   <Image
-                    src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80"
-                    alt="Art exhibition showcase"
+                    src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1771831750/chicago-indian-arts-audience-cultural-event_fkutxc.webp"
+                    alt="Smiling audience engaged at a Chicago Indian Arts cultural event"
                     fill
                     className="object-cover"
                     style={{ transition: "transform 0.5s ease" }}
