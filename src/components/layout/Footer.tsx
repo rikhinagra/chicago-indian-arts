@@ -79,7 +79,7 @@ export default function Footer() {
             CHICAGO INDIAN ARTS
           </h3>
           <p style={{ opacity: 0.8, lineHeight: 1.7, fontSize: "0.9rem" }}>
-            Celebrating and preserving the rich cultural heritage of India communities
+            Celebrating and preserving the rich cultural heritage of Indian communities
             through literature, fashion, and photography. Join us in our mission to
             create meaningful cultural exchanges and artistic experiences.
           </p>
