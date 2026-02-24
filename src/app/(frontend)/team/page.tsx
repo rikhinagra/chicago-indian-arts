@@ -110,8 +110,8 @@ function LeadershipModal({
           align-items: center !important;
         }
         [data-modal="leadership-image"] {
-          width: 130px !important;
-          height: 165px !important;
+          width: 200px !important;
+          height: 260px !important;
           order: -1;
         }
         [data-modal="leadership-name"] {
@@ -146,8 +146,8 @@ function LeadershipModal({
           font-size: 1.35rem !important;
         }
         [data-modal="leadership-image"] {
-          width: 110px !important;
-          height: 140px !important;
+          width: 160px !important;
+          height: 210px !important;
         }
         [data-modal="leadership-quote-marks"] {
           font-size: 2.2rem !important;
@@ -380,8 +380,8 @@ function LeadershipModal({
               data-modal="leadership-image"
               style={{
                 flexShrink: 0,
-                width: "160px",
-                height: "200px",
+                width: "280px",
+                height: "360px",
                 position: "relative",
                 overflow: "hidden",
               }}
@@ -392,7 +392,7 @@ function LeadershipModal({
                 fill
                 className="object-cover"
                 style={{ filter: "grayscale(80%)" }}
-                sizes="(max-width: 480px) 110px, (max-width: 768px) 130px, 160px"
+                sizes="(max-width: 480px) 160px, (max-width: 768px) 200px, 280px"
               />
             </div>
           </div>
