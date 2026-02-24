@@ -18,7 +18,7 @@ const leadershipTeam = [
       "Jigar Shah is the Founder of Chicago Indian Arts. He is passionate about the connection between stories, films, and community. He aims to share perspectives through films and art by providing a platform for talents who are overlooked as he empowers each of us to see our inner artists. Jigar holds several leadership titles and is an advisory board member to several nonprofits. He also serves as a Director of the Chicago South Asian Film Festival and jury member in other international film festivals. Working in a leadership role in a Global healthcare financial firm, Jigar is a technology strategy leader who holds advanced degrees in Engineering, MBA (Chicago), and Law (Pritzker School of Law, Northwestern, Chicago). He is an avid reader with a profound appreciation for literature, poetry, and the arts. He believes in the power of conversation to shape identity, foster empathy, and encourage civic engagement.",
     quote:
       "I believe in bringing each of us together through art and culture; this is possible, and I make this an everyday action in my life.",
-    image: "/images/founder.webp",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1771930385/founder_qtzo8q.webp",
   },
   {
     name: "Vikram Desai",
