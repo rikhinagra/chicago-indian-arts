@@ -21,26 +21,28 @@ const leadershipTeam = [
     image: "/images/founder.webp",
   },
   {
-    name: "Coming Soon",
+    name: "Vikram Desai",
     role: "Vice President",
     subtitle: "Vice President, Chicago Indian Arts",
-    bio: "Details about our Vice President will be shared soon. Stay tuned for updates about our growing leadership team.",
+    bio: "A dedicated leader with a deep passion for community building and cultural preservation, Vikram brings strategic vision to Chicago Indian Arts.",
     fullBio:
-      "Details about our Vice President will be shared soon. Stay tuned for updates about our growing leadership team and the vision they bring to Chicago Indian Arts.",
-    quote: "",
+      "Vikram Desai serves as the Vice President of Chicago Indian Arts. With a strong background in community engagement and nonprofit leadership, he plays a vital role in shaping the organization's strategic direction. Vikram is deeply committed to fostering meaningful connections through art and culture, ensuring that Chicago's Indian community has a vibrant platform for creative expression and cultural celebration.",
+    quote:
+      "Art has the power to bridge communities and create a shared sense of belonging that transcends boundaries.",
     image:
-      "https://ui-avatars.com/api/?name=VP&background=d4af37&color=fff&size=200&font-size=0.4&bold=true",
+      "https://res.cloudinary.com/dom3oj7ya/image/upload/v1771928983/vice_president_daz1fc.webp",
   },
   {
-    name: "Coming Soon",
+    name: "Priya Mehta",
     role: "Director of Programs",
     subtitle: "Director of Programs, Chicago Indian Arts",
-    bio: "Details about our Director of Programs will be shared soon. Stay tuned for updates about our growing leadership team.",
+    bio: "An experienced program strategist, Priya oversees all cultural initiatives and events that bring the mission of Chicago Indian Arts to life.",
     fullBio:
-      "Details about our Director of Programs will be shared soon. Stay tuned for updates about our growing leadership team and the programs they bring to life.",
-    quote: "",
+      "Priya Mehta serves as the Director of Programs at Chicago Indian Arts. She is responsible for designing, developing, and overseeing the organization's diverse portfolio of cultural programs and events. With a keen eye for detail and a passion for storytelling through the arts, Priya ensures that every program reflects the richness and depth of Indian culture while engaging audiences across Chicago and beyond.",
+    quote:
+      "Every program we create is an opportunity to tell a story, celebrate heritage, and inspire the next generation of artists.",
     image:
-      "https://ui-avatars.com/api/?name=DP&background=d4af37&color=fff&size=200&font-size=0.4&bold=true",
+      "https://res.cloudinary.com/dom3oj7ya/image/upload/v1771928982/director_of_programs_l4qsvv.webp",
   },
 ];
 
@@ -108,8 +110,8 @@ function LeadershipModal({
           align-items: center !important;
         }
         [data-modal="leadership-image"] {
-          width: 180px !important;
-          height: 220px !important;
+          width: 200px !important;
+          height: 260px !important;
           order: -1;
         }
         [data-modal="leadership-name"] {
@@ -124,6 +126,7 @@ function LeadershipModal({
         }
         [data-modal="leadership-bio-text"] {
           font-size: 0.88rem !important;
+          text-align: center !important;
         }
         [data-modal="leadership-subtitle"] {
           font-size: 0.9rem !important;
@@ -143,8 +146,8 @@ function LeadershipModal({
           font-size: 1.35rem !important;
         }
         [data-modal="leadership-image"] {
-          width: 150px !important;
-          height: 190px !important;
+          width: 160px !important;
+          height: 210px !important;
         }
         [data-modal="leadership-quote-marks"] {
           font-size: 2.2rem !important;
@@ -157,6 +160,7 @@ function LeadershipModal({
         [data-modal="leadership-bio-text"] {
           font-size: 0.85rem !important;
           line-height: 1.75 !important;
+          text-align: center !important;
         }
         [data-modal="leadership-subtitle"] {
           font-size: 0.85rem !important;
@@ -353,7 +357,7 @@ function LeadershipModal({
             style={{
               display: "flex",
               gap: "2rem",
-              alignItems: "flex-end",
+              alignItems: "flex-start",
               marginTop: "1.5rem",
             }}
           >
@@ -376,8 +380,8 @@ function LeadershipModal({
               data-modal="leadership-image"
               style={{
                 flexShrink: 0,
-                width: "220px",
-                height: "280px",
+                width: "280px",
+                height: "360px",
                 position: "relative",
                 overflow: "hidden",
               }}
@@ -388,7 +392,7 @@ function LeadershipModal({
                 fill
                 className="object-cover"
                 style={{ filter: "grayscale(80%)" }}
-                sizes="(max-width: 480px) 150px, (max-width: 768px) 180px, 220px"
+                sizes="(max-width: 480px) 160px, (max-width: 768px) 200px, 280px"
               />
             </div>
           </div>
@@ -521,7 +525,7 @@ export default function TeamPage() {
       {/* Leadership Section */}
       <section
         data-section="team-leadership"
-        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "4rem 3rem", backgroundColor: "#6b6b4e" }}
       >
         <FadeInSection>
           <div
@@ -540,7 +544,7 @@ export default function TeamPage() {
                   width: "40px",
                   height: "40px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(212,175,55,0.1)",
+                  backgroundColor: "rgba(212,175,55,0.15)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -556,7 +560,7 @@ export default function TeamPage() {
               style={{
                 fontSize: "2.2rem",
                 fontWeight: 300,
-                color: "#1a1a1a",
+                color: "#ffffff",
                 marginBottom: "2.5rem",
               }}
             >
@@ -586,40 +590,25 @@ export default function TeamPage() {
                       }
                     }}
                     style={{
-                      backgroundColor: "#ffffff",
-                      border: "1px solid rgba(0,0,0,0.06)",
-                      padding: "2rem",
-                      textAlign: "center",
-                      transition: "all 0.3s ease",
-                      height: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
+                      transition: "all 0.4s ease",
                       cursor: "pointer",
+                      position: "relative",
                     }}
                     onMouseEnter={(e) => {
-                      e.currentTarget.style.borderColor = "#d4af37";
-                      e.currentTarget.style.boxShadow =
-                        "0 8px 24px rgba(0,0,0,0.08)";
-                      e.currentTarget.style.transform = "translateY(-4px)";
+                      e.currentTarget.style.transform = "translateY(-6px)";
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.borderColor = "rgba(0,0,0,0.06)";
-                      e.currentTarget.style.boxShadow = "none";
                       e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
-                    {/* Avatar image */}
+                    {/* Photo with role label on top-left corner */}
                     <div
                       style={{
-                        width: "90px",
-                        height: "90px",
-                        borderRadius: "50%",
-                        overflow: "hidden",
-                        marginBottom: "1.2rem",
-                        border: "2px solid rgba(212,175,55,0.3)",
-                        flexShrink: 0,
                         position: "relative",
+                        width: "100%",
+                        aspectRatio: "3 / 4",
+                        overflow: "hidden",
+                        backgroundColor: "#3a3a2a",
                       }}
                     >
                       <Image
@@ -627,58 +616,94 @@ export default function TeamPage() {
                         alt={member.name}
                         fill
                         className="object-cover"
-                        sizes="90px"
+                        style={{
+                          filter: "grayscale(100%)",
+                          transition: "transform 0.5s ease",
+                        }}
+                        sizes="(max-width: 768px) 100vw, 33vw"
                       />
+
+                      {/* Role label on top-left corner of image */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "0.75rem",
+                          left: "0.75rem",
+                          zIndex: 2,
+                          border: "1px dashed rgba(255,255,255,0.5)",
+                          padding: "0.35rem 0.85rem",
+                          backgroundColor: "rgba(0,0,0,0.25)",
+                          backdropFilter: "blur(4px)",
+                        }}
+                      >
+                        <span
+                          style={{
+                            color: "#ffffff",
+                            fontSize: "0.75rem",
+                            fontWeight: 400,
+                            letterSpacing: "0.3px",
+                          }}
+                        >
+                          {member.role}
+                        </span>
+                      </div>
                     </div>
 
-                    <h3
-                      className="font-heading font-semibold"
+                    {/* Gold banner at bottom */}
+                    <div
                       style={{
-                        fontSize: "1.2rem",
-                        color: "#1a1a1a",
-                        marginBottom: "0.3rem",
+                        backgroundColor: "#b8a94e",
+                        padding: "0.75rem 1rem",
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
                       }}
                     >
-                      {member.name}
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: "0.8rem",
-                        color: "#cd5c5c",
-                        fontWeight: 600,
-                        letterSpacing: "0.5px",
-                        marginBottom: "1rem",
-                        textTransform: "uppercase",
-                      }}
-                    >
-                      {member.role}
-                    </p>
-                    <p
-                      style={{
-                        fontSize: "0.9rem",
-                        color: "#666",
-                        lineHeight: 1.7,
-                        flex: 1,
-                      }}
-                    >
-                      {member.bio}
-                    </p>
-
-                    {/* Click hint */}
-                    <p
-                      style={{
-                        fontSize: "0.75rem",
-                        color: "#d4af37",
-                        marginTop: "1rem",
-                        fontWeight: 500,
-                        letterSpacing: "0.5px",
-                        opacity: 0.7,
-                      }}
-                    >
-                      Click to read more
-                    </p>
+                      <span
+                        className="font-heading font-bold"
+                        style={{
+                          color: "#1a1a1a",
+                          fontSize: "0.9rem",
+                          marginRight: "0.3rem",
+                        }}
+                      >
+                        {member.name}
+                      </span>
+                      <em
+                        style={{
+                          color: "rgba(26,26,26,0.7)",
+                          fontSize: "0.78rem",
+                          fontStyle: "italic",
+                        }}
+                      >
+                        {member.subtitle}
+                      </em>
+                    </div>
                   </div>
                 </FadeInSection>
+              ))}
+            </div>
+
+            {/* Pagination dots */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "0.5rem",
+                marginTop: "2.5rem",
+              }}
+            >
+              {leadershipTeam.map((_, i) => (
+                <div
+                  key={i}
+                  style={{
+                    width: "10px",
+                    height: "10px",
+                    backgroundColor:
+                      i === 0 ? "#b8a94e" : "rgba(255,255,255,0.3)",
+                    transition: "background-color 0.3s ease",
+                  }}
+                />
               ))}
             </div>
           </div>
