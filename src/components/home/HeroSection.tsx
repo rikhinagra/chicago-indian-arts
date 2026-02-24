@@ -92,31 +92,38 @@ export default function HeroSection() {
             padding-right: 1.25rem !important;
           }
           [data-section="hero"] {
-            padding-top: 5.5rem !important;
-            align-items: flex-start !important;
+            padding-top: 4.5rem !important;
           }
           [data-section="hero-label"] {
-            font-size: 0.82rem !important;
-            margin-bottom: 0.8rem !important;
+            font-size: 0.78rem !important;
+            margin-bottom: 0.5rem !important;
           }
           [data-section="hero-title"] {
-            font-size: 2.2rem !important;
-            margin-bottom: 0.8rem !important;
+            font-size: 2rem !important;
+            margin-bottom: 0.5rem !important;
           }
           [data-section="hero-subtitle"] {
-            font-size: 0.88rem !important;
+            font-size: 0.82rem !important;
+            margin-bottom: 0.6rem !important;
+            line-height: 1.5 !important;
+          }
+          [data-section="countdown-label"] {
+            font-size: 0.7rem !important;
+            margin-bottom: 0.6rem !important;
+          }
+          [data-section="countdown-wrapper"] {
             margin-bottom: 1rem !important;
           }
           [data-section="countdown-item"] {
-            padding: 0.5rem 0.8rem !important;
-            min-width: 60px !important;
+            padding: 0.35rem 0.6rem !important;
+            min-width: 55px !important;
           }
           [data-section="countdown-number"] {
-            font-size: 2rem !important;
-            margin-bottom: 0.3rem !important;
+            font-size: 1.6rem !important;
+            margin-bottom: 0.2rem !important;
           }
           [data-section="hero-buttons"] {
-            gap: 0.7rem !important;
+            gap: 0.5rem !important;
           }
         }
         /* Short wide screens (Nest Hub 1024×600, etc.) */
@@ -208,8 +215,9 @@ export default function HeroSection() {
           </p>
 
           {/* Countdown */}
-          <div style={{ marginBottom: "2rem" }}>
+          <div data-section="countdown-wrapper" style={{ marginBottom: "2rem" }}>
             <div
+              data-section="countdown-label"
               className="uppercase font-medium"
               style={{ color: "rgba(255,255,255,0.95)", fontSize: "0.8rem", letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 10px rgba(0,0,0,0.8)" }}
             >
