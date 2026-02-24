@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 
 function CountdownItem({ value, label }: { value: number; label: string }) {
@@ -323,10 +324,8 @@ export default function HeroSection() {
                 Register Now
               </Button>
             </div>
-            <a
-              href="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeYv3wmGMDA4Q9NN_4vlVHWvvrFAS2jjGrMd4utVl3aDSXD1g/viewform?usp=dialog"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/call-for-submissions"
               style={{
                 padding: "0.75rem 1.5rem",
                 fontSize: "0.82rem",
@@ -353,7 +352,7 @@ export default function HeroSection() {
               }}
             >
               Call for Submissions
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

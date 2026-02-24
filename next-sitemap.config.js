@@ -17,7 +17,7 @@ module.exports = {
     // High priority pages
     const highPriority = ["/", "/vaarta", "/prasang", "/varnam", "/about", "/events"];
     // Medium priority pages
-    const mediumPriority = ["/register", "/donate", "/contact", "/gallery", "/team", "/blog"];
+    const mediumPriority = ["/register", "/donate", "/contact", "/gallery", "/team", "/blog", "/call-for-submissions"];
 
     let priority = 0.5;
     let changefreq = "monthly";
