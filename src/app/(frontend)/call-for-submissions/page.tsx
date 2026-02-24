@@ -30,35 +30,37 @@ const guidelines = [
     icon: FileText,
     title: "Original Work Only",
     description:
-      "All submissions must be the original work of the applicant. Previously published work may be considered if rights are retained by the author.",
+      "All content presented must be the original work of the speaker or properly attributed, and must not infringe upon any third-party intellectual property rights.",
   },
   {
     icon: BookOpen,
-    title: "All Genres Welcome",
+    title: "All Genres & Languages Welcome",
     description:
-      "We welcome submissions across poetry, fiction, memoir, essays, scripts, academic research, and experimental writing in any Indian or English language.",
+      "Programming includes works in Hindi, Urdu, Tamil, Bengali, and other languages of India and the Indian diaspora, with English translations where feasible. We welcome poetry, fiction, memoir, essays, scripts, and experimental writing.",
   },
   {
     icon: Feather,
-    title: "Author Profile Required",
+    title: "Your Rights Are Protected",
     description:
-      "Please include a brief author bio, your social media or portfolio link, and the genre or theme of your submission.",
+      "Participants retain all copyright and intellectual property rights to their original literary works. Chicago Indian Arts does not claim ownership of any participant\u2019s creative work. Any use beyond festival documentation requires separate written consent.",
   },
   {
     icon: PenTool,
     title: "Participation Opportunities",
     description:
-      "Selected contributors may be invited to participate in readings, panel discussions, and live events at Vaarta 2026.",
+      "Selected contributors may be invited for author talks, poetry readings, panel discussions, open mic sessions (5 minutes per participant), book launches, and writing workshops at Vaarta 2026.",
   },
 ];
 
 const terms = [
-  "Submissions must be the original work of the applicant.",
-  "By submitting, you grant permission for review and potential publication or event use with proper credit.",
-  "Selected authors will be contacted directly by the Chicago Indian Arts team.",
-  "Submissions are reviewed on a rolling basis. Our team will reach out as schedules are finalized.",
-  "Multiple submissions are allowed, but each must be submitted separately.",
-  "Chicago Indian Arts reserves the right to curate and select works for the festival program.",
+  "All submissions must be the original work of the applicant and must not infringe upon any third-party intellectual property rights.",
+  "By participating in Vaarta, you grant Chicago Indian Arts a perpetual, royalty-free, non-exclusive license to use images, video, and audio captured at the event for educational, promotional, and archival purposes.",
+  "Participants retain all copyright and intellectual property rights to their original literary works. Chicago Indian Arts does not claim ownership of any participant\u2019s creative work.",
+  "All participants must adhere to the Vaarta Code of Conduct. Harassment, discrimination, hate speech, and disruption of sessions are strictly prohibited.",
+  "Speakers and presenters agree to adhere to their allotted session time and format as determined by the programming committee. Open mic slots are limited to 5 minutes per participant.",
+  "Speakers may not use their platform to promote commercial products or services without prior written consent from Chicago Indian Arts.",
+  "Chicago Indian Arts reserves the right to curate and select works for the festival program based on literary merit, cultural relevance, and thematic alignment.",
+  "Content that is defamatory, obscene, or violates any applicable law is strictly prohibited.",
 ];
 
 export default function CallForSubmissionsPage() {
@@ -516,6 +518,40 @@ export default function CallForSubmissionsPage() {
               </FadeInSection>
             ))}
           </div>
+
+          <FadeInSection delay={0.3}>
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "0.9rem",
+                lineHeight: 1.7,
+                color: "#999999",
+                marginTop: "2.5rem",
+                fontStyle: "italic",
+              }}
+            >
+              These terms are excerpted from the official Vaarta Literature
+              Festival Rules &amp; Regulations. For the complete document,
+              please{" "}
+              <Link
+                href="/contact"
+                style={{
+                  color: "#cd5c5c",
+                  textDecoration: "underline",
+                  transition: "color 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.color = "#d4af37")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.color = "#cd5c5c")
+                }
+              >
+                contact us
+              </Link>
+              .
+            </p>
+          </FadeInSection>
         </div>
       </section>
 
