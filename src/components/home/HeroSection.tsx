@@ -92,38 +92,38 @@ export default function HeroSection() {
             padding-right: 1.25rem !important;
           }
           [data-section="hero"] {
-            padding-top: 4.5rem !important;
+            padding-top: 4rem !important;
           }
           [data-section="hero-label"] {
             font-size: 0.78rem !important;
-            margin-bottom: 0.5rem !important;
+            margin-bottom: 0.4rem !important;
           }
           [data-section="hero-title"] {
             font-size: 2rem !important;
-            margin-bottom: 0.5rem !important;
+            margin-bottom: 0.4rem !important;
           }
           [data-section="hero-subtitle"] {
             font-size: 0.82rem !important;
-            margin-bottom: 0.6rem !important;
-            line-height: 1.5 !important;
+            margin-bottom: 0.4rem !important;
+            line-height: 1.45 !important;
           }
           [data-section="countdown-label"] {
             font-size: 0.7rem !important;
-            margin-bottom: 0.6rem !important;
+            margin-bottom: 0.4rem !important;
           }
           [data-section="countdown-wrapper"] {
-            margin-bottom: 1rem !important;
+            margin-bottom: 0.6rem !important;
           }
           [data-section="countdown-item"] {
-            padding: 0.35rem 0.6rem !important;
-            min-width: 55px !important;
+            padding: 0.3rem 0.5rem !important;
+            min-width: 50px !important;
           }
           [data-section="countdown-number"] {
-            font-size: 1.6rem !important;
-            margin-bottom: 0.2rem !important;
+            font-size: 1.5rem !important;
+            margin-bottom: 0.15rem !important;
           }
           [data-section="hero-buttons"] {
-            gap: 0.5rem !important;
+            gap: 0.4rem !important;
           }
         }
         /* Short wide screens (Nest Hub 1024×600, etc.) */
