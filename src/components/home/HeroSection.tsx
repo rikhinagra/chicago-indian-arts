@@ -187,8 +187,8 @@ export default function HeroSection() {
         >
           {/* Event Label */}
           <div
-            data-section="hero-label" className="uppercase font-semibold"
-            style={{ color: "#d4af37", fontSize: "1rem", letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)" }}
+            data-section="hero-label" className="uppercase"
+            style={{ color: "#ffffff", fontSize: "1rem", fontWeight: 700, letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)" }}
           >
             Vaarta 2026 &middot; May 30
           </div>
