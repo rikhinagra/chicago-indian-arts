@@ -493,6 +493,33 @@ img {
   [data-section="accreditation-form"] {
     padding: 3.5rem 2rem !important;
   }
+
+  /* Submissions */
+  [data-section="submissions-hero"] {
+    min-height: 65vh !important;
+  }
+  [data-section="submissions-hero"] > div:last-child {
+    padding: 8rem 2rem 4rem !important;
+  }
+  [data-section="submissions-hero-title"] {
+    font-size: 3.5rem !important;
+  }
+  [data-section="submissions-about"],
+  [data-section="submissions-categories"],
+  [data-section="submissions-guidelines"],
+  [data-section="submissions-terms"] {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  [data-section="submissions-quote"] {
+    padding: 3.5rem 2rem !important;
+  }
+  [data-section="submissions-cta"] {
+    padding: 3.5rem 2rem !important;
+  }
+  [data-section="submissions-heading"] {
+    font-size: 2.2rem !important;
+  }
 }
 
 /* Mobile: ≤768px */
@@ -1016,6 +1043,41 @@ img {
     grid-template-columns: 1fr !important;
   }
 
+  /* Submissions */
+  [data-section="submissions-hero"] {
+    min-height: 60vh !important;
+  }
+  [data-section="submissions-hero"] > div:last-child {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+  [data-section="submissions-hero-title"] {
+    font-size: 2.8rem !important;
+  }
+  [data-section="submissions-hero-subtitle"] {
+    font-size: 1.05rem !important;
+  }
+  [data-section="submissions-about"],
+  [data-section="submissions-categories"],
+  [data-section="submissions-guidelines"],
+  [data-section="submissions-terms"],
+  [data-section="submissions-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="submissions-quote"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="submissions-quote"] p {
+    font-size: 1.15rem !important;
+  }
+  [data-section="submissions-heading"] {
+    font-size: 1.8rem !important;
+  }
+  [data-section="submissions-guidelines-grid"] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-section="submissions-terms"] .flex.items-start {
+    padding: 1.2rem 1.2rem !important;
+  }
 }
 
 /* Small Mobile: ≤480px */
@@ -1413,4 +1475,36 @@ img {
     padding: 2rem 1rem !important;
   }
 
+  /* Submissions */
+  [data-section="submissions-hero"] > div:last-child {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+  [data-section="submissions-hero-title"] {
+    font-size: 2.2rem !important;
+  }
+  [data-section="submissions-hero-subtitle"] {
+    font-size: 0.95rem !important;
+  }
+  [data-section="submissions-about"],
+  [data-section="submissions-categories"],
+  [data-section="submissions-guidelines"],
+  [data-section="submissions-terms"],
+  [data-section="submissions-cta"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="submissions-quote"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="submissions-quote"] p {
+    font-size: 1rem !important;
+  }
+  [data-section="submissions-heading"] {
+    font-size: 1.5rem !important;
+  }
+  [data-section="submissions-categories"] .grid {
+    grid-template-columns: 1fr !important;
+  }
+  [data-section="submissions-terms"] .flex.items-start {
+    padding: 1rem 1rem !important;
+  }
 }
