@@ -410,6 +410,80 @@ export default function TeamPage() {
 
   return (
     <>
+      {/* Page-level responsive styles — always in DOM */}
+      <style>{`
+        /* Tablet */
+        @media (max-width: 768px) {
+          [data-card="role-label"] {
+            left: -0.5rem !important;
+            top: -0.75rem !important;
+            padding: 0.3rem 0.7rem !important;
+          }
+          [data-card="role-label"] span {
+            font-size: 0.7rem !important;
+          }
+          [data-section="team-hero"] {
+            padding: 8rem 1.5rem 2.5rem !important;
+          }
+          [data-section="team-hero"] h1 {
+            font-size: 2.5rem !important;
+          }
+          [data-section="team-hero"] p {
+            font-size: 0.95rem !important;
+          }
+          [data-section="team-leadership"] {
+            padding: 3rem 1.5rem !important;
+          }
+          [data-section="team-leadership"] h2 {
+            font-size: 1.8rem !important;
+          }
+          [data-section="team-cta"] {
+            padding: 3rem 1.5rem !important;
+          }
+          [data-section="team-cta"] h2 {
+            font-size: 2rem !important;
+          }
+        }
+        /* Mobile */
+        @media (max-width: 480px) {
+          [data-card="role-label"] {
+            left: 0 !important;
+            top: -0.65rem !important;
+            padding: 0.25rem 0.6rem !important;
+          }
+          [data-card="role-label"] span {
+            font-size: 0.65rem !important;
+          }
+          [data-section="team-hero"] {
+            padding: 7rem 1rem 2rem !important;
+          }
+          [data-section="team-hero"] h1 {
+            font-size: 2rem !important;
+          }
+          [data-section="team-hero"] p {
+            font-size: 0.88rem !important;
+          }
+          [data-section="team-leadership"] {
+            padding: 2.5rem 1rem !important;
+          }
+          [data-section="team-leadership"] h2 {
+            font-size: 1.5rem !important;
+          }
+          [data-section="team-leadership-grid"] {
+            gap: 1.5rem !important;
+          }
+          [data-section="team-cta"] {
+            padding: 2.5rem 1rem !important;
+          }
+          [data-section="team-cta"] h2 {
+            font-size: 1.6rem !important;
+          }
+          [data-section="team-cta"] p {
+            font-size: 0.9rem !important;
+          }
+        }
+      `}</style>
+
       {/* Leadership Modal */}
       <AnimatePresence>
         {selectedMember && (
@@ -601,7 +675,33 @@ export default function TeamPage() {
                       e.currentTarget.style.transform = "translateY(0)";
                     }}
                   >
-                    {/* Photo with role label on top-left corner */}
+                    {/* Role label — half outside, half inside the image top-left */}
+                    <div
+                      data-card="role-label"
+                      style={{
+                        position: "absolute",
+                        top: "-0.85rem",
+                        left: "-0.85rem",
+                        zIndex: 3,
+                        border: "1px dashed rgba(255,255,255,0.5)",
+                        padding: "0.35rem 0.85rem",
+                        backgroundColor: "rgba(0,0,0,0.35)",
+                        backdropFilter: "blur(4px)",
+                      }}
+                    >
+                      <span
+                        style={{
+                          color: "#ffffff",
+                          fontSize: "0.75rem",
+                          fontWeight: 400,
+                          letterSpacing: "0.3px",
+                        }}
+                      >
+                        {member.role}
+                      </span>
+                    </div>
+
+                    {/* Photo */}
                     <div
                       style={{
                         position: "relative",
@@ -622,31 +722,6 @@ export default function TeamPage() {
                         }}
                         sizes="(max-width: 768px) 100vw, 33vw"
                       />
-
-                      {/* Role label on top-left corner of image */}
-                      <div
-                        style={{
-                          position: "absolute",
-                          top: "0.75rem",
-                          left: "0.75rem",
-                          zIndex: 2,
-                          border: "1px dashed rgba(255,255,255,0.5)",
-                          padding: "0.35rem 0.85rem",
-                          backgroundColor: "rgba(0,0,0,0.25)",
-                          backdropFilter: "blur(4px)",
-                        }}
-                      >
-                        <span
-                          style={{
-                            color: "#ffffff",
-                            fontSize: "0.75rem",
-                            fontWeight: 400,
-                            letterSpacing: "0.3px",
-                          }}
-                        >
-                          {member.role}
-                        </span>
-                      </div>
                     </div>
 
                     {/* Gold banner at bottom */}
