@@ -85,7 +85,7 @@ export default function HeroSection() {
     <section data-section="hero" className="h-screen relative flex items-center overflow-hidden">
       {/* Mobile-only hero padding override + short screen fix */}
       <style>{`
-        /* All mobile phones — base styles */
+        /* All mobile phones — base styles (tall phones keep inline margins) */
         @media (max-width: 639px) {
           [data-section="hero-content"] {
             padding-left: 1.25rem !important;
@@ -96,23 +96,16 @@ export default function HeroSection() {
           }
           [data-section="hero-label"] {
             font-size: 0.85rem !important;
-            margin-bottom: 1.1rem !important;
           }
           [data-section="hero-title"] {
             font-size: 2.2rem !important;
-            margin-bottom: 1.1rem !important;
           }
           [data-section="hero-subtitle"] {
             font-size: 0.88rem !important;
-            margin-bottom: 1.3rem !important;
             line-height: 1.6 !important;
           }
           [data-section="countdown-label"] {
             font-size: 0.75rem !important;
-            margin-bottom: 1rem !important;
-          }
-          [data-section="countdown-wrapper"] {
-            margin-bottom: 1.5rem !important;
           }
           [data-section="countdown-item"] {
             padding: 0.4rem 0.7rem !important;
