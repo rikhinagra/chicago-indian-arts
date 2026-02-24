@@ -126,6 +126,30 @@ export default function HeroSection() {
             gap: 0.6rem !important;
           }
         }
+        /* Tall iPhones (iPhone 15/16/17 series: 393×852 to 440×960) — relaxed spacing */
+        @media (max-width: 639px) and (min-height: 751px) {
+          [data-section="hero"] {
+            padding-top: 5.5rem !important;
+          }
+          [data-section="hero-label"] {
+            margin-bottom: 1.4rem !important;
+          }
+          [data-section="hero-title"] {
+            margin-bottom: 1.4rem !important;
+          }
+          [data-section="hero-subtitle"] {
+            margin-bottom: 2rem !important;
+          }
+          [data-section="countdown-label"] {
+            margin-bottom: 1.2rem !important;
+          }
+          [data-section="countdown-wrapper"] {
+            margin-bottom: 2rem !important;
+          }
+          [data-section="hero-buttons"] {
+            gap: 0.8rem !important;
+          }
+        }
         /* Short mobile phones only (375×667, 360×740, 540×720) — tighter spacing */
         @media (max-width: 639px) and (max-height: 750px) {
           [data-section="hero"] {
