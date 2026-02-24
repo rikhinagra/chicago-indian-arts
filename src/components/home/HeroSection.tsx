@@ -85,18 +85,55 @@ export default function HeroSection() {
     <section data-section="hero" className="h-screen relative flex items-center overflow-hidden">
       {/* Mobile-only hero padding override + short screen fix */}
       <style>{`
-        /* Mobile phones (375×667, 360×740, 540×720, etc.) */
+        /* All mobile phones — base styles */
         @media (max-width: 639px) {
           [data-section="hero-content"] {
             padding-left: 1.25rem !important;
             padding-right: 1.25rem !important;
           }
           [data-section="hero"] {
+            padding-top: 5rem !important;
+          }
+          [data-section="hero-label"] {
+            font-size: 0.85rem !important;
+            margin-bottom: 0.8rem !important;
+          }
+          [data-section="hero-title"] {
+            font-size: 2.2rem !important;
+            margin-bottom: 0.8rem !important;
+          }
+          [data-section="hero-subtitle"] {
+            font-size: 0.88rem !important;
+            margin-bottom: 1rem !important;
+            line-height: 1.6 !important;
+          }
+          [data-section="countdown-label"] {
+            font-size: 0.75rem !important;
+            margin-bottom: 0.8rem !important;
+          }
+          [data-section="countdown-wrapper"] {
+            margin-bottom: 1.2rem !important;
+          }
+          [data-section="countdown-item"] {
+            padding: 0.4rem 0.7rem !important;
+            min-width: 55px !important;
+          }
+          [data-section="countdown-number"] {
+            font-size: 1.8rem !important;
+            margin-bottom: 0.2rem !important;
+          }
+          [data-section="hero-buttons"] {
+            gap: 0.6rem !important;
+          }
+        }
+        /* Short mobile phones only (375×667, 360×740, 540×720) — tighter spacing */
+        @media (max-width: 639px) and (max-height: 750px) {
+          [data-section="hero"] {
             padding-top: 4rem !important;
           }
           [data-section="hero-label"] {
-            font-size: 0.78rem !important;
             margin-bottom: 0.4rem !important;
+            font-size: 0.78rem !important;
           }
           [data-section="hero-title"] {
             font-size: 2rem !important;
