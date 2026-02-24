@@ -250,6 +250,28 @@ export default function Navbar() {
 
   return (
     <>
+      {/* Compact navbar for mobile + short wide screens */}
+      <style>{`
+        @media (max-width: 639px) {
+          [data-section="nav-container"] {
+            padding: 0.6rem 1.25rem !important;
+          }
+          [data-section="nav-logo"] {
+            height: 50px !important;
+            width: 220px !important;
+          }
+        }
+        @media (max-height: 700px) and (min-width: 768px) {
+          [data-section="nav-container"] {
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+          }
+          [data-section="nav-logo"] {
+            height: 55px !important;
+            width: 260px !important;
+          }
+        }
+      `}</style>
       <nav
         className="fixed top-0 w-full z-[1000] transition-all duration-300"
         style={{

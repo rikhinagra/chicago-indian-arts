@@ -82,13 +82,64 @@ export default function HeroSection() {
   }, [handleVideoEnd]);
 
   return (
-    <section className="h-screen relative flex items-center overflow-hidden">
-      {/* Mobile-only hero padding override */}
+    <section data-section="hero" className="h-screen relative flex items-center overflow-hidden">
+      {/* Mobile-only hero padding override + short screen fix */}
       <style>{`
+        /* Mobile phones (375×667, 360×740, 540×720, etc.) */
         @media (max-width: 639px) {
           [data-section="hero-content"] {
             padding-left: 1.25rem !important;
             padding-right: 1.25rem !important;
+          }
+          [data-section="hero"] {
+            padding-top: 5.5rem !important;
+            align-items: flex-start !important;
+          }
+          [data-section="hero-label"] {
+            font-size: 0.82rem !important;
+            margin-bottom: 0.8rem !important;
+          }
+          [data-section="hero-title"] {
+            font-size: 2.2rem !important;
+            margin-bottom: 0.8rem !important;
+          }
+          [data-section="hero-subtitle"] {
+            font-size: 0.88rem !important;
+            margin-bottom: 1rem !important;
+          }
+          [data-section="countdown-item"] {
+            padding: 0.5rem 0.8rem !important;
+            min-width: 60px !important;
+          }
+          [data-section="countdown-number"] {
+            font-size: 2rem !important;
+            margin-bottom: 0.3rem !important;
+          }
+          [data-section="hero-buttons"] {
+            gap: 0.7rem !important;
+          }
+        }
+        /* Short wide screens (Nest Hub 1024×600, etc.) */
+        @media (max-height: 700px) and (min-width: 768px) {
+          [data-section="hero"] {
+            padding-top: 6rem !important;
+          }
+          [data-section="hero-title"] {
+            font-size: 2.8rem !important;
+          }
+          [data-section="hero-subtitle"] {
+            font-size: 0.95rem !important;
+            margin-bottom: 1.2rem !important;
+          }
+          [data-section="countdown-item"] {
+            padding: 0.6rem 1rem !important;
+            min-width: 70px !important;
+          }
+          [data-section="countdown-number"] {
+            font-size: 2.2rem !important;
+          }
+          [data-section="countdown"] {
+            margin-bottom: 1.2rem !important;
           }
         }
       `}</style>
