@@ -49,7 +49,7 @@ export default function VaartaPage() {
             alt="Vaarta Indian Literature Festival Chicago 2026 - Celebrating Indian authors, poetry, and storytelling traditions in the Midwest"
             fill
             className="object-cover"
-            style={{ objectPosition: "center 85%" }}
+            style={{ objectPosition: "center 25%" }}
             priority
           />
           {/* Left-side gradient for text readability */}
