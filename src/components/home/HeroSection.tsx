@@ -96,23 +96,23 @@ export default function HeroSection() {
           }
           [data-section="hero-label"] {
             font-size: 0.85rem !important;
-            margin-bottom: 0.8rem !important;
+            margin-bottom: 1.1rem !important;
           }
           [data-section="hero-title"] {
             font-size: 2.2rem !important;
-            margin-bottom: 0.8rem !important;
+            margin-bottom: 1.1rem !important;
           }
           [data-section="hero-subtitle"] {
             font-size: 0.88rem !important;
-            margin-bottom: 1rem !important;
+            margin-bottom: 1.3rem !important;
             line-height: 1.6 !important;
           }
           [data-section="countdown-label"] {
             font-size: 0.75rem !important;
-            margin-bottom: 0.8rem !important;
+            margin-bottom: 1rem !important;
           }
           [data-section="countdown-wrapper"] {
-            margin-bottom: 1.2rem !important;
+            margin-bottom: 1.5rem !important;
           }
           [data-section="countdown-item"] {
             padding: 0.4rem 0.7rem !important;
