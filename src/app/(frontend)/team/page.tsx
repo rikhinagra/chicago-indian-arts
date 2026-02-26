@@ -415,12 +415,12 @@ export default function TeamPage() {
         /* Tablet */
         @media (max-width: 768px) {
           [data-card="role-label"] {
-            left: -0.5rem !important;
+            left: 0rem !important;
             top: -0.75rem !important;
-            padding: 0.3rem 0.7rem !important;
+            padding: 0.35rem 0.8rem !important;
           }
           [data-card="role-label"] span {
-            font-size: 0.7rem !important;
+            font-size: 0.72rem !important;
           }
           [data-section="team-hero"] {
             padding: 8rem 1.5rem 2.5rem !important;
@@ -432,10 +432,13 @@ export default function TeamPage() {
             font-size: 0.95rem !important;
           }
           [data-section="team-leadership"] {
-            padding: 3rem 1.5rem !important;
+            padding: 3.5rem 1.5rem !important;
           }
           [data-section="team-leadership"] h2 {
             font-size: 1.8rem !important;
+          }
+          [data-section="team-leadership-grid"] {
+            gap: 2.5rem !important;
           }
           [data-section="team-cta"] {
             padding: 3rem 1.5rem !important;
@@ -447,39 +450,39 @@ export default function TeamPage() {
         /* Mobile */
         @media (max-width: 480px) {
           [data-card="role-label"] {
-            left: 0 !important;
+            left: 0.5rem !important;
             top: -0.65rem !important;
-            padding: 0.25rem 0.6rem !important;
+            padding: 0.3rem 0.7rem !important;
           }
           [data-card="role-label"] span {
-            font-size: 0.65rem !important;
+            font-size: 0.68rem !important;
           }
           [data-section="team-hero"] {
             padding: 7rem 1rem 2rem !important;
           }
           [data-section="team-hero"] h1 {
-            font-size: 2rem !important;
+            font-size: 2.1rem !important;
           }
           [data-section="team-hero"] p {
-            font-size: 0.88rem !important;
+            font-size: 0.9rem !important;
           }
           [data-section="team-leadership"] {
-            padding: 2.5rem 1rem !important;
+            padding: 3rem 1rem !important;
           }
           [data-section="team-leadership"] h2 {
-            font-size: 1.5rem !important;
+            font-size: 1.6rem !important;
           }
           [data-section="team-leadership-grid"] {
-            gap: 1.5rem !important;
+            gap: 3rem !important;
           }
           [data-section="team-cta"] {
             padding: 2.5rem 1rem !important;
           }
           [data-section="team-cta"] h2 {
-            font-size: 1.6rem !important;
+            font-size: 1.7rem !important;
           }
           [data-section="team-cta"] p {
-            font-size: 0.9rem !important;
+            font-size: 0.92rem !important;
           }
         }
       `}</style>
@@ -728,27 +731,28 @@ export default function TeamPage() {
                     <div
                       style={{
                         backgroundColor: "#b8a94e",
-                        padding: "0.75rem 1rem",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
+                        padding: "1rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "0.2rem",
                       }}
                     >
                       <span
                         className="font-heading font-bold"
                         style={{
                           color: "#1a1a1a",
-                          fontSize: "0.9rem",
-                          marginRight: "0.3rem",
+                          fontSize: "1rem",
+                          lineHeight: 1.2,
                         }}
                       >
                         {member.name}
                       </span>
                       <em
                         style={{
-                          color: "rgba(26,26,26,0.7)",
-                          fontSize: "0.78rem",
+                          color: "rgba(26,26,26,0.8)",
+                          fontSize: "0.8rem",
                           fontStyle: "italic",
+                          lineHeight: 1.2,
                         }}
                       >
                         {member.subtitle}

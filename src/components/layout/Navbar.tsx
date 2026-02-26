@@ -275,9 +275,9 @@ export default function Navbar() {
       <nav
         className="fixed top-0 w-full z-[1000] transition-all duration-300"
         style={{
-          backgroundColor: scrolled ? "rgba(255,255,255,0.98)" : "rgba(255,255,255,0)",
-          backdropFilter: scrolled ? "blur(16px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(0,0,0,0.06)" : "1px solid rgba(255,255,255,0.2)",
+          backgroundColor: mounted && isScrolled ? "rgba(255,255,255,0.98)" : "rgba(255,255,255,0)",
+          backdropFilter: mounted && isScrolled ? "blur(16px)" : "none",
+          borderBottom: mounted && isScrolled ? "1px solid rgba(0,0,0,0.06)" : "1px solid rgba(255,255,255,0.2)",
         }}
       >
         <div data-section="nav-container" className="flex justify-between items-center" style={{ padding: "1rem 3rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
