@@ -28,27 +28,26 @@ export const metadata: Metadata = {
 
 const posts = [
   {
-    slug: "vaarta-2026-lineup-announced",
-    title: "Vaarta 2026 Lineup Announced",
+    slug: "literature-festival-2026-lineup-announced",
+    title: "Literature Festival 2026 Lineup Announced",
     excerpt: "We're thrilled to announce the featured authors and speakers for our upcoming literature festival.",
     date: "January 15, 2026",
-    category: "Vaarta",
+    category: "Chicago Indian Literature Festival",
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80",
   },
   {
-    slug: "prasang-designer-spotlight",
-    title: "Prasang Designer Spotlight: Emerging Talent",
-    excerpt: "Meet the up-and-coming designers who will showcase their collections at Prasang 2026.",
+    slug: "fashion-week-designer-spotlight",
+    title: "Fashion Week Designer Spotlight: Emerging Talent",
     date: "January 10, 2026",
-    category: "Prasang",
+    category: "Chicago Indian Fashion Week",
     image: "https://images.unsplash.com/photo-1558769132-cb1aea41c795?w=600&q=80",
   },
   {
-    slug: "varnam-conservation-partnership",
-    title: "Varnam Partners with Wildlife Conservation Society",
+    slug: "photography-festival-conservation-partnership",
+    title: "Wildlife & Arts Festival Conservation Partnership",
     excerpt: "A new partnership that will bring wildlife conservation talks and exhibitions to our photography program.",
     date: "December 20, 2025",
-    category: "Varnam",
+    category: "Wildlife Photography & Visual Arts Festival",
     image: "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=600&q=80",
   },
   {

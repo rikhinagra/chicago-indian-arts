@@ -11,10 +11,10 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 const highlights = [
-  { title: "Vaarta 2025", caption: "Author Panel Discussion", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" },
-  { title: "Prasang 2025", caption: "Designer Runway Show", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80" },
-  { title: "Varnam 2024", caption: "Wildlife Photography Exhibition", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" },
-  { title: "Vaarta Workshop", caption: "Creative Writing Session", image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" },
+  { title: "Literature Festival 2025", caption: "Author Panel Discussion", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" },
+  { title: "Fashion Week 2025", caption: "Designer Runway Show", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80" },
+  { title: "Wildlife Photography 2024", caption: "Wildlife Photography Exhibition", image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80" },
+  { title: "Literature Workshop", caption: "Creative Writing Session", image: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" },
   { title: "Cultural Evening", caption: "Traditional Performance", image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=80" },
   { title: "Networking Event", caption: "Community Gathering", image: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80" },
   { title: "Fashion Workshop", caption: "Textile Design Masterclass", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" },

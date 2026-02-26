@@ -33,16 +33,16 @@ const leadershipTeam = [
       "https://res.cloudinary.com/dom3oj7ya/image/upload/v1771928983/vice_president_daz1fc.webp",
   },
   {
-    name: "Priya Mehta",
+    name: "Divya Verma",
     role: "Director of Programs",
     subtitle: "Director of Programs, Chicago Indian Arts",
-    bio: "An experienced program strategist, Priya oversees all cultural initiatives and events that bring the mission of Chicago Indian Arts to life.",
+    bio: "An experienced program strategist, Divya oversees all cultural initiatives and events that bring the mission of Chicago Indian Arts to life.",
     fullBio:
-      "Priya Mehta serves as the Director of Programs at Chicago Indian Arts. She is responsible for designing, developing, and overseeing the organization's diverse portfolio of cultural programs and events. With a keen eye for detail and a passion for storytelling through the arts, Priya ensures that every program reflects the richness and depth of Indian culture while engaging audiences across Chicago and beyond.",
+      "Divya Verma serves as the Director of Programs at Chicago Indian Arts. She is responsible for designing, developing, and overseeing the organization's diverse portfolio of cultural programs and events. With a keen eye for detail and a passion for storytelling through the arts, Divya ensures that every program reflects the richness and depth of Indian culture while engaging audiences across Chicago and beyond.",
     quote:
       "Every program we create is an opportunity to tell a story, celebrate heritage, and inspire the next generation of artists.",
     image:
-      "https://res.cloudinary.com/dom3oj7ya/image/upload/v1771928982/director_of_programs_l4qsvv.webp",
+      "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118852/divya-verma-director-of-programs_oatiqe.webp",
   },
 ];
 
@@ -391,7 +391,7 @@ function LeadershipModal({
                 alt={member.name}
                 fill
                 className="object-cover"
-                style={{ filter: "grayscale(80%)" }}
+                style={{ /* filter: "grayscale(80%)" */ }}
                 sizes="(max-width: 480px) 160px, (max-width: 768px) 200px, 280px"
               />
             </div>
@@ -717,7 +717,7 @@ export default function TeamPage() {
                         fill
                         className="object-cover"
                         style={{
-                          filter: "grayscale(100%)",
+                          /* filter: "grayscale(100%)", */
                           transition: "transform 0.5s ease",
                         }}
                         sizes="(max-width: 768px) 100vw, 33vw"

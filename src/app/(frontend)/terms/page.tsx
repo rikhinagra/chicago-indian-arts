@@ -189,7 +189,7 @@ export default function TermsPage() {
               Chicago Indian Collective Arts is a registered 501(c)(3) non-profit
               organization dedicated to celebrating and preserving Indian cultural
               heritage through literature, fashion, photography, and the performing
-              arts. Our programs include Vaarta, Prasang, and Varnam.
+              arts. Our programs include the Chicago Indian Literature Festival, Chicago Indian Fashion Week, and the Wildlife Photography & Visual Arts Festival.
             </p>
 
             {/* 3. Event Registration */}

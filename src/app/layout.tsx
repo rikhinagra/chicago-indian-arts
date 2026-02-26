@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Chicago Indian Arts",
   },
   description:
-    "Chicago Indian Arts is a nonprofit celebrating Indian and South Asian cultural heritage through Vaarta (Literature Festival), Prasang (Fashion), and Varnam (Photography). Join Chicago's premier Indian cultural events.",
+    "Chicago Indian Arts is a nonprofit celebrating Indian and South Asian cultural heritage through literature festivals, fashion shows, and photography exhibitions. Join Chicago's premier Indian cultural events.",
   keywords: [
     "Chicago Indian Arts",
     "Indian arts Chicago",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     "Indian cultural organization Chicago",
     "Indian community events Chicago",
     "Indian arts nonprofit Chicago",
-    "Vaarta",
-    "Prasang",
-    "Varnam",
+    "Chicago Indian Literature Festival",
+    "Chicago Indian Fashion Week",
+    "Wildlife Photography & Visual Arts Festival",
     "Indian arts Los Angeles",
     "Indian cultural events Los Angeles",
   ],

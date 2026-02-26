@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const programLinks = [
-  { label: "Vaarta", subtitle: "Literature Festival", href: "/vaarta" },
-  { label: "Prasang", subtitle: "Fashion Innovation", href: "/prasang" },
-  { label: "Varnam", subtitle: "Photography & Wildlife", href: "/varnam" },
+  { label: "Chicago Indian Literature Festival", subtitle: "Literature Festival", href: "/literature-festival" },
+  { label: "Chicago Indian Fashion Week", subtitle: "Fashion Innovation", href: "/fashion-week" },
+  { label: "Wildlife Photography & Visual Arts Festival", subtitle: "Photography & Wildlife", href: "/photography-festival" },
 ];
 
 const aboutLinks = [

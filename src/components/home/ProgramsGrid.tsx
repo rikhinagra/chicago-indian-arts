@@ -9,10 +9,10 @@ import FadeInSection from "@/components/ui/FadeInSection";
 
 const programs = [
   {
-    name: "VAARTA",
+    name: "Chicago Indian Literature Festival",
     type: "Literature Festival",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1771593351/vaarta-indian-literature-festival-chicago_uiuoys.webp",
-    alt: "Vaarta Indian Literature Festival Chicago - Authors and poets celebrating South Asian storytelling traditions",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-literature-festival-authors_ldfpao.webp",
+    alt: "Chicago Indian Literature Festival - Authors and poets celebrating South Asian storytelling traditions",
     description:
       "A landmark event showcasing India's rich storytelling traditions with renowned authors, poets, and thought leaders from around the world.",
     highlights: [
@@ -21,13 +21,13 @@ const programs = [
       "Book launches and signings",
       "Literary workshops",
     ],
-    href: "/vaarta",
+    href: "/literature-festival",
   },
   {
-    name: "PRASANG",
+    name: "Chicago Indian Fashion Week",
     type: "Fashion Innovation",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1771593350/prasang-indian-fashion-innovation-chicago_ltzxxj.webp",
-    alt: "Prasang Indian Fashion Innovation Chicago - Traditional and contemporary Indian designer runway showcase",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-fashion-week-ramp-walk_msegp2.webp",
+    alt: "Chicago Indian Fashion Week - Traditional and contemporary Indian designer runway showcase",
     description:
       "Vibrant runway shows featuring traditional and contemporary Indian fashion from top designers, celebrating textile heritage and innovation.",
     highlights: [
@@ -36,13 +36,13 @@ const programs = [
       "Emerging designer spotlights",
       "Fashion networking events",
     ],
-    href: "/prasang",
+    href: "/fashion-week",
   },
   {
-    name: "VARNAM",
+    name: "Wildlife Photography & Visual Arts Festival",
     type: "Photography & Wildlife",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/c_fit,w_980/v1771593351/varnam-photography-wildlife-exhibition-chicago_yqh1wj.webp",
-    alt: "Varnam Photography and Wildlife Exhibition Chicago - Visual storytelling capturing Indian culture and nature",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-wildlife-photography-festival_ikrzcw.webp",
+    alt: "Wildlife Photography & Visual Arts Festival - Visual storytelling capturing Indian culture and nature",
     description:
       "A space where images become stories and perspectives come alive, bringing together creators who capture culture, wildlife, and the world through the lens.",
     highlights: [
@@ -51,7 +51,7 @@ const programs = [
       "Photo workshops and masterclasses",
       "Visual storytelling sessions",
     ],
-    href: "/varnam",
+    href: "/photography-festival",
   },
 ];
 
@@ -124,9 +124,10 @@ function ProgramCard({
               {program.type}
             </div>
             <h3
+              data-section="program-card-title"
               className="font-heading font-semibold"
               style={{
-                fontSize: "1.6rem",
+                fontSize: "1.35rem",
                 textShadow: "0 2px 6px rgba(0,0,0,0.8)",
               }}
             >
@@ -157,7 +158,7 @@ function ProgramCard({
             className="inline-flex items-center font-semibold transition-all duration-300 group-hover:gap-4"
             style={{ color: "#cd5c5c", fontSize: "0.85rem", letterSpacing: "0.5px", gap: "0.5rem" }}
           >
-            Discover {program.name.charAt(0) + program.name.slice(1).toLowerCase()} →
+            Discover Program →
           </Link>
         </div>
       </div>

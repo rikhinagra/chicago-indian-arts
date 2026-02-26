@@ -184,8 +184,16 @@ img {
     font-size: 3rem !important;
   }
 
+  [data-section="hero-label"] {
+    font-size: 0.9rem !important;
+  }
+
   [data-section="section-heading"] {
     font-size: 2.2rem !important;
+  }
+
+  [data-section="program-card-title"] {
+    font-size: 1.25rem !important;
   }
 
   [data-section="featured-grid"] {
@@ -332,101 +340,101 @@ img {
     padding: 3.5rem 2rem !important;
   }
 
-  /* Vaarta */
-  [data-section="vaarta-hero"] {
+  /* Literature Festival */
+  [data-section="literature-hero"] {
     min-height: 65vh !important;
   }
 
-  [data-section="vaarta-hero"] > div:last-child {
+  [data-section="literature-hero"] > div:last-child {
     padding: 8rem 2rem 4rem !important;
   }
 
-  [data-section="vaarta-hero-title"] {
+  [data-section="literature-hero-title"] {
     font-size: 3.5rem !important;
   }
 
-  [data-section="vaarta-about"],
-  [data-section="vaarta-image"],
-  [data-section="vaarta-why"],
-  [data-section="vaarta-highlights"],
-  [data-section="vaarta-cta"] {
+  [data-section="literature-about"],
+  [data-section="literature-image"],
+  [data-section="literature-why"],
+  [data-section="literature-highlights"],
+  [data-section="literature-cta"] {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
 
-  [data-section="vaarta-quote"] {
+  [data-section="literature-quote"] {
     padding: 3.5rem 2rem !important;
   }
 
-  [data-section="vaarta-heading"] {
+  [data-section="literature-heading"] {
     font-size: 2.2rem !important;
   }
 
-  /* Prasang */
-  [data-section="prasang-hero"] {
+  /* Fashion Week */
+  [data-section="fashion-hero"] {
     min-height: 65vh !important;
   }
 
-  [data-section="prasang-hero"] > div:last-child {
+  [data-section="fashion-hero"] > div:last-child {
     padding: 8rem 2rem 4rem !important;
   }
 
-  [data-section="prasang-hero-title"] {
+  [data-section="fashion-hero-title"] {
     font-size: 3.5rem !important;
   }
 
-  [data-section="prasang-about"],
-  [data-section="prasang-objectives"],
-  [data-section="prasang-gallery"],
-  [data-section="prasang-cta"] {
+  [data-section="fashion-about"],
+  [data-section="fashion-objectives"],
+  [data-section="fashion-gallery"],
+  [data-section="fashion-cta"] {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
 
-  [data-section="prasang-quote"] {
+  [data-section="fashion-quote"] {
     padding: 3.5rem 2rem !important;
   }
 
-  [data-section="prasang-heading"] {
+  [data-section="fashion-heading"] {
     font-size: 2.2rem !important;
   }
 
-  [data-section="prasang-about-grid"] {
+  [data-section="fashion-about-grid"] {
     gap: 3rem !important;
   }
 
-  /* Varnam */
-  [data-section="varnam-hero"] {
+  /* Photography Festival */
+  [data-section="photography-hero"] {
     min-height: 65vh !important;
   }
 
-  [data-section="varnam-hero"] > div:last-child {
+  [data-section="photography-hero"] > div:last-child {
     padding: 8rem 2rem 4rem !important;
   }
 
-  [data-section="varnam-hero-title"] {
+  [data-section="photography-hero-title"] {
     font-size: 3.5rem !important;
   }
 
-  [data-section="varnam-mission"],
-  [data-section="varnam-about"],
-  [data-section="varnam-objectives"],
-  [data-section="varnam-gallery"],
-  [data-section="varnam-cta"] {
+  [data-section="photography-mission"],
+  [data-section="photography-about"],
+  [data-section="photography-objectives"],
+  [data-section="photography-gallery"],
+  [data-section="photography-cta"] {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
 
-  [data-section="varnam-quote"] {
+  [data-section="photography-quote"] {
     padding: 3.5rem 2rem !important;
   }
 
-  [data-section="varnam-heading"] {
+  [data-section="photography-heading"] {
     font-size: 2.2rem !important;
   }
 
-  [data-section="varnam-mission-grid"],
-  [data-section="varnam-about-grid"] {
+  [data-section="photography-mission-grid"],
+  [data-section="photography-about-grid"] {
     gap: 3rem !important;
   }
 
@@ -564,7 +572,7 @@ img {
   }
 
   [data-section="hero-label"] {
-    font-size: 0.7rem !important;
+    font-size: 0.8rem !important;
   }
 
   [data-section="countdown"] {
@@ -586,6 +594,10 @@ img {
 
   [data-section="section-heading"] {
     font-size: 1.8rem !important;
+  }
+
+  [data-section="program-card-title"] {
+    font-size: 1.15rem !important;
   }
 
   [data-section="programs-grid"] {
@@ -825,142 +837,142 @@ img {
     font-size: 2rem !important;
   }
 
-  /* Vaarta */
-  [data-section="vaarta-hero"] {
+  /* Literature Festival */
+  [data-section="literature-hero"] {
     min-height: 60vh !important;
   }
 
-  [data-section="vaarta-hero"] > div:last-child {
+  [data-section="literature-hero"] > div:last-child {
     padding: 10.5rem 1.2rem 3rem !important;
   }
 
-  [data-section="vaarta-hero-title"] {
+  [data-section="literature-hero-title"] {
     font-size: 2.8rem !important;
   }
 
-  [data-section="vaarta-hero-subtitle"] {
+  [data-section="literature-hero-subtitle"] {
     font-size: 1.05rem !important;
   }
 
-  [data-section="vaarta-about"],
-  [data-section="vaarta-why"],
-  [data-section="vaarta-highlights"],
-  [data-section="vaarta-cta"] {
+  [data-section="literature-about"],
+  [data-section="literature-why"],
+  [data-section="literature-highlights"],
+  [data-section="literature-cta"] {
     padding: 2.5rem 1.2rem !important;
   }
 
-  [data-section="vaarta-image"] {
+  [data-section="literature-image"] {
     padding: 0 1.2rem 2.5rem !important;
   }
 
-  [data-section="vaarta-quote"] {
+  [data-section="literature-quote"] {
     padding: 2.5rem 1.2rem !important;
   }
 
-  [data-section="vaarta-quote"] p {
+  [data-section="literature-quote"] p {
     font-size: 1.15rem !important;
   }
 
-  [data-section="vaarta-heading"] {
+  [data-section="literature-heading"] {
     font-size: 1.8rem !important;
   }
 
-  [data-section="vaarta-highlights-grid"] {
+  [data-section="literature-highlights-grid"] {
     grid-template-columns: 1fr !important;
   }
 
-  /* Prasang */
-  [data-section="prasang-hero"] {
+  /* Fashion Week */
+  [data-section="fashion-hero"] {
     min-height: 60vh !important;
   }
 
-  [data-section="prasang-hero"] > div:last-child {
+  [data-section="fashion-hero"] > div:last-child {
     padding: 10.5rem 1.2rem 3rem !important;
   }
 
-  [data-section="prasang-hero-title"] {
+  [data-section="fashion-hero-title"] {
     font-size: 2.8rem !important;
   }
 
-  [data-section="prasang-hero-subtitle"] {
+  [data-section="fashion-hero-subtitle"] {
     font-size: 1.05rem !important;
   }
 
-  [data-section="prasang-about"],
-  [data-section="prasang-objectives"],
-  [data-section="prasang-gallery"],
-  [data-section="prasang-cta"] {
+  [data-section="fashion-about"],
+  [data-section="fashion-objectives"],
+  [data-section="fashion-gallery"],
+  [data-section="fashion-cta"] {
     padding: 2.5rem 1.2rem !important;
   }
 
-  [data-section="prasang-quote"] {
+  [data-section="fashion-quote"] {
     padding: 2.5rem 1.2rem !important;
   }
 
-  [data-section="prasang-quote"] p {
+  [data-section="fashion-quote"] p {
     font-size: 1.15rem !important;
   }
 
-  [data-section="prasang-heading"] {
+  [data-section="fashion-heading"] {
     font-size: 1.8rem !important;
   }
 
-  [data-section="prasang-about-grid"] {
+  [data-section="fashion-about-grid"] {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
 
-  [data-section="prasang-gallery-grid"] {
+  [data-section="fashion-gallery-grid"] {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 
-  [data-section="prasang-gallery-grid"] > div > div > div {
+  [data-section="fashion-gallery-grid"] > div > div > div {
     height: 250px !important;
   }
 
-  /* Varnam */
-  [data-section="varnam-hero"] {
+  /* Photography Festival */
+  [data-section="photography-hero"] {
     min-height: 60vh !important;
   }
 
-  [data-section="varnam-hero"] > div:last-child {
+  [data-section="photography-hero"] > div:last-child {
     padding: 10.5rem 1.2rem 3rem !important;
   }
 
-  [data-section="varnam-hero-title"] {
+  [data-section="photography-hero-title"] {
     font-size: 2.8rem !important;
   }
 
-  [data-section="varnam-hero-subtitle"] {
+  [data-section="photography-hero-subtitle"] {
     font-size: 1.05rem !important;
   }
 
-  [data-section="varnam-mission"],
-  [data-section="varnam-about"],
-  [data-section="varnam-objectives"],
-  [data-section="varnam-gallery"],
-  [data-section="varnam-cta"] {
+  [data-section="photography-mission"],
+  [data-section="photography-about"],
+  [data-section="photography-objectives"],
+  [data-section="photography-gallery"],
+  [data-section="photography-cta"] {
     padding: 2.5rem 1.2rem !important;
   }
 
-  [data-section="varnam-quote"] {
+  [data-section="photography-quote"] {
     padding: 2.5rem 1.2rem !important;
   }
 
-  [data-section="varnam-quote"] p {
+  [data-section="photography-quote"] p {
     font-size: 1.15rem !important;
   }
 
-  [data-section="varnam-heading"] {
+  [data-section="photography-heading"] {
     font-size: 1.8rem !important;
   }
 
-  [data-section="varnam-mission-grid"] {
+  [data-section="photography-mission-grid"] {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
 
-  [data-section="varnam-about-grid"] {
+  [data-section="photography-about-grid"] {
     grid-template-columns: 1fr !important;
     gap: 2rem !important;
   }
@@ -1119,6 +1131,10 @@ img {
 
   [data-section="hero-subtitle"] {
     font-size: 0.85rem !important;
+  }
+
+  [data-section="hero-label"] {
+    font-size: 0.8rem !important;
   }
 
   [data-section="section-heading"] {
@@ -1289,120 +1305,120 @@ img {
     font-size: 1.8rem !important;
   }
 
-  /* Vaarta */
-  [data-section="vaarta-hero"] > div:last-child {
+  /* Literature Festival */
+  [data-section="literature-hero"] > div:last-child {
     padding: 10.5rem 1rem 2.5rem !important;
   }
 
-  [data-section="vaarta-hero-title"] {
+  [data-section="literature-hero-title"] {
     font-size: 2.2rem !important;
   }
 
-  [data-section="vaarta-hero-subtitle"] {
+  [data-section="literature-hero-subtitle"] {
     font-size: 0.95rem !important;
   }
 
-  [data-section="vaarta-about"],
-  [data-section="vaarta-why"],
-  [data-section="vaarta-highlights"],
-  [data-section="vaarta-cta"] {
+  [data-section="literature-about"],
+  [data-section="literature-why"],
+  [data-section="literature-highlights"],
+  [data-section="literature-cta"] {
     padding: 2rem 1rem !important;
   }
 
-  [data-section="vaarta-image"] {
+  [data-section="literature-image"] {
     padding: 0 1rem 2rem !important;
   }
 
-  [data-section="vaarta-quote"] {
+  [data-section="literature-quote"] {
     padding: 2rem 1rem !important;
   }
 
-  [data-section="vaarta-quote"] p {
+  [data-section="literature-quote"] p {
     font-size: 1rem !important;
   }
 
-  [data-section="vaarta-heading"] {
+  [data-section="literature-heading"] {
     font-size: 1.5rem !important;
   }
 
-  /* Prasang */
-  [data-section="prasang-hero"] > div:last-child {
+  /* Fashion Week */
+  [data-section="fashion-hero"] > div:last-child {
     padding: 10.5rem 1rem 2.5rem !important;
   }
 
-  [data-section="prasang-hero-title"] {
+  [data-section="fashion-hero-title"] {
     font-size: 2.2rem !important;
   }
 
-  [data-section="prasang-hero-subtitle"] {
+  [data-section="fashion-hero-subtitle"] {
     font-size: 0.95rem !important;
   }
 
-  [data-section="prasang-about"],
-  [data-section="prasang-objectives"],
-  [data-section="prasang-gallery"],
-  [data-section="prasang-cta"] {
+  [data-section="fashion-about"],
+  [data-section="fashion-objectives"],
+  [data-section="fashion-gallery"],
+  [data-section="fashion-cta"] {
     padding: 2rem 1rem !important;
   }
 
-  [data-section="prasang-quote"] {
+  [data-section="fashion-quote"] {
     padding: 2rem 1rem !important;
   }
 
-  [data-section="prasang-quote"] p {
+  [data-section="fashion-quote"] p {
     font-size: 1rem !important;
   }
 
-  [data-section="prasang-heading"] {
+  [data-section="fashion-heading"] {
     font-size: 1.5rem !important;
   }
 
-  [data-section="prasang-objectives-grid"] {
+  [data-section="fashion-objectives-grid"] {
     grid-template-columns: 1fr !important;
   }
 
-  [data-section="prasang-gallery-grid"] {
+  [data-section="fashion-gallery-grid"] {
     grid-template-columns: 1fr !important;
   }
 
-  [data-section="prasang-gallery-grid"] > div > div > div {
+  [data-section="fashion-gallery-grid"] > div > div > div {
     height: 220px !important;
   }
 
-  /* Varnam */
-  [data-section="varnam-hero"] > div:last-child {
+  /* Photography Festival */
+  [data-section="photography-hero"] > div:last-child {
     padding: 10.5rem 1rem 2.5rem !important;
   }
 
-  [data-section="varnam-hero-title"] {
+  [data-section="photography-hero-title"] {
     font-size: 2.2rem !important;
   }
 
-  [data-section="varnam-hero-subtitle"] {
+  [data-section="photography-hero-subtitle"] {
     font-size: 0.95rem !important;
   }
 
-  [data-section="varnam-mission"],
-  [data-section="varnam-about"],
-  [data-section="varnam-objectives"],
-  [data-section="varnam-gallery"],
-  [data-section="varnam-cta"] {
+  [data-section="photography-mission"],
+  [data-section="photography-about"],
+  [data-section="photography-objectives"],
+  [data-section="photography-gallery"],
+  [data-section="photography-cta"] {
     padding: 2rem 1rem !important;
   }
 
-  [data-section="varnam-quote"] {
+  [data-section="photography-quote"] {
     padding: 2rem 1rem !important;
   }
 
-  [data-section="varnam-quote"] p {
+  [data-section="photography-quote"] p {
     font-size: 1rem !important;
   }
 
-  [data-section="varnam-heading"] {
+  [data-section="photography-heading"] {
     font-size: 1.5rem !important;
   }
 
-  [data-section="varnam-objectives-grid"] {
+  [data-section="photography-objectives-grid"] {
     grid-template-columns: 1fr !important;
   }
 

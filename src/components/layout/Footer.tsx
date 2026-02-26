@@ -12,9 +12,9 @@ function XIcon({ size = 20 }: { size?: number }) {
 }
 
 const programLinks = [
-  { label: "Vaarta", href: "/vaarta" },
-  { label: "Prasang", href: "/prasang" },
-  { label: "Varnam", href: "/varnam" },
+  { label: "Chicago Indian Literature Festival", href: "/literature-festival" },
+  { label: "Chicago Indian Fashion Week", href: "/fashion-week" },
+  { label: "Wildlife Photography & Visual Arts Festival", href: "/photography-festival" },
   { label: "Register", href: "/register" },
 ];
 

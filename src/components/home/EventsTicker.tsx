@@ -1,7 +1,7 @@
 const tickerItems = [
-  "Vaarta Literature Festival | May 30, 2026",
-  "Prasang Fashion Show | July 2026",
-  "Varnam Photography Exhibition | TBD",
+  "Chicago Indian Literature Festival | May 30, 2026",
+  "Chicago Indian Fashion Week | July 2026",
+  "Wildlife Photography & Visual Arts Festival | TBD",
   "Early Bird Registration Now Open",
 ];
 

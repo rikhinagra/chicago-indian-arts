@@ -48,15 +48,15 @@ const guidelines = [
     icon: PenTool,
     title: "Participation Opportunities",
     description:
-      "Selected contributors may be invited for author talks, poetry readings, panel discussions, open mic sessions (5 minutes per participant), book launches, and writing workshops at Vaarta 2026.",
+      "Selected contributors may be invited for author talks, poetry readings, panel discussions, open mic sessions (5 minutes per participant), book launches, and writing workshops at Chicago Indian Literature Festival 2026.",
   },
 ];
 
 const terms = [
   "All submissions must be the original work of the applicant and must not infringe upon any third-party intellectual property rights.",
-  "By participating in Vaarta, you grant Chicago Indian Arts a perpetual, royalty-free, non-exclusive license to use images, video, and audio captured at the event for educational, promotional, and archival purposes.",
+  "By participating in Chicago Indian Literature Festival, you grant Chicago Indian Arts a perpetual, royalty-free, non-exclusive license to use images, video, and audio captured at the event for educational, promotional, and archival purposes.",
   "Participants retain all copyright and intellectual property rights to their original literary works. Chicago Indian Arts does not claim ownership of any participant\u2019s creative work.",
-  "All participants must adhere to the Vaarta Code of Conduct. Harassment, discrimination, hate speech, and disruption of sessions are strictly prohibited.",
+  "All participants must adhere to the Festival Code of Conduct. Harassment, discrimination, hate speech, and disruption of sessions are strictly prohibited.",
   "Speakers and presenters agree to adhere to their allotted session time and format as determined by the programming committee. Open mic slots are limited to 5 minutes per participant.",
   "Speakers may not use their platform to promote commercial products or services without prior written consent from Chicago Indian Arts.",
   "Chicago Indian Arts reserves the right to curate and select works for the festival program based on literary merit, cultural relevance, and thematic alignment.",
@@ -138,7 +138,7 @@ export default function CallForSubmissionsPage() {
                   "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)",
               }}
             >
-              Vaarta Literature Festival
+              Chicago Indian Literature Festival
             </div>
 
             <h1
@@ -248,8 +248,8 @@ export default function CallForSubmissionsPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Thank you for your interest in contributing your work to Vaarta,
-              Chicago&apos;s Indian Literature Festival. We welcome submissions
+              Thank you for your interest in contributing your work to the
+              Chicago Indian Literature Festival. We welcome submissions
               across fiction, poetry, essays, memoir, scripts, and experimental
               writing. Our team will review submissions and reach out as soon as
               we are ready to roll out the schedules.
@@ -261,8 +261,8 @@ export default function CallForSubmissionsPage() {
                 color: "#666666",
               }}
             >
-              Whether you are an established author or an emerging voice, Vaarta
-              is your platform to share your literary vision with the Chicago
+              Whether you are an established author or an emerging voice, our
+              festival is your platform to share your literary vision with the Chicago
               community and beyond.
             </p>
           </FadeInSection>
@@ -530,7 +530,7 @@ export default function CallForSubmissionsPage() {
                 fontStyle: "italic",
               }}
             >
-              These terms are excerpted from the official Vaarta Literature
+              These terms are excerpted from the official Chicago Indian Literature
               Festival Rules &amp; Regulations. For the complete document,
               please{" "}
               <Link
@@ -592,7 +592,7 @@ export default function CallForSubmissionsPage() {
               }}
             >
               Every story deserves a stage. Every voice deserves to be heard.
-              Vaarta is where your words find their home.
+              The festival is where your words find their home.
             </p>
             <div
               style={{

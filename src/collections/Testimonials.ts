@@ -14,9 +14,9 @@ export const Testimonials: CollectionConfig = {
       name: "program",
       type: "select",
       options: [
-        { label: "Vaarta", value: "vaarta" },
-        { label: "Prasang", value: "prasang" },
-        { label: "Varnam", value: "varnam" },
+        { label: "Chicago Indian Literature Festival", value: "literature" },
+        { label: "Chicago Indian Fashion Week", value: "fashion" },
+        { label: "Wildlife Photography & Visual Arts Festival", value: "photography" },
         { label: "General", value: "general" },
       ],
     },

@@ -6,21 +6,21 @@ import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
 const photos = [
-  { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", title: "Vaarta 2025 Opening", program: "Vaarta" },
-  { src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80", title: "Prasang Runway", program: "Prasang" },
-  { src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80", title: "Varnam Exhibition", program: "Varnam" },
-  { src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80", title: "Author Discussion", program: "Vaarta" },
+  { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", title: "Literature Festival Opening", program: "Chicago Indian Literature Festival" },
+  { src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80", title: "Fashion Week Runway", program: "Chicago Indian Fashion Week" },
+  { src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80", title: "Wildlife & Arts Exhibition", program: "Wildlife Photography & Visual Arts Festival" },
+  { src: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800&q=80", title: "Author Discussion", program: "Chicago Indian Literature Festival" },
   { src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80", title: "Cultural Evening", program: "Community" },
   { src: "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80", title: "Community Gathering", program: "Community" },
-  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", title: "Fashion Workshop", program: "Prasang" },
+  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", title: "Fashion Workshop", program: "Chicago Indian Fashion Week" },
   { src: "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=800&q=80", title: "Gala Dinner", program: "Community" },
-  { src: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80", title: "Book Display", program: "Vaarta" },
-  { src: "https://images.unsplash.com/photo-1558769132-cb1aea41c795?w=800&q=80", title: "Designer Showcase", program: "Prasang" },
-  { src: "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=800&q=80", title: "Wildlife Photography", program: "Varnam" },
+  { src: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80", title: "Book Display", program: "Chicago Indian Literature Festival" },
+  { src: "https://images.unsplash.com/photo-1558769132-cb1aea41c795?w=800&q=80", title: "Designer Showcase", program: "Chicago Indian Fashion Week" },
+  { src: "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?w=800&q=80", title: "Wildlife Photography", program: "Wildlife Photography & Visual Arts Festival" },
   { src: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&q=80", title: "India Heritage", program: "Community" },
 ];
 
-const filters = ["All", "Vaarta", "Prasang", "Varnam", "Community"];
+const filters = ["All", "Chicago Indian Literature Festival", "Chicago Indian Fashion Week", "Wildlife Photography & Visual Arts Festival", "Community"];
 
 export default function GalleryPage() {
   const [activeFilter, setActiveFilter] = useState("All");

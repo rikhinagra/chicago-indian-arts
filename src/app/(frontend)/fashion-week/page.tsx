@@ -2,52 +2,70 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Camera, TreePine } from "lucide-react";
+import { ArrowLeft, Scissors, MapPin, Leaf, Sparkles } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
 const objectives = [
   {
-    icon: Camera,
-    title: "Where Nature Tells Its Story",
+    icon: Scissors,
+    title: "Celebrating Craft & Textile Heritage",
     description:
-      "Through curated exhibitions, installations, and artist-led conversations, Varnam transforms the way we see wildlife and the natural world \u2014 inviting viewers to look closer, feel deeper, and act with purpose.",
+      "Honoring the timeless traditions of Indian weaving, embroidery, and textile arts that have been passed down through generations of master artisans.",
   },
   {
-    icon: TreePine,
-    title: "Rooted in Earth, Alive in Chicago",
+    icon: MapPin,
+    title: "Bringing Indian Fashion to Chicago",
     description:
-      "Varnam bridges India\u2019s environmental heritage with Chicago\u2019s vibrant arts scene, creating a platform where conservation meets creativity and where every photograph sparks a conversation about our shared planet.",
+      "A space where handloom meets street style, heritage meets innovation, and Indian design finds new space in a global city.",
+  },
+  {
+    icon: Leaf,
+    title: "Supporting Sustainable & Artisan Fashion",
+    description:
+      "Championing slow fashion, ethical production, and the artisans whose hands create extraordinary textiles that tell stories of culture and place.",
+  },
+  {
+    icon: Sparkles,
+    title: "Empowering Emerging Designers & Creators",
+    description:
+      "Providing a platform for the next generation of Indian fashion talent to showcase their vision, connect with audiences, and build their craft.",
   },
 ];
 
 const galleryImages = [
   {
-    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/varnam01_azulyi.webp",
-    alt: "Wildlife Photography",
-    span: "lg-span-2",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118852/fashion-week-runway-show_ge9euc.webp",
+    alt: "Chicago Indian Fashion Week Event",
   },
   {
-    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909162/varnam02_p9vfeh.webp",
-    alt: "Nature Photography",
-    span: "lg-span-1",
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118855/fashion-week-textile-details_brww8e.webp",
+    alt: "Indian Fashion Showcase",
+  },
+  {
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118853/fashion-week-designer-showcase_pwg1cc.webp",
+    alt: "Traditional Indian Textiles",
+  },
+  {
+    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118852/fashion-week-backstage_a4ctja.webp",
+    alt: "Artisan Craftsmanship",
   },
 ];
 
-export default function VarnamPage() {
+export default function FashionWeekPage() {
   return (
     <>
       {/* Hero */}
       <section
-        data-section="varnam-hero"
+        data-section="fashion-hero"
         className="relative overflow-hidden flex items-center"
         style={{ minHeight: "75vh" }}
       >
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909161/varnam-banner_oqy2nj.webp"
-            alt="Varnam Photography & Wildlife"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-indian-fashion-week-banner_hotuhe.webp"
+            alt="Chicago Indian Fashion Week banner"
             fill
             className="object-cover"
             style={{ objectPosition: "center center" }}
@@ -103,11 +121,11 @@ export default function VarnamPage() {
                 textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)",
               }}
             >
-              Photography &amp; Wildlife
+              Fashion Innovation
             </div>
 
             <h1
-              data-section="varnam-hero-title"
+              data-section="fashion-hero-title"
               className="font-heading font-light"
               style={{
                 fontSize: "4.5rem",
@@ -117,11 +135,11 @@ export default function VarnamPage() {
                 textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)",
               }}
             >
-              VARNAM
+              Chicago Indian Fashion Week
             </h1>
 
             <p
-              data-section="varnam-hero-subtitle"
+              data-section="fashion-hero-subtitle"
               style={{
                 fontSize: "1.25rem",
                 lineHeight: 1.7,
@@ -132,7 +150,7 @@ export default function VarnamPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              An Ode to Photography and Visual Arts
+              Threads of India, Spirit of Chicago
             </p>
 
             <p
@@ -145,8 +163,8 @@ export default function VarnamPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Empowering photographers, conservationists, and storytellers to
-              celebrate India&apos;s wildlife and environmental heritage.
+              Celebrating fashion as emotion, grace, and expression through
+              textures and craftsmanship.
             </p>
 
             <Link
@@ -170,126 +188,13 @@ export default function VarnamPage() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* About Section */}
       <section
-        data-section="varnam-mission"
+        data-section="fashion-about"
         style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
-          data-section="varnam-mission-grid"
-          className="grid grid-cols-1 lg:grid-cols-2"
-          style={{
-            maxWidth: "1400px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            gap: "4rem",
-          }}
-        >
-          {/* Mission */}
-          <FadeInSection>
-            <div
-              style={{
-                padding: "2.5rem",
-                backgroundColor: "#faf8f3",
-                borderLeft: "4px solid #d4af37",
-                height: "100%",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "0.75rem",
-                  fontWeight: 600,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  color: "#cd5c5c",
-                  marginBottom: "1rem",
-                }}
-              >
-                Our Mission
-              </div>
-              <h3
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 600,
-                  color: "#1a1a1a",
-                  marginBottom: "1.2rem",
-                }}
-              >
-                A Global Platform for Visual Stories
-              </h3>
-              <p
-                style={{
-                  fontSize: "0.95rem",
-                  lineHeight: 1.9,
-                  color: "#666666",
-                }}
-              >
-                To become a leading global platform that connects India and the
-                world through transformative wildlife and environmental photography
-                while fostering awareness, inspiring conservation, and celebrating
-                the beauty of the natural world through the art of the lens.
-              </p>
-            </div>
-          </FadeInSection>
-
-          {/* Vision */}
-          <FadeInSection direction="right">
-            <div
-              style={{
-                padding: "2.5rem",
-                backgroundColor: "#faf8f3",
-                borderLeft: "4px solid #cd5c5c",
-                height: "100%",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "0.75rem",
-                  fontWeight: 600,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  color: "#cd5c5c",
-                  marginBottom: "1rem",
-                }}
-              >
-                Our Vision
-              </div>
-              <h3
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 600,
-                  color: "#1a1a1a",
-                  marginBottom: "1.2rem",
-                }}
-              >
-                Celebrating &amp; Preserving Visual Heritage
-              </h3>
-              <p
-                style={{
-                  fontSize: "0.95rem",
-                  lineHeight: 1.9,
-                  color: "#666666",
-                }}
-              >
-                To celebrate, preserve, and amplify the visual stories of India&apos;s
-                wildlife, landscapes, and environmental heritage, building bridges
-                between photographers, communities, and nature lovers worldwide through
-                the power of imagery.
-              </p>
-            </div>
-          </FadeInSection>
-        </div>
-      </section>
-
-      {/* About Section with Image */}
-      <section
-        data-section="varnam-about"
-        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
-      >
-        <div
-          data-section="varnam-about-grid"
+          data-section="fashion-about-grid"
           className="grid grid-cols-1 lg:grid-cols-2 items-center"
           style={{
             maxWidth: "1400px",
@@ -298,31 +203,11 @@ export default function VarnamPage() {
             gap: "4rem",
           }}
         >
-          {/* Image */}
-          <FadeInSection>
-            <div
-              className="relative overflow-hidden"
-              style={{
-                height: "500px",
-                borderRadius: "4px",
-                boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
-              }}
-            >
-              <Image
-                src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770924161/varnam03_gxjgbb.webp"
-                alt="Varnam Wildlife Photography"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </FadeInSection>
-
           {/* Text */}
-          <FadeInSection direction="right">
-            <SectionTag>About Varnam</SectionTag>
+          <FadeInSection>
+            <SectionTag>About Chicago Indian Fashion Week</SectionTag>
             <h2
-              data-section="varnam-heading"
+              data-section="fashion-heading"
               className="font-heading font-semibold"
               style={{
                 fontSize: "2.5rem",
@@ -331,7 +216,7 @@ export default function VarnamPage() {
                 color: "#1a1a1a",
               }}
             >
-              Through the Lens of India
+              Emotions, Grace &amp; Expression
             </h2>
             <p
               style={{
@@ -341,10 +226,10 @@ export default function VarnamPage() {
                 marginBottom: "1.2rem",
               }}
             >
-              Varnam is a celebration of photography and visual arts in its most
-              authentic and expressive form. It brings together the stories of
-              India&apos;s wildlife, landscapes, and environmental heritage through
-              the power of the photographic lens.
+              Celebrating emotions, grace, and expression through textures
+              and craftsmanship, our fashion week honors generational nostalgia,
+              silhouettes that tell stories, hand embroidery that carries legacy,
+              and the rich Indian tapestry that inspires the world.
             </p>
             <p
               style={{
@@ -354,31 +239,51 @@ export default function VarnamPage() {
                 marginBottom: "1.2rem",
               }}
             >
-              Through curated exhibitions, installations, and artist-led conversations,
-              Varnam transforms the way we see wildlife and the natural world,
-              inviting viewers to look closer, feel deeper, and act with purpose.
+              From runway moments to artisan stories, our fashion week celebrates fashion
+              not just as a style but as a culture you can wear, uplifting
+              artisans and emerging talent from across India.
             </p>
+          </FadeInSection>
+
+          {/* Image */}
+          <FadeInSection direction="right">
+            <div
+              className="relative overflow-hidden"
+              style={{
+                height: "450px",
+                borderRadius: "4px",
+                boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+              }}
+            >
+              <Image
+                src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1772119524/fashion-week-red-carpet_fmcfp1.webp"
+                alt="Chicago Indian Fashion Week Event"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
           </FadeInSection>
         </div>
       </section>
 
       {/* Objectives */}
       <section
-        data-section="varnam-objectives"
-        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
+        data-section="fashion-objectives"
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "1400px",
             marginLeft: "auto",
             marginRight: "auto",
           }}
         >
           <FadeInSection>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <SectionTag>What We Do</SectionTag>
+              <SectionTag>Our Vision</SectionTag>
               <h2
-                data-section="varnam-heading"
+                data-section="fashion-heading"
                 className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
@@ -386,22 +291,22 @@ export default function VarnamPage() {
                   color: "#1a1a1a",
                 }}
               >
-                Our Focus
+                What We Stand For
               </h2>
             </div>
           </FadeInSection>
 
           <div
-            data-section="varnam-objectives-grid"
+            data-section="fashion-objectives-grid"
             className="grid grid-cols-1 md:grid-cols-2"
             style={{ gap: "2rem" }}
           >
             {objectives.map((obj, i) => (
-              <FadeInSection key={obj.title} delay={i * 0.15}>
+              <FadeInSection key={obj.title} delay={i * 0.12}>
                 <div
                   style={{
                     padding: "2.5rem 2rem",
-                    backgroundColor: "#faf8f3",
+                    backgroundColor: "#ffffff",
                     borderTop: "3px solid #d4af37",
                     transition: "all 0.3s ease",
                     height: "100%",
@@ -442,7 +347,7 @@ export default function VarnamPage() {
                   </h3>
                   <p
                     style={{
-                      fontSize: "0.95rem",
+                      fontSize: "0.92rem",
                       lineHeight: 1.8,
                       color: "#666666",
                     }}
@@ -458,8 +363,8 @@ export default function VarnamPage() {
 
       {/* Gallery */}
       <section
-        data-section="varnam-gallery"
-        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
+        data-section="fashion-gallery"
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           style={{
@@ -470,9 +375,9 @@ export default function VarnamPage() {
         >
           <FadeInSection>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <SectionTag>Featured Works</SectionTag>
+              <SectionTag>Gallery</SectionTag>
               <h2
-                data-section="varnam-heading"
+                data-section="fashion-heading"
                 className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
@@ -480,39 +385,42 @@ export default function VarnamPage() {
                   color: "#1a1a1a",
                 }}
               >
-                Visual Stories
+                A Glimpse of Fashion Week
               </h2>
             </div>
           </FadeInSection>
 
-          <FadeInSection>
-            <div
-              style={{
-                maxWidth: "1000px",
-                marginLeft: "auto",
-                marginRight: "auto",
-                borderRadius: "4px",
-                boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
-                overflow: "hidden",
-              }}
-            >
-              <Image
-                src={galleryImages[0].src}
-                alt={galleryImages[0].alt}
-                width={1920}
-                height={1080}
-                className="w-full"
-                style={{ display: "block", height: "auto" }}
-                sizes="(max-width: 768px) 100vw, 1000px"
-              />
-            </div>
-          </FadeInSection>
+          <div
+            data-section="fashion-gallery-grid"
+            className="grid grid-cols-2 lg:grid-cols-4"
+            style={{ gap: "1rem" }}
+          >
+            {galleryImages.map((img, i) => (
+              <FadeInSection key={i} delay={i * 0.1}>
+                <div
+                  className="group relative overflow-hidden"
+                  style={{
+                    height: "320px",
+                    borderRadius: "4px",
+                  }}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Quote */}
       <section
-        data-section="varnam-quote"
+        data-section="fashion-quote"
         style={{
           padding: "3rem 3rem",
           backgroundColor: "#1a1a1a",
@@ -546,9 +454,9 @@ export default function VarnamPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Every photograph is a bridge between the seen and the unseen,
-              between the moment and eternity, between humanity and the
-              wild world we are entrusted to protect.
+              Fashion is not just what you wear. It&apos;s the stories woven
+              into every thread, the heritage stitched into every seam, and the
+              culture expressed through every silhouette.
             </p>
             <div
               style={{
@@ -565,7 +473,7 @@ export default function VarnamPage() {
 
       {/* CTA */}
       <section
-        data-section="varnam-cta"
+        data-section="fashion-cta"
         style={{
           padding: "3rem 3rem",
           background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
@@ -589,7 +497,7 @@ export default function VarnamPage() {
                 marginBottom: "1rem",
               }}
             >
-              Capture the Moment with Us
+              Walk the Runway with Us
             </h2>
             <p
               style={{
@@ -599,9 +507,8 @@ export default function VarnamPage() {
                 marginBottom: "2rem",
               }}
             >
-              Join Varnam as a photographer, exhibitor, conservationist,
-              or art lover. Together, let&apos;s tell the visual stories
-              that matter.
+              Be part of Chicago Indian Fashion Week as a designer, artisan, sponsor, or guest.
+              Experience Indian fashion like never before.
             </p>
             <Link
               href="/register"

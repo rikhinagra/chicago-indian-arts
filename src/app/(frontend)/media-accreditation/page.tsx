@@ -40,9 +40,9 @@ const mediaTypes = [
 ];
 
 const events = [
-  "Vaarta Literature Festival (May 30)",
-  "Prasang Fashion Innovation Show (July 2026)",
-  "Varnam Photography Exhibition (TBD)",
+  "Chicago Indian Literature Festival (May 30)",
+  "Chicago Indian Fashion Week (July 2026)",
+  "Wildlife Photography & Visual Arts Festival (TBD)",
   "All Events",
 ];
 

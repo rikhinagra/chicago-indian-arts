@@ -32,9 +32,9 @@ export const BlogPosts: CollectionConfig = {
       name: "category",
       type: "select",
       options: [
-        { label: "Vaarta", value: "vaarta" },
-        { label: "Prasang", value: "prasang" },
-        { label: "Varnam", value: "varnam" },
+        { label: "Chicago Indian Literature Festival", value: "literature" },
+        { label: "Chicago Indian Fashion Week", value: "fashion" },
+        { label: "Wildlife Photography & Visual Arts Festival", value: "photography" },
         { label: "Community", value: "community" },
         { label: "News", value: "news" },
       ],

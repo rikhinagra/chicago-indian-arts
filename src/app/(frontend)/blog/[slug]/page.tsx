@@ -6,25 +6,25 @@ import { ArrowLeft } from "lucide-react";
 
 // Static placeholder for blog posts - will be driven by Payload CMS
 const posts: Record<string, { title: string; date: string; category: string; image: string; content: string[] }> = {
-  "vaarta-2026-lineup-announced": {
-    title: "Vaarta 2026 Lineup Announced",
+  "literature-festival-2026-lineup-announced": {
+    title: "Literature Festival 2026 Lineup Announced",
     date: "January 15, 2026",
-    category: "Vaarta",
+    category: "Chicago Indian Literature Festival",
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1200&q=80",
     content: [
-      "We are thrilled to announce the featured authors and speakers for Vaarta 2026, our third annual literature festival celebrating India's rich storytelling traditions.",
+      "We are thrilled to announce the featured authors and speakers for Chicago Indian Literature Festival 2026, our third annual literature festival celebrating India's rich storytelling traditions.",
       "This year's lineup includes National Book Award winner Priya Sharma, acclaimed poet Arjun Patel, literary critic Kavita Nair, and publisher Sameer Roy, among many other distinguished voices.",
       "The one-day festival will feature panel discussions, poetry readings, book launches, writing workshops, and intimate conversations with authors, all set against the stunning backdrop of the Chicago Cultural Center.",
       "Early bird registration is now open. Don't miss this celebration of Indian literature and storytelling.",
     ],
   },
-  "prasang-designer-spotlight": {
-    title: "Prasang Designer Spotlight: Emerging Talent",
+  "fashion-week-designer-spotlight": {
+    title: "Fashion Week Designer Spotlight: Emerging Talent",
     date: "January 10, 2026",
-    category: "Prasang",
+    category: "Chicago Indian Fashion Week",
     image: "https://images.unsplash.com/photo-1558769132-cb1aea41c795?w=1200&q=80",
     content: [
-      "Prasang 2026 is dedicated to showcasing the next generation of Indian fashion designers who are redefining the intersection of tradition and modernity.",
+      "Chicago Indian Fashion Week 2026 is dedicated to showcasing the next generation of Indian fashion designers who are redefining the intersection of tradition and modernity.",
       "This year, we are spotlighting five emerging designers whose work bridges heritage craftsmanship with contemporary aesthetics. From handloom reimagined to sustainable luxury, these designers represent the future of Indian fashion.",
       "Join us in July 2026 at the Navy Pier Grand Ballroom for an evening of stunning runway presentations, designer meet-and-greets, and a fashion networking mixer.",
     ],

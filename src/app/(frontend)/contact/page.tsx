@@ -9,9 +9,9 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const subjects = [
   "General Inquiry",
-  "Vaarta Literature Festival",
-  "Prasang Fashion Innovation",
-  "Varnam Photography",
+  "Chicago Indian Literature Festival",
+  "Chicago Indian Fashion Week",
+  "Wildlife Photography & Visual Arts Festival",
   "Sponsorship",
   "Volunteering",
   "Media / Press",
@@ -566,7 +566,7 @@ export default function ContactPage() {
                   </h4>
                   <p style={{ fontSize: "0.85rem", color: "#666", lineHeight: 1.6 }}>
                     We love working with artists. Reach out with your portfolio and let us know
-                    which program interests you: Vaarta, Prasang, or Varnam.
+                    which program interests you: literature, fashion, or photography.
                   </p>
                 </div>
                 <div

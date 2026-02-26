@@ -10,20 +10,20 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const interestOptions = [
   {
-    id: "vaarta",
-    label: "Vaarta",
+    id: "literature",
+    label: "Chicago Indian Literature Festival",
     subtitle: "Literature & Storytelling",
     icon: BookOpen,
   },
   {
-    id: "prasang",
-    label: "Prasang",
+    id: "fashion",
+    label: "Chicago Indian Fashion Week",
     subtitle: "Fashion & Design",
     icon: Palette,
   },
   {
-    id: "varnam",
-    label: "Varnam",
+    id: "photography",
+    label: "Wildlife Photography & Visual Arts Festival",
     subtitle: "Photography & Visual Arts",
     icon: Camera,
   },

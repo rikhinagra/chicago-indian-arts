@@ -31,7 +31,7 @@ A premium website for **Chicago Indian Collective Arts** — celebrating and pre
 
 1. **Hero** — Full-screen video background with countdown timer
 2. **Intro** — Mission statement and welcome message
-3. **Programs** — Vaarta (Literature), Prasang (Fashion), Varnam (Photography)
+3. **Programs** — Literature Festival, Fashion Week, Wildlife & Arts Festival
 4. **Events Timeline** — Upcoming events with dates
 5. **Highlights Gallery** — Past event photo gallery with hover overlays
 6. **Featured Speakers** — Speaker profiles with circular images
@@ -81,9 +81,9 @@ src/
   app/
     (frontend)/        # Public-facing pages
       page.tsx          # Homepage
-      vaarta/           # Vaarta program page
-      prasang/          # Prasang program page
-      varnam/           # Varnam program page
+      literature-festival/ # Literature Festival page
+      fashion-week/     # Fashion Week page
+      photography-festival/ # Wildlife & Arts Festival page
     (payload)/          # CMS admin routes
     globals.css         # Global styles & responsive breakpoints
     layout.tsx          # Root layout
@@ -127,21 +127,18 @@ public/
 
 ## Current Status
 
-### Phase 1 (Complete)
-- Homepage design and development
-- Full responsiveness across all screen sizes
-- Video hero background with Cloudinary CDN
-- Scroll animations and smooth scrolling
-- Mobile hamburger menu with dark overlay
-- Countdown timer for upcoming events
-- Sponsor section with SVG logos
+### Phase 1 & 2 (Complete)
+- **Rebranding:** Successfully transitioned all project nomenclature, routing, and metadata to "Chicago Indian Literature Festival", "Chicago Indian Fashion Week", and "Wildlife Photography & Visual Arts Festival".
+- **Homepage:** Full video hero background, programs grid, timeline, and scroll animations (Framer Motion + Lenis).
+- **Inner Pages:** fully built and rebranded (About, Team, Submissions, Contact, Media Accreditation, Registration, etc.).
+- **CMS Integration:** Payload CMS collections structured and rebranded.
+- **SEO:** JSON-LD schema markup, canonical URLs, updated meta tags, and automated sitemap generation.
+- **Responsiveness:** Custom viewport adjustments using inline Tailwind variables and `data-section` attributes for mobile, tablet, and desktop.
 
-### Phase 2 (Upcoming)
-- Replace stock images with real event photos
-- Build inner pages (About, Contact, Donate, Register)
-- Connect newsletter form to email service
-- Add real social media links
-- SEO optimization and meta tags
+### Phase 3 (Upcoming)
+- Connect real APIs for form submissions (Resend, Telegram, Google Sheets).
+- Finalize Stripe donation integrations.
+- Populate final production data in Payload CMS.
 
 ## License
 

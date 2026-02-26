@@ -11,41 +11,41 @@ const events = [
     month: "May",
     day: "30",
     year: "2026",
-    category: "Vaarta · Literature",
-    title: "Vaarta Literature Festival",
+    category: "Chicago Indian Literature Festival",
+    title: "Chicago Indian Literature Festival",
     description:
       "Opening ceremony featuring keynote address by renowned author. Panel discussions on contemporary Indian literature, storytelling traditions, poetry sessions, book launches, and writing workshops.",
     time: "9:00 AM - 6:00 PM",
     venue: "Chicago Cultural Center",
-    program: "Vaarta",
+    program: "Chicago Indian Literature Festival",
   },
   {
     month: "July",
     day: "",
     year: "2026",
-    category: "Prasang · Fashion",
-    title: "Prasang Fashion Innovation Show",
+    category: "Chicago Indian Fashion Week",
+    title: "Chicago Indian Fashion Week",
     description:
       "Spectacular runway presentations showcasing both traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
     time: "6:00 PM - 10:00 PM",
     venue: "Navy Pier Grand Ballroom",
-    program: "Prasang",
+    program: "Chicago Indian Fashion Week",
   },
   {
     month: "TBD",
     day: "",
     year: "",
-    category: "Varnam · Photography",
-    title: "Varnam Photography Exhibition Opening",
+    category: "Wildlife Photography & Visual Arts Festival",
+    title: "Wildlife Photography & Visual Arts Festival Opening",
     description:
       "Grand opening of our annual photography exhibition featuring works from renowned photographers capturing Indian culture and wildlife.",
     time: "5:00 PM - 9:00 PM",
     venue: "Art Institute of Chicago",
-    program: "Varnam",
+    program: "Wildlife Photography & Visual Arts Festival",
   },
 ];
 
-const filters = ["All Events", "Vaarta", "Prasang", "Varnam"];
+const filters = ["All Events", "Chicago Indian Literature Festival", "Chicago Indian Fashion Week", "Wildlife Photography & Visual Arts Festival"];
 
 export default function EventsTimeline() {
   const [activeFilter, setActiveFilter] = useState("All Events");

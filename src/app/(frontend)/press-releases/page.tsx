@@ -11,14 +11,14 @@ const pressReleases = [
     date: "February 2026",
     title: "Chicago Indian Arts Announces Exciting 2026 Season Lineup",
     excerpt:
-      "Chicago Indian Collective Arts unveils its most ambitious season yet, featuring Vaarta Literature Festival, Prasang Fashion Innovation Show, and Varnam Photography & Wildlife Exhibition.",
+      "Chicago Indian Collective Arts unveils its most ambitious season yet, featuring our literature festival, fashion week, and photography & wildlife exhibition.",
     link: "#",
   },
   {
     date: "January 2026",
-    title: "Prasang Fashion Innovation Show — Call for Designers",
+    title: "Fashion Week — Call for Designers",
     excerpt:
-      "Chicago Indian Arts invites emerging and established fashion designers to participate in Prasang, a celebration of Indian fashion innovation blending traditional craftsmanship with contemporary design.",
+      "Chicago Indian Arts invites emerging and established fashion designers to participate in our inaugural fashion week, a celebration of Indian fashion innovation blending traditional craftsmanship with contemporary design.",
     link: "#",
   },
   {
@@ -30,9 +30,9 @@ const pressReleases = [
   },
   {
     date: "October 2025",
-    title: "Varnam Photography Exhibition Announced for 2026",
+    title: "Wildlife Photography & Visual Arts Festival Announced for 2026",
     excerpt:
-      "The third edition of Varnam, our photography and wildlife exhibition, is confirmed for 2026. Exact dates will be announced soon. Submissions for featured photographers are now open.",
+      "The third edition of our photography and wildlife exhibition is confirmed for 2026. Exact dates will be announced soon. Submissions for featured photographers are now open.",
     link: "#",
   },
 ];

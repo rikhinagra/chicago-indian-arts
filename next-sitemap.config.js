@@ -15,7 +15,7 @@ module.exports = {
   },
   transform: async (config, path) => {
     // High priority pages
-    const highPriority = ["/", "/vaarta", "/prasang", "/varnam", "/about", "/events"];
+    const highPriority = ["/", "/literature-festival", "/fashion-week", "/photography-festival", "/about", "/events"];
     // Medium priority pages
     const mediumPriority = ["/register", "/donate", "/contact", "/gallery", "/team", "/blog", "/call-for-submissions"];
 

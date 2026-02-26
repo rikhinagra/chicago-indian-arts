@@ -6,39 +6,39 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const events = [
   {
-    program: "Vaarta",
-    title: "Vaarta Literature Festival",
+    program: "Chicago Indian Literature Festival",
+    title: "Chicago Indian Literature Festival",
     date: "May 30, 2026",
     time: "9:00 AM - 6:00 PM",
     venue: "Chicago Cultural Center",
     description: "Opening ceremony, keynote address, panel discussions on contemporary Indian literature, storytelling traditions, poetry sessions, book launches, and writing workshops.",
   },
   {
-    program: "Prasang",
-    title: "Prasang Fashion Innovation Show",
+    program: "Chicago Indian Fashion Week",
+    title: "Chicago Indian Fashion Week",
     date: "July 2026",
     time: "6:00 PM - 10:00 PM",
     venue: "Navy Pier Grand Ballroom",
     description: "Runway presentations showcasing traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
   },
   {
-    program: "Varnam",
-    title: "Varnam Photography Exhibition Opening",
+    program: "Wildlife Photography & Visual Arts Festival",
+    title: "Wildlife Photography & Visual Arts Festival Opening",
     date: "TBD",
     time: "5:00 PM - 9:00 PM",
     venue: "Art Institute of Chicago",
     description: "Grand opening of our annual photography exhibition featuring works from renowned photographers capturing Indian culture and wildlife.",
   },
   {
-    program: "Varnam",
-    title: "Varnam Wildlife Conservation Talk",
+    program: "Wildlife Photography & Visual Arts Festival",
+    title: "Wildlife Photography & Visual Arts Festival Talk",
     date: "TBD",
     time: "2:00 PM - 5:00 PM",
     venue: "Art Institute of Chicago",
     description: "Panel discussion with wildlife photographers and conservationists on the role of photography in environmental advocacy.",
   },
   {
-    program: "Varnam",
+    program: "Wildlife Photography & Visual Arts Festival",
     title: "Photography Masterclass",
     date: "TBD",
     time: "10:00 AM - 4:00 PM",
@@ -47,7 +47,7 @@ const events = [
   },
 ];
 
-const filters = ["All", "Vaarta", "Prasang", "Varnam"];
+const filters = ["All", "Chicago Indian Literature Festival", "Chicago Indian Fashion Week", "Wildlife Photography & Visual Arts Festival"];
 
 export default function EventsPage() {
   const [activeFilter, setActiveFilter] = useState("All");

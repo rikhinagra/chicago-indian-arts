@@ -2,73 +2,54 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Scissors, MapPin, Leaf, Sparkles } from "lucide-react";
+import { ArrowLeft, BookOpen, Globe, Heart } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
-const objectives = [
+const highlights = [
   {
-    icon: Scissors,
-    title: "Celebrating Craft & Textile Heritage",
+    icon: Heart,
+    title: "A Heartfelt Welcome in the Midwest",
     description:
-      "Honoring the timeless traditions of Indian weaving, embroidery, and textile arts that have been passed down through generations of master artisans.",
+      "LitFest 2026 isn\u2019t just an event, it\u2019s a homecoming for the soul. A space where the Indian diaspora in the Midwest can reconnect with the language, rhythm, and emotion of their literary roots.",
   },
   {
-    icon: MapPin,
-    title: "Bringing Indian Fashion to Chicago",
+    icon: BookOpen,
+    title: "From Ancient Grantha to Modern Voices",
     description:
-      "A space where handloom meets street style, heritage meets innovation, and Indian design finds new space in a global city.",
+      "From the sacred verses of the Vedas to bold contemporary fiction, Chicago Indian Literature Festival celebrates the full arc of Indian literature in all its languages, genres, and forms.",
   },
   {
-    icon: Leaf,
-    title: "Supporting Sustainable & Artisan Fashion",
+    icon: Globe,
+    title: "Weaving Connections Through Words",
     description:
-      "Championing slow fashion, ethical production, and the artisans whose hands create extraordinary textiles that tell stories of culture and place.",
-  },
-  {
-    icon: Sparkles,
-    title: "Empowering Emerging Designers & Creators",
-    description:
-      "Providing a platform for the next generation of Indian fashion talent to showcase their vision, connect with audiences, and build their craft.",
+      "Through panels, readings, and conversations, Chicago Indian Literature Festival bridges generations and geographies, connecting established authors with emerging voices, and local readers with global stories.",
   },
 ];
 
-const galleryImages = [
-  {
-    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770922635/prasang05_kjeayi.webp",
-    alt: "Prasang Fashion Event",
-  },
-  {
-    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang02_zbqvuk.webp",
-    alt: "Indian Fashion Showcase",
-  },
-  {
-    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang03_qxyggx.webp",
-    alt: "Traditional Indian Textiles",
-  },
-  {
-    src: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang04_z3gguq.webp",
-    alt: "Artisan Craftsmanship",
-  },
+const whyNow = [
+  "A growing diaspora hungry for authentic cultural connection and literary exchange.",
+  "A deep curiosity about India\u2019s evolving literary landscape, from ancient epics to modern storytelling.",
+  "A yearning for a platform where writers, readers, and dreamers can gather, listen, and be inspired.",
 ];
 
-export default function PrasangPage() {
+export default function LiteratureFestivalPage() {
   return (
     <>
       {/* Hero */}
       <section
-        data-section="prasang-hero"
+        data-section="literature-hero"
         className="relative overflow-hidden flex items-center"
         style={{ minHeight: "75vh" }}
       >
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909160/prasang-banner_fmrvsn.webp"
-            alt="Prasang Fashion Innovation"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-indian-literature-festival-banner_b36jhu.webp"
+            alt="Chicago Indian Literature Festival banner - Celebrating Indian authors, poetry, and storytelling traditions in the Midwest"
             fill
             className="object-cover"
-            style={{ objectPosition: "center center" }}
+            style={{ objectPosition: "center 25%" }}
             priority
           />
           {/* Left-side gradient for text readability */}
@@ -121,11 +102,11 @@ export default function PrasangPage() {
                 textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)",
               }}
             >
-              Fashion Innovation
+              Literature Festival
             </div>
 
             <h1
-              data-section="prasang-hero-title"
+              data-section="literature-hero-title"
               className="font-heading font-light"
               style={{
                 fontSize: "4.5rem",
@@ -135,11 +116,11 @@ export default function PrasangPage() {
                 textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)",
               }}
             >
-              PRASANG
+              Chicago Indian Literature Festival
             </h1>
 
             <p
-              data-section="prasang-hero-subtitle"
+              data-section="literature-hero-subtitle"
               style={{
                 fontSize: "1.25rem",
                 lineHeight: 1.7,
@@ -150,7 +131,7 @@ export default function PrasangPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Threads of India, Spirit of Chicago
+              Where stories become bridges
             </p>
 
             <p
@@ -163,8 +144,7 @@ export default function PrasangPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Celebrating fashion as emotion, grace, and expression through
-              textures and craftsmanship.
+              Chicago Indian Literature Festival. May 30, 2026
             </p>
 
             <Link
@@ -188,229 +168,161 @@ export default function PrasangPage() {
         </div>
       </section>
 
-      {/* About Prasang */}
+      {/* About Section */}
       <section
-        data-section="prasang-about"
+        data-section="literature-about"
         style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
-          data-section="prasang-about-grid"
-          className="grid grid-cols-1 lg:grid-cols-2 items-center"
           style={{
-            maxWidth: "1400px",
+            maxWidth: "900px",
             marginLeft: "auto",
             marginRight: "auto",
-            gap: "4rem",
+            textAlign: "center",
           }}
         >
-          {/* Text */}
           <FadeInSection>
-            <SectionTag>About Prasang</SectionTag>
+            <SectionTag>About the Festival</SectionTag>
             <h2
-              data-section="prasang-heading"
+              data-section="literature-heading"
               className="font-heading font-semibold"
               style={{
-                fontSize: "2.5rem",
+                fontSize: "2.8rem",
                 lineHeight: 1.3,
                 marginBottom: "1.5rem",
                 color: "#1a1a1a",
               }}
             >
-              Emotions, Grace &amp; Expression
+              Stories &amp; Conversations
             </h2>
             <p
               style={{
                 fontSize: "1rem",
                 lineHeight: 1.9,
                 color: "#666666",
-                marginBottom: "1.2rem",
+                marginBottom: "1.5rem",
               }}
             >
-              Prasang is all about emotions, grace, and expression through textures
-              and craftsmanship. It is all about generational nostalgia,
-              silhouettes that tell stories, hand embroidery that carries legacy,
-              and the rich Indian tapestry that inspires the world.
+              The rich legacy of Indian literature, encompassing stories and conversations
+              passed down through many generations, is the heartbeat of our festival.
+              From ancient scriptures and epics to modern novels and poetry,
+              this literary heritage is vast and reflects the diverse cultures
+              and philosophies of the Indian subcontinent.
             </p>
             <p
               style={{
                 fontSize: "1rem",
                 lineHeight: 1.9,
                 color: "#666666",
-                marginBottom: "1.2rem",
               }}
             >
-              From runway moments to artisan stories, Prasang celebrates fashion
-              not just as a style but as a culture you can wear, uplifting
-              artisans and emerging talent from across India.
+              Through this festival, we aim to celebrate, preserve, and share this incredible
+              literary tradition with the people of Chicago and the Midwest,
+              creating a space where words connect hearts across continents.
             </p>
-          </FadeInSection>
-
-          {/* Image */}
-          <FadeInSection direction="right">
-            <div
-              className="relative overflow-hidden"
-              style={{
-                height: "450px",
-                borderRadius: "4px",
-                boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
-              }}
-            >
-              <Image
-                src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1770909162/prasang01_zb7a7p.webp"
-                alt="Prasang Fashion Event"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
           </FadeInSection>
         </div>
       </section>
 
-      {/* Objectives */}
+      {/* Featured Image */}
       <section
-        data-section="prasang-objectives"
+        data-section="literature-image"
+        style={{ padding: "0 3rem 3rem", backgroundColor: "#ffffff" }}
+      >
+        <FadeInSection>
+          <div
+            style={{
+              maxWidth: "900px",
+              marginLeft: "auto",
+              marginRight: "auto",
+              borderRadius: "4px",
+              boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118855/literature-festival-opening_qjhlcz.webp"
+              alt="Chicago Indian Literature Festival Gathering"
+              width={1920}
+              height={1080}
+              className="w-full"
+              style={{ display: "block", height: "auto" }}
+              sizes="(max-width: 768px) 100vw, 1100px"
+            />
+          </div>
+        </FadeInSection>
+      </section>
+
+      {/* Why LitFest 2026 */}
+      <section
+        data-section="literature-why"
         style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div
           style={{
-            maxWidth: "1400px",
+            maxWidth: "1000px",
             marginLeft: "auto",
             marginRight: "auto",
           }}
         >
           <FadeInSection>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <SectionTag>Our Vision</SectionTag>
+              <SectionTag>Our Heart&apos;s Calling</SectionTag>
               <h2
-                data-section="prasang-heading"
+                data-section="literature-heading"
                 className="font-heading font-semibold"
                 style={{
                   fontSize: "2.5rem",
                   lineHeight: 1.3,
                   color: "#1a1a1a",
+                  marginBottom: "1rem",
                 }}
               >
-                What Prasang Stands For
+                Why Chicago Indian Lit Fest Matters
               </h2>
             </div>
           </FadeInSection>
 
-          <div
-            data-section="prasang-objectives-grid"
-            className="grid grid-cols-1 md:grid-cols-2"
-            style={{ gap: "2rem" }}
-          >
-            {objectives.map((obj, i) => (
-              <FadeInSection key={obj.title} delay={i * 0.12}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            {whyNow.map((item, i) => (
+              <FadeInSection key={i} delay={i * 0.1}>
                 <div
+                  className="flex items-start"
                   style={{
-                    padding: "2.5rem 2rem",
+                    gap: "1.2rem",
+                    padding: "1.5rem 2rem",
                     backgroundColor: "#ffffff",
-                    borderTop: "3px solid #d4af37",
-                    transition: "all 0.3s ease",
-                    height: "100%",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-4px)";
-                    e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.1)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
+                    borderLeft: "4px solid #d4af37",
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.04)",
                   }}
                 >
                   <div
+                    className="flex-shrink-0"
                     style={{
-                      width: "48px",
-                      height: "48px",
+                      width: "32px",
+                      height: "32px",
                       borderRadius: "50%",
-                      backgroundColor: "rgba(205,92,92,0.1)",
+                      backgroundColor: "rgba(212,175,55,0.12)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      marginBottom: "1.5rem",
+                      color: "#d4af37",
+                      fontSize: "0.85rem",
+                      fontWeight: 700,
+                      marginTop: "0.1rem",
                     }}
                   >
-                    <obj.icon size={22} style={{ color: "#cd5c5c" }} />
+                    {i + 1}
                   </div>
-                  <h3
-                    className="font-heading"
-                    style={{
-                      fontSize: "1.3rem",
-                      fontWeight: 600,
-                      color: "#1a1a1a",
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    {obj.title}
-                  </h3>
                   <p
                     style={{
-                      fontSize: "0.92rem",
+                      fontSize: "1rem",
                       lineHeight: 1.8,
-                      color: "#666666",
+                      color: "#444444",
                     }}
                   >
-                    {obj.description}
+                    {item}
                   </p>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section
-        data-section="prasang-gallery"
-        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
-      >
-        <div
-          style={{
-            maxWidth: "1400px",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
-          <FadeInSection>
-            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <SectionTag>Gallery</SectionTag>
-              <h2
-                data-section="prasang-heading"
-                className="font-heading font-semibold"
-                style={{
-                  fontSize: "2.5rem",
-                  lineHeight: 1.3,
-                  color: "#1a1a1a",
-                }}
-              >
-                A Glimpse of Prasang
-              </h2>
-            </div>
-          </FadeInSection>
-
-          <div
-            data-section="prasang-gallery-grid"
-            className="grid grid-cols-2 lg:grid-cols-4"
-            style={{ gap: "1rem" }}
-          >
-            {galleryImages.map((img, i) => (
-              <FadeInSection key={i} delay={i * 0.1}>
-                <div
-                  className="group relative overflow-hidden"
-                  style={{
-                    height: "320px",
-                    borderRadius: "4px",
-                  }}
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    sizes="(max-width: 768px) 50vw, 25vw"
-                  />
                 </div>
               </FadeInSection>
             ))}
@@ -420,7 +332,7 @@ export default function PrasangPage() {
 
       {/* Quote */}
       <section
-        data-section="prasang-quote"
+        data-section="literature-quote"
         style={{
           padding: "3rem 3rem",
           backgroundColor: "#1a1a1a",
@@ -454,9 +366,9 @@ export default function PrasangPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Fashion is not just what you wear. It&apos;s the stories woven
-              into every thread, the heritage stitched into every seam, and the
-              culture expressed through every silhouette.
+              Where there is literature, there is dialogue. Where there is
+              dialogue, there is understanding. And where there is understanding,
+              there is community.
             </p>
             <div
               style={{
@@ -471,9 +383,103 @@ export default function PrasangPage() {
         </FadeInSection>
       </section>
 
+      {/* Highlights */}
+      <section
+        data-section="literature-highlights"
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
+      >
+        <div
+          style={{
+            maxWidth: "1400px",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          <FadeInSection>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <SectionTag>What Awaits You</SectionTag>
+              <h2
+                data-section="literature-heading"
+                className="font-heading font-semibold"
+                style={{
+                  fontSize: "2.5rem",
+                  lineHeight: 1.3,
+                  color: "#1a1a1a",
+                }}
+              >
+                The Festival Experience
+              </h2>
+            </div>
+          </FadeInSection>
+
+          <div
+            data-section="literature-highlights-grid"
+            className="grid grid-cols-1 md:grid-cols-3"
+            style={{ gap: "2rem" }}
+          >
+            {highlights.map((item, i) => (
+              <FadeInSection key={item.title} delay={i * 0.15}>
+                <div
+                  style={{
+                    padding: "2.5rem 2rem",
+                    backgroundColor: "#faf8f3",
+                    borderTop: "3px solid #d4af37",
+                    transition: "all 0.3s ease",
+                    height: "100%",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.1)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "rgba(205,92,92,0.1)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "1.5rem",
+                    }}
+                  >
+                    <item.icon size={22} style={{ color: "#cd5c5c" }} />
+                  </div>
+                  <h3
+                    className="font-heading"
+                    style={{
+                      fontSize: "1.3rem",
+                      fontWeight: 600,
+                      color: "#1a1a1a",
+                      marginBottom: "1rem",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.92rem",
+                      lineHeight: 1.8,
+                      color: "#666666",
+                    }}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section
-        data-section="prasang-cta"
+        data-section="literature-cta"
         style={{
           padding: "3rem 3rem",
           background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
@@ -497,7 +503,7 @@ export default function PrasangPage() {
                 marginBottom: "1rem",
               }}
             >
-              Walk the Runway with Us
+              Be Part of the Story
             </h2>
             <p
               style={{
@@ -507,8 +513,7 @@ export default function PrasangPage() {
                 marginBottom: "2rem",
               }}
             >
-              Be part of Prasang as a designer, artisan, sponsor, or guest.
-              Experience Indian fashion like never before.
+              Register your interest for Chicago Indian Literature Festival 2026. May 30, 2026.
             </p>
             <Link
               href="/register"
