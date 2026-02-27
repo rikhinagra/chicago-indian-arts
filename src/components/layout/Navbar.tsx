@@ -49,11 +49,11 @@ function DesktopDropdown({
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="text-[0.85rem] font-medium tracking-[0.5px] transition-colors duration-300 cursor-pointer flex items-center"
+        className="text-[0.85rem] font-semibold tracking-[0.5px] transition-colors duration-300 cursor-pointer flex items-center"
         style={{
           color: scrolled ? "#2d2d2d" : "#ffffff",
           gap: "0.3rem",
-          textShadow: scrolled ? "none" : "0 1px 8px rgba(0,0,0,0.7)",
+          textShadow: scrolled ? "none" : "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
         onMouseLeave={(e) =>
@@ -147,7 +147,7 @@ function MobileDropdownSection({
     >
       <button
         onClick={toggle}
-        className="font-heading font-light cursor-pointer flex items-center"
+        className="font-heading font-medium cursor-pointer flex items-center"
         style={{
           color: "rgba(255,255,255,0.85)",
           fontSize: "1.6rem",
@@ -329,10 +329,10 @@ export default function Navbar() {
               <li key={link.label}>
                 <button
                   onClick={() => scrollToSection(link.href)}
-                  className="text-[0.85rem] font-medium tracking-[0.5px] transition-colors duration-300 cursor-pointer"
+                  className="text-[0.85rem] font-semibold tracking-[0.5px] transition-colors duration-300 cursor-pointer"
                   style={{
                     color: scrolled ? "#2d2d2d" : "#ffffff",
-                    textShadow: scrolled ? "none" : "0 1px 8px rgba(0,0,0,0.7)",
+                    textShadow: scrolled ? "none" : "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)",
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
                   onMouseLeave={(e) =>
@@ -386,7 +386,7 @@ export default function Navbar() {
               className="lg:hidden transition-colors duration-300"
               style={{
                 color: scrolled ? "#1a1a1a" : "#ffffff",
-                filter: scrolled ? "none" : "drop-shadow(0 1px 4px rgba(0,0,0,0.7))",
+                filter: scrolled ? "none" : "drop-shadow(0 2px 10px rgba(0,0,0,1)) drop-shadow(0 0 5px rgba(0,0,0,0.8))",
               }}
               aria-label="Toggle menu"
             >
@@ -442,7 +442,7 @@ export default function Navbar() {
                 >
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="font-heading font-light cursor-pointer"
+                    className="font-heading font-medium cursor-pointer"
                     style={{
                       color: "rgba(255,255,255,0.85)",
                       fontSize: "1.8rem",
