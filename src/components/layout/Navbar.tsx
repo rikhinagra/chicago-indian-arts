@@ -77,14 +77,14 @@ function DesktopDropdown({
               left: "50%",
               transform: "translateX(-50%)",
               paddingTop: "0.75rem",
-              minWidth: "220px",
+              minWidth: "280px",
             }}
           >
             <div
               style={{
                 backgroundColor: "#ffffff",
-                boxShadow: "0 8px 30px rgba(0,0,0,0.12)",
-                border: "1px solid rgba(0,0,0,0.06)",
+                boxShadow: "0 12px 40px rgba(0,0,0,0.15)",
+                border: "1px solid rgba(0,0,0,0.08)",
                 overflow: "hidden",
               }}
             >
@@ -94,7 +94,7 @@ function DesktopDropdown({
                   href={item.href}
                   className="block"
                   style={{
-                    padding: "0.85rem 1.2rem",
+                    padding: "1rem 1.5rem",
                     textDecoration: "none",
                     transition: "all 0.2s ease",
                     borderBottom: "1px solid rgba(0,0,0,0.04)",
@@ -106,10 +106,10 @@ function DesktopDropdown({
                     e.currentTarget.style.backgroundColor = "transparent";
                   }}
                 >
-                  <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.15rem" }}>
+                  <div style={{ fontSize: "0.9rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.2rem", lineHeight: 1.3 }}>
                     {item.label}
                   </div>
-                  <div style={{ fontSize: "0.72rem", color: "#999" }}>
+                  <div style={{ fontSize: "0.75rem", color: "#888", letterSpacing: "0.3px" }}>
                     {item.subtitle}
                   </div>
                 </Link>
@@ -150,12 +150,14 @@ function MobileDropdownSection({
         className="font-heading font-light cursor-pointer flex items-center"
         style={{
           color: "rgba(255,255,255,0.85)",
-          fontSize: "1.8rem",
+          fontSize: "1.6rem",
           letterSpacing: "1px",
           background: "none",
           border: "none",
           transition: "color 0.3s ease",
           gap: "0.5rem",
+          justifyContent: "center",
+          margin: "0 auto",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
         onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.85)")}
@@ -171,19 +173,23 @@ function MobileDropdownSection({
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            style={{ overflow: "hidden", marginTop: "1rem" }}
+            style={{ overflow: "hidden", marginTop: "1rem", width: "100%" }}
           >
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem", alignItems: "center", padding: "0 1rem" }}>
               {links.map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}
                   onClick={onClose}
+                  className="text-center"
                   style={{
                     color: "rgba(255,255,255,0.6)",
-                    fontSize: "1.1rem",
+                    fontSize: "1.15rem",
                     textDecoration: "none",
                     transition: "color 0.3s ease",
+                    display: "block",
+                    width: "100%",
+                    lineHeight: 1.4,
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.6)")}
@@ -417,7 +423,11 @@ export default function Navbar() {
                 label="Programs"
                 links={programLinks}
                 isOpen={mobileProgramsOpen}
-                toggle={() => setMobileProgramsOpen(!mobileProgramsOpen)}
+                toggle={() => {
+                  setMobileProgramsOpen(!mobileProgramsOpen);
+                  setMobileAboutOpen(false);
+                  setMobilePressOpen(false);
+                }}
                 delay={0}
                 onClose={closeMobile}
               />
@@ -454,7 +464,11 @@ export default function Navbar() {
                 label="About Us"
                 links={aboutLinks}
                 isOpen={mobileAboutOpen}
-                toggle={() => setMobileAboutOpen(!mobileAboutOpen)}
+                toggle={() => {
+                  setMobileAboutOpen(!mobileAboutOpen);
+                  setMobileProgramsOpen(false);
+                  setMobilePressOpen(false);
+                }}
                 delay={0.3}
                 onClose={closeMobile}
               />
@@ -464,7 +478,11 @@ export default function Navbar() {
                 label="Press & Media"
                 links={pressLinks}
                 isOpen={mobilePressOpen}
-                toggle={() => setMobilePressOpen(!mobilePressOpen)}
+                toggle={() => {
+                  setMobilePressOpen(!mobilePressOpen);
+                  setMobileProgramsOpen(false);
+                  setMobileAboutOpen(false);
+                }}
                 delay={0.4}
                 onClose={closeMobile}
               />
