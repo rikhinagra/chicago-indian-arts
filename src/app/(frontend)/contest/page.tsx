@@ -719,7 +719,7 @@ export default function ContestPage() {
                   ))}
                 </ul>
                 <p style={{ marginTop: "1rem", fontSize: "0.8rem", color: "#aaa", fontStyle: "italic" }}>
-                  Judges' decisions are final.
+                  Judges&apos; decisions are final.
                 </p>
               </div>
             </FadeInSection>
