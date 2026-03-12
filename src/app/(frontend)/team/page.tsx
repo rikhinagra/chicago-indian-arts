@@ -20,6 +20,7 @@ const leadershipTeam = [
       "I believe in bringing each of us together through art and culture; this is possible, and I make this an everyday action in my life.",
     image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772122015/jigar-shah-founder_pxsrrq.webp",
   },
+  /* Vice President — temporarily hidden, uncomment when needed
   {
     name: "Vikram Desai",
     role: "Vice President",
@@ -32,6 +33,7 @@ const leadershipTeam = [
     image:
       "https://res.cloudinary.com/dom3oj7ya/image/upload/v1771928983/vice_president_daz1fc.webp",
   },
+  */
   {
     name: "Divya Verma",
     role: "Director of Programs",
@@ -649,9 +651,12 @@ export default function TeamPage() {
 
             <div
               data-section="team-leadership-grid"
-              className="grid grid-cols-1 md:grid-cols-3"
+              className="grid grid-cols-1 md:grid-cols-2"
               style={{
                 gap: "2rem",
+                maxWidth: "800px",
+                marginLeft: "auto",
+                marginRight: "auto",
               }}
             >
               {leadershipTeam.map((member, i) => (

@@ -16,7 +16,8 @@ const events = [
     description:
       "Opening ceremony featuring keynote address by renowned author. Panel discussions on contemporary Indian literature, storytelling traditions, poetry sessions, book launches, and writing workshops.",
     time: "9:00 AM - 6:00 PM",
-    venue: "Chicago Cultural Center",
+    venue: "Congress Plaza Hotel",
+    venueUrl: "https://www.google.com/maps/search/Congress+Plaza+Hotel+Chicago",
     program: "Chicago Indian Literature Festival",
   },
   {
@@ -29,6 +30,7 @@ const events = [
       "Spectacular runway presentations showcasing both traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
     time: "6:00 PM - 10:00 PM",
     venue: "Navy Pier Grand Ballroom",
+    venueUrl: "",
     program: "Chicago Indian Fashion Week",
   },
   {
@@ -41,6 +43,7 @@ const events = [
       "Grand opening of our annual photography exhibition featuring works from renowned photographers capturing Indian culture and wildlife.",
     time: "5:00 PM - 9:00 PM",
     venue: "Art Institute of Chicago",
+    venueUrl: "",
     program: "Wildlife Photography & Visual Arts Festival",
   },
 ];
@@ -206,7 +209,14 @@ export default function EventsTimeline() {
                   </p>
                   <div className="flex flex-wrap" style={{ gap: "1rem", fontSize: "0.8rem", color: "#666666", marginBottom: "0.8rem" }}>
                     <span className="flex items-center" style={{ gap: "0.4rem" }}><Clock size={14} color="#cd5c5c" /> {event.time}</span>
-                    <span className="flex items-center" style={{ gap: "0.4rem" }}><MapPin size={14} color="#cd5c5c" /> {event.venue}</span>
+                    <span className="flex items-center" style={{ gap: "0.4rem" }}>
+                      <MapPin size={14} color="#cd5c5c" />
+                      {event.venueUrl ? (
+                        <a href={event.venueUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#666666", textDecoration: "none" }}>{event.venue}</a>
+                      ) : (
+                        event.venue
+                      )}
+                    </span>
                   </div>
                   <button
                     onClick={() => openRegister(event)}
