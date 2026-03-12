@@ -26,6 +26,7 @@ const pressLinks = [
 const navLinks = [
   { label: "Events", href: "#events" },
   // { label: "Highlights", href: "#highlights" }, — Hidden for now
+  { label: "Gallery", href: "/gallery" },
 ];
 
 /* ── Reusable desktop dropdown ── */
