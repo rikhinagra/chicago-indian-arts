@@ -12,7 +12,7 @@ const events = [
     title: "Zindagi Milegi Na Dobara Film Screening",
     date: "Feb 28, 2026",
     link: "https://photos.app.goo.gl/UBJKv9mH5DJN5GAz7",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1773214972/Zindagi_Na_Milegi_Dobara_s2w8ju.webp",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1773384691/Zindagi_Na_Milegi_Dobara_pxhrwz.webp",
     description:
       "A special community screening of the beloved Bollywood classic, bringing together film lovers for an unforgettable cinematic evening.",
   },
@@ -20,7 +20,7 @@ const events = [
     title: "International Women's Day",
     date: "March 08, 2026",
     link: "https://photos.app.goo.gl/GB78qaDUiKJY8madA",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1773215596/International_Women_S_Day_wbrxoc.webp",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1773383769/International_Women_S_Day_mpsdi7.webp",
     description:
       "Celebrating the strength, creativity, and achievements of women through art, culture, and community.",
   },
@@ -172,8 +172,8 @@ export default function GalleryPage() {
                       el.style.transform = "translateY(0)";
                     }}
                   >
-                    {/* Cover Image — full image, no cropping */}
-                    <div style={{ width: "100%", overflow: "hidden" }}>
+                    {/* Cover Image — fixed aspect ratio, consistent across all image sizes */}
+                    <div style={{ width: "100%", overflow: "hidden", aspectRatio: "16/9" }}>
                       <Image
                         src={event.image}
                         alt={event.title}
@@ -181,7 +181,7 @@ export default function GalleryPage() {
                         height={0}
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className="transition-transform duration-500 group-hover:scale-105"
-                        style={{ width: "100%", height: "auto", display: "block" }}
+                        style={{ width: "100%", height: "100%", display: "block", objectFit: "cover", objectPosition: "top" }}
                       />
                     </div>
 
