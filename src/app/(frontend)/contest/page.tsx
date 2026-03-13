@@ -38,21 +38,21 @@ const prizes = [
   {
     icon: Trophy,
     label: "Winner",
-    title: "CICA Merch + VIP Tickets ×2",
-    description: "Two VIP tickets to Lit Fest & Fashion Week + CICA branded T-shirt and merch pack.",
+    title: "Merch + VIP Tickets ×2",
+    description: "Two VIP tickets to Lit Fest & Fashion Week + branded T-shirt and merch pack.",
     accent: "#d4af37",
   },
   {
     icon: Medal,
     label: "First Runner Up",
-    title: "CICA Branded T-Shirt",
+    title: "Branded T-Shirt",
     description: "Wear your story.",
     accent: "#cd5c5c",
   },
   {
     icon: Award,
     label: "Second Runner Up",
-    title: "CICA Branded T-Shirt",
+    title: "Branded T-Shirt",
     description: "Wear your story.",
     accent: "#cd5c5c",
   },
@@ -108,7 +108,7 @@ const rules = [
   "Videos must be original and unpublished",
   "Plagiarism leads to disqualification",
   "Late entries will not be accepted",
-  "By submitting, participants allow CICA to share videos for non-commercial promotional use",
+  "By submitting, participants allow Chicago Indian Arts to share videos for non-commercial promotional use",
 ];
 
 export default function ContestPage() {
@@ -167,7 +167,7 @@ export default function ContestPage() {
             onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
           >
             <ArrowLeft size={14} />
-            Chicago Indian Arts &nbsp;·&nbsp; CICA &nbsp;·&nbsp; Short Video Contest
+            Chicago Indian Arts &nbsp;·&nbsp; Short Video Contest
           </Link>
 
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
@@ -230,7 +230,9 @@ export default function ContestPage() {
               {/* Buttons */}
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="#"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc8q7OSifk_IMaLn0WGtICTFEMW7maxERTNGWGvbqMRb9zHXA/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-semibold uppercase transition-all duration-300"
                   style={{
                     backgroundColor: "#cd5c5c",
@@ -279,7 +281,7 @@ export default function ContestPage() {
                   gap: "1rem",
                 }}
               >
-                {["#IndiaThroughYourLens", "#ChicagoIndianArts", "#vaarta2026"].map((tag) => (
+                {["#IndiaThroughYourLens", "#ChicagoIndianArts"].map((tag) => (
                   <span
                     key={tag}
                     style={{
@@ -793,7 +795,9 @@ export default function ContestPage() {
             </p>
 
             <Link
-              href="#"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc8q7OSifk_IMaLn0WGtICTFEMW7maxERTNGWGvbqMRb9zHXA/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-semibold uppercase transition-all duration-300"
               style={{
                 backgroundColor: "#ffffff",
@@ -830,7 +834,6 @@ export default function ContestPage() {
                 letterSpacing: "0.5px",
               }}
             >
-              <span>cica@example.com</span>
               <span>Chicago Indian Arts</span>
               <span>#IndiaThroughYourLens</span>
             </div>
