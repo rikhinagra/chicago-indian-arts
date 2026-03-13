@@ -29,12 +29,32 @@ const festivalDetails = [
   },
 ];
 
+const responsiveStyles = `
+  .vendor-hero-inner { padding: 10rem 3rem 5rem; }
+  .vendor-hero-heading { font-size: 4rem; }
+  .vendor-section { padding: 4rem 3rem; }
+  .vendor-cta { padding: 4rem 3rem; }
+  @media (max-width: 768px) {
+    .vendor-hero-inner { padding: 8rem 1.5rem 3rem !important; }
+    .vendor-hero-heading { font-size: 2.2rem !important; }
+    .vendor-hero-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.5) 100%) !important;
+    }
+    .vendor-section { padding: 3rem 1.5rem !important; }
+    .vendor-cta { padding: 3rem 1.5rem !important; }
+  }
+  @media (max-width: 480px) {
+    .vendor-hero-heading { font-size: 1.9rem !important; }
+  }
+`;
+
 const FORM_LINK =
   "https://docs.google.com/forms/d/e/1FAIpQLSeV_WdCeyJM3adZpedKE6PO63jIaJzI5tIIQdggWOTL4lFafw/viewform";
 
 export default function VendorIntakePage() {
   return (
     <>
+      <style>{responsiveStyles}</style>
       {/* Hero */}
       <section
         data-section="vendor-hero"
@@ -51,9 +71,9 @@ export default function VendorIntakePage() {
             style={{ objectPosition: "center center" }}
             priority
           />
-          {/* Left-side gradient for text readability */}
+          {/* Gradient overlay */}
           <div
-            className="absolute inset-0"
+            className="vendor-hero-overlay absolute inset-0"
             style={{
               background:
                 "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 45%, transparent 70%)",
@@ -62,12 +82,11 @@ export default function VendorIntakePage() {
         </div>
 
         <div
-          className="relative z-10"
+          className="vendor-hero-inner relative z-10"
           style={{
             maxWidth: "1400px",
             marginLeft: "auto",
             marginRight: "auto",
-            padding: "10rem 3rem 5rem",
             width: "100%",
           }}
         >
@@ -107,10 +126,9 @@ export default function VendorIntakePage() {
             </div>
 
             <h1
-              className="font-heading font-light"
+              className="vendor-hero-heading font-heading font-light"
               style={{
-                fontSize: "4rem",
-                lineHeight: 1.05,
+                lineHeight: 1.1,
                 color: "#ffffff",
                 marginBottom: "1rem",
                 textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)",
@@ -175,7 +193,7 @@ export default function VendorIntakePage() {
       </section>
 
       {/* Festival Details */}
-      <section style={{ padding: "4rem 3rem", backgroundColor: "#ffffff" }}>
+      <section className="vendor-section" style={{ backgroundColor: "#ffffff" }}>
         <div style={{ maxWidth: "1000px", marginLeft: "auto", marginRight: "auto" }}>
           <FadeInSection>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
@@ -189,7 +207,7 @@ export default function VendorIntakePage() {
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: "1.5rem" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4" style={{ gap: "1.5rem" }}>
             {festivalDetails.map((item, i) => (
               <FadeInSection key={item.label} delay={i * 0.1}>
                 <div
@@ -252,7 +270,7 @@ export default function VendorIntakePage() {
       </section>
 
       {/* Join as a Vendor */}
-      <section style={{ padding: "4rem 3rem", backgroundColor: "#faf8f3" }}>
+      <section className="vendor-section" style={{ backgroundColor: "#faf8f3" }}>
         <div
           style={{
             maxWidth: "900px",
@@ -322,8 +340,8 @@ export default function VendorIntakePage() {
 
       {/* CTA */}
       <section
+        className="vendor-cta"
         style={{
-          padding: "4rem 3rem",
           background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
           textAlign: "center",
         }}
