@@ -1,0 +1,384 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft, CalendarDays, MapPin, ClipboardList, Bell } from "lucide-react";
+import FadeInSection from "@/components/ui/FadeInSection";
+import SectionTag from "@/components/ui/SectionTag";
+
+const festivalDetails = [
+  {
+    icon: CalendarDays,
+    label: "Festival Date",
+    value: "May 30, 2026",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Chicago, IL",
+  },
+  {
+    icon: ClipboardList,
+    label: "Application Deadline",
+    value: "March 31, 2026",
+  },
+  {
+    icon: Bell,
+    label: "Notification By",
+    value: "April 15, 2026",
+  },
+];
+
+const FORM_LINK =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeV_WdCeyJM3adZpedKE6PO63jIaJzI5tIIQdggWOTL4lFafw/viewform";
+
+export default function VendorIntakePage() {
+  return (
+    <>
+      {/* Hero */}
+      <section
+        data-section="vendor-hero"
+        className="relative overflow-hidden flex items-center"
+        style={{ minHeight: "75vh" }}
+      >
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1773381800/Vendor_Intake_gu1tol.webp"
+            alt="Chicago Indian Literature Festival Vendor Intake"
+            fill
+            className="object-cover"
+            style={{ objectPosition: "center center" }}
+            priority
+          />
+          {/* Left-side gradient for text readability */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 45%, transparent 70%)",
+            }}
+          />
+        </div>
+
+        <div
+          className="relative z-10"
+          style={{
+            maxWidth: "1400px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            padding: "10rem 3rem 5rem",
+            width: "100%",
+          }}
+        >
+          <FadeInSection>
+            <Link
+              href="/literature-festival"
+              className="inline-flex items-center"
+              style={{
+                gap: "0.5rem",
+                color: "rgba(255,255,255,0.8)",
+                fontSize: "0.85rem",
+                textDecoration: "none",
+                marginBottom: "2rem",
+                transition: "color 0.3s ease",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
+            >
+              <ArrowLeft size={16} />
+              Back to Literature Festival
+            </Link>
+
+            <div
+              style={{
+                fontSize: "1rem",
+                fontWeight: 600,
+                letterSpacing: "3px",
+                textTransform: "uppercase",
+                color: "#d4af37",
+                marginBottom: "1.2rem",
+                textShadow:
+                  "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1)",
+              }}
+            >
+              Chicago Indian Literature Festival
+            </div>
+
+            <h1
+              className="font-heading font-light"
+              style={{
+                fontSize: "4rem",
+                lineHeight: 1.05,
+                color: "#ffffff",
+                marginBottom: "1rem",
+                textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)",
+                maxWidth: "650px",
+              }}
+            >
+              Vendor &amp; Partner
+              <br />
+              <strong className="font-bold" style={{ color: "#d4af37" }}>
+                Intake Form
+              </strong>
+            </h1>
+
+            <p
+              style={{
+                fontSize: "1.2rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.95)",
+                maxWidth: "520px",
+                marginBottom: "0.8rem",
+                fontStyle: "italic",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
+              }}
+            >
+              Bring your craft to the festival floor
+            </p>
+
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                maxWidth: "500px",
+                marginBottom: "2.5rem",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8)",
+              }}
+            >
+              Chicago Indian Literature Festival · May 30, 2026
+            </p>
+
+            <a
+              href={FORM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-semibold uppercase"
+              style={{
+                backgroundColor: "#cd5c5c",
+                color: "#ffffff",
+                padding: "0.85rem 2.5rem",
+                fontSize: "0.85rem",
+                letterSpacing: "1px",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
+            >
+              Apply Now
+            </a>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* Festival Details */}
+      <section style={{ padding: "4rem 3rem", backgroundColor: "#ffffff" }}>
+        <div style={{ maxWidth: "1000px", marginLeft: "auto", marginRight: "auto" }}>
+          <FadeInSection>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <SectionTag>Key Dates</SectionTag>
+              <h2
+                className="font-heading font-semibold"
+                style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
+              >
+                Festival Details
+              </h2>
+            </div>
+          </FadeInSection>
+
+          <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: "1.5rem" }}>
+            {festivalDetails.map((item, i) => (
+              <FadeInSection key={item.label} delay={i * 0.1}>
+                <div
+                  style={{
+                    padding: "2rem 1.5rem",
+                    backgroundColor: "#faf8f3",
+                    borderTop: "3px solid #d4af37",
+                    textAlign: "center",
+                    height: "100%",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.08)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "48px",
+                      height: "48px",
+                      borderRadius: "50%",
+                      backgroundColor: "rgba(205,92,92,0.1)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      marginBottom: "1rem",
+                      marginLeft: "auto",
+                      marginRight: "auto",
+                    }}
+                  >
+                    <item.icon size={20} style={{ color: "#cd5c5c" }} />
+                  </div>
+                  <p
+                    style={{
+                      fontSize: "0.75rem",
+                      fontWeight: 600,
+                      letterSpacing: "1.5px",
+                      textTransform: "uppercase",
+                      color: "#999",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    {item.label}
+                  </p>
+                  <p
+                    className="font-heading"
+                    style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1a1a1a" }}
+                  >
+                    {item.value}
+                  </p>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Join as a Vendor */}
+      <section style={{ padding: "4rem 3rem", backgroundColor: "#faf8f3" }}>
+        <div
+          style={{
+            maxWidth: "900px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+          }}
+        >
+          <FadeInSection>
+            <SectionTag>Join as a Vendor</SectionTag>
+            <h2
+              className="font-heading font-semibold"
+              style={{
+                fontSize: "2.8rem",
+                lineHeight: 1.3,
+                marginBottom: "1.5rem",
+                color: "#1a1a1a",
+              }}
+            >
+              We&apos;d Love to Feature Your Business
+            </h2>
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.9,
+                color: "#666666",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Welcome to the Chicago Indian Literature Festival Vendor &amp; Partner Intake
+              Form. Please complete this form to apply for a vendor spot and tell us about
+              your publication, bookstore, artisan, or food venture. We&apos;d love to
+              celebrate Indian literature and culture alongside you.
+            </p>
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.9,
+                color: "#666666",
+                marginBottom: "2.5rem",
+              }}
+            >
+              Once filled out, submit this form and our team will be in touch.
+            </p>
+            <a
+              href={FORM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-semibold uppercase"
+              style={{
+                backgroundColor: "#cd5c5c",
+                color: "#ffffff",
+                padding: "0.85rem 2.5rem",
+                fontSize: "0.85rem",
+                letterSpacing: "1px",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
+            >
+              Fill Out the Form
+            </a>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section
+        style={{
+          padding: "4rem 3rem",
+          background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
+          textAlign: "center",
+        }}
+      >
+        <FadeInSection>
+          <div style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto" }}>
+            <h2
+              className="font-heading font-semibold"
+              style={{
+                fontSize: "2.5rem",
+                lineHeight: 1.3,
+                color: "#ffffff",
+                marginBottom: "1rem",
+              }}
+            >
+              Ready to Join the Festival?
+            </h2>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                marginBottom: "2rem",
+              }}
+            >
+              Complete the intake form and our team will review your application and get in touch before April 15, 2026.
+            </p>
+            <a
+              href={FORM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-semibold uppercase"
+              style={{
+                backgroundColor: "#ffffff",
+                color: "#1a1a1a",
+                padding: "0.85rem 2.5rem",
+                fontSize: "0.85rem",
+                letterSpacing: "1px",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#1a1a1a";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#ffffff";
+                e.currentTarget.style.color = "#1a1a1a";
+              }}
+            >
+              Apply Now
+            </a>
+          </div>
+        </FadeInSection>
+      </section>
+    </>
+  );
+}

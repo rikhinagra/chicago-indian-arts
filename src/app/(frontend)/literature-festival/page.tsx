@@ -148,7 +148,7 @@ export default function LiteratureFestivalPage() {
             </p>
 
             <Link
-              href="/register"
+              href="/vendor-intake"
               className="inline-block font-semibold uppercase"
               style={{
                 backgroundColor: "#cd5c5c",
@@ -162,7 +162,7 @@ export default function LiteratureFestivalPage() {
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
             >
-              Register Interest
+              Vendor &amp; Partner Intake Form
             </Link>
           </FadeInSection>
         </div>
