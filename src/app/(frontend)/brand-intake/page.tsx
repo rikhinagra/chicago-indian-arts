@@ -59,7 +59,7 @@ export default function BrandIntakePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1774401676/chicago-indian-fashion-week-designer-brand-intake_vr6e2z.webp"
+            src="https://res.cloudinary.com/dom3oj7ya/image/upload/v1774403275/chicago-indian-fashion-week-designer-brand-intake_zp9sdi.webp"
             alt="Chicago Indian Fashion Week Designer and Brand Intake Form"
             fill
             className="object-cover"
