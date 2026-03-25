@@ -168,7 +168,7 @@ export default function FashionWeekPage() {
             </p>
 
             <Link
-              href="/register"
+              href="/brand-intake"
               className="inline-block font-semibold uppercase"
               style={{
                 backgroundColor: "#cd5c5c",
@@ -182,7 +182,7 @@ export default function FashionWeekPage() {
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
             >
-              Register Interest
+              Brand Intake Form
             </Link>
           </FadeInSection>
         </div>
