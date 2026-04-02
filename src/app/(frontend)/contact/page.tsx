@@ -51,6 +51,7 @@ export default function ContactPage() {
   const [phone, setPhone] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -64,7 +65,7 @@ export default function ContactPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, subject, message }),
+        body: JSON.stringify({ name, email, phone, subject, message, website: honeypot }),
       });
       if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);
@@ -253,6 +254,16 @@ export default function ContactPage() {
           {/* Left Column - Contact Form */}
           <FadeInSection>
             <form onSubmit={handleSubmit}>
+              {/* Honeypot - hidden from real users, bots will fill this */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                style={{ display: "none" }}
+              />
               {/* Name */}
               <div style={{ marginBottom: "1.5rem" }}>
                 <label

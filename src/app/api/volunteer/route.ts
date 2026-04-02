@@ -6,8 +6,13 @@ import { saveToPayload } from "@/lib/payload-submit";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, roles, availability, experience, message } =
+    const { name, email, phone, roles, availability, experience, message, website } =
       body;
+
+    // Honeypot check — bots fill this, real users don't
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     // Validation
     if (!name || !email || !roles || roles.length === 0) {

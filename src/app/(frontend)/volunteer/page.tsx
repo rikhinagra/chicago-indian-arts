@@ -71,6 +71,7 @@ export default function VolunteerPage() {
   const [availability, setAvailability] = useState("");
   const [experience, setExperience] = useState("");
   const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -98,6 +99,7 @@ export default function VolunteerPage() {
           availability,
           experience,
           message,
+          website: honeypot,
         }),
       });
       if (!res.ok) throw new Error("Submission failed");
@@ -317,6 +319,16 @@ export default function VolunteerPage() {
           {/* Left Column - Form */}
           <FadeInSection>
             <form onSubmit={handleSubmit}>
+              {/* Honeypot - hidden from real users, bots will fill this */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                style={{ display: "none" }}
+              />
               {/* Name */}
               <div style={{ marginBottom: "1.5rem" }}>
                 <label

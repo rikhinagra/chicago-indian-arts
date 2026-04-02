@@ -23,6 +23,7 @@ export default function RegisterModal({
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [persons, setPersons] = useState("1");
+  const [honeypot, setHoneypot] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -45,6 +46,7 @@ export default function RegisterModal({
           event: eventTitle,
           date: eventDate,
           venue: eventVenue,
+          website: honeypot,
         }),
       });
 
@@ -207,6 +209,16 @@ export default function RegisterModal({
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit}>
+                  {/* Honeypot - hidden from real users, bots will fill this */}
+                  <input
+                    type="text"
+                    name="website"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    style={{ display: "none" }}
+                  />
                   {/* Name */}
                   <div style={{ marginBottom: "1rem" }}>
                     <label
