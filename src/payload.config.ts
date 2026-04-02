@@ -42,11 +42,11 @@ export default buildConfig({
   ],
   globals: [SiteSettings],
   editor: lexicalEditor(),
-  secret: process.env.PAYLOAD_SECRET || "chicago-indian-arts-default-secret",
+  secret: process.env.PAYLOAD_SECRET as string,
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   db: mongooseAdapter({
-    url: process.env.DATABASE_URI || "mongodb://localhost:27017/chicago-indian-arts",
+    url: process.env.DATABASE_URI as string,
   }),
 });
