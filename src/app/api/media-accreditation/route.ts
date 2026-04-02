@@ -16,7 +16,13 @@ export async function POST(request: NextRequest) {
       portfolioUrl,
       event,
       coveragePlan,
+      website,
     } = body;
+
+    // Honeypot check — bots fill this, real users don't
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
 
     // Validation
     if (

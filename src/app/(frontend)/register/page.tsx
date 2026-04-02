@@ -52,6 +52,7 @@ export default function RegisterPage() {
   const [city, setCity] = useState("");
   const [interests, setInterests] = useState<string[]>([]);
   const [hearAbout, setHearAbout] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -71,7 +72,7 @@ export default function RegisterPage() {
       const res = await fetch("/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, phone, city, interests, hearAbout }),
+        body: JSON.stringify({ name, email, phone, city, interests, hearAbout, website: honeypot }),
       });
       if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);
@@ -262,6 +263,16 @@ export default function RegisterPage() {
           {/* Left Column - Registration Form */}
           <FadeInSection>
             <form onSubmit={handleSubmit}>
+              {/* Honeypot - hidden from real users, bots will fill this */}
+              <input
+                type="text"
+                name="website"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                style={{ display: "none" }}
+              />
               {/* Name */}
               <div style={{ marginBottom: "1.5rem" }}>
                 <label
