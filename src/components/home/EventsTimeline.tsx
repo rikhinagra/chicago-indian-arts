@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Clock, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Clock, MapPin, ArrowUpRight } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 import RegisterModal from "@/components/ui/RegisterModal";
@@ -19,6 +20,7 @@ const events = [
     venue: "Congress Plaza Hotel",
     venueUrl: "https://www.google.com/maps/search/Congress+Plaza+Hotel+Chicago",
     program: "Chicago Indian Literature Festival",
+    pageUrl: "/literature-festival",
   },
   {
     month: "July",
@@ -32,6 +34,7 @@ const events = [
     venue: "Navy Pier Grand Ballroom",
     venueUrl: "",
     program: "Chicago Indian Fashion Week",
+    pageUrl: "/fashion-week",
   },
   {
     month: "TBD",
@@ -45,6 +48,7 @@ const events = [
     venue: "Art Institute of Chicago",
     venueUrl: "",
     program: "Wildlife Photography & Visual Arts Festival",
+    pageUrl: "/photography-festival",
   },
 ];
 
@@ -218,26 +222,44 @@ export default function EventsTimeline() {
                       )}
                     </span>
                   </div>
-                  <button
-                    onClick={() => openRegister(event)}
-                    className="inline-block text-white font-semibold cursor-pointer"
-                    style={{
-                      padding: "0.5rem 1.2rem",
-                      backgroundColor: "#cd5c5c",
-                      fontSize: "0.8rem",
-                      letterSpacing: "0.5px",
-                      border: "none",
-                      transition: "all 0.3s ease",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = "#1a1a1a";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = "#cd5c5c";
-                    }}
-                  >
-                    Register Now
-                  </button>
+                  <div className="flex items-center flex-wrap" style={{ gap: "1rem" }}>
+                    <button
+                      onClick={() => openRegister(event)}
+                      className="inline-block text-white font-semibold cursor-pointer"
+                      style={{
+                        padding: "0.5rem 1.2rem",
+                        backgroundColor: "#cd5c5c",
+                        fontSize: "0.8rem",
+                        letterSpacing: "0.5px",
+                        border: "none",
+                        transition: "all 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#1a1a1a";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#cd5c5c";
+                      }}
+                    >
+                      Register Now
+                    </button>
+                    <Link
+                      href={event.pageUrl}
+                      className="inline-flex items-center font-semibold"
+                      style={{
+                        gap: "0.3rem",
+                        color: "#cd5c5c",
+                        fontSize: "0.8rem",
+                        letterSpacing: "0.5px",
+                        textDecoration: "none",
+                        transition: "color 0.3s ease",
+                      }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#1a1a1a")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#cd5c5c")}
+                    >
+                      View Event Page <ArrowUpRight size={14} />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </FadeInSection>
