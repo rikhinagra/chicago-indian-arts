@@ -12,6 +12,8 @@ type Session = {
   title: string;
   subtitle?: string;
   speakers?: string[];
+  ownerLead?: string;
+  supportingTeam?: string;
   venue?: string;
   description?: string;
   confirmed: boolean;
@@ -30,6 +32,8 @@ const morningsessions: Session[] = [
     description:
       "Collect your badges, explore the venue, visit community booths, book signing tables, the Chai & Coffee Bar, and connect with fellow attendees before the day begins.",
     venue: "Main Entrance",
+    ownerLead: "Shivani + Divya + Parul",
+    supportingTeam: "Ashish, Akhilesh, Rupesh, Yatharth, Neelam, Bhargav",
     confirmed: false,
     tag: "General",
     tagColor: "#888",
@@ -42,6 +46,8 @@ const morningsessions: Session[] = [
       "The official inauguration of the Chicago Indian Literature Festival 2026 with a traditional lamp lighting ceremony, welcome addresses, a poetry recitation, and a classical dance performance on the Main Stage.",
     venue: "Main Stage",
     speakers: ["Smita Garg", "Julie A", "Geetika Chandran"],
+    ownerLead: "Smita Garg + Julie A + Geetika Chandran",
+    supportingTeam: "Ashish, Akhilesh, Rupesh, Yatharth, Neelam, Bhargav",
     confirmed: true,
     tag: "Opening",
     tagColor: "#cd5c5c",
@@ -82,6 +88,8 @@ const morningsessions: Session[] = [
       "Saborna Roy Chowdhary",
       "Sonali Dev",
     ],
+    ownerLead: "Sarveshi + Divya + Kavita",
+    supportingTeam: "Geetika Chandran + Alpana",
     confirmed: false,
     tag: "Keynote",
     tagColor: "#888",
@@ -105,6 +113,8 @@ const afternoonSessions: Session[] = [
       "Shailla Chand",
       "Shivani Gupta (Facilitator)",
     ],
+    ownerLead: "Shivani Gupta",
+    supportingTeam: "Pooja Nayak + Geetika Chandran",
     confirmed: true,
     tag: "Workshop",
     tagColor: "#d4af37",
@@ -118,6 +128,7 @@ const afternoonSessions: Session[] = [
       "An exclusive book launch celebration featuring a reading, author conversation, and book signing.",
     venue: "Main Stage",
     speakers: ["Parul Bhandari"],
+    ownerLead: "Shivani Gupta",
     confirmed: true,
     tag: "Book Launch",
     tagColor: "#cd5c5c",
@@ -139,6 +150,8 @@ const afternoonSessions: Session[] = [
       "Romit",
       "Shilajeet Niyogi",
     ],
+    ownerLead: "Vishal Rajput + Sanjay Bansal + Jinal",
+    supportingTeam: "Parul Bhandari + Alpana + Rupesh + Ashish",
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
@@ -151,6 +164,8 @@ const afternoonSessions: Session[] = [
     description: "Programme details coming soon.",
     venue: "Workshop Room",
     speakers: ["Keith Farazi", "Scott Sommer", "Ahmed Bin Athar"],
+    ownerLead: "Sarveshi + Parul",
+    supportingTeam: "Bhargav, Pooja Nayak, Ashish",
     confirmed: false,
     tag: "Workshop",
     tagColor: "#888",
@@ -175,6 +190,8 @@ const afternoonSessions: Session[] = [
       "Mrinal Kokhle",
       "Prasanta Verma",
     ],
+    ownerLead: "Sarveshi + Divya + Kavita",
+    supportingTeam: "Smita Garg, Alpana, Julie A",
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
@@ -204,6 +221,8 @@ const afternoonSessions: Session[] = [
       "Shashank",
       "Tara Swaminathan",
     ],
+    ownerLead: "Jitesh Jaggi + Shweta Singh",
+    supportingTeam: "Bhargav, Yatharth, Neelam, Akhilesh, Ashish",
     confirmed: false,
     tag: "Open Mic",
     tagColor: "#888",
@@ -219,6 +238,8 @@ const eveningSessions: Session[] = [
     description:
       "A glamorous red carpet reception welcoming guests to the evening gala of the Chicago Indian Literature Festival 2026.",
     venue: "Grand Entrance",
+    ownerLead: "Neetu + Divya + Neelam",
+    supportingTeam: "Bhargav, Yatharth, Neelam, Akhilesh, Ashish",
     confirmed: true,
     tag: "Evening Gala",
     tagColor: "#1a1a1a",
@@ -232,6 +253,9 @@ const eveningSessions: Session[] = [
       "A grand evening celebration featuring opening remarks by the Founder & President and introductions of the CICA Board and Advisory Board.",
     venue: "Grand Ballroom",
     speakers: ["Jigar Shah", "CICA Board & Advisory Board"],
+    ownerLead: "Jigar",
+    supportingTeam:
+      "Bhargav, Yatharth, Neelam, Akhilesh, Ashish, Julie, Smita, Parul, (everyone on the team)",
     confirmed: true,
     tag: "Evening Gala",
     tagColor: "#1a1a1a",
@@ -255,6 +279,7 @@ const eveningSessions: Session[] = [
       "Sahil (Sifr)",
       "Meena (Moderator)",
     ],
+    ownerLead: "Divya + Kavita + Geetika",
     confirmed: false,
     tag: "Food Panel",
     tagColor: "#888",
@@ -267,6 +292,7 @@ const eveningSessions: Session[] = [
     description: "Programme details coming soon.",
     venue: "Grand Ballroom",
     speakers: ["Rishaad Tobaccowala"],
+    ownerLead: "Divya + Kavita + Sarveshi",
     confirmed: false,
     tag: "Speech",
     tagColor: "#888",
@@ -284,6 +310,7 @@ const eveningSessions: Session[] = [
       "Tanveer Singh Sapra",
       "Sandhya Menon",
     ],
+    ownerLead: "Divya + Neetu + Jigar + Kavita",
     confirmed: false,
     tag: "Performance",
     tagColor: "#888",
@@ -344,7 +371,6 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
             className="flex flex-wrap items-center"
             style={{ gap: "0.6rem", marginBottom: "0.85rem" }}
           >
-            {/* Time */}
             <div
               className="flex items-center"
               style={{ gap: "0.35rem", color: "#888", fontSize: "0.8rem" }}
@@ -353,7 +379,6 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
               <span style={{ fontWeight: 500 }}>{session.time}</span>
             </div>
 
-            {/* Tag */}
             <span
               style={{
                 fontSize: "0.7rem",
@@ -372,7 +397,6 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
               {session.tag}
             </span>
 
-            {/* Confirmed badge */}
             {session.confirmed && (
               <span
                 className="flex items-center"
@@ -393,7 +417,6 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
               </span>
             )}
 
-            {/* Ticket price */}
             {session.ticketPrice && (
               <span
                 className="flex items-center"
@@ -414,7 +437,6 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
               </span>
             )}
 
-            {/* Venue */}
             {session.venue && (
               <div
                 className="flex items-center"
@@ -462,16 +484,16 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                 fontSize: "0.88rem",
                 lineHeight: 1.8,
                 color: session.confirmed ? "#666" : "#aaa",
-                marginBottom: session.speakers && session.speakers.length > 0 ? "1rem" : "0",
+                marginBottom: "1rem",
               }}
             >
               {session.description}
             </p>
           )}
 
-          {/* Speakers */}
+          {/* Authors & Artists */}
           {session.speakers && session.speakers.length > 0 && (
-            <div>
+            <div style={{ marginBottom: "0.85rem" }}>
               <p
                 style={{
                   fontSize: "0.72rem",
@@ -482,7 +504,7 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                   marginBottom: "0.5rem",
                 }}
               >
-                {session.confirmed ? "Speakers & Artists" : "Expected Speakers"}
+                Authors & Artists
               </p>
               <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
                 {session.speakers.map((s) => (
@@ -504,6 +526,59 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                   </span>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* Owner Lead */}
+          {session.ownerLead && (
+            <div style={{ marginBottom: "0.6rem" }}>
+              <p
+                style={{
+                  fontSize: "0.72rem",
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  color: "#999",
+                  marginBottom: "0.3rem",
+                }}
+              >
+                Owner Lead
+              </p>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#666",
+                  fontWeight: 500,
+                }}
+              >
+                {session.ownerLead}
+              </p>
+            </div>
+          )}
+
+          {/* Supporting Team */}
+          {session.supportingTeam && (
+            <div>
+              <p
+                style={{
+                  fontSize: "0.72rem",
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  color: "#999",
+                  marginBottom: "0.3rem",
+                }}
+              >
+                Supporting Team
+              </p>
+              <p
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#666",
+                }}
+              >
+                {session.supportingTeam}
+              </p>
             </div>
           )}
         </div>
@@ -674,29 +749,22 @@ export default function LitFestSchedulePage() {
             gala celebration.
           </p>
 
-          {/* Info strip */}
           <div className="flex flex-wrap" style={{ gap: "2rem" }}>
             <div className="flex items-center" style={{ gap: "0.6rem" }}>
               <Calendar size={16} color="#d4af37" />
-              <span
-                style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}
-              >
+              <span style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}>
                 Saturday, May 30, 2026
               </span>
             </div>
             <div className="flex items-center" style={{ gap: "0.6rem" }}>
               <Clock size={16} color="#d4af37" />
-              <span
-                style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}
-              >
+              <span style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}>
                 9:30 AM – 9:00 PM
               </span>
             </div>
             <div className="flex items-center" style={{ gap: "0.6rem" }}>
               <MapPin size={16} color="#d4af37" />
-              <span
-                style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}
-              >
+              <span style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}>
                 Congress Plaza Hotel, Chicago
               </span>
             </div>
@@ -724,97 +792,39 @@ export default function LitFestSchedulePage() {
         >
           <div className="flex flex-wrap" style={{ gap: "2.5rem" }}>
             <div>
-              <span
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  color: "#1a1a1a",
-                }}
-              >
+              <span className="font-heading" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1a1a1a" }}>
                 {totalSessions}
               </span>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#888",
-                  marginLeft: "0.4rem",
-                }}
-              >
+              <span style={{ fontSize: "0.8rem", color: "#888", marginLeft: "0.4rem" }}>
                 Sessions
               </span>
             </div>
             <div>
-              <span
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  color: "#d4af37",
-                }}
-              >
+              <span className="font-heading" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#d4af37" }}>
                 {confirmedCount}
               </span>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#888",
-                  marginLeft: "0.4rem",
-                }}
-              >
+              <span style={{ fontSize: "0.8rem", color: "#888", marginLeft: "0.4rem" }}>
                 Confirmed
               </span>
             </div>
             <div>
-              <span
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  color: "#cd5c5c",
-                }}
-              >
+              <span className="font-heading" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#cd5c5c" }}>
                 1
               </span>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#888",
-                  marginLeft: "0.4rem",
-                }}
-              >
+              <span style={{ fontSize: "0.8rem", color: "#888", marginLeft: "0.4rem" }}>
                 Day
               </span>
             </div>
           </div>
 
-          {/* Legend */}
           <div className="flex items-center" style={{ gap: "1.5rem" }}>
             <div className="flex items-center" style={{ gap: "0.4rem" }}>
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "50%",
-                  backgroundColor: "#d4af37",
-                }}
-              />
-              <span style={{ fontSize: "0.78rem", color: "#666" }}>
-                Confirmed
-              </span>
+              <div style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: "#d4af37" }} />
+              <span style={{ fontSize: "0.78rem", color: "#666" }}>Confirmed</span>
             </div>
             <div className="flex items-center" style={{ gap: "0.4rem" }}>
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "50%",
-                  backgroundColor: "#ccc",
-                }}
-              />
-              <span style={{ fontSize: "0.78rem", color: "#666" }}>
-                Programme Coming Soon
-              </span>
+              <div style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: "#ccc" }} />
+              <span style={{ fontSize: "0.78rem", color: "#666" }}>Programme Coming Soon</span>
             </div>
           </div>
         </div>
@@ -825,29 +835,13 @@ export default function LitFestSchedulePage() {
         data-section="schedule-content"
         style={{ padding: "3rem 3rem 4rem", backgroundColor: "#faf8f3" }}
       >
-        <div
-          style={{
-            maxWidth: "1100px",
-            marginLeft: "auto",
-            marginRight: "auto",
-          }}
-        >
+        <div style={{ maxWidth: "1100px", marginLeft: "auto", marginRight: "auto" }}>
+
           {/* ── MORNING ── */}
           <FadeInSection>
-            <BlockHeader
-              title="Morning"
-              timeRange="9:30 AM – 12:00 PM"
-              color="#cd5c5c"
-            />
+            <BlockHeader title="Morning" timeRange="9:30 AM – 12:00 PM" color="#cd5c5c" />
           </FadeInSection>
-
-          <div
-            style={{
-              paddingLeft: "1.65rem",
-              borderLeft: "2px solid rgba(0,0,0,0.06)",
-              marginBottom: "3.5rem",
-            }}
-          >
+          <div style={{ paddingLeft: "1.65rem", borderLeft: "2px solid rgba(0,0,0,0.06)", marginBottom: "3.5rem" }}>
             {morningsessions.map((session, i) => (
               <SessionCard key={`morning-${i}`} session={session} index={i} />
             ))}
@@ -855,44 +849,19 @@ export default function LitFestSchedulePage() {
 
           {/* ── AFTERNOON ── */}
           <FadeInSection>
-            <BlockHeader
-              title="Afternoon"
-              timeRange="12:00 PM – 5:30 PM"
-              color="#d4af37"
-            />
+            <BlockHeader title="Afternoon" timeRange="12:00 PM – 5:30 PM" color="#d4af37" />
           </FadeInSection>
-
-          <div
-            style={{
-              paddingLeft: "1.65rem",
-              borderLeft: "2px solid rgba(0,0,0,0.06)",
-              marginBottom: "3.5rem",
-            }}
-          >
+          <div style={{ paddingLeft: "1.65rem", borderLeft: "2px solid rgba(0,0,0,0.06)", marginBottom: "3.5rem" }}>
             {afternoonSessions.map((session, i) => (
-              <SessionCard
-                key={`afternoon-${i}`}
-                session={session}
-                index={i}
-              />
+              <SessionCard key={`afternoon-${i}`} session={session} index={i} />
             ))}
           </div>
 
           {/* ── EVENING ── */}
           <FadeInSection>
-            <BlockHeader
-              title="Evening Gala"
-              timeRange="6:30 PM – 9:00 PM"
-              color="#1a1a1a"
-            />
+            <BlockHeader title="Evening Gala" timeRange="6:30 PM – 9:00 PM" color="#1a1a1a" />
           </FadeInSection>
-
-          <div
-            style={{
-              paddingLeft: "1.65rem",
-              borderLeft: "2px solid rgba(0,0,0,0.06)",
-            }}
-          >
+          <div style={{ paddingLeft: "1.65rem", borderLeft: "2px solid rgba(0,0,0,0.06)" }}>
             {eveningSessions.map((session, i) => (
               <SessionCard key={`evening-${i}`} session={session} index={i} />
             ))}
@@ -913,9 +882,7 @@ export default function LitFestSchedulePage() {
                 marked as &ldquo;Programme Coming Soon&rdquo; are part of the
                 full day programme and will be updated with confirmed speaker
                 details as they are finalised. Sessions with a{" "}
-                <span style={{ color: "#d4af37", fontWeight: 600 }}>
-                  gold Confirmed
-                </span>{" "}
+                <span style={{ color: "#d4af37", fontWeight: 600 }}>gold Confirmed</span>{" "}
                 badge have been fully finalised. Ticket prices marked{" "}
                 <strong style={{ color: "#1a1a1a" }}>TBD</strong> will be
                 announced shortly. Schedule is subject to change.
@@ -935,20 +902,10 @@ export default function LitFestSchedulePage() {
         }}
       >
         <FadeInSection>
-          <div
-            style={{
-              maxWidth: "600px",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
+          <div style={{ maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
             <h2
               className="font-heading font-semibold"
-              style={{
-                fontSize: "2.2rem",
-                color: "#ffffff",
-                marginBottom: "1rem",
-              }}
+              style={{ fontSize: "2.2rem", color: "#ffffff", marginBottom: "1rem" }}
             >
               Reserve Your Spot
             </h2>
