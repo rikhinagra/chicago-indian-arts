@@ -147,23 +147,49 @@ export default function LiteratureFestivalPage() {
               Chicago Indian Literature Festival. May 30, 2026
             </p>
 
-            <Link
-              href="/vendor-intake"
-              className="inline-block font-semibold uppercase"
-              style={{
-                backgroundColor: "#cd5c5c",
-                color: "#ffffff",
-                padding: "0.85rem 2.5rem",
-                fontSize: "0.85rem",
-                letterSpacing: "1px",
-                textDecoration: "none",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
-            >
-              Vendor &amp; Partner Intake Form
-            </Link>
+            <div className="flex flex-wrap" style={{ gap: "1rem" }}>
+              <Link
+                href="/literature-festival/schedule"
+                className="inline-block font-semibold uppercase"
+                style={{
+                  backgroundColor: "#d4af37",
+                  color: "#1a1a1a",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ffffff")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
+              >
+                View Full Schedule
+              </Link>
+              <Link
+                href="/vendor-intake"
+                className="inline-block font-semibold uppercase"
+                style={{
+                  backgroundColor: "transparent",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  border: "1px solid rgba(255,255,255,0.5)",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.1)";
+                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.9)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.5)";
+                }}
+              >
+                Vendor &amp; Partner Intake Form
+              </Link>
+            </div>
           </FadeInSection>
         </div>
       </section>

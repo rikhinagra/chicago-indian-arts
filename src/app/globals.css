@@ -528,6 +528,26 @@ img {
   [data-section="submissions-heading"] {
     font-size: 2.2rem !important;
   }
+
+  /* Schedule Page */
+  [data-section="schedule-hero"] {
+    padding: 8rem 2rem 3.5rem !important;
+  }
+  [data-section="schedule-title"] {
+    font-size: 2.8rem !important;
+  }
+  [data-section="schedule-stats-bar"] {
+    padding: 1rem 2rem !important;
+  }
+  [data-section="schedule-content"] {
+    padding: 3.5rem 2rem !important;
+  }
+  [data-section="schedule-cta"] {
+    padding: 3.5rem 2rem !important;
+  }
+  [data-section="schedule-cta"] h2 {
+    font-size: 1.8rem !important;
+  }
 }
 
 /* Mobile: ≤768px */
@@ -1090,6 +1110,26 @@ img {
   [data-section="submissions-terms"] .flex.items-start {
     padding: 1.2rem 1.2rem !important;
   }
+
+  /* Schedule Page */
+  [data-section="schedule-hero"] {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+  [data-section="schedule-title"] {
+    font-size: 2.2rem !important;
+  }
+  [data-section="schedule-stats-bar"] {
+    padding: 1rem 1.2rem !important;
+  }
+  [data-section="schedule-content"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="schedule-cta"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="schedule-cta"] h2 {
+    font-size: 2rem !important;
+  }
 }
 
 /* Small Mobile: ≤480px */
@@ -1522,5 +1562,25 @@ img {
   }
   [data-section="submissions-terms"] .flex.items-start {
     padding: 1rem 1rem !important;
+  }
+
+  /* Schedule Page */
+  [data-section="schedule-hero"] {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+  [data-section="schedule-title"] {
+    font-size: 1.8rem !important;
+  }
+  [data-section="schedule-stats-bar"] {
+    padding: 0.75rem 1rem !important;
+  }
+  [data-section="schedule-content"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="schedule-cta"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="schedule-cta"] h2 {
+    font-size: 1.8rem !important;
   }
 }
