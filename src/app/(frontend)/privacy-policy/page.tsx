@@ -129,7 +129,7 @@ export default function PrivacyPolicyPage() {
               marginRight: "auto",
             }}
           >
-            {/* Last Updated */}
+            {/* Effective Date */}
             <div
               className="flex items-center"
               style={{
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
                     color: "#1a1a1a",
                   }}
                 >
-                  Last Updated: February 2026
+                  Effective: January 1, 2026
                 </p>
                 <p style={{ fontSize: "0.8rem", color: "#999" }}>
                   Effective for all users of chicagoindianarts.org
@@ -171,270 +171,404 @@ export default function PrivacyPolicyPage() {
 
             {/* Introduction */}
             <p style={paragraphStyle}>
-              Chicago Indian Collective Arts (&quot;Chicago Indian Arts,&quot;
-              &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is a registered
-              501(c)(3) non-profit organization committed to protecting your
-              privacy. This Privacy Policy describes how we collect, use, and
-              safeguard your personal information when you visit our website,
-              register for events, make donations, or interact with us in any
-              way.
+              <a
+                href="https://www.chicagoindianarts.org/"
+                style={{ color: "#d4af37", textDecoration: "none" }}
+              >
+                https://www.chicagoindianarts.org/
+              </a>{" "}
+              (this &ldquo;Site&rdquo;) is owned and operated by Chicago Indian
+              Collective Arts, NFP (&ldquo;CICA,&rdquo; &ldquo;we,&rdquo;
+              &ldquo;our&rdquo; or &ldquo;us&rdquo;). CICA is an Illinois nonprofit
+              organization with the goal to educate, preserve and promote the rich
+              tapestry of Indian arts, literature, cinema, fashion, music and dance
+              in the heart of Chicago &ndash; empowering voices, fostering cross
+              cultural dialogue, and building vibrant platforms for community
+              expression and creative exchange.
+            </p>
+            <p style={paragraphStyle}>
+              This Privacy Policy is part of the Terms and Conditions that govern
+              your use of this Site. You may review our Terms and Conditions by
+              clicking on the link at the bottom of each page of this Site.
             </p>
 
-            {/* 1. Information We Collect */}
+            {/* Scope */}
             <h2 className="font-heading" style={sectionHeadingStyle}>
-              1. Information We Collect
+              Scope of this Privacy Policy
             </h2>
             <p style={paragraphStyle}>
-              We collect information that you voluntarily provide to us through
-              our website forms:
+              This Privacy Policy covers the &ldquo;personal information&rdquo; we
+              collect through this Site. &ldquo;Personal information&rdquo; is
+              information that identifies you personally, either alone or in
+              combination with other information available to us.
+            </p>
+
+            {/* Your Consent */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Your Consent
+            </h2>
+            <p style={paragraphStyle}>
+              Please read this Privacy Policy carefully. By accessing or using this
+              Site, you are agreeing to the terms of this Privacy Policy. If you do
+              not agree to the collection, use and disclosure of your personal
+              information as set forth in this Privacy Policy, you may not use this
+              Site.
+            </p>
+
+            {/* Privacy Notices */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Privacy Notices
+            </h2>
+            <p style={paragraphStyle}>
+              This Privacy Policy may be supplemented or amended from time to time
+              by &ldquo;privacy notices&rdquo; posted on this Site. Generally,
+              privacy notices provide details about the personal information we
+              collect on particular pages or particular areas of this Site, why we
+              need that information, and choices you may have about the ways we use
+              or share that information. Our privacy notices are part of this
+              Privacy Policy.
+            </p>
+
+            {/* Changes to Privacy Policy */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Changes to This Privacy Policy
+            </h2>
+            <p style={paragraphStyle}>
+              We reserve the right to update or revise this Privacy Policy at any
+              time and without prior notice, by posting the revised version on this
+              Site. The changes will be effective as of the date we post the
+              revised version on this Site. They will apply only to the personal
+              information we collect after we have posted the revised version. Your
+              use of this Site following any such change constitutes your consent to
+              the terms of the revised Privacy Policy. For this reason, it is
+              important to review this Privacy Policy regularly.
+            </p>
+            <p style={paragraphStyle}>
+              You may access the current version of this Privacy Policy at any time
+              by clicking on the link marked &ldquo;Privacy Policy&rdquo; at the
+              bottom of each page of this Site. For your convenience, we will post
+              a notice at the top of this Privacy Policy for at least 60 days after
+              we revise this Privacy Policy to alert you to the changes we have
+              made.
+            </p>
+
+            {/* What Personal Information */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              What Personal Information Do We Collect Through This Site?
+            </h2>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>Information You Provide.</strong>{" "}
+              We collect the personal information you knowingly provide (using your
+              mouse and keyboard) when you use this Site. The information we collect
+              depends on how you use this Site. Specifically, the purpose of the
+              Site involves you providing various types of information as described
+              in the Terms and Conditions. This sharing of information is fully at
+              the discretion of the users of the Site and, pursuant to the
+              limitation of liability and disclaimer language in the Terms and
+              Conditions to the Site, CICA accepts no liability for the possible
+              undesired disclosure of such information due to any issue with the
+              Site or otherwise.
+            </p>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>
+                Information Sent to Us by Your Web Browser.
+              </strong>{" "}
+              We collect information that is sent to us automatically by your Web
+              browser. This information typically includes your IP address, the
+              identity of your Internet Service Provider, the name and version of
+              your operating system, the name and version of your browser, the date
+              and time of your visit, and the pages you visit. An &ldquo;IP
+              address&rdquo; is a unique number that is automatically assigned to
+              your computer when you connect to the Internet. Although it does not
+              identify you by name, we treat your IP address as your personal
+              information.
+            </p>
+            <p style={paragraphStyle}>
+              Generally, we do not link the information provided by your browser to
+              information that identifies you by name. We review our server logs
+              &mdash; which contain visitors&rsquo; IP addresses &mdash; for
+              security and fraud prevention purposes. If criminal activity is
+              suspected, we may share our server logs and the personal information
+              we have collected through this Site with the appropriate investigative
+              authorities who could use that information to trace and identify
+              individuals.
+            </p>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>
+                Cookies and Similar Technologies.
+              </strong>{" "}
+              We use &ldquo;cookies&rdquo; and other Web technologies for a number
+              of purposes, including:
             </p>
             <ul style={listStyle}>
               <li>
-                <strong style={{ color: "#1a1a1a" }}>Contact Form:</strong>{" "}
-                Name, email address, phone number (optional), subject, and
-                message.
+                to collect information about the ways visitors use this Site &mdash;
+                for example, which pages they visit, which links they use, and how
+                long they stay on each page;
               </li>
               <li>
-                <strong style={{ color: "#1a1a1a" }}>
-                  Event Registration:
-                </strong>{" "}
-                Name, email address, phone number (optional), city, areas of
-                interest, and how you heard about us.
+                to support the features and functionality of this Site &mdash; for
+                example, to save you the trouble of re-entering information already
+                in our database or to prompt the settings you established on
+                previous visits to this Site;
               </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>
-                  Volunteer Application:
-                </strong>{" "}
-                Name, email address, phone number (optional), preferred roles,
-                availability, experience, and additional message.
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Donations:</strong> Name,
-                email address, donation amount, and donation frequency. Payment
-                card details are processed securely by Stripe and are never
-                stored on our servers.
-              </li>
+              <li>to personalize your experience when you use this Site; and</li>
+              <li>to remarket to you after you have left this Site.</li>
             </ul>
+            <p style={paragraphStyle}>
+              Generally, the information we collect using these Web technologies
+              does not identify you personally. If you do not wish to allow cookies,
+              you may set your browser to reject cookies or to alert you when a
+              cookie is placed on your computer. Although you are not required to
+              accept our cookies when you visit this Site, you will not be able to
+              use all of the features and functionality of this Site if you set your
+              browser to reject cookies.
+            </p>
 
-            {/* 2. How We Use Your Information */}
+            {/* How Do We Use */}
             <h2 className="font-heading" style={sectionHeadingStyle}>
-              2. How We Use Your Information
+              How Do We Use the Personal Information We Collect Through This Site?
             </h2>
             <p style={paragraphStyle}>
-              We use your personal information for the following purposes:
+              Generally, we use the personal information we collect through this
+              Site:
             </p>
             <ul style={listStyle}>
+              <li>to provide the information and services you request;</li>
+              <li>to personalize your experience when you use this Site;</li>
+              <li>to personalize our communications with you;</li>
               <li>
-                Processing event registrations and sending event-related updates
+                to contact you with information and notices related to your use of
+                this Site (unless you have chosen not to receive these
+                communications);
               </li>
               <li>
-                Processing donations and issuing tax-deductible receipts
+                to make sure our mailing lists are accurate, current and do not
+                contain multiple entries for the same individual;
+              </li>
+              <li>to better understand your needs and interests;</li>
+              <li>
+                to improve the content, functionality and usability of this Site;
               </li>
               <li>
-                Coordinating volunteer opportunities and schedules
+                to deliver advertising or remarketing reminders through display
+                networks encouraging users to return to the Site;
               </li>
-              <li>Responding to your inquiries and messages</li>
-              <li>
-                Sending newsletters and updates about our programs and events
-                (with your consent)
-              </li>
-              <li>Improving our website and services</li>
+              <li>to improve our marketing and promotional efforts; and</li>
+              <li>for security and fraud-prevention purposes.</li>
             </ul>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>Form Fill Features.</strong> You
+              may use the site to submit forms, sign up for newsletters, and
+              otherwise submit information to us for our use in answering your
+              questions and concerns, enrolling you in our newsletter submission,
+              and in otherwise communicating with you.
+            </p>
 
-            {/* 3. Payment Processing */}
+            {/* How Do We Share */}
             <h2 className="font-heading" style={sectionHeadingStyle}>
-              3. Payment Processing
+              How Do We Share Your Personal Information?
             </h2>
             <p style={paragraphStyle}>
-              All donations are processed through{" "}
-              <strong style={{ color: "#1a1a1a" }}>Stripe</strong>, a
-              PCI-DSS Level 1 certified payment processor. When you make a
-              donation, your payment card information is sent directly to
-              Stripe&apos;s secure servers. We never receive, store, or have
-              access to your full card number, expiration date, or CVC.
+              <strong style={{ color: "#1a1a1a" }}>Service Providers.</strong> We
+              may share your personal information with companies that perform
+              services on our behalf, such as credit card verification, online
+              recruiting, and Web hosting service providers.
             </p>
             <p style={paragraphStyle}>
-              For recurring donations (monthly, quarterly, or annual), Stripe
-              securely stores your payment information and automatically
-              processes charges according to your selected frequency. You can
-              cancel your recurring donation at any time by contacting us at{" "}
+              <strong style={{ color: "#1a1a1a" }}>Co-Sponsored Events.</strong>{" "}
+              Depending on your privacy preferences, we may contact you with
+              information about seminars and other events sponsored by CICA. Some
+              of these events may be co-sponsored with other organizations. In such
+              cases, we may lend our mailing list to a co-sponsor so that all of
+              the communications regarding the event can be processed centrally.
+            </p>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>
+                Compliance With Laws and Protection of Our Rights and the Rights of
+                Others.
+              </strong>{" "}
+              We may disclose personal information when we, in good faith, believe
+              disclosure is appropriate to comply with the law or a legal
+              obligation. We may also disclose personal information to prevent or
+              investigate a possible crime, such as fraud or identity theft; to
+              enforce or apply our Terms and Conditions or other agreements; or to
+              protect our own rights or property or the rights, property or safety
+              of our users or others.
+            </p>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>Successors in Interest.</strong>{" "}
+              Your personal information may be transferred to another entity that
+              succeeds to all or part of our business, for example, if we
+              reorganize our structure or transfer a significant portion of our
+              assets or personnel to another entity. In such event, your personal
+              information will continue to be protected by this Privacy Policy and
+              the privacy preferences you have expressed to us.
+            </p>
+
+            {/* Your Choices */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Your Choices
+            </h2>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>In General.</strong> We respect
+              your right to make choices about the ways we collect, use and disclose
+              your personal information. In most cases, we will ask you to indicate
+              your choices at the time we collect your personal information.
+            </p>
+            <p style={paragraphStyle}>
+              <strong style={{ color: "#1a1a1a" }}>Direct Marketing.</strong> We
+              will not use your personal information for direct marketing purposes,
+              without your consent. We will include an &ldquo;opt-out&rdquo; link
+              in electronic newsletters and promotional emails we send you, so that
+              you can inform us that you do not wish to receive such communications
+              from us in the future. If at any time you wish to be removed from our
+              mailing lists, please contact us using the contact information
+              provided at the end of this Privacy Policy. Please provide your full
+              name, postal address and email address so that we can locate you on
+              our mailing lists. We will honor your request within a reasonable
+              period of time and, in any event, within the time limits established
+              by law.
+            </p>
+
+            {/* Access, Update or Correct */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              How Can You Access, Update or Correct Your Personal Information?
+            </h2>
+            <p style={paragraphStyle}>
+              If you wish to access, update or correct your personal information,
+              please contact us by email at{" "}
               <a
                 href="mailto:info@chicagoindianarts.org"
                 style={{ color: "#d4af37", textDecoration: "none" }}
               >
                 info@chicagoindianarts.org
-              </a>
-              .
-            </p>
-
-            {/* 4. Data Sharing */}
-            <h2 className="font-heading" style={sectionHeadingStyle}>
-              4. Data Sharing & Third-Party Services
-            </h2>
-            <p style={paragraphStyle}>
-              We do not sell, rent, or trade your personal information to any
-              third parties. We use the following trusted services to operate
-              our platform:
-            </p>
-            <ul style={listStyle}>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Stripe:</strong> For
-                secure payment processing of donations.
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Google Workspace:</strong>{" "}
-                For internal record-keeping of form submissions and email
-                communications.
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Google Analytics:</strong>{" "}
-                For understanding website traffic and user behavior (anonymized
-                data).
-              </li>
-            </ul>
-            <p style={paragraphStyle}>
-              Each of these services has their own privacy policies governing
-              how they handle data. We encourage you to review their policies
-              for more information.
-            </p>
-
-            {/* 5. Cookies & Analytics */}
-            <h2 className="font-heading" style={sectionHeadingStyle}>
-              5. Cookies & Analytics
-            </h2>
-            <p style={paragraphStyle}>
-              Our website may use cookies and similar technologies to enhance
-              your browsing experience. These include:
-            </p>
-            <ul style={listStyle}>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Essential Cookies:</strong>{" "}
-                Necessary for website functionality and security.
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Analytics Cookies:</strong>{" "}
-                Used by Google Analytics to collect anonymized data about how
-                visitors use our website, helping us improve our content and
-                services.
-              </li>
-            </ul>
-            <p style={paragraphStyle}>
-              You can control cookie settings through your browser preferences.
-              Disabling certain cookies may affect website functionality.
-            </p>
-
-            {/* 6. Data Security */}
-            <h2 className="font-heading" style={sectionHeadingStyle}>
-              6. Data Security
-            </h2>
-            <p style={paragraphStyle}>
-              We implement appropriate technical and organizational measures to
-              protect your personal information from unauthorized access,
-              alteration, disclosure, or destruction. This includes secure
-              server infrastructure, encrypted data transmission (SSL/TLS), and
-              restricted access to personal data by authorized personnel only.
-            </p>
-
-            {/* 7. Data Retention */}
-            <h2 className="font-heading" style={sectionHeadingStyle}>
-              7. Data Retention
-            </h2>
-            <p style={paragraphStyle}>
-              We retain your personal information only for as long as necessary
-              to fulfill the purposes for which it was collected, including
-              legal, accounting, or reporting requirements. Donation records are
-              retained as required by IRS regulations for 501(c)(3)
-              organizations. You may request deletion of your data at any time
-              by contacting us.
-            </p>
-
-            {/* 8. Your Rights */}
-            <h2 className="font-heading" style={sectionHeadingStyle}>
-              8. Your Rights
-            </h2>
-            <p style={paragraphStyle}>You have the right to:</p>
-            <ul style={listStyle}>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Access</strong> the
-                personal information we hold about you
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Correct</strong> any
-                inaccurate or incomplete information
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Delete</strong> your
-                personal information (subject to legal retention requirements)
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Opt out</strong> of
-                marketing communications at any time
-              </li>
-              <li>
-                <strong style={{ color: "#1a1a1a" }}>Cancel</strong> recurring
-                donations by contacting us
-              </li>
-            </ul>
-            <p style={paragraphStyle}>
-              To exercise any of these rights, please contact us at{" "}
+              </a>{" "}
+              or use the contact form at{" "}
               <a
-                href="mailto:info@chicagoindianarts.org"
+                href="https://www.chicagoindianarts.org/contact"
                 style={{ color: "#d4af37", textDecoration: "none" }}
               >
-                info@chicagoindianarts.org
+                https://www.chicagoindianarts.org/contact
               </a>
-              . We will respond to your request within 30 days.
+              . We will respond to you within a reasonable time and, in any case,
+              within the time limits established by applicable law. We may ask you
+              for additional information to verify your identity. In most cases, we
+              will provide access and correct or delete any inaccurate information
+              you discover. In some cases, however, we may limit or deny your
+              request if the law permits or requires us to do so or if we are unable
+              to verify your identity.
             </p>
 
-            {/* 9. Children's Privacy */}
+            {/* CCPA */}
             <h2 className="font-heading" style={sectionHeadingStyle}>
-              9. Children&apos;s Privacy
+              CCPA Privacy Policy (Do Not Sell My Personal Information)
             </h2>
             <p style={paragraphStyle}>
-              Our website is not directed to children under the age of 13. We do
-              not knowingly collect personal information from children under 13.
-              If you believe we have inadvertently collected information from a
-              child, please contact us immediately and we will promptly delete
-              it.
+              Under CCPA, among other rights, California consumers have the right
+              to:
+            </p>
+            <ul style={listStyle}>
+              <li>
+                Request that a business that collects a consumer&rsquo;s personal
+                data disclose the categories and specific pieces of personal data
+                that a business has collected about consumers.
+              </li>
+              <li>
+                Request that a business delete any personal data about the consumer
+                that a business has collected.
+              </li>
+              <li>
+                Request that a business that sells a consumer&rsquo;s personal
+                data, not sell the consumer&rsquo;s personal data.
+              </li>
+            </ul>
+            <p style={paragraphStyle}>
+              If you make a request, we have one month to respond to you. If you
+              would like to exercise any of these rights, please contact us.
             </p>
 
-            {/* 10. Photography at Events */}
+            {/* Security */}
             <h2 className="font-heading" style={sectionHeadingStyle}>
-              10. Photography & Media at Events
+              Security
             </h2>
             <p style={paragraphStyle}>
-              By attending Chicago Indian Arts events, you acknowledge that
-              photography and video recording may take place. These images may
-              be used for promotional purposes on our website, social media, and
-              marketing materials. If you do not wish to be photographed, please
-              inform our event staff. For more details, please refer to our{" "}
-              <Link
-                href="/terms"
-                style={{ color: "#d4af37", textDecoration: "none" }}
-              >
-                Terms & Conditions
-              </Link>
-              .
+              We take reasonable precautions to provide a level of security
+              appropriate to the sensitivity of the personal information we collect.
+              Although we use reasonable measures to help protect your personal
+              information against unauthorized use or disclosure, we cannot
+              guarantee the security of information provided over the Internet or
+              stored in our databases. Your transmissions are, therefore, at your
+              own risk.
             </p>
 
-            {/* 11. Changes to This Policy */}
+            {/* Supplemental Information */}
             <h2 className="font-heading" style={sectionHeadingStyle}>
-              11. Changes to This Policy
+              Supplemental Information
             </h2>
             <p style={paragraphStyle}>
-              We may update this Privacy Policy from time to time to reflect
-              changes in our practices or for legal reasons. Any changes will be
-              posted on this page with an updated &quot;Last Updated&quot; date.
-              We encourage you to review this policy periodically.
+              From time to time, we may supplement the personal information we
+              collect through this Site with information from other sources,
+              including information we collect from you through other channels. For
+              example, if you provide us with contact information when you attend
+              one of our seminars, we may use that information to update the contact
+              information collected through this Site.
             </p>
 
-            {/* 12. Contact */}
+            {/* Our Other Websites */}
             <h2 className="font-heading" style={sectionHeadingStyle}>
-              12. Contact Us
+              Our Other Websites
             </h2>
             <p style={paragraphStyle}>
-              If you have any questions, concerns, or requests regarding this
-              Privacy Policy or your personal data, please contact us:
+              CICA operates other websites, including extranet sites we maintain
+              for the convenience of our clients. This Privacy Policy applies only
+              to this Site and not to any other site owned or operated by CICA.
+            </p>
+
+            {/* Third Party Websites */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Third Party Websites
+            </h2>
+            <p style={paragraphStyle}>
+              This Site may contain links to websites owned by third parties. This
+              Privacy Policy applies only to this Site and not to any third-party
+              website.
+            </p>
+
+            {/* Special Notice */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Special Notice for Visitors Who Reside Outside the United States
+            </h2>
+            <p style={paragraphStyle}>
+              Our Web servers and databases are located in the United States and in
+              other countries. We may transfer your personal information among our
+              offices and to our service providers and others located in the United
+              States or other countries for the purposes described in this Privacy
+              Policy. Different countries have different privacy laws and
+              requirements, and some, including the United States, provide less
+              legal protection for your personal information than others. Regardless
+              of the country in which your personal information is collected, used,
+              transferred or stored, information collected through this Site will be
+              protected by the terms of this Privacy Policy and any other agreements
+              between you and CICA.
+            </p>
+
+            {/* Governing Law */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Governing Law
+            </h2>
+            <p style={paragraphStyle}>
+              This Privacy Policy is governed under the laws of the State of
+              Illinois, USA, without regard to its conflicts of law provisions.
+            </p>
+
+            {/* Contact */}
+            <h2 className="font-heading" style={sectionHeadingStyle}>
+              Contact Information
+            </h2>
+            <p style={paragraphStyle}>
+              If you have any questions about this Privacy Policy or our data
+              practices, please contact us:
             </p>
             <div
               style={{
@@ -474,6 +608,26 @@ export default function PrivacyPolicyPage() {
                 </a>
               </p>
             </div>
+
+            {/* Terms Reference */}
+            <p
+              style={{
+                fontSize: "0.85rem",
+                color: "#999",
+                textAlign: "center",
+                paddingTop: "1.5rem",
+                borderTop: "1px solid rgba(0,0,0,0.06)",
+              }}
+            >
+              Please also review our{" "}
+              <Link
+                href="/terms"
+                style={{ color: "#d4af37", textDecoration: "none" }}
+              >
+                Terms &amp; Conditions
+              </Link>
+              .
+            </p>
           </div>
         </FadeInSection>
       </section>
