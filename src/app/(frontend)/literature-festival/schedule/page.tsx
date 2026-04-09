@@ -26,6 +26,18 @@ type Session = {
 
 const morningsessions: Session[] = [
   {
+    time: "8:00 AM",
+    title: "Check In & Logistics Prep",
+    subtitle: "Booth set up · Gaming Arcade · Food Vendors · Chai & Coffee Bar · Tattoo Bar",
+    description:
+      "Give booth to all community organizations. Gaming Arcade set up. Food Vendors set up. Badges. Standees, Step & Repeat. Chai and Coffee Bar. Tattoo bar.",
+    ownerLead: "Neetu + Neelam",
+    supportingTeam: "Ashish, Akhilesh, Rupesh, Yatharth, Neelam, Bhargav, Jyoti Temple",
+    confirmed: false,
+    tag: "Setup",
+    tagColor: "#888",
+  },
+  {
     time: "9:30 AM",
     title: "Registration & Welcome",
     subtitle: "Doors open",
@@ -318,6 +330,12 @@ const eveningSessions: Session[] = [
   },
 ];
 
+// ─── HELPER ──────────────────────────────────────────────────────────────────
+
+function splitNames(str: string): string[] {
+  return str.split(/[+,]/).map((s) => s.trim()).filter(Boolean);
+}
+
 // ─── SESSION CARD ─────────────────────────────────────────────────────────────
 
 function SessionCard({ session, index }: { session: Session; index: number }) {
@@ -531,7 +549,7 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
 
           {/* Owner Lead */}
           {session.ownerLead && (
-            <div style={{ marginBottom: "0.6rem" }}>
+            <div style={{ marginBottom: "0.85rem" }}>
               <p
                 style={{
                   fontSize: "0.72rem",
@@ -539,20 +557,29 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                   letterSpacing: "1px",
                   textTransform: "uppercase",
                   color: "#999",
-                  marginBottom: "0.3rem",
+                  marginBottom: "0.5rem",
                 }}
               >
                 Owner Lead
               </p>
-              <p
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#666",
-                  fontWeight: 500,
-                }}
-              >
-                {session.ownerLead}
-              </p>
+              <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
+                {splitNames(session.ownerLead).map((name) => (
+                  <span
+                    key={name}
+                    style={{
+                      fontSize: "0.78rem",
+                      color: "#555",
+                      backgroundColor: "rgba(0,0,0,0.05)",
+                      border: "1px solid rgba(0,0,0,0.1)",
+                      padding: "0.25rem 0.6rem",
+                      borderRadius: "2px",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
             </div>
           )}
 
@@ -566,19 +593,29 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                   letterSpacing: "1px",
                   textTransform: "uppercase",
                   color: "#999",
-                  marginBottom: "0.3rem",
+                  marginBottom: "0.5rem",
                 }}
               >
                 Supporting Team
               </p>
-              <p
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#666",
-                }}
-              >
-                {session.supportingTeam}
-              </p>
+              <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
+                {splitNames(session.supportingTeam).map((name) => (
+                  <span
+                    key={name}
+                    style={{
+                      fontSize: "0.78rem",
+                      color: "#555",
+                      backgroundColor: "rgba(0,0,0,0.05)",
+                      border: "1px solid rgba(0,0,0,0.1)",
+                      padding: "0.25rem 0.6rem",
+                      borderRadius: "2px",
+                      fontWeight: 400,
+                    }}
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
             </div>
           )}
         </div>
