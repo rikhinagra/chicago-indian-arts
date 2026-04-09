@@ -265,7 +265,7 @@ const eveningSessions: Session[] = [
       "A grand evening celebration featuring opening remarks by the Founder & President and introductions of the CICA Board and Advisory Board.",
     venue: "Grand Ballroom",
     speakers: ["Jigar Shah", "CICA Board & Advisory Board"],
-    ownerLead: "Jigar",
+    ownerLead: "Jigar Shah",
     supportingTeam:
       "Bhargav, Yatharth, Neelam, Akhilesh, Ashish, Julie, Smita, Parul, (everyone on the team)",
     confirmed: true,
@@ -876,7 +876,7 @@ export default function LitFestSchedulePage() {
 
           {/* ── MORNING ── */}
           <FadeInSection>
-            <BlockHeader title="Morning" timeRange="9:30 AM – 12:00 PM" color="#cd5c5c" />
+            <BlockHeader title="Morning" timeRange="8:00 AM – 12:00 PM" color="#cd5c5c" />
           </FadeInSection>
           <div style={{ paddingLeft: "1.65rem", borderLeft: "2px solid rgba(0,0,0,0.06)", marginBottom: "3.5rem" }}>
             {morningsessions.map((session, i) => (
