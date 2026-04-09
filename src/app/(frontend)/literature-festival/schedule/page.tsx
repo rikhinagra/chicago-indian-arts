@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, MapPin, Clock, CheckCircle, Calendar } from "lucide-react";
+import { ArrowLeft, MapPin, Clock, CheckCircle, Calendar, Ticket } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
@@ -17,6 +17,7 @@ type Session = {
   confirmed: boolean;
   tag: string;
   tagColor: string;
+  ticketPrice?: string;
 };
 
 // ─── SCHEDULE DATA ────────────────────────────────────────────────────────────
@@ -44,6 +45,7 @@ const morningsessions: Session[] = [
     confirmed: true,
     tag: "Opening",
     tagColor: "#cd5c5c",
+    ticketPrice: "$5",
   },
   {
     time: "10:00 – 11:00 AM",
@@ -63,6 +65,7 @@ const morningsessions: Session[] = [
     confirmed: true,
     tag: "Children & Family",
     tagColor: "#cd5c5c",
+    ticketPrice: "$5",
   },
   {
     time: "11:00 AM – 12:00 PM",
@@ -70,9 +73,19 @@ const morningsessions: Session[] = [
     subtitle: "An inspiring conversation to set the tone for the festival",
     description: "Programme details coming soon.",
     venue: "Main Stage",
+    speakers: [
+      "Sunita Williams",
+      "Ferose SAP",
+      "Kiran Desai",
+      "Chitra Divakaruni",
+      "Roshan Choksi",
+      "Saborna Roy Chowdhary",
+      "Sonali Dev",
+    ],
     confirmed: false,
     tag: "Keynote",
     tagColor: "#888",
+    ticketPrice: "$10",
   },
 ];
 
@@ -95,6 +108,7 @@ const afternoonSessions: Session[] = [
     confirmed: true,
     tag: "Workshop",
     tagColor: "#d4af37",
+    ticketPrice: "$10",
   },
   {
     time: "12:45 – 1:15 PM",
@@ -121,10 +135,14 @@ const afternoonSessions: Session[] = [
       "Richard Divizio",
       "Carlos Pesina",
       "Tim Kirchkoff",
+      "Ani Chaoudhary",
+      "Romit",
+      "Shilajeet Niyogi",
     ],
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
+    ticketPrice: "$10",
   },
   {
     time: "2:00 – 2:45 PM",
@@ -132,10 +150,11 @@ const afternoonSessions: Session[] = [
     subtitle: "Craft sessions with published authors",
     description: "Programme details coming soon.",
     venue: "Workshop Room",
-    speakers: ["Keith Farazi", "Scott Sommer"],
+    speakers: ["Keith Farazi", "Scott Sommer", "Ahmed Bin Athar"],
     confirmed: false,
     tag: "Workshop",
     tagColor: "#888",
+    ticketPrice: "$5",
   },
   {
     time: "3:00 – 4:00 PM",
@@ -151,10 +170,15 @@ const afternoonSessions: Session[] = [
       "Roshan Choksi",
       "Saborna Roy Chowdhary",
       "Sonali Dev",
+      "Nina Sudakar",
+      "Shruti Tewari",
+      "Mrinal Kokhle",
+      "Prasanta Verma",
     ],
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
+    ticketPrice: "$5",
   },
   {
     time: "4:00 – 5:30 PM",
@@ -170,9 +194,11 @@ const afternoonSessions: Session[] = [
       "Darshita Jain",
       "Binish Lalani",
       "Alka Sharma",
+      "Annmarie",
       "Madhuri Bandla",
       "Zohra Sheikh",
       "Saarika Rao",
+      "Poonam",
       "Shivani Gupta",
       "Godhuli",
       "Shashank",
@@ -181,6 +207,7 @@ const afternoonSessions: Session[] = [
     confirmed: false,
     tag: "Open Mic",
     tagColor: "#888",
+    ticketPrice: "$10",
   },
 ];
 
@@ -195,18 +222,72 @@ const eveningSessions: Session[] = [
     confirmed: true,
     tag: "Evening Gala",
     tagColor: "#1a1a1a",
+    ticketPrice: "TBD",
   },
   {
     time: "7:00 – 9:00 PM",
     title: "Opening Gala",
-    subtitle: "Opening Remarks · Board & Advisory Board Introductions · Cultural Performances",
+    subtitle: "Opening Remarks · Board & Advisory Board Introductions",
     description:
-      "A grand evening celebration featuring opening remarks by the Founder & President, introductions of the CICA Board and Advisory Board, key guest speeches, cultural performances, and a curated culinary experience.",
+      "A grand evening celebration featuring opening remarks by the Founder & President and introductions of the CICA Board and Advisory Board.",
     venue: "Grand Ballroom",
     speakers: ["Jigar Shah", "CICA Board & Advisory Board"],
     confirmed: true,
     tag: "Evening Gala",
     tagColor: "#1a1a1a",
+  },
+  {
+    time: "7:00 – 9:00 PM",
+    title: "Food Panel",
+    subtitle: "A literary feast — food, culture & storytelling",
+    description:
+      "A 30-minute culinary panel bringing together Chicago's most celebrated South Asian chefs, food writers, and restaurateurs for a conversation on food, culture, and identity.",
+    venue: "Grand Ballroom",
+    speakers: [
+      "Colleen Sen",
+      "Ashok Selvam",
+      "Rohit Thaledi",
+      "Rishi Kumar",
+      "Monica Eng",
+      "Sanjeev Pandey",
+      "Zeeshan Shah",
+      "Srujan Sirkar",
+      "Sahil (Sifr)",
+      "Meena (Moderator)",
+    ],
+    confirmed: false,
+    tag: "Food Panel",
+    tagColor: "#888",
+    ticketPrice: "TBD",
+  },
+  {
+    time: "7:00 – 9:00 PM",
+    title: "Key Guest Speeches",
+    subtitle: "Voices that inspire",
+    description: "Programme details coming soon.",
+    venue: "Grand Ballroom",
+    speakers: ["Rishaad Tobaccowala"],
+    confirmed: false,
+    tag: "Speech",
+    tagColor: "#888",
+  },
+  {
+    time: "7:00 – 9:00 PM",
+    title: "Cultural Performances",
+    subtitle: "Music · Dance · Classical Arts",
+    description:
+      "An evening of cultural performances celebrating the richness and diversity of South Asian artistic traditions.",
+    venue: "Grand Ballroom",
+    speakers: [
+      "Ochin Pakhi",
+      "South Asian Musical Society",
+      "Tanveer Singh Sapra",
+      "Sandhya Menon",
+    ],
+    confirmed: false,
+    tag: "Performance",
+    tagColor: "#888",
+    ticketPrice: "TBD",
   },
 ];
 
@@ -309,6 +390,27 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
               >
                 <CheckCircle size={11} />
                 Confirmed
+              </span>
+            )}
+
+            {/* Ticket price */}
+            {session.ticketPrice && (
+              <span
+                className="flex items-center"
+                style={{
+                  gap: "0.3rem",
+                  fontSize: "0.7rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.5px",
+                  color: "#444",
+                  backgroundColor: "rgba(212,175,55,0.07)",
+                  border: "1px solid rgba(212,175,55,0.3)",
+                  padding: "0.2rem 0.65rem",
+                  borderRadius: "2px",
+                }}
+              >
+                <Ticket size={11} />
+                Ticket Price: {session.ticketPrice}
               </span>
             )}
 
@@ -814,7 +916,9 @@ export default function LitFestSchedulePage() {
                 <span style={{ color: "#d4af37", fontWeight: 600 }}>
                   gold Confirmed
                 </span>{" "}
-                badge have been fully finalised. Schedule is subject to change.
+                badge have been fully finalised. Ticket prices marked{" "}
+                <strong style={{ color: "#1a1a1a" }}>TBD</strong> will be
+                announced shortly. Schedule is subject to change.
               </p>
             </div>
           </FadeInSection>
