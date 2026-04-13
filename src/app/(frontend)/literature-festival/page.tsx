@@ -149,23 +149,6 @@ export default function LiteratureFestivalPage() {
 
             <div className="flex flex-wrap" style={{ gap: "1rem" }}>
               <Link
-                href="/literature-festival/schedule"
-                className="inline-block font-semibold uppercase"
-                style={{
-                  backgroundColor: "#d4af37",
-                  color: "#1a1a1a",
-                  padding: "0.85rem 2.5rem",
-                  fontSize: "0.85rem",
-                  letterSpacing: "1px",
-                  textDecoration: "none",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#ffffff")}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
-              >
-                View Full Schedule
-              </Link>
-              <Link
                 href="/vendor-intake"
                 className="inline-block font-semibold uppercase"
                 style={{

@@ -28,6 +28,8 @@ const navLinks = [
   // { label: "Highlights", href: "#highlights" }, — Hidden for now
   { label: "Gallery", href: "/gallery" },
   { label: "Contest", href: "/contest" },
+  { label: "The Schedule", href: "/literature-festival/schedule" },
+  { label: "Speakers 2026", href: "/literature-festival/speakers" },
 ];
 
 /* ── Reusable desktop dropdown ── */
@@ -51,10 +53,11 @@ function DesktopDropdown({
       onMouseLeave={() => setIsOpen(false)}
     >
       <button
-        className="text-[0.85rem] font-semibold tracking-[0.5px] transition-colors duration-300 cursor-pointer flex items-center"
+        className="text-[0.8rem] font-semibold tracking-[0.5px] transition-colors duration-300 cursor-pointer flex items-center"
         style={{
           color: scrolled ? "#2d2d2d" : "#ffffff",
           gap: "0.3rem",
+          whiteSpace: "nowrap",
           textShadow: scrolled ? "none" : "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)",
         }}
         onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
@@ -288,7 +291,7 @@ export default function Navbar() {
           borderBottom: mounted && isScrolled ? "1px solid rgba(0,0,0,0.06)" : "1px solid rgba(255,255,255,0.2)",
         }}
       >
-        <div data-section="nav-container" className="flex justify-between items-center" style={{ padding: "1rem 3rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto" }}>
+        <div data-section="nav-container" className="flex justify-between items-center" style={{ padding: "1rem 3rem", maxWidth: "1600px", marginLeft: "auto", marginRight: "auto", position: "relative" }}>
           {/* Logo */}
           <Link href="/" data-section="nav-logo" className="relative" style={{ display: "block", height: "75px", width: "340px" }}>
             <Image
@@ -316,7 +319,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Links */}
-          <ul className="hidden lg:flex items-center" style={{ gap: "2rem", listStyle: "none" }}>
+          <ul className="hidden lg:flex items-center" style={{ gap: "1.2rem", listStyle: "none", position: "absolute", left: "50%", transform: "translateX(-50%)", whiteSpace: "nowrap" }}>
             {/* Programs Dropdown */}
             <DesktopDropdown
               label="Programs"
@@ -331,9 +334,10 @@ export default function Navbar() {
               <li key={link.label}>
                 <button
                   onClick={() => scrollToSection(link.href)}
-                  className="text-[0.85rem] font-semibold tracking-[0.5px] transition-colors duration-300 cursor-pointer"
+                  className="text-[0.8rem] font-semibold tracking-[0.5px] transition-colors duration-300 cursor-pointer"
                   style={{
                     color: scrolled ? "#2d2d2d" : "#ffffff",
+                    whiteSpace: "nowrap",
                     textShadow: scrolled ? "none" : "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5)",
                   }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}

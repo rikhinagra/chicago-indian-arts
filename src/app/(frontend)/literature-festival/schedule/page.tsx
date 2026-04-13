@@ -1,21 +1,23 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, MapPin, Clock, CheckCircle, Calendar, Ticket } from "lucide-react";
+import { ArrowLeft, MapPin, Clock, CheckCircle, Calendar, Ticket, X, Share2 } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
 // ─── TYPE ────────────────────────────────────────────────────────────────────
 
 type Session = {
-  time: string;
+  time?: string;
+  hideTime?: boolean;
   title: string;
   subtitle?: string;
+  subTitles?: string[];
   speakers?: string[];
-  ownerLead?: string;
-  supportingTeam?: string;
   venue?: string;
   description?: string;
+  popupText?: string;
   confirmed: boolean;
   tag: string;
   tagColor: string;
@@ -26,60 +28,29 @@ type Session = {
 
 const morningsessions: Session[] = [
   {
-    time: "8:00 AM",
-    title: "Check In & Logistics Prep",
-    subtitle: "Booth set up · Gaming Arcade · Food Vendors · Chai & Coffee Bar · Tattoo Bar",
-    description:
-      "Give booth to all community organizations. Gaming Arcade set up. Food Vendors set up. Badges. Standees, Step & Repeat. Chai and Coffee Bar. Tattoo bar.",
-    ownerLead: "Neetu + Neelam",
-    supportingTeam: "Ashish, Akhilesh, Rupesh, Yatharth, Neelam, Bhargav, Jyoti Temple",
-    confirmed: false,
-    tag: "Setup",
-    tagColor: "#888",
-  },
-  {
     time: "9:30 AM",
-    title: "Registration & Welcome",
-    subtitle: "Doors open",
+    title: "Welcome to the 2026 Chicago Indian Arts Literary Festival",
+    subtitle: "Setting the stage for a day of stories, ideas, and conversation",
+    subTitles: [
+      "Light, Word & Wonder: Opening the Festival",
+      "Tamso Ma Jyotirgamay",
+    ],
     description:
       "Collect your badges, explore the venue, visit community booths, book signing tables, the Chai & Coffee Bar, and connect with fellow attendees before the day begins.",
-    venue: "Main Entrance",
-    ownerLead: "Shivani + Divya + Parul",
-    supportingTeam: "Ashish, Akhilesh, Rupesh, Yatharth, Neelam, Bhargav",
+    venue: "The Gold Room",
     confirmed: false,
     tag: "General",
     tagColor: "#888",
   },
   {
     time: "10:00 – 11:00 AM",
-    title: "Opening Ceremony",
-    subtitle: "Lamp Lighting · Inaugural Address · Poetry Recital · Dance",
-    description:
-      "The official inauguration of the Chicago Indian Literature Festival 2026 with a traditional lamp lighting ceremony, welcome addresses, a poetry recitation, and a classical dance performance on the Main Stage.",
-    venue: "Main Stage",
-    speakers: ["Smita Garg", "Julie A", "Geetika Chandran"],
-    ownerLead: "Smita Garg + Julie A + Geetika Chandran",
-    supportingTeam: "Ashish, Akhilesh, Rupesh, Yatharth, Neelam, Bhargav",
-    confirmed: true,
-    tag: "Opening",
-    tagColor: "#cd5c5c",
-    ticketPrice: "$5",
-  },
-  {
-    time: "10:00 – 11:00 AM",
-    title: "Children's Story Corner",
+    title: "Once Upon the tale: Stories for Little Listeners",
     subtitle: "Family storytelling sessions for young readers",
     description:
       "A dedicated space for children and families featuring interactive storytelling, poetry for young minds, and culturally rich narratives spanning festivals, seasons, and South Asian traditions.",
-    venue: "Breakout Room",
-    speakers: [
-      "Deepa Bhaskaran Salem",
-      "Ajanta Chakraborty",
-      "Godhuli Gupta",
-      "Geshu Sugandh",
-      "Rima Chakraborty",
-      "Parul Bhandari",
-    ],
+    popupText:
+      "Step into a vibrant world of imagination, wonder, and storytelling in this engaging children's session at the Chicago Indian Literature Festival. Designed for young readers, this interactive experience introduces children to the rich and diverse traditions of Indian literature, from timeless folktales and mythological adventures to contemporary stories filled with humor, courage, and creativity.\n\nThrough lively narration, playful activities, and audience participation, children will meet unforgettable characters, explore magical landscapes, and discover the joy of storytelling across cultures. The session encourages curiosity, empathy, and a love for reading, while celebrating the beauty of Indian heritage in a way that is accessible and fun for all.\n\nPerfect for children and families, this session invites young minds to listen, imagine, and create their own stories, because every child has a storyteller within.",
+    venue: "The Gold Room",
     confirmed: true,
     tag: "Children & Family",
     tagColor: "#cd5c5c",
@@ -90,18 +61,7 @@ const morningsessions: Session[] = [
     title: "Opening Keynote Session",
     subtitle: "An inspiring conversation to set the tone for the festival",
     description: "Programme details coming soon.",
-    venue: "Main Stage",
-    speakers: [
-      "Sunita Williams",
-      "Ferose SAP",
-      "Kiran Desai",
-      "Chitra Divakaruni",
-      "Roshan Choksi",
-      "Saborna Roy Chowdhary",
-      "Sonali Dev",
-    ],
-    ownerLead: "Sarveshi + Divya + Kavita",
-    supportingTeam: "Geetika Chandran + Alpana",
+    venue: "The Gold Room",
     confirmed: false,
     tag: "Keynote",
     tagColor: "#888",
@@ -113,10 +73,12 @@ const afternoonSessions: Session[] = [
   {
     time: "12:00 – 12:45 PM",
     title: "Reading Salon & Workshop",
-    subtitle: "Motherhood, Daughterhood & Sense of Self",
+    subtitle: "Rooted & Reaching: Motherhood, Daughterhood & the Self We Carry",
     description:
-      "An intimate reading salon and workshop exploring identity, womanhood, and the bonds between mothers and daughters — the roles that are written versus the roles we choose to play. Featuring confirmed voices from across the South Asian literary diaspora.",
-    venue: "Salon Room",
+      "An intimate reading salon and workshop exploring identity, womanhood, and the bonds between mothers and daughters, the roles that are written versus the roles we choose to play. Featuring confirmed voices from across the South Asian literary diaspora.",
+    popupText:
+      "This session explores the intimate and evolving relationships between children and parents within the context of diaspora, where identity is often shaped across borders, languages, and generations. Through stories that weave memory, migration and belonging, it examines how women inherit, resist and redefine cultural expectations while forging their own sense of self. At the heart of the conversation lies the tension between continuity and change, how daughters navigate the legacies of their mothers, and how mothers adapt as their children grow into identities that may differ from their own. The session reflects on questions of home, hybridity, and the emotional landscapes of displacement, where love, conflict, and understanding coexist. Blending literary insight with lived experience, this discussion invites audiences to consider how motherhood and daughterhood become powerful sites of negotiation, resilience, and self-discovery in diasporic life. It celebrates the multiplicity of voices that emerge when women claim their stories across generations and geographies.",
+    venue: "The Gold Room",
     speakers: [
       "Reema Rao",
       "Sharanjit Bilan",
@@ -125,8 +87,6 @@ const afternoonSessions: Session[] = [
       "Shailla Chand",
       "Shivani Gupta (Facilitator)",
     ],
-    ownerLead: "Shivani Gupta",
-    supportingTeam: "Pooja Nayak + Geetika Chandran",
     confirmed: true,
     tag: "Workshop",
     tagColor: "#d4af37",
@@ -138,9 +98,8 @@ const afternoonSessions: Session[] = [
     subtitle: "A celebration of a new literary voice",
     description:
       "An exclusive book launch celebration featuring a reading, author conversation, and book signing.",
-    venue: "Main Stage",
+    venue: "The Gold Room",
     speakers: ["Parul Bhandari"],
-    ownerLead: "Shivani Gupta",
     confirmed: true,
     tag: "Book Launch",
     tagColor: "#cd5c5c",
@@ -149,8 +108,15 @@ const afternoonSessions: Session[] = [
     time: "1:15 – 1:45 PM",
     title: "From Mythology to Combat: Storytelling in Games",
     subtitle: "AI, Technology & Literature Panel",
+    subTitles: [
+      "Algorithms & Archetypes: When AI Meets the Storyteller's Mind",
+      "Indika – Culture, Combat, Creativity: From Mythology to Combat: Storytelling in Games",
+      "Horror, Comics & Culture",
+    ],
     description: "Programme details coming soon.",
-    venue: "Main Stage",
+    popupText:
+      "Step into a one-day immersive celebration of storytelling across worlds. From the timeless epics of India to the explosive universe of modern gaming, horror, and comics, INDIKA Fest brings together authors, artists, game creators, and cultural icons for an unforgettable experience in the heart of Chicago. Featuring: Icons from the Mortal Kombat universe, Live panels & Q&A sessions, Gaming showcases & interactive experiences, Comic creators & horror vendors.",
+    venue: "The Gold Room",
     speakers: [
       "Vishal Rajput",
       "Daniel Pesina",
@@ -162,8 +128,6 @@ const afternoonSessions: Session[] = [
       "Romit",
       "Shilajeet Niyogi",
     ],
-    ownerLead: "Vishal Rajput + Sanjay Bansal + Jinal",
-    supportingTeam: "Parul Bhandari + Alpana + Rupesh + Ashish",
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
@@ -171,13 +135,13 @@ const afternoonSessions: Session[] = [
   },
   {
     time: "2:00 – 2:45 PM",
-    title: "Writers Workshop",
+    title: "The Discipline of Imagination: From Blank Page to First Draft, A Writer's Room",
     subtitle: "Craft sessions with published authors",
     description: "Programme details coming soon.",
-    venue: "Workshop Room",
+    popupText:
+      "This interactive writer's workshop invites aspiring and emerging writers to explore the art and craft of storytelling in a supportive and dynamic environment. Whether you're working on fiction, memoir, or poetry, this session offers practical tools to help shape ideas, develop authentic voice, and deepen narrative impact. Through guided prompts, close reading, and collaborative exercises, participants will experiment with character, voice, and structure while learning how to transform personal experiences and observations into compelling stories. The workshop also addresses the challenges writers often face: self-doubt, creative blocks, and the discipline of revision, offering strategies to sustain a meaningful writing practice. Designed for writers at all stages, this session emphasizes both craft and courage, encouraging participants to take creative risks and trust their unique perspectives. By the end of the workshop, attendees will leave with new material, fresh insights, and a renewed sense of confidence in their writing journey.",
+    venue: "The Gold Room",
     speakers: ["Keith Farazi", "Scott Sommer", "Ahmed Bin Athar"],
-    ownerLead: "Sarveshi + Parul",
-    supportingTeam: "Bhargav, Pooja Nayak, Ashish",
     confirmed: false,
     tag: "Workshop",
     tagColor: "#888",
@@ -188,33 +152,30 @@ const afternoonSessions: Session[] = [
     title: "Authors Panel",
     subtitle: "In conversation with celebrated literary voices",
     description: "Programme details coming soon.",
-    venue: "Main Stage",
-    speakers: [
-      "Sunita Williams",
-      "Ferose SAP",
-      "Kiran Desai",
-      "Chitra Divakaruni",
-      "Roshan Choksi",
-      "Saborna Roy Chowdhary",
-      "Sonali Dev",
-      "Nina Sudakar",
-      "Shruti Tewari",
-      "Mrinal Kokhle",
-      "Prasanta Verma",
-    ],
-    ownerLead: "Sarveshi + Divya + Kavita",
-    supportingTeam: "Smita Garg, Alpana, Julie A",
+    venue: "The Gold Room",
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
     ticketPrice: "$5",
   },
   {
-    time: "4:00 – 5:30 PM",
+    time: "4:00 – 4:15 PM",
+    title: "Stories from Soil: The Living Legacy of Kannada Literature",
+    description:
+      "An exploration of the living legacy of Kannada literature, from ancient vachanas and classical poetry to modern fiction, celebrating the enduring power of regional literary traditions.",
+    popupText:
+      "Rooted in the landscapes, languages, and lived experiences of Karnataka, Kannada literature carries a profound sense of place, memory, and cultural continuity. This session delves into the richness and depth of Kannada storytelling, from ancient vachanas and classical poetry to modern fiction and contemporary voices, revealing how the soil itself becomes a powerful metaphor for identity, resilience, and belonging.\n\nExploring themes of rural life, folklore, social change, and philosophical inquiry, the discussion highlights how Kannada writers have preserved and reimagined heritage across generations. It examines the interplay between oral and written traditions, and how regional narratives continue to shape broader literary conversations in India and beyond.\n\nBringing together literary insight and cultural reflection, this session celebrates the enduring vitality of Kannada literature, honoring its roots while embracing its evolving voice in a global context. It invites audiences to reconnect with stories that emerge from the land, carrying with them the spirit, struggles, and soul of a people.",
+    venue: "The Gold Room",
+    confirmed: false,
+    tag: "Panel",
+    tagColor: "#888",
+  },
+  {
+    time: "4:15 – 5:30 PM",
     title: "Spoken Fest",
     subtitle: "Open Mic · Poetry · Storytelling",
     description: "Programme details coming soon.",
-    venue: "Main Stage",
+    venue: "The Gold Room",
     speakers: [
       "Asha Sudra",
       "Shivani Kumar",
@@ -233,8 +194,6 @@ const afternoonSessions: Session[] = [
       "Shashank",
       "Tara Swaminathan",
     ],
-    ownerLead: "Jitesh Jaggi + Shweta Singh",
-    supportingTeam: "Bhargav, Yatharth, Neelam, Akhilesh, Ashish",
     confirmed: false,
     tag: "Open Mic",
     tagColor: "#888",
@@ -249,9 +208,7 @@ const eveningSessions: Session[] = [
     subtitle: "Welcome the evening in style",
     description:
       "A glamorous red carpet reception welcoming guests to the evening gala of the Chicago Indian Literature Festival 2026.",
-    venue: "Grand Entrance",
-    ownerLead: "Neetu + Divya + Neelam",
-    supportingTeam: "Bhargav, Yatharth, Neelam, Akhilesh, Ashish",
+    venue: "The Gold Room",
     confirmed: true,
     tag: "Evening Gala",
     tagColor: "#1a1a1a",
@@ -263,22 +220,21 @@ const eveningSessions: Session[] = [
     subtitle: "Opening Remarks · Board & Advisory Board Introductions",
     description:
       "A grand evening celebration featuring opening remarks by the Founder & President and introductions of the CICA Board and Advisory Board.",
-    venue: "Grand Ballroom",
+    venue: "The Gold Room",
     speakers: ["Jigar Shah", "CICA Board & Advisory Board"],
-    ownerLead: "Jigar Shah",
-    supportingTeam:
-      "Bhargav, Yatharth, Neelam, Akhilesh, Ashish, Julie, Smita, Parul",
     confirmed: true,
     tag: "Evening Gala",
     tagColor: "#1a1a1a",
   },
   {
     time: "7:00 – 9:00 PM",
-    title: "Food Panel",
-    subtitle: "A literary feast — food, culture & storytelling",
+    title: "Spice, Memory & the Table: A Conversation About Our Food",
+    subtitle: "A literary feast: food, culture & storytelling",
     description:
-      "A 30-minute culinary panel bringing together Chicago's most celebrated South Asian chefs, food writers, and restaurateurs for a conversation on food, culture, and identity.",
-    venue: "Grand Ballroom",
+      "A culinary panel bringing together Chicago's most celebrated South Asian chefs, food writers, and restaurateurs for a conversation on food, culture, and identity.",
+    popupText:
+      "In Indian literature, food is never just sustenance. It is memory, identity, and a language of love, loss, and belonging. This session explores how meals, kitchens, and shared tables become powerful narrative spaces where personal and collective histories unfold. From the aromas of childhood kitchens to the tastes that travel across borders, food evokes stories that linger far beyond the page. Through literary excerpts and reflections, the discussion examines how writers use food to trace memory, negotiate cultural identity, and bridge generations. Recipes become archives, meals become rituals, and the act of cooking and sharing transforms into storytelling itself, preserving traditions while adapting to changing worlds. Whether rooted in nostalgia or shaped by migration and modernity, these culinary narratives reveal how the table serves as a site of connection, conflict, and continuity. This session invites audiences to savor the rich interplay between food and literature, and to rediscover how stories, like meals, are best when shared.",
+    venue: "The Gold Room",
     speakers: [
       "Colleen Sen",
       "Ashok Selvam",
@@ -291,20 +247,18 @@ const eveningSessions: Session[] = [
       "Sahil (Sifr)",
       "Meena (Moderator)",
     ],
-    ownerLead: "Divya + Kavita + Geetika Chandran",
     confirmed: false,
     tag: "Food Panel",
     tagColor: "#888",
     ticketPrice: "TBD",
   },
   {
-    time: "7:00 – 9:00 PM",
+    hideTime: true,
     title: "Key Guest Speeches",
     subtitle: "Voices that inspire",
     description: "Programme details coming soon.",
-    venue: "Grand Ballroom",
+    venue: "The Gold Room",
     speakers: ["Rishaad Tobaccowala"],
-    ownerLead: "Divya + Kavita + Sarveshi",
     confirmed: false,
     tag: "Speech",
     tagColor: "#888",
@@ -315,14 +269,7 @@ const eveningSessions: Session[] = [
     subtitle: "Music · Dance · Classical Arts",
     description:
       "An evening of cultural performances celebrating the richness and diversity of South Asian artistic traditions.",
-    venue: "Grand Ballroom",
-    speakers: [
-      "Ochin Pakhi",
-      "South Asian Musical Society",
-      "Tanveer Singh Sapra",
-      "Sandhya Menon",
-    ],
-    ownerLead: "Divya + Neetu + Jigar Shah + Kavita",
+    venue: "The Gold Room",
     confirmed: false,
     tag: "Performance",
     tagColor: "#888",
@@ -330,15 +277,17 @@ const eveningSessions: Session[] = [
   },
 ];
 
-// ─── HELPER ──────────────────────────────────────────────────────────────────
-
-function splitNames(str: string): string[] {
-  return str.split(/[+,]/).map((s) => s.trim()).filter(Boolean);
-}
-
 // ─── SESSION CARD ─────────────────────────────────────────────────────────────
 
-function SessionCard({ session, index }: { session: Session; index: number }) {
+function SessionCard({
+  session,
+  index,
+  onTitleClick,
+}: {
+  session: Session;
+  index: number;
+  onTitleClick: (session: Session) => void;
+}) {
   return (
     <FadeInSection delay={index * 0.07}>
       <div
@@ -367,6 +316,7 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
 
         {/* Card */}
         <div
+          className="schedule-session-card"
           style={{
             flex: 1,
             backgroundColor: "#ffffff",
@@ -374,6 +324,7 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
             borderLeft: `4px solid ${session.confirmed ? "#d4af37" : "#e0e0e0"}`,
             padding: "1.5rem 1.75rem",
             transition: "all 0.3s ease",
+            position: "relative",
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.boxShadow = "0 8px 28px rgba(0,0,0,0.08)";
@@ -384,18 +335,47 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
             e.currentTarget.style.transform = "translateY(0)";
           }}
         >
+          {/* Share on WhatsApp button */}
+          <button
+            onClick={() => {
+              const text = `"${session.title}" at Chicago Indian Literature Festival 2026 — May 30, 2026. https://www.chicagoindianarts.org/literature-festival/schedule`;
+              window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
+            }}
+            title="Share on WhatsApp"
+            style={{
+              position: "absolute",
+              top: "1rem",
+              right: "1rem",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+              color: "#ccc",
+              transition: "color 0.2s ease",
+              padding: "0.2rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#25D366")}
+            onMouseLeave={(e) => (e.currentTarget.style.color = "#ccc")}
+          >
+            <Share2 size={15} />
+          </button>
+
           {/* Top row: time + badges */}
           <div
             className="flex flex-wrap items-center"
             style={{ gap: "0.6rem", marginBottom: "0.85rem" }}
           >
-            <div
-              className="flex items-center"
-              style={{ gap: "0.35rem", color: "#888", fontSize: "0.8rem" }}
-            >
-              <Clock size={13} />
-              <span style={{ fontWeight: 500 }}>{session.time}</span>
-            </div>
+            {!session.hideTime && session.time && (
+              <div
+                className="flex items-center"
+                style={{ gap: "0.35rem", color: "#888", fontSize: "0.8rem" }}
+              >
+                <Clock size={13} />
+                <span style={{ fontWeight: 500 }}>{session.time}</span>
+              </div>
+            )}
 
             <span
               style={{
@@ -466,19 +446,36 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
             )}
           </div>
 
-          {/* Title */}
-          <h3
+          {/* Title — clickable */}
+          <button
+            onClick={() => onTitleClick(session)}
             className="font-heading"
             style={{
               fontSize: "1.2rem",
               fontWeight: 600,
               color: session.confirmed ? "#1a1a1a" : "#555",
-              marginBottom: session.subtitle ? "0.3rem" : "0.75rem",
+              marginBottom:
+                session.subtitle ||
+                (session.subTitles && session.subTitles.length > 0)
+                  ? "0.3rem"
+                  : "0.75rem",
               lineHeight: 1.3,
+              cursor: "pointer",
+              textAlign: "left",
+              background: "none",
+              border: "none",
+              padding: 0,
+              display: "block",
+              width: "100%",
+              transition: "color 0.2s ease",
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = "#d4af37")}
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = session.confirmed ? "#1a1a1a" : "#555")
+            }
           >
             {session.title}
-          </h3>
+          </button>
 
           {/* Subtitle */}
           {session.subtitle && (
@@ -487,12 +484,53 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                 fontSize: "0.88rem",
                 color: "#d4af37",
                 fontWeight: 500,
-                marginBottom: "0.75rem",
+                marginBottom:
+                  session.subTitles && session.subTitles.length > 0
+                    ? "0.5rem"
+                    : "0.75rem",
                 fontStyle: "italic",
               }}
             >
               {session.subtitle}
             </p>
+          )}
+
+          {/* Sub-titles */}
+          {session.subTitles && session.subTitles.length > 0 && (
+            <div style={{ marginBottom: "0.75rem" }}>
+              {session.subTitles.map((st, i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "0.5rem",
+                    marginBottom: "0.3rem",
+                  }}
+                >
+                  <span
+                    style={{
+                      color: "#d4af37",
+                      fontSize: "0.7rem",
+                      marginTop: "0.2rem",
+                      flexShrink: 0,
+                    }}
+                  >
+                    ◆
+                  </span>
+                  <p
+                    style={{
+                      fontSize: "0.82rem",
+                      color: "#888",
+                      fontStyle: "italic",
+                      lineHeight: 1.4,
+                    }}
+                  >
+                    {st}
+                  </p>
+                </div>
+              ))}
+            </div>
           )}
 
           {/* Description */}
@@ -502,11 +540,43 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                 fontSize: "0.88rem",
                 lineHeight: 1.8,
                 color: session.confirmed ? "#666" : "#aaa",
-                marginBottom: "1rem",
+                marginBottom: session.popupText ? "0.5rem" : "1rem",
+                ...(session.popupText ? {
+                  overflow: "hidden",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: "vertical" as const,
+                } : {}),
               }}
             >
               {session.description}
             </p>
+          )}
+
+          {/* Read More button — only when meaningful popup content exists */}
+          {session.popupText && (
+            <button
+              onClick={() => onTitleClick(session)}
+              style={{
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+                color: "#d4af37",
+                fontSize: "0.82rem",
+                fontWeight: 700,
+                letterSpacing: "0.3px",
+                marginBottom: "1rem",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.3rem",
+                transition: "color 0.2s ease",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#1a1a1a")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#d4af37")}
+            >
+              Read More →
+            </button>
           )}
 
           {/* Authors & Artists */}
@@ -534,85 +604,17 @@ function SessionCard({ session, index }: { session: Session; index: number }) {
                       backgroundColor: session.confirmed
                         ? "rgba(212,175,55,0.08)"
                         : "rgba(0,0,0,0.04)",
-                      border: `1px solid ${session.confirmed ? "rgba(212,175,55,0.2)" : "rgba(0,0,0,0.08)"}`,
+                      border: `1px solid ${
+                        session.confirmed
+                          ? "rgba(212,175,55,0.2)"
+                          : "rgba(0,0,0,0.08)"
+                      }`,
                       padding: "0.25rem 0.6rem",
                       borderRadius: "2px",
                       fontWeight: session.confirmed ? 500 : 400,
                     }}
                   >
                     {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Owner Lead */}
-          {session.ownerLead && (
-            <div style={{ marginBottom: "0.85rem" }}>
-              <p
-                style={{
-                  fontSize: "0.72rem",
-                  fontWeight: 700,
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
-                  color: "#999",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Owner Lead
-              </p>
-              <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
-                {splitNames(session.ownerLead).map((name) => (
-                  <span
-                    key={name}
-                    style={{
-                      fontSize: "0.78rem",
-                      color: "#555",
-                      backgroundColor: "rgba(0,0,0,0.05)",
-                      border: "1px solid rgba(0,0,0,0.1)",
-                      padding: "0.25rem 0.6rem",
-                      borderRadius: "2px",
-                      fontWeight: 500,
-                    }}
-                  >
-                    {name}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Supporting Team */}
-          {session.supportingTeam && (
-            <div>
-              <p
-                style={{
-                  fontSize: "0.72rem",
-                  fontWeight: 700,
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
-                  color: "#999",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Supporting Team
-              </p>
-              <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
-                {splitNames(session.supportingTeam).map((name) => (
-                  <span
-                    key={name}
-                    style={{
-                      fontSize: "0.78rem",
-                      color: "#555",
-                      backgroundColor: "rgba(0,0,0,0.05)",
-                      border: "1px solid rgba(0,0,0,0.1)",
-                      padding: "0.25rem 0.6rem",
-                      borderRadius: "2px",
-                      fontWeight: 400,
-                    }}
-                  >
-                    {name}
                   </span>
                 ))}
               </div>
@@ -678,9 +680,301 @@ function BlockHeader({
   );
 }
 
+// ─── SESSION MODAL ────────────────────────────────────────────────────────────
+
+function SessionModal({
+  session,
+  onClose,
+}: {
+  session: Session;
+  onClose: () => void;
+}) {
+  return (
+    <div
+      className="schedule-modal-outer fixed inset-0 z-[2000] flex items-center justify-center"
+      style={{ backgroundColor: "rgba(0,0,0,0.72)", padding: "1.5rem" }}
+      onClick={onClose}
+    >
+      <div
+        className="schedule-modal-inner"
+        style={{
+          backgroundColor: "#ffffff",
+          maxWidth: "680px",
+          width: "100%",
+          maxHeight: "88vh",
+          overflowY: "auto",
+          padding: "2.5rem",
+          position: "relative",
+          boxShadow: "0 32px 80px rgba(0,0,0,0.35)",
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          style={{
+            position: "absolute",
+            top: "1.25rem",
+            right: "1.25rem",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            color: "#aaa",
+            transition: "color 0.2s ease",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#1a1a1a")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#aaa")}
+          aria-label="Close"
+        >
+          <X size={22} />
+        </button>
+
+        {/* Tag + time + venue */}
+        <div
+          className="flex flex-wrap items-center"
+          style={{ gap: "0.5rem", marginBottom: "1.25rem", paddingRight: "2rem" }}
+        >
+          <span
+            style={{
+              fontSize: "0.7rem",
+              fontWeight: 600,
+              letterSpacing: "0.8px",
+              textTransform: "uppercase",
+              color: session.tagColor === "#888" ? "#999" : "#fff",
+              backgroundColor:
+                session.tagColor === "#888"
+                  ? "rgba(0,0,0,0.06)"
+                  : session.tagColor,
+              padding: "0.2rem 0.6rem",
+              borderRadius: "2px",
+            }}
+          >
+            {session.tag}
+          </span>
+
+          {!session.hideTime && session.time && (
+            <span
+              style={{
+                fontSize: "0.8rem",
+                color: "#888",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.3rem",
+              }}
+            >
+              <Clock size={12} />
+              {session.time}
+            </span>
+          )}
+
+          {session.venue && (
+            <span
+              style={{
+                fontSize: "0.8rem",
+                color: "#aaa",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.3rem",
+              }}
+            >
+              <MapPin size={12} />
+              {session.venue}
+            </span>
+          )}
+
+          {session.confirmed && (
+            <span
+              style={{
+                fontSize: "0.7rem",
+                fontWeight: 600,
+                letterSpacing: "0.8px",
+                textTransform: "uppercase",
+                color: "#d4af37",
+                backgroundColor: "rgba(212,175,55,0.1)",
+                padding: "0.2rem 0.6rem",
+                borderRadius: "2px",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.3rem",
+              }}
+            >
+              <CheckCircle size={11} />
+              Confirmed
+            </span>
+          )}
+        </div>
+
+        {/* Title */}
+        <h2
+          className="schedule-modal-title font-heading"
+          style={{
+            fontSize: "1.55rem",
+            fontWeight: 700,
+            color: "#1a1a1a",
+            marginBottom: "0.5rem",
+            lineHeight: 1.3,
+            paddingRight: "2rem",
+          }}
+        >
+          {session.title}
+        </h2>
+
+        {/* Subtitle */}
+        {session.subtitle && (
+          <p
+            style={{
+              fontSize: "0.95rem",
+              color: "#d4af37",
+              fontStyle: "italic",
+              marginBottom: "1rem",
+              fontWeight: 500,
+            }}
+          >
+            {session.subtitle}
+          </p>
+        )}
+
+        {/* Sub-titles */}
+        {session.subTitles && session.subTitles.length > 0 && (
+          <div style={{ marginBottom: "1rem" }}>
+            {session.subTitles.map((st, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "0.5rem",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                <span
+                  style={{
+                    color: "#d4af37",
+                    flexShrink: 0,
+                    marginTop: "0.2rem",
+                    fontSize: "0.7rem",
+                  }}
+                >
+                  ◆
+                </span>
+                <p
+                  style={{
+                    fontSize: "0.88rem",
+                    color: "#666",
+                    fontStyle: "italic",
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {st}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Divider */}
+        <div
+          style={{
+            height: "1px",
+            backgroundColor: "rgba(212,175,55,0.2)",
+            marginBottom: "1.25rem",
+          }}
+        />
+
+        {/* Popup text or description */}
+        <p
+          style={{
+            fontSize: "0.92rem",
+            lineHeight: 1.9,
+            color: "#555",
+            marginBottom: session.speakers && session.speakers.length > 0 ? "1.5rem" : "0",
+          }}
+        >
+          {session.popupText || session.description}
+        </p>
+
+        {/* Speakers */}
+        {session.speakers && session.speakers.length > 0 && (
+          <div>
+            <p
+              style={{
+                fontSize: "0.72rem",
+                fontWeight: 700,
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                color: "#999",
+                marginBottom: "0.6rem",
+              }}
+            >
+              Authors & Artists
+            </p>
+            <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
+              {session.speakers.map((s) => (
+                <span
+                  key={s}
+                  style={{
+                    fontSize: "0.78rem",
+                    color: "#1a1a1a",
+                    backgroundColor: "rgba(212,175,55,0.08)",
+                    border: "1px solid rgba(212,175,55,0.2)",
+                    padding: "0.25rem 0.6rem",
+                    borderRadius: "2px",
+                    fontWeight: 500,
+                  }}
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Ticket price */}
+        {session.ticketPrice && (
+          <div
+            style={{
+              marginTop: "1.5rem",
+              paddingTop: "1rem",
+              borderTop: "1px solid rgba(0,0,0,0.06)",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "0.8rem",
+                color: "#888",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.4rem",
+              }}
+            >
+              <Ticket size={13} />
+              Ticket Price:{" "}
+              <strong style={{ color: "#1a1a1a" }}>{session.ticketPrice}</strong>
+            </span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 // ─── PAGE ─────────────────────────────────────────────────────────────────────
 
 export default function LitFestSchedulePage() {
+  const [selectedSession, setSelectedSession] = useState<Session | null>(null);
+
+  // Close modal on Escape key
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedSession(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   const totalSessions =
     morningsessions.length + afternoonSessions.length + eveningSessions.length;
   const confirmedCount = [
@@ -691,6 +985,14 @@ export default function LitFestSchedulePage() {
 
   return (
     <>
+      {/* Modal */}
+      {selectedSession && (
+        <SessionModal
+          session={selectedSession}
+          onClose={() => setSelectedSession(null)}
+        />
+      )}
+
       {/* Hero */}
       <section
         data-section="schedule-hero"
@@ -789,19 +1091,25 @@ export default function LitFestSchedulePage() {
           <div className="flex flex-wrap" style={{ gap: "2rem" }}>
             <div className="flex items-center" style={{ gap: "0.6rem" }}>
               <Calendar size={16} color="#d4af37" />
-              <span style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}>
+              <span
+                style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}
+              >
                 Saturday, May 30, 2026
               </span>
             </div>
             <div className="flex items-center" style={{ gap: "0.6rem" }}>
               <Clock size={16} color="#d4af37" />
-              <span style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}>
+              <span
+                style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}
+              >
                 9:30 AM – 9:00 PM
               </span>
             </div>
             <div className="flex items-center" style={{ gap: "0.6rem" }}>
               <MapPin size={16} color="#d4af37" />
-              <span style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}>
+              <span
+                style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}
+              >
                 Congress Plaza Hotel, Chicago
               </span>
             </div>
@@ -829,26 +1137,65 @@ export default function LitFestSchedulePage() {
         >
           <div className="flex flex-wrap" style={{ gap: "2.5rem" }}>
             <div>
-              <span className="font-heading" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1a1a1a" }}>
+              <span
+                className="font-heading"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: 700,
+                  color: "#1a1a1a",
+                }}
+              >
                 {totalSessions}
               </span>
-              <span style={{ fontSize: "0.8rem", color: "#888", marginLeft: "0.4rem" }}>
+              <span
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#888",
+                  marginLeft: "0.4rem",
+                }}
+              >
                 Sessions
               </span>
             </div>
             <div>
-              <span className="font-heading" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#d4af37" }}>
+              <span
+                className="font-heading"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: 700,
+                  color: "#d4af37",
+                }}
+              >
                 {confirmedCount}
               </span>
-              <span style={{ fontSize: "0.8rem", color: "#888", marginLeft: "0.4rem" }}>
+              <span
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#888",
+                  marginLeft: "0.4rem",
+                }}
+              >
                 Confirmed
               </span>
             </div>
             <div>
-              <span className="font-heading" style={{ fontSize: "1.5rem", fontWeight: 700, color: "#cd5c5c" }}>
+              <span
+                className="font-heading"
+                style={{
+                  fontSize: "1.5rem",
+                  fontWeight: 700,
+                  color: "#cd5c5c",
+                }}
+              >
                 1
               </span>
-              <span style={{ fontSize: "0.8rem", color: "#888", marginLeft: "0.4rem" }}>
+              <span
+                style={{
+                  fontSize: "0.8rem",
+                  color: "#888",
+                  marginLeft: "0.4rem",
+                }}
+              >
                 Day
               </span>
             </div>
@@ -856,12 +1203,30 @@ export default function LitFestSchedulePage() {
 
           <div className="flex items-center" style={{ gap: "1.5rem" }}>
             <div className="flex items-center" style={{ gap: "0.4rem" }}>
-              <div style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: "#d4af37" }} />
-              <span style={{ fontSize: "0.78rem", color: "#666" }}>Confirmed</span>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  borderRadius: "50%",
+                  backgroundColor: "#d4af37",
+                }}
+              />
+              <span style={{ fontSize: "0.78rem", color: "#666" }}>
+                Confirmed
+              </span>
             </div>
             <div className="flex items-center" style={{ gap: "0.4rem" }}>
-              <div style={{ width: "10px", height: "10px", borderRadius: "50%", backgroundColor: "#ccc" }} />
-              <span style={{ fontSize: "0.78rem", color: "#666" }}>Programme Coming Soon</span>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  borderRadius: "50%",
+                  backgroundColor: "#ccc",
+                }}
+              />
+              <span style={{ fontSize: "0.78rem", color: "#666" }}>
+                Programme Coming Soon
+              </span>
             </div>
           </div>
         </div>
@@ -872,35 +1237,87 @@ export default function LitFestSchedulePage() {
         data-section="schedule-content"
         style={{ padding: "3rem 3rem 4rem", backgroundColor: "#faf8f3" }}
       >
-        <div style={{ maxWidth: "1100px", marginLeft: "auto", marginRight: "auto" }}>
-
+        <div
+          style={{
+            maxWidth: "1100px",
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
           {/* ── MORNING ── */}
           <FadeInSection>
-            <BlockHeader title="Morning" timeRange="8:00 AM – 12:00 PM" color="#cd5c5c" />
+            <BlockHeader
+              title="Morning"
+              timeRange="9:30 AM – 12:00 PM"
+              color="#cd5c5c"
+            />
           </FadeInSection>
-          <div style={{ paddingLeft: "1.65rem", borderLeft: "2px solid rgba(0,0,0,0.06)", marginBottom: "3.5rem" }}>
+          <div
+            className="schedule-timeline-block"
+            style={{
+              paddingLeft: "1.65rem",
+              borderLeft: "2px solid rgba(0,0,0,0.06)",
+              marginBottom: "3.5rem",
+            }}
+          >
             {morningsessions.map((session, i) => (
-              <SessionCard key={`morning-${i}`} session={session} index={i} />
+              <SessionCard
+                key={`morning-${i}`}
+                session={session}
+                index={i}
+                onTitleClick={setSelectedSession}
+              />
             ))}
           </div>
 
           {/* ── AFTERNOON ── */}
           <FadeInSection>
-            <BlockHeader title="Afternoon" timeRange="12:00 PM – 5:30 PM" color="#d4af37" />
+            <BlockHeader
+              title="Afternoon"
+              timeRange="12:00 PM – 5:30 PM"
+              color="#d4af37"
+            />
           </FadeInSection>
-          <div style={{ paddingLeft: "1.65rem", borderLeft: "2px solid rgba(0,0,0,0.06)", marginBottom: "3.5rem" }}>
+          <div
+            className="schedule-timeline-block"
+            style={{
+              paddingLeft: "1.65rem",
+              borderLeft: "2px solid rgba(0,0,0,0.06)",
+              marginBottom: "3.5rem",
+            }}
+          >
             {afternoonSessions.map((session, i) => (
-              <SessionCard key={`afternoon-${i}`} session={session} index={i} />
+              <SessionCard
+                key={`afternoon-${i}`}
+                session={session}
+                index={i}
+                onTitleClick={setSelectedSession}
+              />
             ))}
           </div>
 
           {/* ── EVENING ── */}
           <FadeInSection>
-            <BlockHeader title="Evening Gala" timeRange="6:30 PM – 9:00 PM" color="#1a1a1a" />
+            <BlockHeader
+              title="Evening Gala"
+              timeRange="6:30 PM – 9:00 PM"
+              color="#1a1a1a"
+            />
           </FadeInSection>
-          <div style={{ paddingLeft: "1.65rem", borderLeft: "2px solid rgba(0,0,0,0.06)" }}>
+          <div
+            className="schedule-timeline-block"
+            style={{
+              paddingLeft: "1.65rem",
+              borderLeft: "2px solid rgba(0,0,0,0.06)",
+            }}
+          >
             {eveningSessions.map((session, i) => (
-              <SessionCard key={`evening-${i}`} session={session} index={i} />
+              <SessionCard
+                key={`evening-${i}`}
+                session={session}
+                index={i}
+                onTitleClick={setSelectedSession}
+              />
             ))}
           </div>
 
@@ -919,10 +1336,13 @@ export default function LitFestSchedulePage() {
                 marked as &ldquo;Programme Coming Soon&rdquo; are part of the
                 full day programme and will be updated with confirmed speaker
                 details as they are finalised. Sessions with a{" "}
-                <span style={{ color: "#d4af37", fontWeight: 600 }}>gold Confirmed</span>{" "}
+                <span style={{ color: "#d4af37", fontWeight: 600 }}>
+                  gold Confirmed
+                </span>{" "}
                 badge have been fully finalised. Ticket prices marked{" "}
                 <strong style={{ color: "#1a1a1a" }}>TBD</strong> will be
-                announced shortly. Schedule is subject to change.
+                announced shortly. Schedule is subject to change. Click any
+                session title to learn more.
               </p>
             </div>
           </FadeInSection>
@@ -939,10 +1359,20 @@ export default function LitFestSchedulePage() {
         }}
       >
         <FadeInSection>
-          <div style={{ maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
+          <div
+            style={{
+              maxWidth: "600px",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
             <h2
               className="font-heading font-semibold"
-              style={{ fontSize: "2.2rem", color: "#ffffff", marginBottom: "1rem" }}
+              style={{
+                fontSize: "2.2rem",
+                color: "#ffffff",
+                marginBottom: "1rem",
+              }}
             >
               Reserve Your Spot
             </h2>
@@ -982,6 +1412,54 @@ export default function LitFestSchedulePage() {
           </div>
         </FadeInSection>
       </section>
+
+      {/* Responsive styles */}
+      <style>{`
+        @media (max-width: 768px) {
+          [data-section="schedule-hero"] {
+            padding: 7.5rem 1.25rem 2.5rem !important;
+          }
+          [data-section="schedule-title"] {
+            font-size: 2.1rem !important;
+          }
+          [data-section="schedule-stats-bar"] {
+            padding: 1rem 1.25rem !important;
+          }
+          [data-section="schedule-content"] {
+            padding: 2rem 1.25rem 3rem !important;
+          }
+          [data-section="schedule-cta"] {
+            padding: 2.5rem 1.25rem !important;
+          }
+          .schedule-timeline-block {
+            padding-left: 1rem !important;
+          }
+          .schedule-session-card {
+            padding: 1.1rem 0.9rem 1.1rem 1rem !important;
+          }
+          .schedule-modal-outer {
+            padding: 0.75rem !important;
+            align-items: flex-end !important;
+          }
+          .schedule-modal-inner {
+            padding: 1.5rem 1.25rem !important;
+            max-height: 92vh !important;
+            border-radius: 8px 8px 0 0 !important;
+          }
+          .schedule-modal-title {
+            font-size: 1.2rem !important;
+            padding-right: 1.75rem !important;
+          }
+        }
+        @media (max-width: 480px) {
+          [data-section="schedule-title"] {
+            font-size: 1.75rem !important;
+          }
+          .schedule-session-card {
+            padding: 1rem 0.75rem !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

@@ -548,6 +548,20 @@ img {
   [data-section="schedule-cta"] h2 {
     font-size: 1.8rem !important;
   }
+
+  /* Speakers Page */
+  [data-section="speakers-hero"] {
+    padding: 8rem 2rem 4rem !important;
+  }
+  [data-section="speakers-title"] {
+    font-size: 2.8rem !important;
+  }
+  [data-section="speakers-coming-soon"] {
+    padding: 4rem 2rem !important;
+  }
+  [data-section="speakers-coming-soon-heading"] {
+    font-size: 1.9rem !important;
+  }
 }
 
 /* Mobile: ≤768px */
@@ -1130,6 +1144,20 @@ img {
   [data-section="schedule-cta"] h2 {
     font-size: 2rem !important;
   }
+
+  /* Speakers Page */
+  [data-section="speakers-hero"] {
+    padding: 10.5rem 1.2rem 3rem !important;
+  }
+  [data-section="speakers-title"] {
+    font-size: 2.2rem !important;
+  }
+  [data-section="speakers-coming-soon"] {
+    padding: 2.5rem 1.2rem !important;
+  }
+  [data-section="speakers-coming-soon-heading"] {
+    font-size: 1.8rem !important;
+  }
 }
 
 /* Small Mobile: ≤480px */
@@ -1582,5 +1610,19 @@ img {
   }
   [data-section="schedule-cta"] h2 {
     font-size: 1.8rem !important;
+  }
+
+  /* Speakers Page */
+  [data-section="speakers-hero"] {
+    padding: 10.5rem 1rem 2.5rem !important;
+  }
+  [data-section="speakers-title"] {
+    font-size: 1.9rem !important;
+  }
+  [data-section="speakers-coming-soon"] {
+    padding: 2rem 1rem !important;
+  }
+  [data-section="speakers-coming-soon-heading"] {
+    font-size: 1.5rem !important;
   }
 }
