@@ -152,23 +152,16 @@ export default function LiteratureFestivalPage() {
                 href="/vendor-intake"
                 className="inline-block font-semibold uppercase"
                 style={{
-                  backgroundColor: "transparent",
+                  backgroundColor: "#cd5c5c",
                   color: "#ffffff",
                   padding: "0.85rem 2.5rem",
                   fontSize: "0.85rem",
                   letterSpacing: "1px",
                   textDecoration: "none",
-                  border: "1px solid rgba(255,255,255,0.5)",
                   transition: "all 0.3s ease",
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.1)";
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.9)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.5)";
-                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
               >
                 Vendor &amp; Partner Intake Form
               </Link>
