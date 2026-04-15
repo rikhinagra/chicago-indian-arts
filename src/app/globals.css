@@ -1057,6 +1057,9 @@ img {
     grid-template-columns: 1fr !important;
     gap: 1.5rem !important;
   }
+  [data-card="card-name"] {
+    font-size: 1.1rem !important;
+  }
   [data-section="team-board-grid"] {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem !important;
@@ -1683,6 +1686,9 @@ img {
   }
   [data-section="speakers-cards-flex"] {
     gap: 1rem !important;
+  }
+  [data-card="card-name"] {
+    font-size: 1.15rem !important;
   }
 
   /* Gallery Page */

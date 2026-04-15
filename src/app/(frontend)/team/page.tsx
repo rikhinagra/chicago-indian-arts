@@ -743,10 +743,11 @@ export default function TeamPage() {
                       }}
                     >
                       <span
+                        data-card="card-name"
                         className="font-heading font-bold"
                         style={{
                           color: "#1a1a1a",
-                          fontSize: "1rem",
+                          fontSize: "1.1rem",
                           lineHeight: 1.2,
                         }}
                       >
