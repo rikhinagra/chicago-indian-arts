@@ -25,7 +25,7 @@ const festivalDetails = [
   {
     icon: Bell,
     label: "Notification By",
-    value: "April 15, 2026",
+    value: "May 10, 2026",
   },
 ];
 
@@ -367,7 +367,7 @@ export default function VendorIntakePage() {
                 marginBottom: "2rem",
               }}
             >
-              Complete the intake form and our team will review your application and get in touch before April 15, 2026.
+              Complete the intake form and our team will review your application and get in touch before May 10, 2026.
             </p>
             <a
               href={FORM_LINK}

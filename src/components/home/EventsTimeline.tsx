@@ -10,6 +10,21 @@ import RegisterModal from "@/components/ui/RegisterModal";
 const events = [
   {
     month: "May",
+    day: "9",
+    year: "2026",
+    category: "Chicago Indian Fashion Week",
+    title: "The Curtain Raiser — A Fashion Innovation Evening First Cut",
+    description:
+      "A special evening of films, fashion innovation, and networking hosted by Chicago Indian Arts. Join us for an inspiring preview of the upcoming Chicago Indian Fashion Week.",
+    time: "1:00 PM - 5:00 PM",
+    venue: "Ila's Chicago, 15 W Hubbard St, Chicago",
+    venueUrl: "https://www.google.com/maps/search/Ila's+Chicago+15+W+Hubbard+St+Chicago",
+    program: "Chicago Indian Fashion Week",
+    pageUrl: "/fashion-week",
+    externalRegisterUrl: "https://www.eventbrite.com/e/chicago-indian-arts-a-fashion-innovation-curtain-raiser-tickets-1987194909468?utm-campaign=social&utm-content=attendeeshare&utm-medium=discovery&utm-term=listing&utm-source=cp&aff=ebdsshcopyurl",
+  },
+  {
+    month: "May",
     day: "30",
     year: "2026",
     category: "Chicago Indian Literature Festival",
@@ -224,21 +239,17 @@ export default function EventsTimeline() {
                   </div>
                   <div className="flex items-center flex-wrap" style={{ gap: "1rem" }}>
                     <button
-                      onClick={() => openRegister(event)}
-                      className="inline-block text-white font-semibold cursor-pointer"
+                      onClick={() =>
+                        event.externalRegisterUrl
+                          ? window.open(event.externalRegisterUrl, "_blank")
+                          : openRegister(event)
+                      }
+                      className="inline-block font-semibold cursor-pointer events-register-btn"
                       style={{
                         padding: "0.5rem 1.2rem",
-                        backgroundColor: "#cd5c5c",
                         fontSize: "0.8rem",
                         letterSpacing: "0.5px",
                         border: "none",
-                        transition: "all 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#1a1a1a";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#cd5c5c";
                       }}
                     >
                       Register Now

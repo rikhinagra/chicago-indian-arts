@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft, MapPin, Clock, CheckCircle, Calendar, Ticket, X, Share2 } from "lucide-react";
+import { ArrowLeft, MapPin, Clock, CheckCircle, Calendar, X, Share2 } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
@@ -21,7 +21,6 @@ type Session = {
   confirmed: boolean;
   tag: string;
   tagColor: string;
-  ticketPrice?: string;
 };
 
 // ─── SCHEDULE DATA ────────────────────────────────────────────────────────────
@@ -54,7 +53,7 @@ const morningsessions: Session[] = [
     confirmed: true,
     tag: "Children & Family",
     tagColor: "#cd5c5c",
-    ticketPrice: "$5",
+
   },
   {
     time: "11:00 AM – 12:00 PM",
@@ -65,7 +64,7 @@ const morningsessions: Session[] = [
     confirmed: false,
     tag: "Keynote",
     tagColor: "#888",
-    ticketPrice: "$10",
+
   },
 ];
 
@@ -90,7 +89,7 @@ const afternoonSessions: Session[] = [
     confirmed: true,
     tag: "Workshop",
     tagColor: "#d4af37",
-    ticketPrice: "$10",
+
   },
   {
     time: "12:45 – 1:15 PM",
@@ -131,7 +130,7 @@ const afternoonSessions: Session[] = [
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
-    ticketPrice: "$10",
+
   },
   {
     time: "2:00 – 2:45 PM",
@@ -145,7 +144,7 @@ const afternoonSessions: Session[] = [
     confirmed: false,
     tag: "Workshop",
     tagColor: "#888",
-    ticketPrice: "$5",
+
   },
   {
     time: "3:00 – 4:00 PM",
@@ -156,7 +155,7 @@ const afternoonSessions: Session[] = [
     confirmed: false,
     tag: "Panel",
     tagColor: "#888",
-    ticketPrice: "$5",
+
   },
   {
     time: "4:00 – 4:15 PM",
@@ -197,7 +196,7 @@ const afternoonSessions: Session[] = [
     confirmed: false,
     tag: "Open Mic",
     tagColor: "#888",
-    ticketPrice: "$10",
+
   },
 ];
 
@@ -212,7 +211,7 @@ const eveningSessions: Session[] = [
     confirmed: true,
     tag: "Evening Gala",
     tagColor: "#1a1a1a",
-    ticketPrice: "TBD",
+
   },
   {
     time: "7:00 – 9:00 PM",
@@ -250,7 +249,7 @@ const eveningSessions: Session[] = [
     confirmed: false,
     tag: "Food Panel",
     tagColor: "#888",
-    ticketPrice: "TBD",
+
   },
   {
     hideTime: true,
@@ -273,7 +272,7 @@ const eveningSessions: Session[] = [
     confirmed: false,
     tag: "Performance",
     tagColor: "#888",
-    ticketPrice: "TBD",
+
   },
 ];
 
@@ -415,25 +414,6 @@ function SessionCard({
               </span>
             )}
 
-            {session.ticketPrice && (
-              <span
-                className="flex items-center"
-                style={{
-                  gap: "0.3rem",
-                  fontSize: "0.7rem",
-                  fontWeight: 600,
-                  letterSpacing: "0.5px",
-                  color: "#444",
-                  backgroundColor: "rgba(212,175,55,0.07)",
-                  border: "1px solid rgba(212,175,55,0.3)",
-                  padding: "0.2rem 0.65rem",
-                  borderRadius: "2px",
-                }}
-              >
-                <Ticket size={11} />
-                Ticket Price: {session.ticketPrice}
-              </span>
-            )}
 
             {session.venue && (
               <div
@@ -932,30 +912,6 @@ function SessionModal({
           </div>
         )}
 
-        {/* Ticket price */}
-        {session.ticketPrice && (
-          <div
-            style={{
-              marginTop: "1.5rem",
-              paddingTop: "1rem",
-              borderTop: "1px solid rgba(0,0,0,0.06)",
-            }}
-          >
-            <span
-              style={{
-                fontSize: "0.8rem",
-                color: "#888",
-                display: "flex",
-                alignItems: "center",
-                gap: "0.4rem",
-              }}
-            >
-              <Ticket size={13} />
-              Ticket Price:{" "}
-              <strong style={{ color: "#1a1a1a" }}>{session.ticketPrice}</strong>
-            </span>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -1339,9 +1295,7 @@ export default function LitFestSchedulePage() {
                 <span style={{ color: "#d4af37", fontWeight: 600 }}>
                   gold Confirmed
                 </span>{" "}
-                badge have been fully finalised. Ticket prices marked{" "}
-                <strong style={{ color: "#1a1a1a" }}>TBD</strong> will be
-                announced shortly. Schedule is subject to change. Click any
+                badge have been fully finalised. Schedule is subject to change. Click any
                 session title to learn more.
               </p>
             </div>

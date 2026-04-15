@@ -31,6 +31,7 @@ export default function GalleryPage() {
     <>
       {/* Hero Section */}
       <section
+        data-section="gallery-hero"
         className="relative overflow-hidden"
         style={{
           padding: "10rem 3rem 5rem",
@@ -91,6 +92,7 @@ export default function GalleryPage() {
           >
             <SectionTag>Gallery</SectionTag>
             <h1
+              data-section="gallery-title"
               className="font-heading font-light"
               style={{
                 fontSize: "3.5rem",
@@ -122,7 +124,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Events Cards Section */}
-      <section style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}>
+      <section data-section="gallery-cards" style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}>
         <div
           style={{
             maxWidth: "900px",
@@ -133,6 +135,7 @@ export default function GalleryPage() {
           <FadeInSection className="text-center" style={{ marginBottom: "3.5rem" }}>
             <SectionTag>Photo Albums</SectionTag>
             <h2
+              data-section="gallery-heading"
               className="font-heading font-semibold"
               style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
             >
