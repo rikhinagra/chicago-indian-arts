@@ -582,31 +582,30 @@ export default function SpeakersPage() {
 
               {/* Panel block header */}
               <FadeInSection>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "1rem",
-                    marginBottom: "2.5rem",
-                  }}
-                >
-                  {/* Icon badge — inline on same row as heading */}
+                <div style={{ marginBottom: "2.5rem" }}>
+                  {/* Icon + heading on the exact same line */}
                   <div
                     style={{
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      backgroundColor: "rgba(212,175,55,0.15)",
                       display: "flex",
                       alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                      marginTop: "0.3rem",
+                      gap: "1rem",
+                      marginBottom: "0.4rem",
                     }}
                   >
-                    <group.icon size={20} color="#d4af37" />
-                  </div>
-                  <div>
+                    <div
+                      style={{
+                        width: "40px",
+                        height: "40px",
+                        borderRadius: "50%",
+                        backgroundColor: "rgba(212,175,55,0.15)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <group.icon size={20} color="#d4af37" />
+                    </div>
                     <h2
                       data-section="speakers-panel-heading"
                       className="font-heading"
@@ -618,23 +617,24 @@ export default function SpeakersPage() {
                     >
                       {group.panel}
                     </h2>
-                    <p
-                      style={{
-                        fontSize: "0.8rem",
-                        fontWeight: 600,
-                        letterSpacing: "1.5px",
-                        textTransform: "uppercase",
-                        color: "#d4af37",
-                        marginTop: "0.3rem",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.4rem",
-                      }}
-                    >
-                      <Clock size={12} />
-                      {group.timeSlot}
-                    </p>
                   </div>
+                  {/* Timeslot — indented to align under heading text */}
+                  <p
+                    style={{
+                      fontSize: "0.8rem",
+                      fontWeight: 600,
+                      letterSpacing: "1.5px",
+                      textTransform: "uppercase",
+                      color: "#d4af37",
+                      paddingLeft: "calc(40px + 1rem)",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "0.4rem",
+                    }}
+                  >
+                    <Clock size={12} />
+                    {group.timeSlot}
+                  </p>
                 </div>
               </FadeInSection>
 
