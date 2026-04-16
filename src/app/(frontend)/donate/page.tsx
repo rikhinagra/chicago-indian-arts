@@ -91,7 +91,6 @@ export default function DonatePage() {
             <iframe
               src={process.env.NEXT_PUBLIC_ZEFFY_DONATION_URL}
               style={{ width: "100%", flex: 1, border: 0 }}
-              allowTransparency={true}
             />
           </div>
         </div>
@@ -561,8 +560,7 @@ export default function DonatePage() {
                   height: "100%",
                 }}
                 src={process.env.NEXT_PUBLIC_ZEFFY_NEWSLETTER_URL}
-                allowTransparency={true}
-              />
+                />
             </div>
           </FadeInSection>
         </div>
