@@ -70,6 +70,42 @@ body {
   color: white;
 }
 
+/* ============================================
+   DONATE PAGE — Grid Layout
+   Desktop:  [left]        [right]
+             [newsletter]  [newsletter]
+   Mobile:   [left] → [newsletter] → [right]
+   ============================================ */
+
+[data-section="donate-outer"] {
+  background-color: #faf8f3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "donate-left donate-right"
+    "donate-newsletter donate-newsletter";
+  column-gap: 4rem;
+  row-gap: 3rem;
+  padding: 3rem;
+}
+
+[data-section="donate-left-section"] {
+  grid-area: donate-left;
+}
+
+[data-section="donate-right-section"] {
+  grid-area: donate-right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+[data-section="donate-newsletter"] {
+  grid-area: donate-newsletter;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
 /* Ticker Marquee Animation */
 @keyframes ticker-scroll {
   0% {
@@ -240,12 +276,13 @@ img {
     font-size: 2.8rem !important;
   }
 
-  [data-section="donate-main"] {
+  [data-section="donate-outer"] {
     padding: 3.5rem 2rem !important;
+    column-gap: 3rem !important;
   }
 
-  [data-section="donate-grid"] {
-    gap: 3rem !important;
+  [data-section="donate-newsletter"] h2 {
+    font-size: 1.9rem !important;
   }
 
   [data-section="register-hero"] {
@@ -765,13 +802,28 @@ img {
     font-size: 2.2rem !important;
   }
 
-  [data-section="donate-main"] {
+  /* Mobile: stack to 1 column, reorder: left → newsletter → right */
+  [data-section="donate-outer"] {
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "donate-left"
+      "donate-newsletter"
+      "donate-right" !important;
     padding: 2.5rem 1.2rem !important;
+    column-gap: 0 !important;
+    row-gap: 0 !important;
   }
 
-  [data-section="donate-grid"] {
-    grid-template-columns: 1fr !important;
-    gap: 2.5rem !important;
+  /* Equal space above and below the newsletter section on mobile */
+  [data-section="donate-newsletter"] {
+    border-top: none !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    margin-top: 0 !important;
+  }
+
+  [data-section="donate-newsletter"] h2 {
+    font-size: 1.8rem !important;
   }
 
   [data-section="register-hero"] {
@@ -1333,8 +1385,18 @@ img {
     font-size: 1.8rem !important;
   }
 
-  [data-section="donate-main"] {
+  [data-section="donate-outer"] {
     padding: 2rem 1rem !important;
+    row-gap: 0 !important;
+  }
+
+  [data-section="donate-newsletter"] {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  [data-section="donate-newsletter"] h2 {
+    font-size: 1.5rem !important;
   }
 
   [data-section="register-hero"] {
