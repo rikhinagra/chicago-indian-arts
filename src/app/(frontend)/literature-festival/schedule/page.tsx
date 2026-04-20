@@ -988,6 +988,36 @@ export default function LitFestSchedulePage() {
               </span>
             </div>
           </div>
+
+          <div style={{ marginTop: "2rem" }}>
+            <Link
+              href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                padding: "0.75rem 2rem",
+                backgroundColor: "#cd5c5c",
+                color: "#ffffff",
+                fontSize: "0.85rem",
+                fontWeight: 600,
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                border: "none",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#b84e4e";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#cd5c5c";
+              }}
+            >
+              Get your Tickets
+            </Link>
+          </div>
         </div>
       </section>
 
