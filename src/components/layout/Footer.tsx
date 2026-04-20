@@ -23,6 +23,7 @@ const orgLinks = [
   { label: "Our Team", href: "/team" },
   // { label: "Community Partners", href: "/community-partners" }, — Hidden for now
   { label: "Contact", href: "/contact" },
+  { label: "Get your Tickets", href: "https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival", external: true },
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/volunteer" },
 ];
@@ -38,11 +39,12 @@ const socialLinks = [
   { label: "X", href: "https://x.com/chiIndianArts", icon: XIcon },
 ];
 
-function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+function FooterLink({ href, children, external }: { href: string; children: React.ReactNode; external?: boolean }) {
   return (
     <Link
       href={href}
       className="block"
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       style={{
         color: "rgba(255,255,255,0.7)",
         fontSize: "0.85rem",
@@ -109,7 +111,7 @@ export default function Footer() {
             <ul style={{ listStyle: "none" }}>
               {orgLinks.map((link) => (
                 <li key={link.label} style={{ marginBottom: "0.8rem" }}>
-                  <FooterLink href={link.href}>{link.label}</FooterLink>
+                  <FooterLink href={link.href} external={link.external}>{link.label}</FooterLink>
                 </li>
               ))}
             </ul>

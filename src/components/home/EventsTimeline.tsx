@@ -36,6 +36,8 @@ const events = [
     venueUrl: "https://www.google.com/maps/search/Congress+Plaza+Hotel+Chicago",
     program: "Chicago Indian Literature Festival",
     pageUrl: "/literature-festival",
+    externalRegisterUrl: "https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival",
+    registerLabel: "Get your Tickets",
   },
   {
     month: "July",
@@ -252,7 +254,7 @@ export default function EventsTimeline() {
                         border: "none",
                       }}
                     >
-                      Register Now
+                      {event.registerLabel || "Register Now"}
                     </button>
                     <Link
                       href={event.pageUrl}

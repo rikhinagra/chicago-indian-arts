@@ -325,7 +325,9 @@ export default function HeroSection() {
               </Button>
             </div>
             <Link
-              href="/call-for-submissions"
+              href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 padding: "0.75rem 1.5rem",
                 fontSize: "0.82rem",
@@ -351,7 +353,7 @@ export default function HeroSection() {
                 e.currentTarget.style.color = "#ffffff";
               }}
             >
-              Call for Submissions
+              Get your Tickets
             </Link>
           </div>
         </motion.div>
