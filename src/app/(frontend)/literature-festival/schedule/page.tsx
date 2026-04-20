@@ -27,56 +27,50 @@ type Session = {
 
 const morningsessions: Session[] = [
   {
-    time: "9:30 AM",
-    title: "Welcome to the 2026 Chicago Indian Arts Literary Festival",
-    subtitle: "Setting the stage for a day of stories, ideas, and conversation",
-    subTitles: [
-      "Light, Word & Wonder: Opening the Festival",
-      "Tamso Ma Jyotirgamay",
-    ],
+    time: "9:00 AM",
+    title: "Welcome & Registration",
     description:
-      "Collect your badges, explore the venue, visit community booths, book signing tables, the Chai & Coffee Bar, and connect with fellow attendees before the day begins.",
+      "The festival begins before the first panel. Collect your badge, wander the community booths, pause at the book signing tables, and find your chai. Let the morning unfold\n\n— Tamso Ma Jyotirgamaya",
     venue: "The Gold Room",
-    confirmed: false,
+    confirmed: true,
     tag: "General",
-    tagColor: "#888",
+    tagColor: "#cd5c5c",
   },
   {
-    time: "10:00 – 11:00 AM",
-    title: "Once Upon the tale: Stories for Little Listeners",
-    subtitle: "Family storytelling sessions for young readers",
+    time: "9:00 – 11:00 AM",
+    title: "Interactive with Kids and Families",
+    subtitle: "Once Upon the tale: Stories for Little Listeners",
     description:
       "A dedicated space for children and families featuring interactive storytelling, poetry for young minds, and culturally rich narratives spanning festivals, seasons, and South Asian traditions.",
     popupText:
-      "Step into a vibrant world of imagination, wonder, and storytelling in this engaging children's session at the Chicago Indian Literature Festival. Designed for young readers, this interactive experience introduces children to the rich and diverse traditions of Indian literature, from timeless folktales and mythological adventures to contemporary stories filled with humor, courage, and creativity.\n\nThrough lively narration, playful activities, and audience participation, children will meet unforgettable characters, explore magical landscapes, and discover the joy of storytelling across cultures. The session encourages curiosity, empathy, and a love for reading, while celebrating the beauty of Indian heritage in a way that is accessible and fun for all.\n\nPerfect for children and families, this session invites young minds to listen, imagine, and create their own stories, because every child has a storyteller within.",
+      "Once Upon the tale: Stories for Little Listeners — A dedicated space for children and families featuring interactive storytelling, poetry for young minds, and culturally rich narratives spanning festivals, seasons, and South Asian traditions. Through lively narration, playful activities, and audience participation, children will meet unforgettable characters, explore magical landscapes, and discover the joy of storytelling across cultures.",
     venue: "The Gold Room",
     confirmed: true,
     tag: "Children & Family",
     tagColor: "#cd5c5c",
-
   },
   {
-    time: "11:00 AM – 12:00 PM",
-    title: "Opening Keynote Session",
-    subtitle: "An inspiring conversation to set the tone for the festival",
-    description: "Programme details coming soon.",
+    time: "11:00 AM – 11:45 AM",
+    title: "Authors Panel",
+    subtitle: "Page to Perception: How Literature Shapes the India We Imagine.",
+    description:
+      "This panel explores how contemporary Indian voices across literature, scholarship, and the arts are reshaping narratives about India in a global context. Discussion spans memory, migration, history, culture, and how creators negotiate authenticity versus audience expectation.",
     venue: "The Gold Room",
-    confirmed: false,
-    tag: "Keynote",
-    tagColor: "#888",
-
+    confirmed: true,
+    tag: "Panel",
+    tagColor: "#cd5c5c",
   },
 ];
 
 const afternoonSessions: Session[] = [
   {
     time: "12:00 – 12:45 PM",
-    title: "Reading Salon & Workshop",
-    subtitle: "Rooted & Reaching: Motherhood, Daughterhood & the Self We Carry",
+    title: "Reading Salon & Workshop: Rooted & Reaching",
+    subtitle: "Motherhood, Daughterhood & the Self We Carry.",
     description:
-      "An intimate reading salon and workshop exploring identity, womanhood, and the bonds between mothers and daughters, the roles that are written versus the roles we choose to play. Featuring confirmed voices from across the South Asian literary diaspora.",
+      "An intimate reading salon and workshop exploring identity, womanhood, and the bonds between mothers and daughters — the roles that are written versus the roles we choose to play. Examines how women inherit, resist, and redefine cultural expectations while forging their own sense of self across borders, languages, and generations.",
     popupText:
-      "This session explores the intimate and evolving relationships between children and parents within the context of diaspora, where identity is often shaped across borders, languages, and generations. Through stories that weave memory, migration and belonging, it examines how women inherit, resist and redefine cultural expectations while forging their own sense of self. At the heart of the conversation lies the tension between continuity and change, how daughters navigate the legacies of their mothers, and how mothers adapt as their children grow into identities that may differ from their own. The session reflects on questions of home, hybridity, and the emotional landscapes of displacement, where love, conflict, and understanding coexist. Blending literary insight with lived experience, this discussion invites audiences to consider how motherhood and daughterhood become powerful sites of negotiation, resilience, and self-discovery in diasporic life. It celebrates the multiplicity of voices that emerge when women claim their stories across generations and geographies.",
+      "Motherhood, Daughterhood & the Self We Carry. An intimate reading salon and workshop exploring identity, womanhood, and the bonds between mothers and daughters — the roles that are written versus the roles we choose to play. Examines how women inherit, resist, and redefine cultural expectations while forging their own sense of self across borders, languages, and generations.",
     venue: "The Gold Room",
     speakers: [
       "Reema Rao",
@@ -88,13 +82,11 @@ const afternoonSessions: Session[] = [
     ],
     confirmed: true,
     tag: "Workshop",
-    tagColor: "#d4af37",
-
+    tagColor: "#cd5c5c",
   },
   {
-    time: "12:45 – 1:15 PM",
+    time: "12:45 – 1:00 PM",
     title: "Book Launch",
-    subtitle: "A celebration of a new literary voice",
     description:
       "An exclusive book launch celebration featuring a reading, author conversation, and book signing.",
     venue: "The Gold Room",
@@ -104,17 +96,13 @@ const afternoonSessions: Session[] = [
     tagColor: "#cd5c5c",
   },
   {
-    time: "1:15 – 1:45 PM",
+    time: "1:00 – 1:45 PM",
     title: "From Mythology to Combat: Storytelling in Games",
-    subtitle: "AI, Technology & Literature Panel",
-    subTitles: [
-      "Algorithms & Archetypes: When AI Meets the Storyteller's Mind",
-      "Indika – Culture, Combat, Creativity: From Mythology to Combat: Storytelling in Games",
-      "Horror, Comics & Culture",
-    ],
-    description: "Programme details coming soon.",
+    subtitle: "Algorithms & Archetypes: When AI Meets the Storyteller's Mind",
+    description:
+      "Indika: Culture, Combat, Creativity — Horror, Comics & Culture. An immersive celebration of storytelling across worlds: from the timeless epics of India to the explosive universe of modern gaming, horror, and comics. Featuring icons from the Mortal Kombat universe, live panels, gaming showcases, and comic creators.",
     popupText:
-      "Step into a one-day immersive celebration of storytelling across worlds. From the timeless epics of India to the explosive universe of modern gaming, horror, and comics, INDIKA Fest brings together authors, artists, game creators, and cultural icons for an unforgettable experience in the heart of Chicago. Featuring: Icons from the Mortal Kombat universe, Live panels & Q&A sessions, Gaming showcases & interactive experiences, Comic creators & horror vendors.",
+      "Algorithms & Archetypes: When AI Meets the Storyteller's Mind — Indika: Culture, Combat, Creativity — Horror, Comics & Culture. An immersive celebration of storytelling across worlds: from the timeless epics of India to the explosive universe of modern gaming, horror, and comics. Featuring icons from the Mortal Kombat universe, live panels, gaming showcases, and comic creators.",
     venue: "The Gold Room",
     speakers: [
       "Vishal Rajput",
@@ -127,53 +115,55 @@ const afternoonSessions: Session[] = [
       "Romit",
       "Shilajeet Niyogi",
     ],
-    confirmed: false,
+    confirmed: true,
     tag: "Panel",
-    tagColor: "#888",
-
+    tagColor: "#cd5c5c",
   },
   {
     time: "2:00 – 2:45 PM",
-    title: "The Discipline of Imagination: From Blank Page to First Draft, A Writer's Room",
-    subtitle: "Craft sessions with published authors",
-    description: "Programme details coming soon.",
+    title: "The Discipline of Imagination: From Blank Page to First Draft",
+    subtitle: "A Writer's Workshop",
+    description:
+      "An interactive writers' workshop for aspiring and emerging writers exploring the art and craft of storytelling. Guided prompts, close reading, and collaborative exercises help participants develop authentic voice and deepen narrative impact. Covers character, structure, revision, and the discipline of sustaining a writing practice.",
     popupText:
-      "This interactive writer's workshop invites aspiring and emerging writers to explore the art and craft of storytelling in a supportive and dynamic environment. Whether you're working on fiction, memoir, or poetry, this session offers practical tools to help shape ideas, develop authentic voice, and deepen narrative impact. Through guided prompts, close reading, and collaborative exercises, participants will experiment with character, voice, and structure while learning how to transform personal experiences and observations into compelling stories. The workshop also addresses the challenges writers often face: self-doubt, creative blocks, and the discipline of revision, offering strategies to sustain a meaningful writing practice. Designed for writers at all stages, this session emphasizes both craft and courage, encouraging participants to take creative risks and trust their unique perspectives. By the end of the workshop, attendees will leave with new material, fresh insights, and a renewed sense of confidence in their writing journey.",
+      "A Writer's Workshop. An interactive writers' workshop for aspiring and emerging writers exploring the art and craft of storytelling. Guided prompts, close reading, and collaborative exercises help participants develop authentic voice and deepen narrative impact. Covers character, structure, revision, and the discipline of sustaining a writing practice.",
     venue: "The Gold Room",
     speakers: ["Keith Farazi", "Scott Sommer", "Ahmed Bin Athar"],
-    confirmed: false,
+    confirmed: true,
     tag: "Workshop",
-    tagColor: "#888",
-
+    tagColor: "#cd5c5c",
   },
   {
-    time: "3:00 – 4:00 PM",
+    time: "3:00 – 3:45 PM",
     title: "Authors Panel",
-    subtitle: "In conversation with celebrated literary voices",
-    description: "Programme details coming soon.",
+    subtitle: "Fiction, Truth and Everything in Between",
+    description:
+      "In a literary and tech-enabled landscape shaped by memory, history, innovation and imagination, today's writers are constantly negotiating the space between what is lived, what is remembered and what is invented.",
+    popupText:
+      "Fiction, Truth and Everything in Between — and does that boundary even matter anymore? In a literary and tech enabled landscape which is shaped by memory, history, innovation and imagination, today's writers are constantly negotiating space between what is lived, what is remembered and what is invented. This panel will bring authors to explore how contemporary Indian literature blurs, bends and sometimes deliberately erases the lines between facts and fiction.\n\nWhat responsibilities do writers carry when drawing real lives and events? How do readers interpret \"truth\"?",
     venue: "The Gold Room",
-    confirmed: false,
+    confirmed: true,
     tag: "Panel",
-    tagColor: "#888",
-
+    tagColor: "#cd5c5c",
   },
   {
     time: "4:00 – 4:15 PM",
     title: "Stories from Soil: The Living Legacy of Kannada Literature",
     description:
-      "An exploration of the living legacy of Kannada literature, from ancient vachanas and classical poetry to modern fiction, celebrating the enduring power of regional literary traditions.",
+      "Rooted in the landscapes, languages, and lived experiences of Karnataka, this session delves into the richness of Kannada storytelling — from ancient vachanas and classical poetry to modern fiction and contemporary voices — revealing how 'the soil' itself becomes a powerful metaphor for identity, resilience, and belonging.",
     popupText:
-      "Rooted in the landscapes, languages, and lived experiences of Karnataka, Kannada literature carries a profound sense of place, memory, and cultural continuity. This session delves into the richness and depth of Kannada storytelling, from ancient vachanas and classical poetry to modern fiction and contemporary voices, revealing how the soil itself becomes a powerful metaphor for identity, resilience, and belonging.\n\nExploring themes of rural life, folklore, social change, and philosophical inquiry, the discussion highlights how Kannada writers have preserved and reimagined heritage across generations. It examines the interplay between oral and written traditions, and how regional narratives continue to shape broader literary conversations in India and beyond.\n\nBringing together literary insight and cultural reflection, this session celebrates the enduring vitality of Kannada literature, honoring its roots while embracing its evolving voice in a global context. It invites audiences to reconnect with stories that emerge from the land, carrying with them the spirit, struggles, and soul of a people.",
+      "Rooted in the landscapes, languages, and lived experiences of Karnataka, this session delves into the richness of Kannada storytelling — from ancient vachanas and classical poetry to modern fiction and contemporary voices — revealing how 'the soil' itself becomes a powerful metaphor for identity, resilience, and belonging.",
     venue: "The Gold Room",
-    confirmed: false,
+    confirmed: true,
     tag: "Panel",
-    tagColor: "#888",
+    tagColor: "#cd5c5c",
   },
   {
-    time: "4:15 – 5:30 PM",
-    title: "Spoken Fest",
-    subtitle: "Open Mic · Poetry · Storytelling",
-    description: "Programme details coming soon.",
+    time: "4:30 – 6:00 PM",
+    title: "Spoken Fest: The Word Stands Up",
+    subtitle: "Unfiltered Spoken Word Showcase — Open Mic · Poetry · Storytelling",
+    description:
+      "An open platform for spoken word artists, poets, and storytellers from across the South Asian diaspora. 10–12 performers, 3 minutes each.",
     venue: "The Gold Room",
     speakers: [
       "Asha Sudra",
@@ -193,46 +183,42 @@ const afternoonSessions: Session[] = [
       "Shashank",
       "Tara Swaminathan",
     ],
-    confirmed: false,
+    confirmed: true,
     tag: "Open Mic",
-    tagColor: "#888",
-
+    tagColor: "#cd5c5c",
   },
 ];
 
 const eveningSessions: Session[] = [
   {
-    time: "6:30 – 7:00 PM",
+    time: "6:00 – 7:00 PM",
     title: "Red Carpet",
-    subtitle: "Welcome the evening in style",
     description:
       "A glamorous red carpet reception welcoming guests to the evening gala of the Chicago Indian Literature Festival 2026.",
     venue: "The Gold Room",
     confirmed: true,
     tag: "Evening Gala",
-    tagColor: "#1a1a1a",
-
+    tagColor: "#cd5c5c",
   },
   {
-    time: "7:00 – 9:00 PM",
-    title: "Opening Gala",
-    subtitle: "Opening Remarks · Board & Advisory Board Introductions",
+    time: "7:00 – 7:30 PM",
+    title: "Opening Gala & Introductions",
     description:
-      "A grand evening celebration featuring opening remarks by the Founder & President and introductions of the CICA Board and Advisory Board.",
+      "Opening remarks by the Founder & President, introductions of the CICA Board and Advisory Board, and welcome to the evening celebration.",
     venue: "The Gold Room",
     speakers: ["Jigar Shah", "CICA Board & Advisory Board"],
     confirmed: true,
     tag: "Evening Gala",
-    tagColor: "#1a1a1a",
+    tagColor: "#cd5c5c",
   },
   {
-    time: "7:00 – 9:00 PM",
+    time: "7:30 – 8:00 PM",
     title: "Spice, Memory & the Table: A Conversation About Our Food",
     subtitle: "A literary feast: food, culture & storytelling",
     description:
-      "A culinary panel bringing together Chicago's most celebrated South Asian chefs, food writers, and restaurateurs for a conversation on food, culture, and identity.",
+      "A culinary panel bringing together Chicago's most celebrated South Asian chefs, food writers, and restaurateurs for a conversation on food, culture, and identity. In Indian literature, food is never just sustenance — it is memory, identity, and a language of love, loss, and belonging.",
     popupText:
-      "In Indian literature, food is never just sustenance. It is memory, identity, and a language of love, loss, and belonging. This session explores how meals, kitchens, and shared tables become powerful narrative spaces where personal and collective histories unfold. From the aromas of childhood kitchens to the tastes that travel across borders, food evokes stories that linger far beyond the page. Through literary excerpts and reflections, the discussion examines how writers use food to trace memory, negotiate cultural identity, and bridge generations. Recipes become archives, meals become rituals, and the act of cooking and sharing transforms into storytelling itself, preserving traditions while adapting to changing worlds. Whether rooted in nostalgia or shaped by migration and modernity, these culinary narratives reveal how the table serves as a site of connection, conflict, and continuity. This session invites audiences to savor the rich interplay between food and literature, and to rediscover how stories, like meals, are best when shared.",
+      "A culinary panel bringing together Chicago's most celebrated South Asian chefs, food writers, and restaurateurs for a conversation on food, culture, and identity. In Indian literature, food is never just sustenance — it is memory, identity, and a language of love, loss, and belonging.",
     venue: "The Gold Room",
     speakers: [
       "Colleen Sen",
@@ -246,33 +232,41 @@ const eveningSessions: Session[] = [
       "Sahil (Sifr)",
       "Meena (Moderator)",
     ],
-    confirmed: false,
+    confirmed: true,
     tag: "Food Panel",
-    tagColor: "#888",
-
+    tagColor: "#cd5c5c",
   },
   {
-    hideTime: true,
+    time: "8:00 – 8:15 PM",
     title: "Key Guest Speeches",
-    subtitle: "Voices that inspire",
-    description: "Programme details coming soon.",
+    description:
+      "Inspiring addresses from distinguished guests of the Chicago Indian Literature Festival 2026.",
     venue: "The Gold Room",
     speakers: ["Rishaad Tobaccowala"],
-    confirmed: false,
+    confirmed: true,
     tag: "Speech",
-    tagColor: "#888",
+    tagColor: "#cd5c5c",
   },
   {
-    time: "7:00 – 9:00 PM",
+    time: "8:15 – 8:30 PM",
+    title: "Keynote Address",
+    description:
+      "An evening keynote address from a distinguished guest speaker.",
+    venue: "The Gold Room",
+    confirmed: true,
+    tag: "Keynote",
+    tagColor: "#cd5c5c",
+  },
+  {
+    time: "8:30 – 9:30 PM",
     title: "Cultural Performances",
     subtitle: "Music · Dance · Classical Arts",
     description:
       "An evening of cultural performances celebrating the richness and diversity of South Asian artistic traditions.",
     venue: "The Gold Room",
-    confirmed: false,
+    confirmed: true,
     tag: "Performance",
-    tagColor: "#888",
-
+    tagColor: "#cd5c5c",
   },
 ];
 
@@ -559,47 +553,6 @@ function SessionCard({
             </button>
           )}
 
-          {/* Authors & Artists */}
-          {session.speakers && session.speakers.length > 0 && (
-            <div style={{ marginBottom: "0.85rem" }}>
-              <p
-                style={{
-                  fontSize: "0.72rem",
-                  fontWeight: 700,
-                  letterSpacing: "1px",
-                  textTransform: "uppercase",
-                  color: "#999",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Authors & Artists
-              </p>
-              <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
-                {session.speakers.map((s) => (
-                  <span
-                    key={s}
-                    style={{
-                      fontSize: "0.78rem",
-                      color: session.confirmed ? "#1a1a1a" : "#aaa",
-                      backgroundColor: session.confirmed
-                        ? "rgba(212,175,55,0.08)"
-                        : "rgba(0,0,0,0.04)",
-                      border: `1px solid ${
-                        session.confirmed
-                          ? "rgba(212,175,55,0.2)"
-                          : "rgba(0,0,0,0.08)"
-                      }`,
-                      padding: "0.25rem 0.6rem",
-                      borderRadius: "2px",
-                      fontWeight: session.confirmed ? 500 : 400,
-                    }}
-                  >
-                    {s}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </FadeInSection>
@@ -876,41 +829,6 @@ function SessionModal({
           {session.popupText || session.description}
         </p>
 
-        {/* Speakers */}
-        {session.speakers && session.speakers.length > 0 && (
-          <div>
-            <p
-              style={{
-                fontSize: "0.72rem",
-                fontWeight: 700,
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-                color: "#999",
-                marginBottom: "0.6rem",
-              }}
-            >
-              Authors & Artists
-            </p>
-            <div className="flex flex-wrap" style={{ gap: "0.4rem" }}>
-              {session.speakers.map((s) => (
-                <span
-                  key={s}
-                  style={{
-                    fontSize: "0.78rem",
-                    color: "#1a1a1a",
-                    backgroundColor: "rgba(212,175,55,0.08)",
-                    border: "1px solid rgba(212,175,55,0.2)",
-                    padding: "0.25rem 0.6rem",
-                    borderRadius: "2px",
-                    fontWeight: 500,
-                  }}
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
 
       </div>
     </div>
@@ -1058,7 +976,7 @@ export default function LitFestSchedulePage() {
               <span
                 style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.85)" }}
               >
-                9:30 AM – 9:00 PM
+                9:00 AM – 9:30 PM
               </span>
             </div>
             <div className="flex items-center" style={{ gap: "0.6rem" }}>
@@ -1072,121 +990,6 @@ export default function LitFestSchedulePage() {
           </div>
         </div>
       </section>
-
-      {/* Stats bar */}
-      <div
-        data-section="schedule-stats-bar"
-        style={{
-          backgroundColor: "#faf8f3",
-          borderBottom: "1px solid rgba(0,0,0,0.06)",
-          padding: "1.25rem 3rem",
-        }}
-      >
-        <div
-          className="flex flex-wrap items-center justify-between"
-          style={{
-            maxWidth: "1100px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            gap: "1rem",
-          }}
-        >
-          <div className="flex flex-wrap" style={{ gap: "2.5rem" }}>
-            <div>
-              <span
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  color: "#1a1a1a",
-                }}
-              >
-                {totalSessions}
-              </span>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#888",
-                  marginLeft: "0.4rem",
-                }}
-              >
-                Sessions
-              </span>
-            </div>
-            <div>
-              <span
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  color: "#d4af37",
-                }}
-              >
-                {confirmedCount}
-              </span>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#888",
-                  marginLeft: "0.4rem",
-                }}
-              >
-                Confirmed
-              </span>
-            </div>
-            <div>
-              <span
-                className="font-heading"
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  color: "#cd5c5c",
-                }}
-              >
-                1
-              </span>
-              <span
-                style={{
-                  fontSize: "0.8rem",
-                  color: "#888",
-                  marginLeft: "0.4rem",
-                }}
-              >
-                Day
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-center" style={{ gap: "1.5rem" }}>
-            <div className="flex items-center" style={{ gap: "0.4rem" }}>
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "50%",
-                  backgroundColor: "#d4af37",
-                }}
-              />
-              <span style={{ fontSize: "0.78rem", color: "#666" }}>
-                Confirmed
-              </span>
-            </div>
-            <div className="flex items-center" style={{ gap: "0.4rem" }}>
-              <div
-                style={{
-                  width: "10px",
-                  height: "10px",
-                  borderRadius: "50%",
-                  backgroundColor: "#ccc",
-                }}
-              />
-              <span style={{ fontSize: "0.78rem", color: "#666" }}>
-                Programme Coming Soon
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Schedule Content */}
       <section
@@ -1204,7 +1007,7 @@ export default function LitFestSchedulePage() {
           <FadeInSection>
             <BlockHeader
               title="Morning"
-              timeRange="9:30 AM – 12:00 PM"
+              timeRange="9:00 AM – 11:45 AM"
               color="#cd5c5c"
             />
           </FadeInSection>
@@ -1230,7 +1033,7 @@ export default function LitFestSchedulePage() {
           <FadeInSection>
             <BlockHeader
               title="Afternoon"
-              timeRange="12:00 PM – 5:30 PM"
+              timeRange="12:00 PM – 6:00 PM"
               color="#d4af37"
             />
           </FadeInSection>
@@ -1256,7 +1059,7 @@ export default function LitFestSchedulePage() {
           <FadeInSection>
             <BlockHeader
               title="Evening Gala"
-              timeRange="6:30 PM – 9:00 PM"
+              timeRange="6:00 PM – 9:30 PM"
               color="#1a1a1a"
             />
           </FadeInSection>
