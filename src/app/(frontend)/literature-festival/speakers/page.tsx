@@ -209,7 +209,7 @@ function SpeakerModal({
           }
           [data-modal="speaker-bio-text"] {
             font-size: 0.88rem !important;
-            text-align: center !important;
+            text-align: left !important;
           }
           [data-modal="speaker-subtitle"] {
             font-size: 0.9rem !important;
@@ -235,7 +235,7 @@ function SpeakerModal({
           [data-modal="speaker-bio-text"] {
             font-size: 0.85rem !important;
             line-height: 1.75 !important;
-            text-align: center !important;
+            text-align: left !important;
           }
           [data-modal="speaker-subtitle"] {
             font-size: 0.85rem !important;
