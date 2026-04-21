@@ -273,7 +273,7 @@ export default function TeamPage() {
       <section data-section="team-content" style={{ padding: "4rem 3rem", backgroundColor: "#6b6b4e" }}>
         <div style={{ maxWidth: "1200px", marginLeft: "auto", marginRight: "auto" }}>
           {groups.map((group, gi) => (
-            <div key={group.tag} style={{ marginBottom: gi < groups.length - 1 ? "5rem" : 0 }}>
+            <div key={group.tag} style={{ marginBottom: "4rem" }}>
 
               {/* Section header */}
               <FadeInSection>
@@ -338,6 +338,21 @@ export default function TeamPage() {
               </div>
             </div>
           ))}
+
+          {/* Pagination dots */}
+          <div style={{ display: "flex", justifyContent: "center", gap: "0.5rem", marginTop: "2.5rem" }}>
+            {groups.map((_, i) => (
+              <div
+                key={i}
+                style={{
+                  width: "10px",
+                  height: "10px",
+                  backgroundColor: i === 0 ? "#b8a94e" : "rgba(255,255,255,0.3)",
+                  transition: "background-color 0.3s ease",
+                }}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
