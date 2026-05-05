@@ -56,6 +56,15 @@ const boardMembers: Member[] = [
     image: "https://res.cloudinary.com/dist59h0i/image/upload/v1776952625/shetal_patel_eygkws.webp",
   },
   {
+    name: "Atif Rahim",
+    role: "Board Member",
+    subtitle: "Board, Chicago Indian Arts",
+    bio: "Founder and Chief Investment Officer of Akiba Capital with 25+ years of corporate and investing experience, dedicated to bringing people together in Chicago while celebrating their cultural roots.",
+    fullBio:
+      "Atif Rahim is the founder and chief investment officer of Akiba Capital, an investment management firm focused on public equities. With a corporate and investing career spanning 25+ years, Atif brings a unique blend of financial acumen and diverse cultural experience to Chicago Indian Arts.\n\nA resident of Chicago since 2015, Atif is dedicated to advancing efforts which bring people together in the city while maintaining their cultural roots. In his free time, he enjoys cooking, squash and traveling. He currently resides in Old Town with his wife, Erum, and their three children.",
+    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1777988945/atif_rahim_e8gznr.webp",
+  },
+  {
     name: "Vikram Choudhary",
     role: "Board Member",
     subtitle: "Board, Chicago Indian Arts",
@@ -72,15 +81,6 @@ const boardMembers: Member[] = [
     fullBio:
       "Raj Kamaria is a former McKinsey consultant and current Venture Capitalist, focused on social impact, green energy, and alternative investments. He has experience as former Director of Givology - Chicago, an international non-profit focused on helping underprivileged women in India, and attended the Kellogg School of Management in Evanston, IL. He will be joining Chicago Indian Arts as Finance Director.",
     image: "https://res.cloudinary.com/dist59h0i/image/upload/v1776952624/raj_kamaria_z3celc.webp",
-  },
-  {
-    name: "Atif Rahim",
-    role: "Board Member",
-    subtitle: "Board, Chicago Indian Arts",
-    bio: "Founder and Chief Investment Officer of Akiba Capital with 25+ years of corporate and investing experience, dedicated to bringing people together in Chicago while celebrating their cultural roots.",
-    fullBio:
-      "Atif Rahim is the founder and chief investment officer of Akiba Capital, an investment management firm focused on public equities. With a corporate and investing career spanning 25+ years, Atif brings a unique blend of financial acumen and diverse cultural experience to Chicago Indian Arts.\n\nA resident of Chicago since 2015, Atif is dedicated to advancing efforts which bring people together in the city while maintaining their cultural roots. In his free time, he enjoys cooking, squash and traveling. He currently resides in Old Town with his wife, Erum, and their three children.",
-    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1777988945/atif_rahim_e8gznr.webp",
   },
 ];
 
