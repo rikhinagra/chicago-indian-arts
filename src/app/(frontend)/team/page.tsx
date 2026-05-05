@@ -56,6 +56,15 @@ const boardMembers: Member[] = [
     image: "https://res.cloudinary.com/dist59h0i/image/upload/v1776952625/shetal_patel_eygkws.webp",
   },
   {
+    name: "Vikram Choudhary",
+    role: "Board Member",
+    subtitle: "Board, Chicago Indian Arts",
+    bio: "President and Clinical Director of Quantum Clinics, internationally recognized for clinical excellence in prosthetic and orthotic care, and a passionate advocate for arts and creative expression within the limb loss community.",
+    fullBio:
+      "Vikram Choudhary serves as President and Clinical Director of Quantum Clinics, a multi-state organization providing advanced prosthetic and orthotic care across Illinois, Indiana, and Nevada. He is internationally recognized for his commitment to clinical excellence, innovation, and restoring mobility and independence for individuals with limb loss and physical disabilities.\n\nBeyond his clinical work, Vikram has a strong passion for the arts and creative expression. With an early background in art and design, he brings a unique aesthetic perspective to his work, blending form, function, and innovation in prosthetic design. He actively promotes artistic expression within the limb loss community, organizing patient fashion shows and awareness events that celebrate resilience, identity, and confidence through movement and visual storytelling.\n\nVikram is committed to advancing both healthcare and cultural engagement, using art as a bridge to inspire, empower, and connect diverse communities across Chicago and beyond. He has been instrumental in organizing and supporting amputee-focused fashion shows and awareness events, creating platforms that celebrate resilience, confidence, and inclusion while challenging societal perceptions of disability.\n\nThese initiatives reflect his broader mission to empower individuals and foster dignity through both innovation and creative expression.",
+    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1777900328/vikram_choudhary_jz55zg.webp",
+  },
+  {
     name: "Raj Kamaria",
     role: "Finance Director",
     subtitle: "Finance Director, Chicago Indian Arts",
@@ -63,6 +72,15 @@ const boardMembers: Member[] = [
     fullBio:
       "Raj Kamaria is a former McKinsey consultant and current Venture Capitalist, focused on social impact, green energy, and alternative investments. He has experience as former Director of Givology - Chicago, an international non-profit focused on helping underprivileged women in India, and attended the Kellogg School of Management in Evanston, IL. He will be joining Chicago Indian Arts as Finance Director.",
     image: "https://res.cloudinary.com/dist59h0i/image/upload/v1776952624/raj_kamaria_z3celc.webp",
+  },
+  {
+    name: "Atif Rahim",
+    role: "Board Member",
+    subtitle: "Board, Chicago Indian Arts",
+    bio: "Founder and Chief Investment Officer of Akiba Capital with 25+ years of corporate and investing experience, dedicated to bringing people together in Chicago while celebrating their cultural roots.",
+    fullBio:
+      "Atif Rahim is the founder and chief investment officer of Akiba Capital, an investment management firm focused on public equities. With a corporate and investing career spanning 25+ years, Atif brings a unique blend of financial acumen and diverse cultural experience to Chicago Indian Arts.\n\nA resident of Chicago since 2015, Atif is dedicated to advancing efforts which bring people together in the city while maintaining their cultural roots. In his free time, he enjoys cooking, squash and traveling. He currently resides in Old Town with his wife, Erum, and their three children.",
+    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1777988945/atif_rahim_e8gznr.webp",
   },
 ];
 
