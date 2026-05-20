@@ -124,6 +124,62 @@ const panelGroups: { panel: string; timeSlot: string; icon: React.ElementType; s
     ],
   },
   {
+    panel: "Authors Panel",
+    timeSlot: "3:00 PM – 3:30 PM",
+    icon: BookOpen,
+    speakers: [
+      {
+        name: "Kunal Sen",
+        panel: "Authors Panel",
+        timeSlot: "3:00 PM – 3:30 PM",
+        bio: "Kunal Sen grew up in Calcutta. In his formative years, he was surrounded by art workers, including his filmmaker father and his actor mother. However, his primary interest drifted toward Science and Technology. After studying Physics and then Computer Science, he went to Chicago to do his doctoral work and obtained a Ph.D. in Artificial Intelligence. He also studied drawing and painting at the Art Institute of Chicago. In his professional life, he worked as a scientist, a teacher, a textbook author, and as the Chief Information Officer of two iconic publishers, Encyclopædia Britannica and Merriam-Webster. During the last decade, Kunal has also turned his passionate hobby into a second profession. He creates visual art from his studio in Chicago. He combines his skills in painting and engineering to create art that includes elements of painting, sculpture, and kinetic objects using active electronics. He exhibits regularly around the United States. Kunal recently authored his first non-technical book about his experience of growing up in the company of his parents. Kunal lives in Chicago with his wife Nisha, but remains a frequent visitor to Calcutta.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288605/kunal_sen_zbkhvu.jpg",
+      },
+      {
+        name: "Srikanth Reddy",
+        panel: "Authors Panel",
+        timeSlot: "3:00 PM – 3:30 PM",
+        bio: "Srikanth Reddy (he/him) grew up in Chicago. He earned a BA from Harvard College, an MFA in creative writing from the University of Iowa, and a PhD in English literature from Harvard University. He is the author of the poetry collections Underworld Lit (Wave Books, 2020), Voyager (University of California Press, 2011), and Facts for Visitors (University of California Press, 2004) and a book of literary criticism, Changing Subjects: Digressions in Modern American Poetry (Oxford University Press, 2012). Underworld Lit was a finalist for the Griffin International Poetry Prize and the Four Quartets Prize and was a 2020 Times Literary Supplement Book of the Year. Reddy's previous book, Voyager, was named one of the best books of poetry of 2011 by The New Yorker, The Believer, and National Public Radio. His first collection, Facts for Visitors, won the 2005 Asian American Literary Award for poetry. Reddy was a guest editor for the March, April, and May 2022 issues of Poetry magazine and currently serves as poetry editor of The Paris Review. His poetry and criticism have appeared in Harper's, The Guardian (UK), The New Republic, The New York Times, and other publications. In fall 2015, he delivered the Bagley Wright Lectures in Poetry. The recipient of fellowships from the Guggenheim Foundation, Creative Capital, and the National Endowment for the Arts, Reddy is a professor of English and creative writing at the University of Chicago, where he edits the Phoenix Poets book series at the University of Chicago Press.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288606/srikanth_reddy_usxwth.png",
+      },
+      {
+        name: "Rakesh Malhotra",
+        panel: "Authors Panel",
+        timeSlot: "3:00 PM – 3:30 PM",
+        bio: "Rakesh is a Chicago-based entrepreneur, author, poet, and cultural thought leader whose work bridges the worlds of business, literature, and civilizational values. As President & CEO of Global Natural Resources, Inc., he brings decades of leadership experience in strategy, enterprise growth, and cross-functional collaboration. He is the Founder & President of the Global Indian Diaspora Foundation (NFP), a platform committed to strengthening cultural connections and fostering global trade partnerships across the Indian diaspora. Through this initiative and his broader community engagements, Rakesh has consistently championed dialogue that unites heritage with modernity. A passionate advocate for language and identity, Rakesh serves as Convenor of Hindi Samnvay Samiti, Chicago, working in collaboration with the Consulate of India to promote native languages and preserve the cultural essence of an ancient civilization. His belief is clear and compelling: language is not merely a medium of communication, but the soul of cultural continuity. Rakesh is also the Founder of \"Five Global Values,\" a transformative initiative centered on respect, self-confidence, trust, happiness, and wisdom; principles he believes are essential for nurturing conscious individuals and future leaders. An acclaimed author, his book \"The Adventures of the Tornado Kid: Whirling Back Towards Timeless Values\" explores human behavior and the enduring impact of foundational values through a compelling narrative lens. His writings spanning art, culture, leadership, and society reflect a deep philosophical inquiry into the human experience and the role of values in shaping a harmonious world. He actively contributes to several organizations, including serving on the Advisory Board of SEWA International Chicago, as a Member of the Architecture Review Board in the Village of Lincolnshire, and in leadership roles with the Federation of Indian Associations (Chicago) and PIOCCI. Recognized for his commitment to cultural preservation and community empowerment, Rakesh Malhotra represents a rare confluence of enterprise, artistic sensibility, and values-driven leadership. His voice continues to inspire conversations that connect creativity with consciousness, and tradition with transformation.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288605/rakesh_malhotra_bqdz4m.jpg",
+      },
+    ],
+  },
+  {
+    panel: "Authors Panel",
+    timeSlot: "3:30 PM – 4:00 PM",
+    icon: BookOpen,
+    speakers: [
+      {
+        name: "Romit Bhatia",
+        panel: "Authors Panel",
+        timeSlot: "3:30 PM – 4:00 PM",
+        bio: "Romit Bhatia is the co-author of The AI Advantage: Thriving Within Civilization's Next Big Disruption, a #1 Amazon bestseller in the United States and Japan, selected for the Alvin Sherman Library at Nova Southeastern University. Based in Chicago, he is an Associate Partner at IBM and a member of the Forbes Technology Council, where he writes and speaks on artificial intelligence, governance, and the architecture of trust in machine-generated systems. His work sits at the intersection of technology, truth, and the stories we now build together with our machines.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288605/romit_bhatia_m6mygz.jpg",
+      },
+      {
+        name: "Rajendra Parande",
+        panel: "Authors Panel",
+        timeSlot: "3:30 PM – 4:00 PM",
+        bio: "Rajendra Parande is an AI Strategy, Safety, and Transformation Leader who has spent over two decades navigating the intersection of human enterprise and machine intelligence. An Adjunct Professor at Lake Forest Graduate School of Management and leader at Capgemini, PwC, and Booz and Company, Rajendra bridges the \"AI Chasm\" for global organizations. Drawing on Hindu philosophy, his work explores the nature of consciousness and intellect, ensuring that as AI becomes pervasive, it remains grounded in ethical frameworks. His book, The Human-AI Paradox, advocates for AI safety, integrity, and transparency, prioritizing human dignity in the Agentic Age.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288605/rajendra_parande_rbkjoo.jpg",
+      },
+      {
+        name: "Ani Chaudhuri",
+        panel: "Authors Panel",
+        timeSlot: "3:30 PM – 4:00 PM",
+        bio: "A four-time founder and product builder, Ani most recently co-founded data-security company Dasera, acquired by Netskope in 2024 (Nasdaq: NTSK). Previously, he built products and services at McKinsey, Tata Steel, and HP. Across startups and global enterprises, his work centers on four unchanging principles: intimate knowledge of your customer, understanding of your customer's problem, differentiation of your solution, and simplicity of your messaging. Ani lives in California with his wife, two sons, and their dog.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288605/ani_chaudhuri_kmjmis.png",
+      },
+    ],
+  },
+  {
     panel: "Spoken Word: The Word Stands Up Unfiltered Spoken Word Showcase",
     timeSlot: "4:00 PM – 5:30 PM",
     icon: Mic,
@@ -619,7 +675,7 @@ export default function SpeakersPage() {
           }}
         >
           {panelGroups.map((group) => (
-            <div key={group.panel} data-section="speakers-panel-group" style={{ marginBottom: "4rem" }}>
+            <div key={`${group.panel}-${group.timeSlot}`} data-section="speakers-panel-group" style={{ marginBottom: "4rem" }}>
 
               {/* Panel block header */}
               <FadeInSection>
