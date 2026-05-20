@@ -18,6 +18,7 @@ type Speaker = {
   bio: string;
   image: string;
   website?: string;
+  objectPosition?: string;
 };
 
 // ─── DATA ──────────────────────────────────────────────────────────────────────
@@ -132,6 +133,7 @@ const panelGroups: { panel: string; timeSlot: string; icon: React.ElementType; s
         name: "Kunal Sen",
         panel: "Authors Panel",
         timeSlot: "3:00 PM – 3:30 PM",
+        objectPosition: "top",
         bio: "Kunal Sen grew up in Calcutta. In his formative years, he was surrounded by art workers, including his filmmaker father and his actor mother. However, his primary interest drifted toward Science and Technology. After studying Physics and then Computer Science, he went to Chicago to do his doctoral work and obtained a Ph.D. in Artificial Intelligence. He also studied drawing and painting at the Art Institute of Chicago. In his professional life, he worked as a scientist, a teacher, a textbook author, and as the Chief Information Officer of two iconic publishers, Encyclopædia Britannica and Merriam-Webster. During the last decade, Kunal has also turned his passionate hobby into a second profession. He creates visual art from his studio in Chicago. He combines his skills in painting and engineering to create art that includes elements of painting, sculpture, and kinetic objects using active electronics. He exhibits regularly around the United States. Kunal recently authored his first non-technical book about his experience of growing up in the company of his parents. Kunal lives in Chicago with his wife Nisha, but remains a frequent visitor to Calcutta.",
         image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288605/kunal_sen_zbkhvu.jpg",
       },
@@ -146,6 +148,7 @@ const panelGroups: { panel: string; timeSlot: string; icon: React.ElementType; s
         name: "Rakesh Malhotra",
         panel: "Authors Panel",
         timeSlot: "3:00 PM – 3:30 PM",
+        objectPosition: "top",
         bio: "Rakesh is a Chicago-based entrepreneur, author, poet, and cultural thought leader whose work bridges the worlds of business, literature, and civilizational values. As President & CEO of Global Natural Resources, Inc., he brings decades of leadership experience in strategy, enterprise growth, and cross-functional collaboration. He is the Founder & President of the Global Indian Diaspora Foundation (NFP), a platform committed to strengthening cultural connections and fostering global trade partnerships across the Indian diaspora. Through this initiative and his broader community engagements, Rakesh has consistently championed dialogue that unites heritage with modernity. A passionate advocate for language and identity, Rakesh serves as Convenor of Hindi Samnvay Samiti, Chicago, working in collaboration with the Consulate of India to promote native languages and preserve the cultural essence of an ancient civilization. His belief is clear and compelling: language is not merely a medium of communication, but the soul of cultural continuity. Rakesh is also the Founder of \"Five Global Values,\" a transformative initiative centered on respect, self-confidence, trust, happiness, and wisdom; principles he believes are essential for nurturing conscious individuals and future leaders. An acclaimed author, his book \"The Adventures of the Tornado Kid: Whirling Back Towards Timeless Values\" explores human behavior and the enduring impact of foundational values through a compelling narrative lens. His writings spanning art, culture, leadership, and society reflect a deep philosophical inquiry into the human experience and the role of values in shaping a harmonious world. He actively contributes to several organizations, including serving on the Advisory Board of SEWA International Chicago, as a Member of the Architecture Review Board in the Village of Lincolnshire, and in leadership roles with the Federation of Indian Associations (Chicago) and PIOCCI. Recognized for his commitment to cultural preservation and community empowerment, Rakesh Malhotra represents a rare confluence of enterprise, artistic sensibility, and values-driven leadership. His voice continues to inspire conversations that connect creativity with consciousness, and tradition with transformation.",
         image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779288605/rakesh_malhotra_bqdz4m.jpg",
       },
@@ -537,6 +540,7 @@ function SpeakerModal({
                   alt={speaker.name}
                   fill
                   className="object-cover"
+                  style={{ objectPosition: speaker.objectPosition || "center" }}
                   sizes="(max-width: 480px) 160px, (max-width: 768px) 200px, 280px"
                 />
               </div>
@@ -781,7 +785,7 @@ export default function SpeakersPage() {
                             alt={speaker.name}
                             fill
                             className="object-cover"
-                            style={{ transition: "transform 0.5s ease" }}
+                            style={{ transition: "transform 0.5s ease", objectPosition: speaker.objectPosition || "center" }}
                             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                           />
                         </div>
