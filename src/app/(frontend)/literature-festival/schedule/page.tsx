@@ -134,13 +134,26 @@ const afternoonSessions: Session[] = [
     tagColor: "#cd5c5c",
   },
   {
-    time: "3:00 – 3:45 PM",
+    time: "3:00 – 3:30 PM",
     title: "Authors Panel",
     subtitle: "Fiction, Truth and Everything in Between",
     description:
       "In a literary and tech-enabled landscape shaped by memory, history, innovation and imagination, today's writers are constantly negotiating the space between what is lived, what is remembered and what is invented.",
     popupText:
-      "Fiction, Truth and Everything in Between — and does that boundary even matter anymore? In a literary and tech enabled landscape which is shaped by memory, history, innovation and imagination, today's writers are constantly negotiating space between what is lived, what is remembered and what is invented. This panel will bring authors to explore how contemporary Indian literature blurs, bends and sometimes deliberately erases the lines between facts and fiction.\n\nWhat responsibilities do writers carry when drawing real lives and events? How do readers interpret \"truth\"?",
+      "Fiction, Truth and Everything in Between, and does that boundary even matter anymore? In a literary and tech enabled landscape which is shaped by memory, history, innovation and imagination, today's writers are constantly negotiating space between what is lived, what is remembered and what is invented. This panel will bring authors to explore how contemporary Indian literature blurs, bends and sometimes deliberately erases the lines between facts and fiction.\n\nWhat responsibilities do writers carry when drawing real lives and events? How do readers interpret \"truth\" in an age of unreliable narrators and contested histories? And can fiction sometimes reveal deeper truths than the facts itself?\n\nThis panel will offer a nuanced look at the power of storytelling and shaping how we understand both ourselves and the world around us.",
+    venue: "The Gold Room",
+    confirmed: true,
+    tag: "Panel",
+    tagColor: "#cd5c5c",
+  },
+  {
+    time: "3:00 – 4:00 PM",
+    title: "Authors Panel",
+    subtitle: "In the Age of AI - Who is the genuine Writer",
+    description:
+      "A question the literary world is circling without yet answering seriously. AI produces text that is structurally coherent, tonally plausible, and often indistinguishable from competent prose. So what remains? What does genuine authorship require that a language model cannot replicate?",
+    popupText:
+      "In the Age of AI - Who is the genuine Writer. A question the literary world is circling without yet answering seriously. AI produces text that is structurally coherent, tonally plausible, and often indistinguishable from competent prose. So what remains? What does genuine authorship require that a language model cannot replicate? This is a craft question, not a technology debate. A poet, a Hollywood screenwriter, and an international producer will have three different answers. That is the conversation.",
     venue: "The Gold Room",
     confirmed: true,
     tag: "Panel",
