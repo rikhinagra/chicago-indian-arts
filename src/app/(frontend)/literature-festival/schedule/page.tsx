@@ -50,6 +50,15 @@ const morningsessions: Session[] = [
     tagColor: "#cd5c5c",
   },
   {
+    time: "11:00 AM – 2:00 PM",
+    title: "Between Sips: An immersive coffee and storytelling experience",
+    description:
+      "The best conversations happen over a cup that never quite empties. Between Sips a collection of stories by Alamkrutha Gamini.",
+    confirmed: true,
+    tag: "Experience",
+    tagColor: "#cd5c5c",
+  },
+  {
     time: "11:00 AM – 11:45 AM",
     title: "Authors Panel",
     subtitle: "Page to Perception: How Literature Shapes the India We Imagine.",
@@ -64,7 +73,7 @@ const morningsessions: Session[] = [
 
 const afternoonSessions: Session[] = [
   {
-    time: "12:00 – 12:45 PM",
+    time: "12:00 – 1:00 PM",
     title: "Reading Salon & Workshop: Rooted & Reaching",
     subtitle: "Motherhood, Daughterhood & the Self We Carry.",
     description:
@@ -85,7 +94,7 @@ const afternoonSessions: Session[] = [
     tagColor: "#cd5c5c",
   },
   {
-    time: "12:45 – 1:00 PM",
+    time: "1:00 – 1:20 PM",
     title: "Book Launch",
     description:
       "An exclusive book launch celebration featuring a reading, author conversation, and book signing.",
@@ -96,27 +105,25 @@ const afternoonSessions: Session[] = [
     tagColor: "#cd5c5c",
   },
   {
-    time: "1:00 – 1:45 PM",
-    title: "From Mythology to Combat: Storytelling in Games",
-    subtitle: "Algorithms & Archetypes: When AI Meets the Storyteller's Mind",
+    time: "1:30 – 1:45 PM",
+    title: "Literature and Sentiments",
     description:
-      "Indika: Culture, Combat, Creativity — Horror, Comics & Culture. An immersive celebration of storytelling across worlds: from the timeless epics of India to the explosive universe of modern gaming, horror, and comics. Featuring icons from the Mortal Kombat universe, live panels, gaming showcases, and comic creators.",
+      "Ahmed Athar (Rik) is a Pakistani filmmaker, playwright, and storyteller based in Chicago.",
     popupText:
-      "Algorithms & Archetypes: When AI Meets the Storyteller's Mind — Indika: Culture, Combat, Creativity — Horror, Comics & Culture. An immersive celebration of storytelling across worlds: from the timeless epics of India to the explosive universe of modern gaming, horror, and comics. Featuring icons from the Mortal Kombat universe, live panels, gaming showcases, and comic creators.",
-    venue: "The Gold Room",
-    speakers: [
-      "Vishal Rajput",
-      "Daniel Pesina",
-      "Ho-Sung Pak",
-      "Richard Divizio",
-      "Carlos Pesina",
-      "Tim Kirchkoff",
-      "Ani Chaoudhary",
-      "Romit",
-      "Shilajeet Niyogi",
-    ],
+      "Ahmed Athar (Rik) is a Pakistani filmmaker, playwright, and storyteller based in Chicago. His play \"Just Ten Minutes\" won 2nd place at the Mandi Theatre Contest (2025), and he is currently developing \"Bulleyah,\" a feature film recovering the erased queer identity of 18th-century Sufi poet Bulleh Shah. His short films, including \"Mann Ki Hastam\" and \"Rekhta,\" have screened at 15+ international festivals. He is also the author of the novel \"The Blood Moon\" (Daastan Publication House, 2018). His work excavates suppressed South Asian queer and emotional histories through surrealism, bilingual storytelling, and decolonial aesthetics. He holds an MBA from Concordia University Chicago and a Film Diploma from Indus Valley School of Art and Architecture.",
     confirmed: true,
-    tag: "Panel",
+    tag: "Literature",
+    tagColor: "#cd5c5c",
+  },
+  {
+    time: "1:45 – 2:00 PM",
+    title: "Literature and Sentiments",
+    description:
+      "Nishant Pandey rendition of poems.",
+    popupText:
+      "Nishant Pandey rendition of poems. Nishant Pandey is a Hindi poet, songwriter, actor, and playwright who finds stories in the intersections of life and emotion. His book Khudrang marked his entry into the literary world, and he has since written 50+ songs with diverse artists and musicians. Alongside his creative journey, he works as a Technology Director at a major bank, navigating both logic and lyric with equal passion.",
+    confirmed: true,
+    tag: "Literature",
     tagColor: "#cd5c5c",
   },
   {
@@ -160,7 +167,7 @@ const afternoonSessions: Session[] = [
     tagColor: "#cd5c5c",
   },
   {
-    time: "4:00 – 4:15 PM",
+    time: "4:00 – 4:20 PM",
     title: "Stories from Soil: The Living Legacy of Kannada Literature",
     description:
       "Rooted in the landscapes, languages, and lived experiences of Karnataka, this session delves into the richness of Kannada storytelling — from ancient vachanas and classical poetry to modern fiction and contemporary voices — revealing how 'the soil' itself becomes a powerful metaphor for identity, resilience, and belonging.",
