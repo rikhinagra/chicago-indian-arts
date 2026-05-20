@@ -17,11 +17,62 @@ type Speaker = {
   timeSlot: string;
   bio: string;
   image: string;
+  website?: string;
 };
 
 // ─── DATA ──────────────────────────────────────────────────────────────────────
 
 const panelGroups: { panel: string; timeSlot: string; icon: React.ElementType; speakers: Speaker[] }[] = [
+  {
+    panel: "Authors Panel",
+    timeSlot: "11:00 AM – 11:45 AM",
+    icon: BookOpen,
+    speakers: [
+      {
+        name: "Mrinal Gokhale",
+        panel: "Authors Panel",
+        timeSlot: "11:00 AM – 11:45 AM",
+        bio: "Mrinal Gokhale is a writer, author, and speaker based in Wisconsin. She has published two anthologies that each share true stories covering mental health, neurodiversity, disability, intergenerational trauma, and model minority myth in the South Asian diaspora.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/q_auto/f_auto/v1776268548/mrinal_gokhale_q8iclb.webp",
+      },
+      {
+        name: "Prasanta Verma",
+        panel: "Authors Panel",
+        timeSlot: "11:00 AM – 11:45 AM",
+        bio: "Prasanta Verma is an author, speaker, and professional working in community economic development and food systems. Her debut book, Beyond Ethnic Loneliness, was a 2024 Foreword INDIES Book of the Year finalist. A graduate of the Kenyon Review Writers Workshop and a Write On, Door County writing residency, she holds a Master of Public Health and an MBA and is currently pursuing a doctorate in public health. Prasanta frequently writes and speaks on belonging, connection, and community well-being, and publishes essays through her Substack newsletter. When not working, she enjoys reading, walking, visiting Farmers Markets, and meeting friends for chai.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/q_auto/f_auto/v1776268550/prasanta_verma_gqphto.webp",
+      },
+      {
+        name: "Mansi Shah",
+        panel: "Authors Panel",
+        timeSlot: "11:00 AM – 11:45 AM",
+        bio: "Mansi Shah is the author of the upmarket novels Saving Face, A Good Indian Girl (a Lilly's Library pick), The Direction of the Wind, and The Taste of Ginger, which explore identity, family, and belonging across the Indian diaspora. Her bestselling books have reached more than 500,000 readers, enabling her to leave her longtime career as an entertainment attorney to travel and write full-time. She is also the founder of Jet Set Write, an elite writing retreat company that helps aspiring authors move their manuscripts forward in stunning global destinations. Born in Toronto and raised in the Midwest, she now lives in Los Angeles.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779284032/mansi_shah_nxtl2r.webp",
+      },
+      {
+        name: "Sonali Dev",
+        panel: "Authors Panel",
+        timeSlot: "11:00 AM – 11:45 AM",
+        bio: "USA Today bestselling author Sonali Dev writes hilarious and heartwarming stories about families without boundaries. Her novels have been named Best Books of the Year by Library Journal, NPR, the Washington Post, and Kirkus. She has won the American Library Association's award for best in genre, the RT Reviewer Choice Award, multiple RT Seals of Excellence, has been a RITA® finalist, and has been listed for the Dublin Literary Award. Shelf Awareness calls her \"Not only one of the best but one of the bravest romance novelists working today.\" She lives in Chicagoland with her husband, two visiting adult children, and the world's most perfect dog.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779284032/sonali_dev_gtrea0.webp",
+      },
+      {
+        name: "Nina Sudhakar",
+        panel: "Authors Panel",
+        timeSlot: "11:00 AM – 11:45 AM",
+        bio: "Nina Sudhakar is a writer, poet, and lawyer based in Chicago. She is the author of Where to Carry the Sound (winner of the 2024 Katherine Anne Porter Prize in Short Fiction and a 2024 Foreword INDIES Award) and two poetry chapbooks, Matriarchetypes and Embodiments. She serves as Dispatches Editor & Book Reviews Editor for The Common and as Vice President of the Board of the Chicago Poetry Center.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779284032/nina_sudhakar_obwfwo.webp",
+        website: "https://www.ninasudhakar.com",
+      },
+      {
+        name: "Susan Patel",
+        panel: "Authors Panel",
+        timeSlot: "11:00 AM – 11:45 AM",
+        bio: "Susan leads the SAACIL organization in its mission to support and advance the interests of South Asian American businesses across the state. SAACCIL is dedicated to fostering economic growth, providing networking opportunities, and advocating for policies that benefit the South Asian business community. Under Susan's leadership, SAACCIL has become a pivotal resource for entrepreneurs and professionals, helping to create a vibrant and thriving business environment. Beyond her work with SAACCIL, Susan Patel continues to drive forward-thinking initiatives, including her involvement with Suuprah, a company at the intersection of wellness, events, and professional services. Through these roles, Susan remains committed to enhancing the well-being of individuals and communities, empowering them to thrive in every aspect of their journey. Her journey is a testament to the power of determination, leadership, and a relentless pursuit of excellence.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779284032/susan_patel_ameygo.webp",
+      },
+    ],
+  },
   {
     panel: "Rooted & Reaching: Motherhood, Daughterhood & the Self We Carry",
     timeSlot: "12:00 PM – 12:45 PM",
@@ -69,29 +120,6 @@ const panelGroups: { panel: string; timeSlot: string; icon: React.ElementType; s
         timeSlot: "12:00 PM – 12:45 PM",
         bio: "Sharan Bilan is a South Asian writer, storyteller, and community health leader based in California. Her work explores identity, grief, resilience, and the generational bonds that shape who we become. She is a contributor to the anthology 'The Desi Divorcee' and co-host of the podcast 'Brown & Unbothered,' where she shares stories about culture, healing, and personal growth.",
         image: "https://res.cloudinary.com/dist59h0i/image/upload/q_auto/f_auto/v1776268549/sharanjit_bilan_dfsc42.webp",
-      },
-    ],
-  },
-  {
-    panel: "Authors Panel",
-    timeSlot: "3:00 PM – 4:00 PM",
-    icon: BookOpen,
-    speakers: [
-      {
-        name: "Mrinal Gokhale",
-        panel: "Authors Panel",
-        timeSlot: "3:00 PM – 4:00 PM",
-        bio: "Mrinal Gokhale is a writer, author, and speaker based in Wisconsin. She has published two anthologies that each share true stories covering mental health, neurodiversity, disability, intergenerational trauma, and model minority myth in the South Asian diaspora.",
-        image:
-          "https://res.cloudinary.com/dist59h0i/image/upload/q_auto/f_auto/v1776268548/mrinal_gokhale_q8iclb.webp",
-      },
-      {
-        name: "Prasanta Verma",
-        panel: "Authors Panel",
-        timeSlot: "3:00 PM – 4:00 PM",
-        bio: "Prasanta Verma is an author, speaker, and professional working in community economic development and food systems. Her debut book, Beyond Ethnic Loneliness, was a 2024 Foreword INDIES Book of the Year finalist. A graduate of the Kenyon Review Writers Workshop and a Write On, Door County writing residency, she holds a Master of Public Health and an MBA and is currently pursuing a doctorate in public health. Prasanta frequently writes and speaks on belonging, connection, and community well-being, and publishes essays through her Substack newsletter. When not working, she enjoys reading, walking, visiting Farmers Markets, and meeting friends for chai.",
-        image:
-          "https://res.cloudinary.com/dist59h0i/image/upload/q_auto/f_auto/v1776268550/prasanta_verma_gqphto.webp",
       },
     ],
   },
@@ -422,6 +450,19 @@ function SpeakerModal({
                 >
                   {speaker.bio}
                 </p>
+                {speaker.website && (
+                  <p style={{ marginTop: "0.75rem", fontSize: "0.92rem" }}>
+                    <span style={{ color: "rgba(255,255,255,0.85)" }}>For more, please see </span>
+                    <a
+                      href={speaker.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#d4af37", textDecoration: "underline" }}
+                    >
+                      {speaker.website.replace("https://", "")}
+                    </a>
+                  </p>
+                )}
               </div>
 
               {/* Image on right */}
