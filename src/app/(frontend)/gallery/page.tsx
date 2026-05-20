@@ -27,7 +27,7 @@ const events = [
   {
     title: "Curtain Raiser: A Fashion Innovation Evening First Cut",
     date: "May 9, 2026",
-    link: "https://drive.google.com/drive/u/0/folders/1DJFHfs7rcbZZj1RKSgZHXELKykoQ2Yi7",
+    link: "https://photos.app.goo.gl/JEWTD2G6KC3oZzQp6",
     image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779087073/cica_walk_d27nyq.webp",
     description:
       "Chicago Indian Arts presents The Curtain Raiser: A Fashion Innovation Evening First Cut. ILA's Chicago. Films. Fashion. Innovation.",
