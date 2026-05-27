@@ -231,7 +231,7 @@ const eveningSessions: Session[] = [
     tag: "Evening Gala",
     tagColor: "#cd5c5c",
   },
-  {
+  /* {
     time: "7:30 – 8:00 PM",
     title: "Spice, Memory & the Table: A Conversation About Our Food",
     subtitle: "A literary feast: food, culture & storytelling",
@@ -255,7 +255,7 @@ const eveningSessions: Session[] = [
     confirmed: true,
     tag: "Food Panel",
     tagColor: "#cd5c5c",
-  },
+  }, */
   {
     time: "8:00 – 8:15 PM",
     title: "Key Guest Speeches",
