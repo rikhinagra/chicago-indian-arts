@@ -9,12 +9,12 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const events = [
   {
-    title: "Zindagi Milegi Na Dobara Film Screening",
-    date: "Feb 28, 2026",
-    link: "https://photos.app.goo.gl/UBJKv9mH5DJN5GAz7",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1773384691/Zindagi_Na_Milegi_Dobara_pxhrwz.webp",
+    title: "Curtain Raiser: A Fashion Innovation Evening First Cut",
+    date: "May 9, 2026",
+    link: "https://photos.app.goo.gl/JEWTD2G6KC3oZzQp6",
+    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779087073/cica_walk_d27nyq.webp",
     description:
-      "A special community screening of the beloved Bollywood classic, bringing together film lovers for an unforgettable cinematic evening.",
+      "Chicago Indian Arts presents The Curtain Raiser: A Fashion Innovation Evening First Cut. ILA's Chicago. Films. Fashion. Innovation.",
   },
   {
     title: "International Women's Day",
@@ -25,12 +25,12 @@ const events = [
       "Celebrating the strength, creativity, and achievements of women through art, culture, and community.",
   },
   {
-    title: "Curtain Raiser: A Fashion Innovation Evening First Cut",
-    date: "May 9, 2026",
-    link: "https://photos.app.goo.gl/JEWTD2G6KC3oZzQp6",
-    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779087073/cica_walk_d27nyq.webp",
+    title: "Zindagi Milegi Na Dobara Film Screening",
+    date: "Feb 28, 2026",
+    link: "https://photos.app.goo.gl/UBJKv9mH5DJN5GAz7",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1773384691/Zindagi_Na_Milegi_Dobara_pxhrwz.webp",
     description:
-      "Chicago Indian Arts presents The Curtain Raiser: A Fashion Innovation Evening First Cut. ILA's Chicago. Films. Fashion. Innovation.",
+      "A special community screening of the beloved Bollywood classic, bringing together film lovers for an unforgettable cinematic evening.",
   },
 ];
 
