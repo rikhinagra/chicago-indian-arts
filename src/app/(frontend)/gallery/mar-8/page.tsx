@@ -33,9 +33,10 @@ export default function Mar8GalleryPage() {
       {/* Hero Section */}
       <section
         data-section="mar8-hero"
-        className="relative overflow-hidden"
+        className="relative overflow-hidden px-6 sm:px-12"
         style={{
-          padding: "10rem 3rem 5rem",
+          paddingTop: "10rem",
+          paddingBottom: "5rem",
           background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
         }}
       >
@@ -95,7 +96,7 @@ export default function Mar8GalleryPage() {
             <h1
               className="font-heading font-light"
               style={{
-                fontSize: "3rem",
+                fontSize: "clamp(1.8rem, 5vw, 3rem)",
                 lineHeight: 1.15,
                 color: "#ffffff",
                 marginBottom: "1.2rem",
@@ -123,13 +124,13 @@ export default function Mar8GalleryPage() {
       </section>
 
       {/* Albums Section */}
-      <section data-section="mar8-albums" style={{ padding: "5rem 3rem", backgroundColor: "#faf8f3" }}>
+      <section data-section="mar8-albums" className="px-6 sm:px-12" style={{ paddingTop: "5rem", paddingBottom: "5rem", backgroundColor: "#faf8f3" }}>
         <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
           <FadeInSection className="text-center" style={{ marginBottom: "3.5rem" }}>
             <SectionTag>Photo Albums</SectionTag>
             <h2
               className="font-heading font-semibold"
-              style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
+              style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)", lineHeight: 1.3, color: "#1a1a1a" }}
             >
               Browse Albums
             </h2>
