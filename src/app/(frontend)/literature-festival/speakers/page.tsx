@@ -132,6 +132,27 @@ const panelGroups: { panel: string; timeSlot: string; icon: React.ElementType; s
     ],
   },
   {
+    panel: "Literature and Sentiments",
+    timeSlot: "1:30 PM – 2:00 PM",
+    icon: BookOpen,
+    speakers: [
+      {
+        name: "Ahmed Athar",
+        panel: "Literature and Sentiments",
+        timeSlot: "1:30 PM – 1:45 PM",
+        bio: "Ahmed Athar (Rik) is a Pakistani filmmaker, playwright, and storyteller based in Chicago. His play \"Just Ten Minutes\" won 2nd place at the Mandi Theatre Contest (2025), and he is currently developing \"Bulleyah,\" a feature film recovering the erased queer identity of 18th-century Sufi poet Bulleh Shah. His short films, including \"Mann Ki Hastam\" and \"Rekhta,\" have screened at 15+ international festivals. He is also the author of the novel \"The Blood Moon\" (Daastan Publication House, 2018). His work excavates suppressed South Asian queer and emotional histories through surrealism, bilingual storytelling, and decolonial aesthetics. He holds an MBA from Concordia University Chicago and a Film Diploma from Indus Valley School of Art and Architecture.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779881924/ahmed_athar_euncsk.webp",
+      },
+      {
+        name: "Nishant Pandey",
+        panel: "Literature and Sentiments",
+        timeSlot: "1:45 PM – 2:00 PM",
+        bio: "Nishant Pandey rendition of poems. Nishant Pandey is a Hindi poet, songwriter, actor, and playwright who finds stories in the intersections of life and emotion. His book Khudrang marked his entry into the literary world, and he has since written 50+ songs with diverse artists and musicians. Alongside his creative journey, he works as a Technology Director at a major bank, navigating both logic and lyric with equal passion.",
+        image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779881924/nishant_pandey_jxldmh.webp",
+      },
+    ],
+  },
+  {
     panel: "Authors Panel",
     timeSlot: "3:00 PM – 3:30 PM",
     icon: BookOpen,
@@ -291,7 +312,7 @@ const panelGroups: { panel: string; timeSlot: string; icon: React.ElementType; s
         name: "Geshu Sugandh",
         panel: "Spoken Word: The Word Stands Up Unfiltered Spoken Word Showcase",
         timeSlot: "4:30 PM – 6:00 PM",
-        bio: "Geshu Sugandh is a mom, artist, writer, and children's book author in English and Hindi. Born and raised in Bihar, India, she is a Bihari raising her family in Brooklyn, where she weaves her two tongues and blends her worlds. She has explored nearly fifty countries and lived and worked in the U.K., Norway, and Singapore. After a two-decade corporate career, she began a creative journey with BROOKLYNBIHARN, a storytelling-led indie bilingual publisher rooted in curiosity, choice, and connection. Her work, spanning books, zines, songs, essays, poetry and art, creates space for all ages to explore words and worlds across tongues, places, and time. Her work has reached audiences through the Brooklyn Museum's Children's Book Fair, the Children's Museum of Manhattan, Bowery Poetry, the NYC Poetry Festival, and more.",
+        bio: "Geshu Sugandh is a mom, artist, writer, and children's book author in English and Hindi. Born and raised in Bihar, India, she is a Biharn raising her family in Brooklyn, where she weaves her two tongues and blends her worlds. She has explored nearly fifty countries and lived and worked in the U.K., Norway, and Singapore. After a two-decade corporate career, she began a creative journey with BROOKLYNBIHARN, a storytelling-led indie bilingual publisher rooted in curiosity, choice, and connection. Her work, spanning books, zines, songs, essays, poetry and art, creates space for all ages to explore words and worlds across tongues, places, and time. Her work has reached audiences through the Brooklyn Museum's Children's Book Fair, the Children's Museum of Manhattan, Bowery Poetry, the NYC Poetry Festival, and more.",
         image: "https://res.cloudinary.com/dist59h0i/image/upload/v1779420603/geshu_sugandh_fqjer4.webp",
       },
       {

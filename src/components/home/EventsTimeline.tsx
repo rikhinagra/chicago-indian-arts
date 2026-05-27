@@ -21,6 +21,7 @@ const events = [
     venueUrl: "https://www.google.com/maps/search/Congress+Plaza+Hotel+Chicago",
     program: "Chicago Indian Literature Festival",
     pageUrl: "/literature-festival",
+    scheduleUrl: "/literature-festival/schedule",
     externalRegisterUrl: "https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival",
     registerLabel: "Get your Tickets",
   },
@@ -257,6 +258,24 @@ export default function EventsTimeline() {
                     >
                       View Event Page <ArrowUpRight size={14} />
                     </Link>
+                    {event.scheduleUrl && (
+                      <Link
+                        href={event.scheduleUrl}
+                        className="inline-flex items-center font-semibold"
+                        style={{
+                          gap: "0.3rem",
+                          color: "#cd5c5c",
+                          fontSize: "0.8rem",
+                          letterSpacing: "0.5px",
+                          textDecoration: "none",
+                          transition: "color 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = "#1a1a1a")}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = "#cd5c5c")}
+                      >
+                        Schedule <ArrowUpRight size={14} />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

@@ -315,15 +315,7 @@ export default function HeroSection() {
           </div>
 
           {/* CTA Buttons */}
-          <div data-section="hero-buttons" className="inline-flex flex-col items-center" style={{ gap: "1rem" }}>
-            <div className="flex flex-row gap-2 sm:gap-4">
-              <Button href="#events" variant="primary">
-                View Events
-              </Button>
-              <Button href="/register" variant="outline">
-                Register Now
-              </Button>
-            </div>
+          <div data-section="hero-buttons" className="flex flex-col sm:flex-row items-center" style={{ gap: "1rem" }}>
             <Link
               href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
               target="_blank"
@@ -355,6 +347,9 @@ export default function HeroSection() {
             >
               Get your Tickets
             </Link>
+            <Button href="#events" variant="primary">
+              View Events
+            </Button>
           </div>
         </motion.div>
       </div>
