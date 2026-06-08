@@ -8,12 +8,6 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const albums = [
   {
-    name: "Event Album",
-    description: "The official curated event album from Chicago Indian Literature Festival 2026.",
-    url: "https://photos.app.goo.gl/hMk37sbjZ37cTPw7A",
-    credit: "CICA",
-  },
-  {
     name: "Memories in Motion",
     description: "Beautifully captured moments from LitFest 2026 by Memories in Motion.",
     url: "https://photos.app.goo.gl/JZUfWKWJ4ZSGkQ596",
