@@ -9,6 +9,15 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const events = [
   {
+    title: "Chicago Indian Literature Festival 2026",
+    date: "May 30, 2026",
+    eventAlbumUrl: "https://photos.app.goo.gl/hMk37sbjZ37cTPw7A",
+    photographersPageUrl: "/gallery/may-30",
+    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1780906812/Chicago-Indian-Literature-Festival-30May_g8ansz.webp",
+    description:
+      "We brought together voices, stories, and a community hungry to be seen and Chicago Indian Literature Festival 2026 delivered. From the first panel to the last word, this was South Asian Chicago at its finest.",
+  },
+  {
     title: "Curtain Raiser: A Fashion Innovation Evening First Cut",
     date: "May 9, 2026",
     eventAlbumUrl: "https://photos.app.goo.gl/LroSCjCMHuAjUVS16",
