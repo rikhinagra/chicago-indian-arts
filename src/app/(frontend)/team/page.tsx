@@ -106,6 +106,7 @@ const advisoryBoardMembers: Member[] = [
 ];
 
 const teamMembers: Member[] = [
+  /* HIDDEN — uncomment when needed
   {
     name: "Divya Verma",
     role: "Director of Programs",
@@ -118,6 +119,7 @@ const teamMembers: Member[] = [
     image:
       "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118852/divya-verma-director-of-programs_oatiqe.webp",
   },
+  */
   {
     name: "Rekha Tobaccowala",
     role: "Director of Strategy & Communications",
