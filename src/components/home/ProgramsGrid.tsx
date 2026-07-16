@@ -9,21 +9,6 @@ import FadeInSection from "@/components/ui/FadeInSection";
 
 const programs = [
   {
-    name: "Chicago Indian Literature Festival",
-    type: "Literature Festival",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-literature-festival-authors_ldfpao.webp",
-    alt: "Chicago Indian Literature Festival - Authors and poets celebrating South Asian storytelling traditions",
-    description:
-      "A landmark event showcasing India's rich storytelling traditions with renowned authors, poets, and thought leaders from around the world.",
-    highlights: [
-      "Panel discussions with bestselling authors",
-      "Poetry readings and performances",
-      "Book launches and signings",
-      "Literary workshops",
-    ],
-    href: "/literature-festival",
-  },
-  {
     name: "Chicago Indian Fashion Week",
     type: "Fashion Innovation",
     image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-fashion-week-ramp-walk_msegp2.webp",
@@ -37,6 +22,21 @@ const programs = [
       "Fashion networking events",
     ],
     href: "/fashion-week",
+  },
+  {
+    name: "Chicago Indian Literature Festival",
+    type: "Literature Festival",
+    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-literature-festival-authors_ldfpao.webp",
+    alt: "Chicago Indian Literature Festival - Authors and poets celebrating South Asian storytelling traditions",
+    description:
+      "A landmark event showcasing India's rich storytelling traditions with renowned authors, poets, and thought leaders from around the world.",
+    highlights: [
+      "Panel discussions with bestselling authors",
+      "Poetry readings and performances",
+      "Book launches and signings",
+      "Literary workshops",
+    ],
+    href: "/literature-festival",
   },
   {
     name: "Wildlife Photography & Visual Arts Festival",
@@ -75,12 +75,16 @@ function ProgramCard({
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, delay: index * 0.15, ease: [0.25, 0.4, 0.25, 1] }}
+      style={{ height: "100%" }}
     >
       <div
         className="group overflow-hidden cursor-pointer"
         style={{
           backgroundColor: "#ffffff",
           transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
         }}
         onMouseEnter={(e) => {
           onHoverStart();
@@ -101,7 +105,7 @@ function ProgramCard({
             width={980}
             height={600}
             className="w-full transition-transform duration-500 group-hover:scale-[1.05]"
-            style={{ display: "block", height: "auto" }}
+            style={{ display: "block", height: "260px", objectFit: "cover", objectPosition: "center" }}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div
@@ -137,7 +141,7 @@ function ProgramCard({
         </Link>
 
         {/* Content */}
-        <div style={{ padding: "1.5rem" }}>
+        <div style={{ padding: "1.5rem", display: "flex", flexDirection: "column", flex: 1 }}>
           <p style={{ color: "#666666", lineHeight: 1.7, marginBottom: "1.2rem", fontSize: "0.9rem" }}>
             {program.description}
           </p>
@@ -156,7 +160,7 @@ function ProgramCard({
           <Link
             href={program.href}
             className="inline-flex items-center font-semibold transition-all duration-300 group-hover:gap-4"
-            style={{ color: "#cd5c5c", fontSize: "0.85rem", letterSpacing: "0.5px", gap: "0.5rem" }}
+            style={{ color: "#cd5c5c", fontSize: "0.85rem", letterSpacing: "0.5px", gap: "0.5rem", marginTop: "auto" }}
           >
             Discover Program →
           </Link>
