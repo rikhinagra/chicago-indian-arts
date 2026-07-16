@@ -283,8 +283,8 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div data-section="hero-buttons" className="flex flex-col sm:flex-row items-center" style={{ gap: "1rem" }}>
-            {/* <Link
-              href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfp4MUh3oeeytstxd_QdxojNBAFMneE5bmO41fudn39ijaJdg/viewform"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -312,9 +312,9 @@ export default function HeroSection() {
                 e.currentTarget.style.color = "#ffffff";
               }}
             >
-              Get your Tickets
-            </Link> */}
-            <Button href="#events" variant="terracotta">
+              Model &amp; Designer Intake
+            </Link>
+            <Button href="#events" variant="primary">
               View Events
             </Button>
           </div>
