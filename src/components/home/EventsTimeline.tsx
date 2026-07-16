@@ -21,7 +21,7 @@ const events = [
     venueUrl: "https://www.google.com/maps/search/Congress+Plaza+Hotel+Chicago",
     program: "Chicago Indian Literature Festival",
     pageUrl: "/literature-festival",
-    scheduleUrl: "/literature-festival/schedule",
+    scheduleUrl: "", // Hidden — restore to "/literature-festival/schedule" when needed
     externalRegisterUrl: "https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival",
     registerLabel: "Get your Tickets",
   },

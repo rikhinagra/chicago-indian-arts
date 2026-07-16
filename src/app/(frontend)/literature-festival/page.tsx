@@ -169,6 +169,7 @@ export default function LiteratureFestivalPage() {
                 >
                   Get Tickets
                 </Link>
+                {/* Schedule button hidden — uncomment to restore
                 <Link
                   href="/literature-festival/schedule"
                   className="inline-block font-semibold uppercase"
@@ -193,6 +194,7 @@ export default function LiteratureFestivalPage() {
                 >
                   Schedule
                 </Link>
+                */}
               </div>
 
               {/* Row 2: Vendor & Partner — yellow, no hover effect */}
