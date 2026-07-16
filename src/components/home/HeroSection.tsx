@@ -259,64 +259,26 @@ export default function HeroSection() {
             data-section="hero-label" className="uppercase"
             style={{ color: "#ffffff", fontSize: "1rem", fontWeight: 700, letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)" }}
           >
-            Chicago Indian Literature Festival &middot; May 30
+            Chicago Indian Fashion Week &middot; Coming Soon
           </div>
 
           {/* Main Heading */}
           <h1 data-section="hero-title" className="font-heading font-light" style={{ fontSize: "3.5rem", lineHeight: 1.15, marginBottom: "1.2rem", maxWidth: "800px", textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)" }}>
-            Indian Voices,{" "}
-            <strong className="font-bold">New Ground.</strong>
+            Threads of India,{" "}
+            <strong className="font-bold">Spirit of Chicago.</strong>
           </h1>
 
           {/* Subtitle */}
           <p data-section="hero-subtitle"
             style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 500, lineHeight: 1.7, maxWidth: "650px", marginBottom: "1.8rem", textShadow: "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.9)" }}
           >
-            Experience the vibrant tapestry of Indian cultural heritage
-            through our three signature programs: literature, fashion, and photography.
+            Celebrating fashion as emotion, grace, and expression through textures and craftsmanship.
+            For Chicago&apos;s Indian community and the designers who dress it, this is the first American runway where Indian craft walks as current fashion, in front of an audience with the means to wear it.
           </p>
-
-          {/* Countdown */}
-          <div data-section="countdown-wrapper" style={{ marginBottom: "2rem" }}>
-            <div
-              data-section="countdown-label"
-              className="uppercase font-medium"
-              style={{ color: "rgba(255,255,255,0.95)", fontSize: "0.8rem", letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 10px rgba(0,0,0,0.8)" }}
-            >
-              Chicago Indian Literature Festival Begins In
-            </div>
-            <div
-              data-section="countdown" className="inline-flex flex-col sm:flex-row rounded-xl"
-              style={{
-                background: "rgba(0,0,0,0.15)",
-                border: "1px solid rgba(255,255,255,0.15)",
-                backdropFilter: "blur(20px)",
-                WebkitBackdropFilter: "blur(20px)",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
-                padding: "0.5rem",
-              }}
-            >
-              <CountdownItem value={countdown.days} label="Days" />
-              <div
-                data-section="countdown-separator" className="hidden sm:flex items-center font-heading"
-                style={{ color: "rgba(212,175,55,0.4)", fontSize: "2rem" }}
-              >
-                :
-              </div>
-              <CountdownItem value={countdown.hours} label="Hours" />
-              <div
-                data-section="countdown-separator" className="hidden sm:flex items-center font-heading"
-                style={{ color: "rgba(212,175,55,0.4)", fontSize: "2rem" }}
-              >
-                :
-              </div>
-              <CountdownItem value={countdown.minutes} label="Minutes" />
-            </div>
-          </div>
 
           {/* CTA Buttons */}
           <div data-section="hero-buttons" className="flex flex-col sm:flex-row items-center" style={{ gap: "1rem" }}>
-            <Link
+            {/* <Link
               href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
               target="_blank"
               rel="noopener noreferrer"
@@ -346,8 +308,8 @@ export default function HeroSection() {
               }}
             >
               Get your Tickets
-            </Link>
-            <Button href="#events" variant="primary">
+            </Link> */}
+            <Button href="#events" variant="terracotta">
               View Events
             </Button>
           </div>
