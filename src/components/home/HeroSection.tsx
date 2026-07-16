@@ -270,9 +270,14 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <p data-section="hero-subtitle"
-            style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 500, lineHeight: 1.7, maxWidth: "650px", marginBottom: "1.8rem", textShadow: "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.9)" }}
+            className="uppercase"
+            style={{ color: "#ffffff", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "2.5px", lineHeight: 1.7, maxWidth: "650px", marginBottom: "0.9rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1)" }}
           >
             Celebrating fashion as emotion, grace, and expression through textures and craftsmanship.
+          </p>
+          <p data-section="hero-subtitle"
+            style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 500, lineHeight: 1.7, maxWidth: "650px", marginBottom: "1.8rem", textShadow: "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.9)" }}
+          >
             For Chicago&apos;s Indian community and the designers who dress it, this is the first American runway where Indian craft walks as current fashion, in front of an audience with the means to wear it.
           </p>
 
