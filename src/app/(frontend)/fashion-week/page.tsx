@@ -267,10 +267,84 @@ export default function FashionWeekPage() {
         </div>
       </section>
 
+      {/* The Home and the World */}
+      <section
+        data-section="fashion-editorial"
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
+      >
+        <div
+          className="grid grid-cols-1 lg:grid-cols-2 items-center"
+          style={{
+            maxWidth: "1400px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            gap: "4rem",
+          }}
+        >
+          {/* Image — left */}
+          <FadeInSection>
+            <div
+              className="relative overflow-hidden"
+              style={{
+                height: "450px",
+                borderRadius: "4px",
+                boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+              }}
+            >
+              <Image
+                src="https://res.cloudinary.com/dist59h0i/image/upload/v1784291980/ethnic-indian-bridal-wear-green-lehenga_zb3266.webp"
+                alt="Chicago Indian Fashion Week 2026 — The Home and the World"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </FadeInSection>
+
+          {/* Text — right */}
+          <FadeInSection direction="right">
+            <SectionTag>Chicago Indian Fashion Week 2026</SectionTag>
+            <h2
+              className="font-heading font-semibold"
+              style={{
+                fontSize: "2.5rem",
+                lineHeight: 1.3,
+                marginBottom: "1.5rem",
+                color: "#1a1a1a",
+              }}
+            >
+              The Home and the World
+            </h2>
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.9,
+                color: "#666666",
+                marginBottom: "1.2rem",
+              }}
+            >
+              Tagore&apos;s question, now alive through fashion. Indian designers
+              rooted in tradition but reaching boldly outward, making clothes that
+              hold both home and horizon.
+            </p>
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: 1.9,
+                color: "#666666",
+              }}
+            >
+              Watch live collections from emerging and established makers who
+              refuse to choose between where they come from and where they&apos;re going.
+            </p>
+          </FadeInSection>
+        </div>
+      </section>
+
       {/* Objectives */}
       <section
         data-section="fashion-objectives"
-        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div
           style={{
