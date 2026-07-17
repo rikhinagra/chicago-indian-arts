@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe";
+import { getStripe } from "@/lib/stripe";
 import { sendTelegramNotification } from "@/lib/telegram";
 import { sendToGoogleSheets } from "@/lib/google-sheets";
 import { saveToPayload } from "@/lib/payload-submit";
@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const session = await stripe.checkout.sessions.retrieve(sessionId);
+    const session = await getStripe().checkout.sessions.retrieve(sessionId);
 
     if (session.payment_status === "paid" || session.status === "complete") {
       const meta = session.metadata || {};
