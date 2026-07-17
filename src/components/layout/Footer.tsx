@@ -18,7 +18,7 @@ const programLinks = [
   { label: "Register", href: "/register" },
 ];
 
-const orgLinks = [
+const orgLinks: { label: string; href: string; external?: boolean }[] = [
   { label: "About Us", href: "/about" },
   { label: "Our Team", href: "/team" },
   // { label: "Community Partners", href: "/community-partners" }, — Hidden for now
