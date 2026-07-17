@@ -7,7 +7,24 @@ import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 import RegisterModal from "@/components/ui/RegisterModal";
 
-const events = [
+type EventItem = {
+  month: string;
+  day: string;
+  year: string;
+  category: string;
+  title: string;
+  description: string;
+  time: string;
+  venue: string;
+  venueUrl: string;
+  program: string;
+  pageUrl: string;
+  scheduleUrl?: string;
+  externalRegisterUrl?: string;
+  registerLabel?: string;
+};
+
+const events: EventItem[] = [
   {
     month: "TBD",
     day: "",
