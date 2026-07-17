@@ -111,10 +111,10 @@ export default function May30GalleryPage() {
                   style={{ textDecoration: "none", display: "block" }}
                 >
                   <div
+                    className="h-[190px] md:h-[240px]"
                     style={{
                       background: "linear-gradient(135deg, #1c1c1c 0%, #252525 60%, #1c1c1c 100%)",
                       border: "1px solid rgba(212,175,55,0.15)",
-                      height: "190px",
                       display: "flex",
                       flexDirection: "column",
                       position: "relative",
