@@ -150,6 +150,7 @@ export default function LiteratureFestivalPage() {
             <div className="flex flex-col" style={{ gap: "1rem", alignItems: "flex-start" }}>
               {/* Row 1: Get Tickets + Schedule */}
               <div className="flex flex-wrap" style={{ gap: "1rem" }}>
+                {/* Get Tickets button hidden — uncomment to restore
                 <Link
                   href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
                   target="_blank"
@@ -169,6 +170,7 @@ export default function LiteratureFestivalPage() {
                 >
                   Get Tickets
                 </Link>
+                */}
                 {/* Schedule button hidden — uncomment to restore
                 <Link
                   href="/literature-festival/schedule"
@@ -197,18 +199,21 @@ export default function LiteratureFestivalPage() {
                 */}
               </div>
 
-              {/* Row 2: Vendor & Partner — yellow, no hover effect */}
+              {/* Row 2: Vendor & Partner — red (swapped from Get Tickets) */}
               <Link
                 href="/vendor-intake"
                 className="inline-block font-semibold uppercase"
                 style={{
-                  backgroundColor: "#d4af37",
+                  backgroundColor: "#cd5c5c",
                   color: "#ffffff",
                   padding: "0.85rem 2.5rem",
                   fontSize: "0.85rem",
                   letterSpacing: "1px",
                   textDecoration: "none",
+                  transition: "all 0.3s ease",
                 }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b04848")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
               >
                 Vendor &amp; Partner Intake Form
               </Link>

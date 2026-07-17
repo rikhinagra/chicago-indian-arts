@@ -23,7 +23,7 @@ const orgLinks = [
   { label: "Our Team", href: "/team" },
   // { label: "Community Partners", href: "/community-partners" }, — Hidden for now
   { label: "Contact", href: "/contact" },
-  { label: "Get your Tickets", href: "https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival", external: true },
+  // { label: "Get your Tickets", href: "https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival", external: true }, — Hidden, uncomment to restore
   { label: "Donate", href: "/donate" },
   { label: "Volunteer", href: "/volunteer" },
 ];
