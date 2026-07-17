@@ -9,26 +9,9 @@ import RegisterModal from "@/components/ui/RegisterModal";
 
 const events = [
   {
-    month: "May",
-    day: "30",
-    year: "2026",
-    category: "Chicago Indian Literature Festival",
-    title: "Chicago Indian Literature Festival",
-    description:
-      "Opening ceremony featuring keynote address by renowned author. Panel discussions on contemporary Indian literature, storytelling traditions, poetry sessions, book launches, and writing workshops.",
-    time: "9:00 AM - 6:00 PM",
-    venue: "Congress Plaza Hotel",
-    venueUrl: "https://www.google.com/maps/search/Congress+Plaza+Hotel+Chicago",
-    program: "Chicago Indian Literature Festival",
-    pageUrl: "/literature-festival",
-    scheduleUrl: "", // Hidden — restore to "/literature-festival/schedule" when needed
-    externalRegisterUrl: "https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival",
-    registerLabel: "Get your Tickets",
-  },
-  {
-    month: "July",
+    month: "TBD",
     day: "",
-    year: "2026",
+    year: "",
     category: "Chicago Indian Fashion Week",
     title: "Chicago Indian Fashion Week",
     description:
@@ -52,6 +35,22 @@ const events = [
     venueUrl: "",
     program: "Wildlife Photography & Visual Arts Festival",
     pageUrl: "/photography-festival",
+  },
+  {
+    month: "May",
+    day: "30",
+    year: "2026",
+    category: "Chicago Indian Literature Festival",
+    title: "Chicago Indian Literature Festival",
+    description:
+      "Opening ceremony featuring keynote address by renowned author. Panel discussions on contemporary Indian literature, storytelling traditions, poetry sessions, book launches, and writing workshops.",
+    time: "9:00 AM - 6:00 PM",
+    venue: "Congress Plaza Hotel",
+    venueUrl: "https://www.google.com/maps/search/Congress+Plaza+Hotel+Chicago",
+    program: "Chicago Indian Literature Festival",
+    pageUrl: "/literature-festival",
+    scheduleUrl: "", // Hidden — restore to "/literature-festival/schedule" when needed
+    registerLabel: "Register Now",
   },
 ];
 
