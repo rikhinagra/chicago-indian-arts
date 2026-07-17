@@ -91,7 +91,7 @@ export default function May30GalleryPage() {
       </section>
 
       {/* Albums Section */}
-      <section data-section="may30-albums" className="px-6 sm:px-12" style={{ paddingTop: "5rem", paddingBottom: "5rem", backgroundColor: "#faf8f3" }}>
+      <section data-section="may30-albums" style={{ paddingTop: "4rem", paddingBottom: "4rem", paddingLeft: "clamp(1rem, 5vw, 4rem)", paddingRight: "clamp(1rem, 5vw, 4rem)", backgroundColor: "#faf8f3" }}>
         <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
           <FadeInSection className="text-center" style={{ marginBottom: "3.5rem" }}>
             <SectionTag>Photo Albums</SectionTag>
@@ -100,7 +100,7 @@ export default function May30GalleryPage() {
             </h2>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {albums.map((album, i) => (
               <FadeInSection key={album.name} delay={i * 0.1}>
                 <Link
@@ -114,7 +114,7 @@ export default function May30GalleryPage() {
                     style={{
                       background: "linear-gradient(135deg, #1c1c1c 0%, #252525 60%, #1c1c1c 100%)",
                       border: "1px solid rgba(212,175,55,0.15)",
-                      height: "230px",
+                      height: "190px",
                       display: "flex",
                       flexDirection: "column",
                       position: "relative",
@@ -139,7 +139,7 @@ export default function May30GalleryPage() {
                       aria-hidden="true"
                       style={{
                         position: "absolute",
-                        fontSize: "9rem",
+                        fontSize: "7rem",
                         fontWeight: 900,
                         fontFamily: "Georgia, serif",
                         color: "rgba(212,175,55,0.05)",
@@ -182,7 +182,7 @@ export default function May30GalleryPage() {
                         alignItems: "center",
                         justifyContent: "center",
                         textAlign: "center",
-                        padding: "3rem 2rem 2rem",
+                        padding: "2rem 1.5rem 1.5rem",
                       }}
                     >
                       <h3
