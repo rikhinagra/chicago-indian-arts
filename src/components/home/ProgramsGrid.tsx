@@ -41,7 +41,7 @@ const programs = [
   {
     name: "Wildlife Photography & Visual Arts Festival",
     type: "Photography & Wildlife",
-    image: "https://res.cloudinary.com/dom3oj7ya/image/upload/v1772118851/chicago-wildlife-photography-festival_ikrzcw.webp",
+    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1784731080/chicago-wildlife-photography-festival_whdo8q.webp",
     alt: "Wildlife Photography & Visual Arts Festival - Visual storytelling capturing Indian culture and nature",
     description:
       "A space where images become stories and perspectives come alive, bringing together creators who capture culture, wildlife, and the world through the lens.",
