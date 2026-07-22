@@ -34,7 +34,7 @@ const events: EventItem[] = [
     description:
       "Spectacular runway presentations showcasing both traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
     time: "6:00 PM - 10:00 PM",
-    venue: "Navy Pier Grand Ballroom",
+    venue: "Venue TBA",
     venueUrl: "",
     program: "Chicago Indian Fashion Week",
     pageUrl: "/fashion-week",
@@ -48,7 +48,7 @@ const events: EventItem[] = [
     description:
       "Grand opening of our annual photography exhibition featuring works from renowned photographers capturing Indian culture and wildlife.",
     time: "5:00 PM - 9:00 PM",
-    venue: "Art Institute of Chicago",
+    venue: "Venue TBA",
     venueUrl: "",
     program: "Wildlife Photography & Visual Arts Festival",
     pageUrl: "/photography-festival",

@@ -18,7 +18,7 @@ const events = [
     title: "Chicago Indian Fashion Week",
     date: "July 2026",
     time: "6:00 PM - 10:00 PM",
-    venue: "Navy Pier Grand Ballroom",
+    venue: "Venue TBA",
     description: "Runway presentations showcasing traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
   },
   {
@@ -26,7 +26,7 @@ const events = [
     title: "Wildlife Photography & Visual Arts Festival Opening",
     date: "TBD",
     time: "5:00 PM - 9:00 PM",
-    venue: "Art Institute of Chicago",
+    venue: "Venue TBA",
     description: "Grand opening of our annual photography exhibition featuring works from renowned photographers capturing Indian culture and wildlife.",
   },
   {
@@ -34,7 +34,7 @@ const events = [
     title: "Wildlife Photography & Visual Arts Festival Talk",
     date: "TBD",
     time: "2:00 PM - 5:00 PM",
-    venue: "Art Institute of Chicago",
+    venue: "Venue TBA",
     description: "Panel discussion with wildlife photographers and conservationists on the role of photography in environmental advocacy.",
   },
   {
@@ -42,7 +42,7 @@ const events = [
     title: "Photography Masterclass",
     date: "TBD",
     time: "10:00 AM - 4:00 PM",
-    venue: "Art Institute of Chicago",
+    venue: "Venue TBA",
     description: "Hands-on photography workshop covering landscape, portrait, and wildlife techniques with professional photographers.",
   },
 ];
