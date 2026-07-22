@@ -49,8 +49,8 @@ const events = [
 export default function GalleryPage() {
   return (
     <>
-      {/* Hero Section */}
-      <section
+      {/* Hero Section — commented out, highlights section now leads the page */}
+      {/* <section
         data-section="gallery-hero"
         className="relative overflow-hidden"
         style={{
@@ -58,7 +58,6 @@ export default function GalleryPage() {
           background: "linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%)",
         }}
       >
-        {/* Decorative blobs */}
         <div
           className="absolute"
           style={{
@@ -81,12 +80,10 @@ export default function GalleryPage() {
             borderRadius: "50%",
           }}
         />
-
         <div
           className="relative z-10"
           style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto", textAlign: "center" }}
         >
-          {/* Back Link */}
           <Link
             href="/"
             className="inline-flex items-center"
@@ -104,7 +101,6 @@ export default function GalleryPage() {
             <ArrowLeft size={16} />
             Back to Home
           </Link>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,32 +110,83 @@ export default function GalleryPage() {
             <h1
               data-section="gallery-title"
               className="font-heading font-light"
-              style={{
-                fontSize: "3.5rem",
-                lineHeight: 1.15,
-                color: "#ffffff",
-                marginBottom: "1.2rem",
-              }}
+              style={{ fontSize: "3.5rem", lineHeight: 1.15, color: "#ffffff", marginBottom: "1.2rem" }}
             >
-              Event{" "}
-              <strong className="font-bold" style={{ color: "#d4af37" }}>
-                Gallery
-              </strong>
+              Event <strong className="font-bold" style={{ color: "#d4af37" }}>Gallery</strong>
             </h1>
-            <p
-              style={{
-                fontSize: "1.05rem",
-                lineHeight: 1.8,
-                color: "rgba(255,255,255,0.75)",
-                maxWidth: "600px",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-            >
-              Relive the moments from our past events. Click on any event below
-              to view the full photo album.
+            <p style={{ fontSize: "1.05rem", lineHeight: 1.8, color: "rgba(255,255,255,0.75)", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
+              Relive the moments from our past events. Click on any event below to view the full photo album.
             </p>
           </motion.div>
+        </div>
+      </section> */}
+
+      {/* Event Highlights Section */}
+      <section
+        data-section="gallery-highlights"
+        style={{
+          paddingTop: "9rem",
+          paddingBottom: "5rem",
+          paddingLeft: "clamp(1rem, 5vw, 3rem)",
+          paddingRight: "clamp(1rem, 5vw, 3rem)",
+          background: "linear-gradient(180deg, #111111 0%, #1a1a1a 100%)",
+        }}
+      >
+        <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
+          <FadeInSection className="text-center" style={{ marginBottom: "3rem" }}>
+            <SectionTag>Gallery</SectionTag>
+            <h2 className="font-heading font-semibold" style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", lineHeight: 1.3, color: "#ffffff" }}>
+              Event{" "}
+              <strong className="font-bold" style={{ color: "#d4af37" }}>Highlights</strong>
+            </h2>
+            <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.65)", marginTop: "0.75rem", maxWidth: "700px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.7 }}>
+              Relive key moments from the Chicago Indian Literature Festival 2026.
+            </p>
+          </FadeInSection>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Video 1 — Guest Speaker */}
+            <FadeInSection delay={0.1}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden", border: "1px solid rgba(212,175,55,0.2)" }}>
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  >
+                    <source src="https://res.cloudinary.com/dist59h0i/video/upload/v1784722053/chicago-indian-literature-festival-guest-speaker_r1r7hl.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div>
+                  <p style={{ color: "#d4af37", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.3rem" }}>LitFest 2026</p>
+                  <p className="font-heading" style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 600, lineHeight: 1.3 }}>Guest Speaker Session</p>
+                </div>
+              </div>
+            </FadeInSection>
+
+            {/* Video 2 — Women's Panel */}
+            <FadeInSection delay={0.2}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden", border: "1px solid rgba(212,175,55,0.2)" }}>
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  >
+                    <source src="https://res.cloudinary.com/dist59h0i/video/upload/v1784722047/chicago-indian-literature-festival-womens-panel-discussion_ffytzi.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div>
+                  <p style={{ color: "#d4af37", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.3rem" }}>LitFest 2026</p>
+                  <p className="font-heading" style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 600, lineHeight: 1.3 }}>Women&apos;s Panel Discussion</p>
+                </div>
+              </div>
+            </FadeInSection>
+          </div>
         </div>
       </section>
 

@@ -22,6 +22,7 @@ function CountdownItem({ value, label }: { value: number; label: string }) {
 }
 
 const heroVideos = [
+  "https://res.cloudinary.com/dist59h0i/video/upload/v1784722046/chicago-indian-literature-festival-audience-dance-celebration_lzropu.mp4",
   "https://res.cloudinary.com/dist59h0i/video/upload/v1784294793/artisans-weaving-fabric-on-loom_kbmytn.mp4",
   "https://res.cloudinary.com/dom3oj7ya/video/upload/v1771592584/chicago-skyline-indian-arts-cultural-event_eqfcyx.mp4",
   "https://res.cloudinary.com/dom3oj7ya/video/upload/v1770836588/Ornate_Indian_Palace_Corridor_Video_xwh2yc.mp4",
@@ -108,6 +109,11 @@ export default function HeroSection() {
             font-size: 0.88rem !important;
             margin-bottom: 1rem !important;
             line-height: 1.6 !important;
+          }
+          [data-section="hero-tagline"] {
+            font-size: 1.25rem !important;
+            margin-bottom: 0.4rem !important;
+            line-height: 1.4 !important;
           }
           [data-section="countdown-label"] {
             font-size: 0.75rem !important;
@@ -276,10 +282,16 @@ export default function HeroSection() {
           >
             Celebrating fashion as emotion, grace, and expression through textures and craftsmanship
           </p>
-          <p data-section="hero-subtitle"
-            style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 500, lineHeight: 1.7, maxWidth: "650px", marginBottom: "1.8rem", textShadow: "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.9)" }}
+          <p data-section="hero-tagline"
+            className="font-heading"
+            style={{ fontSize: "1.6rem", fontWeight: 600, fontStyle: "italic", lineHeight: 1.5, maxWidth: "650px", marginBottom: "0.5rem", color: "#d4af37", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 40px rgba(212,175,55,0.4)" }}
           >
-            For Chicago&apos;s Indian community and the designers who dress it, this is the first American runway where Indian craft walks as current fashion, in front of an audience with the means to wear it
+            The Home and the World
+          </p>
+          <p data-section="hero-subtitle"
+            style={{ color: "rgba(255,255,255,0.88)", fontSize: "1.05rem", fontWeight: 400, lineHeight: 1.7, maxWidth: "650px", marginBottom: "1.8rem", textShadow: "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.9)" }}
+          >
+            A new runway for Indian fashion, coming to Chicago
           </p>
 
           {/* CTA Buttons */}
