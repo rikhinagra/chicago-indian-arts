@@ -34,7 +34,7 @@ const pressMediaLinks = [
 ];
 
 const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/chicagoindianarts", icon: Instagram },
+  { label: "Instagram", href: "https://www.instagram.com/chicagoindianfashionweek/", icon: Instagram },
   { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61588363585494", icon: Facebook },
   { label: "X", href: "https://x.com/chiIndianArts", icon: XIcon },
 ];
