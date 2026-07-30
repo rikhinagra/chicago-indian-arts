@@ -26,9 +26,9 @@ type EventItem = {
 
 const events: EventItem[] = [
   {
-    month: "TBD",
-    day: "",
-    year: "",
+    month: "Oct",
+    day: "10",
+    year: "2026",
     category: "Chicago Indian Fashion Week",
     title: "Chicago Indian Fashion Week",
     description:
@@ -198,8 +198,8 @@ export default function EventsTimeline() {
                       }}
                     >
                       <span
-                        className="font-heading font-bold"
-                        style={{ fontSize: "1.5rem", lineHeight: 1, color: "#1a1a1a" }}
+                        className="font-bold"
+                        style={{ fontSize: "1.5rem", lineHeight: 1, color: "#1a1a1a", fontFamily: "var(--font-lato), 'Lato', sans-serif" }}
                       >
                         {event.day}
                       </span>

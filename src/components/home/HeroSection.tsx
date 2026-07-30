@@ -266,7 +266,7 @@ export default function HeroSection() {
             data-section="hero-label" className="uppercase"
             style={{ color: "#ffffff", fontSize: "1rem", fontWeight: 700, letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)" }}
           >
-            Chicago Indian Fashion Week &middot; Coming Soon
+            Chicago Indian Fashion Week &middot; October 10, 2026
           </div>
 
           {/* Main Heading */}
