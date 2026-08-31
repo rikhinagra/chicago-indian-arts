@@ -28,7 +28,7 @@ const navLinks = [
   // { label: "Highlights", href: "#highlights" }, — Hidden for now
   { label: "Gallery", href: "/gallery" },
   // { label: "Contest", href: "/contest" }, — Hidden for now
-  // { label: "Schedule", href: "/literature-festival/schedule" }, — Hidden for now
+  { label: "Schedule", href: "/fashion-week/schedule" },
   { label: "Speakers 2026", href: "/literature-festival/speakers" },
 ];
 

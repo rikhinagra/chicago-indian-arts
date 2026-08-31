@@ -147,59 +147,28 @@ export default function LiteratureFestivalPage() {
               Chicago Indian Literature Festival. May 30, 2026
             </p>
 
-            <div className="flex flex-col" style={{ gap: "1rem", alignItems: "flex-start" }}>
-              {/* Row 1: Get Tickets + Schedule */}
-              <div className="flex flex-wrap" style={{ gap: "1rem" }}>
-                {/* Get Tickets button hidden — uncomment to restore
-                <Link
-                  href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block font-semibold uppercase"
-                  style={{
-                    backgroundColor: "#cd5c5c",
-                    color: "#ffffff",
-                    padding: "0.85rem 2.5rem",
-                    fontSize: "0.85rem",
-                    letterSpacing: "1px",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b04848")}
-                  onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
-                >
-                  Get Tickets
-                </Link>
-                */}
-                {/* Schedule button hidden — uncomment to restore
-                <Link
-                  href="/literature-festival/schedule"
-                  className="inline-block font-semibold uppercase"
-                  style={{
-                    backgroundColor: "transparent",
-                    color: "#d4af37",
-                    border: "1.5px solid #d4af37",
-                    padding: "0.85rem 2.5rem",
-                    fontSize: "0.85rem",
-                    letterSpacing: "1px",
-                    textDecoration: "none",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#d4af37";
-                    e.currentTarget.style.color = "#1a1a1a";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                    e.currentTarget.style.color = "#d4af37";
-                  }}
-                >
-                  Schedule
-                </Link>
-                */}
-              </div>
-
-              {/* Row 2: Vendor & Partner — red (swapped from Get Tickets) */}
+            <div className="flex flex-wrap" style={{ gap: "1rem" }}>
+              {/* Get Tickets button hidden — uncomment to restore
+              <Link
+                href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block font-semibold uppercase"
+                style={{
+                  backgroundColor: "#cd5c5c",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b04848")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
+              >
+                Get Tickets
+              </Link>
+              */}
               <Link
                 href="/vendor-intake"
                 className="inline-block font-semibold uppercase"
@@ -216,6 +185,29 @@ export default function LiteratureFestivalPage() {
                 onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
               >
                 Vendor &amp; Partner Intake Form
+              </Link>
+              <Link
+                href="/literature-festival/schedule"
+                className="inline-block font-semibold uppercase"
+                style={{
+                  backgroundColor: "#d4af37",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ffffff";
+                  e.currentTarget.style.color = "#1a1a1a";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#d4af37";
+                  e.currentTarget.style.color = "#ffffff";
+                }}
+              >
+                View Literature Festival Schedule
               </Link>
             </div>
           </FadeInSection>

@@ -16,9 +16,9 @@ const events = [
   {
     program: "Chicago Indian Fashion Week",
     title: "Chicago Indian Fashion Week",
-    date: "July 2026",
-    time: "6:00 PM - 10:00 PM",
-    venue: "Venue TBA",
+    date: "October 10, 2026",
+    time: "4:00 PM - 10:00 PM",
+    venue: "Rivvy Hotel, 55 E Ontario Street",
     description: "Runway presentations showcasing traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
   },
   {

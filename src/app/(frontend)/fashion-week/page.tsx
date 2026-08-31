@@ -167,23 +167,73 @@ export default function FashionWeekPage() {
               textures and craftsmanship.
             </p>
 
-            <Link
-              href="/brand-intake"
-              className="inline-block font-semibold uppercase"
-              style={{
-                backgroundColor: "#cd5c5c",
-                color: "#ffffff",
-                padding: "0.85rem 2.5rem",
-                fontSize: "0.85rem",
-                letterSpacing: "1px",
-                textDecoration: "none",
-                transition: "all 0.3s ease",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
-            >
-              Brand Intake Form
-            </Link>
+            <div className="flex flex-wrap" style={{ gap: "1rem" }}>
+              <Link
+                href="https://drive.google.com/file/d/1PlXgopiZaezIsuat6aQDiHQeWvOUqFLD/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block font-semibold uppercase"
+                style={{
+                  backgroundColor: "#cd5c5c",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b04848")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
+              >
+                CIFW Creative Deck
+              </Link>
+              <Link
+                href="/fashion-week/schedule"
+                className="inline-block font-semibold uppercase"
+                style={{
+                  backgroundColor: "#d4af37",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ffffff";
+                  e.currentTarget.style.color = "#1a1a1a";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#d4af37";
+                  e.currentTarget.style.color = "#ffffff";
+                }}
+              >
+                View Schedule
+              </Link>
+            </div>
+
+            {/* Get Tickets */}
+            <div style={{ marginTop: "1rem" }}>
+              <Link
+                href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block font-semibold uppercase"
+                style={{
+                  backgroundColor: "#cd5c5c",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b04848")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
+              >
+                Get Tickets
+              </Link>
+            </div>
           </FadeInSection>
         </div>
       </section>

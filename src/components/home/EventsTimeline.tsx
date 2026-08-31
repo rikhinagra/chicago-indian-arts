@@ -22,6 +22,7 @@ type EventItem = {
   scheduleUrl?: string;
   externalRegisterUrl?: string;
   registerLabel?: string;
+  ticketUrl?: string;
 };
 
 const events: EventItem[] = [
@@ -33,11 +34,12 @@ const events: EventItem[] = [
     title: "Chicago Indian Fashion Week",
     description:
       "Spectacular runway presentations showcasing both traditional Indian textiles and contemporary designer collections. Fashion networking mixer to follow.",
-    time: "6:00 PM - 10:00 PM",
-    venue: "Venue TBA",
-    venueUrl: "",
+    time: "4:00 PM - 10:00 PM",
+    venue: "Rivvy Hotel, 55 E Ontario Street",
+    venueUrl: "https://www.google.com/maps/search/55+E+Ontario+Street",
     program: "Chicago Indian Fashion Week",
     pageUrl: "/fashion-week",
+    ticketUrl: "https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week",
   },
   {
     month: "TBD",
@@ -221,12 +223,20 @@ export default function EventsTimeline() {
                     </div>
                   </div>
 
-                  <h3
-                    className="font-heading font-semibold"
-                    style={{ fontSize: "1.3rem", marginBottom: "0.6rem", color: "#1a1a1a" }}
+                  <Link
+                    href={event.pageUrl}
+                    className="inline-block"
+                    style={{ textDecoration: "none" }}
                   >
-                    {event.title}
-                  </h3>
+                    <h3
+                      className="font-heading font-semibold"
+                      style={{ fontSize: "1.3rem", marginBottom: "0.6rem", color: "#1a1a1a", transition: "color 0.3s ease" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = "#cd5c5c")}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = "#1a1a1a")}
+                    >
+                      {event.title}
+                    </h3>
+                  </Link>
                   <p style={{ color: "#666666", lineHeight: 1.7, marginBottom: "0.8rem", fontSize: "0.9rem" }}>
                     {event.description}
                   </p>
@@ -258,6 +268,27 @@ export default function EventsTimeline() {
                     >
                       {event.registerLabel || "Register Now"}
                     </button>
+                    {event.ticketUrl && (
+                      <Link
+                        href={event.ticketUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block font-semibold"
+                        style={{
+                          padding: "0.5rem 1.2rem",
+                          fontSize: "0.8rem",
+                          letterSpacing: "0.5px",
+                          backgroundColor: "#d4af37",
+                          color: "#ffffff",
+                          textDecoration: "none",
+                          transition: "background-color 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1a1a1a")}
+                        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
+                      >
+                        Get Tickets
+                      </Link>
+                    )}
                     <Link
                       href={event.pageUrl}
                       className="inline-flex items-center font-semibold"

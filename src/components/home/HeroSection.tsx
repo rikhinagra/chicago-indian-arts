@@ -331,6 +331,41 @@ export default function HeroSection() {
               View Events
             </Button>
           </div>
+
+          {/* Get Tickets */}
+          <div style={{ marginTop: "1rem" }}>
+            <Link
+              href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: "0.75rem 1.5rem",
+                fontSize: "0.82rem",
+                fontWeight: 600,
+                letterSpacing: "1px",
+                textTransform: "uppercase",
+                display: "inline-block",
+                textDecoration: "none",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+                backgroundColor: "#cd5c5c",
+                color: "#ffffff",
+                border: "none",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#b84e4e";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#cd5c5c";
+                e.currentTarget.style.color = "#ffffff";
+              }}
+            >
+              Get Tickets
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
