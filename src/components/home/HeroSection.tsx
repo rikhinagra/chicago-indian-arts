@@ -349,18 +349,16 @@ export default function HeroSection() {
                 textAlign: "center",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
-                backgroundColor: "#cd5c5c",
+                backgroundColor: "#1a1a1a",
                 color: "#ffffff",
                 border: "none",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#b84e4e";
-                e.currentTarget.style.color = "#ffffff";
+                e.currentTarget.style.backgroundColor = "#d4af37";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#cd5c5c";
-                e.currentTarget.style.color = "#ffffff";
+                e.currentTarget.style.backgroundColor = "#1a1a1a";
               }}
             >
               Get Tickets
