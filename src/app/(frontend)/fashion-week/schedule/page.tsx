@@ -310,7 +310,7 @@ export default function FashionWeekSchedulePage() {
       {/* Banner */}
       <section data-section="fw-schedule-banner" className="relative" style={{ aspectRatio: "3 / 1" }}>
         <Image
-          src="https://res.cloudinary.com/dom3oj7ya/image/upload/chicago-indian-fashion-week-banner_hotuhe.webp"
+          src="https://res.cloudinary.com/dist59h0i/image/upload/v1788376955/fashion-week-2026/chicago-indian-fashion-week-schedule-models-embroidered-gowns-banner.webp"
           alt="Chicago Indian Fashion Week models in embroidered gowns"
           fill
           className="object-cover"

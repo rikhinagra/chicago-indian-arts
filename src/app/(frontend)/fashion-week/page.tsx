@@ -757,6 +757,35 @@ export default function FashionWeekPage() {
         </div>
       </section>
 
+      {/* Beyond Fashion — Luxury Lifestyle */}
+      <section
+        data-section="fashion-luxury-lifestyle"
+        style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
+      >
+        <div style={{ maxWidth: "1400px", marginLeft: "auto", marginRight: "auto" }}>
+          <FadeInSection>
+            <div
+              className="relative w-full"
+              style={{
+                borderRadius: "4px",
+                overflow: "hidden",
+                boxShadow: "0 16px 48px rgba(0,0,0,0.12)",
+              }}
+            >
+              <Image
+                src="https://res.cloudinary.com/dist59h0i/image/upload/v1788376509/fashion-week-2026/chicago-indian-fashion-week-luxury-lifestyle-jewelry-accessories-banner.webp"
+                alt="Beyond Fashion: A Complete Luxury Lifestyle Experience — Jewelry, Colognes & Fragrances, Accessories, Footwear"
+                width={1527}
+                height={1030}
+                className="w-full h-auto"
+                style={{ display: "block" }}
+                sizes="(max-width: 1024px) 100vw, 1400px"
+              />
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
       {/* Objectives */}
       <section
         data-section="fashion-objectives"
