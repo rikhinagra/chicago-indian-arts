@@ -311,17 +311,17 @@ export default function HeroSection() {
                 textAlign: "center",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
-                backgroundColor: "#cd5c5c",
+                backgroundColor: "#1a1a1a",
                 color: "#ffffff",
                 border: "none",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#b84e4e";
+                e.currentTarget.style.backgroundColor = "#d4af37";
                 e.currentTarget.style.color = "#ffffff";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#cd5c5c";
+                e.currentTarget.style.backgroundColor = "#1a1a1a";
                 e.currentTarget.style.color = "#ffffff";
               }}
             >
@@ -349,16 +349,16 @@ export default function HeroSection() {
                 textAlign: "center",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
-                backgroundColor: "#1a1a1a",
+                backgroundColor: "#cd5c5c",
                 color: "#ffffff",
                 border: "none",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#d4af37";
+                e.currentTarget.style.backgroundColor = "#b84e4e";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#1a1a1a";
+                e.currentTarget.style.backgroundColor = "#cd5c5c";
               }}
             >
               Get Tickets

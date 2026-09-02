@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Calendar, Clock, MapPin, Sparkles, Camera, Store, UtensilsCrossed, Users } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
@@ -20,11 +21,11 @@ const itinerary = [
   },
   {
     time: "7:00 PM – 8:30 PM",
-    title: "Designer Showcases",
+    title: "Fireside Chat & Designer Showcases",
   },
   {
     time: "8:30 PM – 10:00 PM",
-    title: "After Dark",
+    title: "After Dark Industry Mixer Party",
   },
 ];
 
@@ -183,16 +184,20 @@ export default function FashionWeekSchedulePage() {
               A New Cultural Chapter in Chicago
             </h2>
             <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "1.2rem" }}>
-              This October, Chicago Indian Fashion Week returns for an unforgettable evening
+              This October, Inaugural Chicago Indian Fashion Week is coming with an unforgettable evening
               celebrating fashion, culture, creativity, and community in the heart of Chicago.
               Guests will enjoy runway designer and model shows, a red carpet experience, the
               vibrant Fashion Village, appetizers, and networking with designers, creatives,
               media, and community leaders.
             </p>
             <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "2rem" }}>
-              Arrive in your finest Black Tie, Evening Gown, or Sophisticated Indian attire
+              Arrive in your finest Black Tie, Evening Gown, Formal Wear or Sophisticated Indian attire
               for the red carpet, then take your seat for a night of glitz, glam, and stunning
               modern Indian couture blending rich heritage with bold, contemporary design.
+            </p>
+            <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "2rem" }}>
+              CIFW is proud to support Bookwallah Charity which empowers kids and women through
+              education. We are also supporting building St Jude&rsquo;s Cancer Hospital in India.
             </p>
             <div
               className="inline-flex items-center"
@@ -208,6 +213,32 @@ export default function FashionWeekSchedulePage() {
               <span style={{ fontSize: "0.88rem", fontWeight: 600, color: "#1a1a1a" }}>
                 Early Bird tickets are limited. Reserve your place today.
               </span>
+            </div>
+
+            <div style={{ marginTop: "1.5rem" }}>
+              <Link
+                href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-block",
+                  padding: "0.75rem 2rem",
+                  backgroundColor: "#cd5c5c",
+                  color: "#ffffff",
+                  fontSize: "0.85rem",
+                  fontWeight: 600,
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  textDecoration: "none",
+                  border: "none",
+                  boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b84e4e")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
+              >
+                Get Tickets
+              </Link>
             </div>
           </FadeInSection>
         </div>
@@ -274,6 +305,18 @@ export default function FashionWeekSchedulePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Banner */}
+      <section data-section="fw-schedule-banner" className="relative" style={{ aspectRatio: "3 / 1" }}>
+        <Image
+          src="https://res.cloudinary.com/dom3oj7ya/image/upload/chicago-indian-fashion-week-banner_hotuhe.webp"
+          alt="Chicago Indian Fashion Week models in embroidered gowns"
+          fill
+          className="object-cover"
+          style={{ objectPosition: "center 15%" }}
+          sizes="100vw"
+        />
       </section>
 
       {/* Event Highlights */}

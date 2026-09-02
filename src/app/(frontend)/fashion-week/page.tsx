@@ -40,8 +40,7 @@ const acts = [
     number: "Act 1",
     title: "Home",
     image:
-      "https://res.cloudinary.com/dist59h0i/image/upload/v1788300140/fashion-week-2026/fashion-week-act-one-home-male-model-runway.webp",
-    imagePosition: "center 15%",
+      "https://res.cloudinary.com/dist59h0i/image/upload/v1788272821/fashion-week-2026/fashion-week-act-three-street-scene-night.webp",
     description:
       "Where every thread begins. A story rooted in tradition, told through the intimacy of home.",
   },
@@ -57,7 +56,8 @@ const acts = [
     number: "Act 3",
     title: "The Street",
     image:
-      "https://res.cloudinary.com/dist59h0i/image/upload/v1788272821/fashion-week-2026/fashion-week-act-three-street-scene-night.webp",
+      "https://res.cloudinary.com/dist59h0i/image/upload/v1788301559/fashion-week-2026/fashion-week-act-four-world-street-portrait.webp",
+    imagePosition: "center 10%",
     description:
       "Fashion spills into daily life, vibrant and unapologetic, carried by the rhythm of the city.",
   },
@@ -65,8 +65,8 @@ const acts = [
     number: "Act 4",
     title: "The World",
     image:
-      "https://res.cloudinary.com/dist59h0i/image/upload/v1788301559/fashion-week-2026/fashion-week-act-four-world-street-portrait.webp",
-    imagePosition: "center 10%",
+      "https://res.cloudinary.com/dist59h0i/image/upload/v1788300140/fashion-week-2026/fashion-week-act-one-home-male-model-runway.webp",
+    imagePosition: "center 15%",
     description:
       "The final act of transformation, where Indian design steps onto the global stage.",
   },
@@ -86,9 +86,9 @@ const galleryImages = [
     alt: "Traditional Indian Textiles",
   },
   {
-    src: "https://res.cloudinary.com/dist59h0i/image/upload/v1788300142/fashion-week-2026/fashion-week-act-four-world-male-model-runway.webp",
-    alt: "Chicago Indian Fashion Week Male Model Runway",
-    position: "center 20%",
+    src: "https://res.cloudinary.com/dist59h0i/image/upload/v1788364848/fashion-week-2026/chicago-indian-fashion-week-male-model-embroidered-runway-attire.webp",
+    alt: "Chicago Indian Fashion Week Male Model in Embroidered Runway Attire",
+    position: "center 15%",
   },
 ];
 
@@ -227,8 +227,6 @@ export default function FashionWeekPage() {
                   textDecoration: "none",
                   transition: "all 0.3s ease",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b04848")}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
               >
                 Get Tickets
               </Link>
@@ -246,8 +244,6 @@ export default function FashionWeekPage() {
                   border: "none",
                   transition: "all 0.3s ease",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d4af37")}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#1a1a1a")}
               >
                 Support CIFW
               </button>
@@ -265,41 +261,25 @@ export default function FashionWeekPage() {
                   textDecoration: "none",
                   transition: "all 0.3s ease",
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ffffff";
-                  e.currentTarget.style.color = "#1a1a1a";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#d4af37";
-                  e.currentTarget.style.color = "#1a1a1a";
-                }}
               >
                 View Schedule
               </Link>
 
-              {/* CIFW Creative Deck — outline white */}
+              {/* CIFW Creative Deck — solid white */}
               <Link
                 href="https://drive.google.com/file/d/1PlXgopiZaezIsuat6aQDiHQeWvOUqFLD/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block font-semibold uppercase text-center"
                 style={{
-                  backgroundColor: "transparent",
-                  color: "#ffffff",
+                  backgroundColor: "#ffffff",
+                  color: "#1a1a1a",
                   border: "1.5px solid #ffffff",
                   padding: "0.85rem 2.2rem",
                   fontSize: "0.85rem",
                   letterSpacing: "1px",
                   textDecoration: "none",
                   transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ffffff";
-                  e.currentTarget.style.color = "#1a1a1a";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.color = "#ffffff";
                 }}
               >
                 CIFW Creative Deck
@@ -494,7 +474,7 @@ export default function FashionWeekPage() {
               onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#b04848")}
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
             >
-              View More
+              View Schedule
             </Link>
           </FadeInSection>
         </div>
@@ -644,10 +624,8 @@ export default function FashionWeekPage() {
               Fashion Week is not only a celebration of style but a platform for
               lasting, positive change in Chicago.
             </p>
-            <a
-              href="https://bookwallah.org/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/donate"
               className="inline-block font-semibold uppercase"
               style={{
                 backgroundColor: "#cd5c5c",
@@ -662,7 +640,7 @@ export default function FashionWeekPage() {
               onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#cd5c5c")}
             >
               More Details
-            </a>
+            </Link>
           </FadeInSection>
         </div>
       </section>
