@@ -121,7 +121,7 @@ export default function SponsorshipModal({ isOpen, onClose }: SponsorshipModalPr
                   marginBottom: "0.5rem",
                 }}
               >
-                Support CIFW
+                Become a Sponsor
               </div>
               <h3
                 className="font-heading font-semibold"

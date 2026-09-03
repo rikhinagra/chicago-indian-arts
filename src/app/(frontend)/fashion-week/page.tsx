@@ -231,7 +231,7 @@ export default function FashionWeekPage() {
                 Get Tickets
               </Link>
 
-              {/* Support CIFW — dark, opens sponsorship modal */}
+              {/* Become a Sponsor — dark, opens sponsorship modal */}
               <button
                 onClick={() => setSponsorshipOpen(true)}
                 className="inline-block font-semibold uppercase cursor-pointer text-center"
@@ -245,7 +245,7 @@ export default function FashionWeekPage() {
                   transition: "all 0.3s ease",
                 }}
               >
-                Support CIFW
+                Become a Sponsor
               </button>
 
               {/* View Schedule — gold */}
@@ -757,6 +757,102 @@ export default function FashionWeekPage() {
         </div>
       </section>
 
+      {/* CTA */}
+      <section
+        data-section="fashion-cta"
+        style={{
+          padding: "3rem 3rem",
+          background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
+          textAlign: "center",
+        }}
+      >
+        <FadeInSection>
+          <div
+            style={{
+              maxWidth: "700px",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            <h2
+              className="font-heading font-semibold"
+              style={{
+                fontSize: "2.5rem",
+                lineHeight: 1.3,
+                color: "#ffffff",
+                marginBottom: "1rem",
+              }}
+            >
+              Walk the Runway with Us
+            </h2>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                lineHeight: 1.7,
+                color: "rgba(255,255,255,0.9)",
+                marginBottom: "2rem",
+              }}
+            >
+              Be part of Chicago Indian Fashion Week as a designer, artisan, sponsor, or guest.
+              Experience Indian fashion like never before.
+            </p>
+            <div data-section="fashion-cta-buttons" className="flex flex-wrap justify-center" style={{ gap: "1rem" }}>
+              <Link
+                href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block font-semibold uppercase text-center"
+                style={{
+                  backgroundColor: "#ffffff",
+                  color: "#1a1a1a",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#1a1a1a";
+                  e.currentTarget.style.color = "#ffffff";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ffffff";
+                  e.currentTarget.style.color = "#1a1a1a";
+                }}
+              >
+                Secure Your Seat
+              </Link>
+              <Link
+                href="https://drive.google.com/file/d/1PlXgopiZaezIsuat6aQDiHQeWvOUqFLD/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block font-semibold uppercase text-center"
+                style={{
+                  backgroundColor: "transparent",
+                  color: "#ffffff",
+                  border: "1.5px solid #ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ffffff";
+                  e.currentTarget.style.color = "#1a1a1a";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.color = "#ffffff";
+                }}
+              >
+                View Theme
+              </Link>
+            </div>
+          </div>
+        </FadeInSection>
+      </section>
+
       {/* Beyond Fashion — Luxury Lifestyle */}
       <section
         data-section="fashion-luxury-lifestyle"
@@ -945,6 +1041,7 @@ export default function FashionWeekPage() {
           padding: "3rem 3rem",
           backgroundColor: "#1a1a1a",
           textAlign: "center",
+          borderBottom: "1px solid rgba(255,255,255,0.1)",
         }}
       >
         <FadeInSection>
@@ -987,100 +1084,6 @@ export default function FashionWeekPage() {
                 marginRight: "auto",
               }}
             />
-          </div>
-        </FadeInSection>
-      </section>
-
-      {/* CTA */}
-      <section
-        data-section="fashion-cta"
-        style={{
-          padding: "3rem 3rem",
-          background: "linear-gradient(135deg, #cd5c5c 0%, #d4af37 100%)",
-          textAlign: "center",
-        }}
-      >
-        <FadeInSection>
-          <div
-            style={{
-              maxWidth: "700px",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          >
-            <h2
-              className="font-heading font-semibold"
-              style={{
-                fontSize: "2.5rem",
-                lineHeight: 1.3,
-                color: "#ffffff",
-                marginBottom: "1rem",
-              }}
-            >
-              Walk the Runway with Us
-            </h2>
-            <p
-              style={{
-                fontSize: "1.05rem",
-                lineHeight: 1.7,
-                color: "rgba(255,255,255,0.9)",
-                marginBottom: "2rem",
-              }}
-            >
-              Be part of Chicago Indian Fashion Week as a designer, artisan, sponsor, or guest.
-              Experience Indian fashion like never before.
-            </p>
-            <div data-section="fashion-cta-buttons" className="flex flex-wrap justify-center" style={{ gap: "1rem" }}>
-              <Link
-                href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block font-semibold uppercase text-center"
-                style={{
-                  backgroundColor: "#ffffff",
-                  color: "#1a1a1a",
-                  padding: "0.85rem 2.5rem",
-                  fontSize: "0.85rem",
-                  letterSpacing: "1px",
-                  textDecoration: "none",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#1a1a1a";
-                  e.currentTarget.style.color = "#ffffff";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ffffff";
-                  e.currentTarget.style.color = "#1a1a1a";
-                }}
-              >
-                Secure Your Seat
-              </Link>
-              <Link
-                href="#"
-                className="inline-block font-semibold uppercase text-center"
-                style={{
-                  backgroundColor: "transparent",
-                  color: "#ffffff",
-                  border: "1.5px solid #ffffff",
-                  padding: "0.85rem 2.5rem",
-                  fontSize: "0.85rem",
-                  letterSpacing: "1px",
-                  textDecoration: "none",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ffffff";
-                  e.currentTarget.style.color = "#1a1a1a";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.color = "#ffffff";
-                }}
-              >
-                View Theme
-              </Link>
-            </div>
           </div>
         </FadeInSection>
       </section>
