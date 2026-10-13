@@ -9,6 +9,16 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const events = [
   {
+    title: "Chicago Indian Fashion Week 2026",
+    date: "October 10, 2026",
+    photographersPageUrl: "/gallery/oct-10",
+    albumsLabel: "Visual Creators' Albums",
+    featured: true,
+    image: "https://res.cloudinary.com/dist59h0i/image/upload/v1791918944/fashion-week-2026/chicago-indian-fashion-week-2026-gallery-card.webp",
+    description:
+      "An unforgettable evening of runway, couture, and community. Relive Chicago Indian Fashion Week 2026 through the lens of our visual creators.",
+  },
+  {
     title: "Chicago Indian Literature Festival 2026",
     date: "May 30, 2026",
     eventAlbumUrl: "https://photos.app.goo.gl/hMk37sbjZ37cTPw7A",
@@ -140,12 +150,12 @@ export default function GalleryPage() {
               <strong className="font-bold" style={{ color: "#d4af37" }}>Highlights</strong>
             </h2>
             <p style={{ fontSize: "1rem", color: "rgba(255,255,255,0.65)", marginTop: "0.75rem", maxWidth: "700px", marginLeft: "auto", marginRight: "auto", lineHeight: 1.7 }}>
-              Relive key moments from the Chicago Indian Literature Festival 2026.
+              Relive key moments from Chicago Indian Fashion Week 2026.
             </p>
           </FadeInSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Video 1 — Guest Speaker */}
+            {/* Video 1 — Runway Finale */}
             <FadeInSection delay={0.1}>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden", border: "1px solid rgba(212,175,55,0.2)" }}>
@@ -156,17 +166,17 @@ export default function GalleryPage() {
                     playsInline
                     style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                   >
-                    <source src="https://res.cloudinary.com/dist59h0i/video/upload/v1784722053/chicago-indian-literature-festival-guest-speaker_r1r7hl.mp4" type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dist59h0i/video/upload/v1791918936/fashion-week-2026/chicago-indian-fashion-week-2026-runway-finale-designers-models.mp4" type="video/mp4" />
                   </video>
                 </div>
                 <div>
-                  <p style={{ color: "#d4af37", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.3rem" }}>LitFest 2026</p>
-                  <p className="font-heading" style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 600, lineHeight: 1.3 }}>Guest Speaker Session</p>
+                  <p style={{ color: "#d4af37", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.3rem" }}>Fashion Week 2026</p>
+                  <p className="font-heading" style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 600, lineHeight: 1.3 }}>Runway Finale</p>
                 </div>
               </div>
             </FadeInSection>
 
-            {/* Video 2 — Women's Panel */}
+            {/* Video 2 — Runway Show */}
             <FadeInSection delay={0.2}>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div style={{ width: "100%", aspectRatio: "16/9", overflow: "hidden", border: "1px solid rgba(212,175,55,0.2)" }}>
@@ -177,12 +187,12 @@ export default function GalleryPage() {
                     playsInline
                     style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
                   >
-                    <source src="https://res.cloudinary.com/dist59h0i/video/upload/v1784722047/chicago-indian-literature-festival-womens-panel-discussion_ffytzi.mp4" type="video/mp4" />
+                    <source src="https://res.cloudinary.com/dist59h0i/video/upload/v1791918940/fashion-week-2026/chicago-indian-fashion-week-2026-runway-show-audience.mp4" type="video/mp4" />
                   </video>
                 </div>
                 <div>
-                  <p style={{ color: "#d4af37", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.3rem" }}>LitFest 2026</p>
-                  <p className="font-heading" style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 600, lineHeight: 1.3 }}>Women&apos;s Panel Discussion</p>
+                  <p style={{ color: "#d4af37", fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", marginBottom: "0.3rem" }}>Fashion Week 2026</p>
+                  <p className="font-heading" style={{ color: "#ffffff", fontSize: "1.05rem", fontWeight: 600, lineHeight: 1.3 }}>Runway Show</p>
                 </div>
               </div>
             </FadeInSection>
@@ -212,15 +222,13 @@ export default function GalleryPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {events.map((event, i) => (
-              <FadeInSection key={event.title} delay={i * 0.15}>
+              <FadeInSection key={event.title} delay={i * 0.15} className={event.featured ? "md:col-span-2" : undefined}>
                 <div
-                  className="group"
+                  className={`group flex flex-col ${event.featured ? "lg:flex-row" : ""}`}
                   style={{
                     backgroundColor: "#ffffff",
                     border: "1px solid rgba(0,0,0,0.06)",
                     height: "100%",
-                    display: "flex",
-                    flexDirection: "column",
                     transition: "all 0.3s ease",
                   }}
                   onMouseEnter={(e) => {
@@ -237,7 +245,7 @@ export default function GalleryPage() {
                   }}
                 >
                   {/* Cover Image — fixed aspect ratio, consistent across all image sizes */}
-                  <div style={{ width: "100%", overflow: "hidden", aspectRatio: "16/9" }}>
+                  <div className={`w-full ${event.featured ? "lg:w-[58%] lg:flex-shrink-0" : ""}`} style={{ overflow: "hidden", aspectRatio: "16/9" }}>
                     <Image
                       src={event.image}
                       alt={event.title}
@@ -251,13 +259,15 @@ export default function GalleryPage() {
 
                   {/* Bottom accent bar */}
                   <div
-                    style={{
-                      height: "3px",
-                      background: "linear-gradient(90deg, #cd5c5c, #d4af37)",
-                    }}
+                    className={
+                      event.featured
+                        ? "h-[3px] lg:h-auto lg:w-[3px] lg:flex-shrink-0 bg-gradient-to-r lg:bg-gradient-to-b from-[#cd5c5c] to-[#d4af37]"
+                        : "h-[3px]"
+                    }
+                    style={event.featured ? undefined : { background: "linear-gradient(90deg, #cd5c5c, #d4af37)" }}
                   />
 
-                  <div style={{ padding: "1.75rem 2rem", display: "flex", flexDirection: "column", flex: 1 }}>
+                  <div className={event.featured ? "lg:justify-center" : undefined} style={{ padding: "1.75rem 2rem", display: "flex", flexDirection: "column", flex: 1 }}>
                     {/* Date */}
                     <div
                       style={{
@@ -303,7 +313,8 @@ export default function GalleryPage() {
 
                     {/* CTAs */}
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-                      {/* View Event Photos */}
+                      {/* View Event Photos (only if a combined album exists) */}
+                      {event.eventAlbumUrl && (
                       <Link
                         href={event.eventAlbumUrl}
                         target="_blank"
@@ -328,6 +339,7 @@ export default function GalleryPage() {
                       >
                         View Event Photos <ArrowUpRight size={13} />
                       </Link>
+                      )}
 
                       {/* View Photographer's Albums (only if sub-page exists) */}
                       {event.photographersPageUrl && (
@@ -358,7 +370,7 @@ export default function GalleryPage() {
                             e.currentTarget.style.color = "#d4af37";
                           }}
                         >
-                          Photographer&apos;s Albums <ArrowUpRight size={13} />
+                          {event.albumsLabel ?? "Photographer's Albums"} <ArrowUpRight size={13} />
                         </Link>
                       )}
                     </div>
