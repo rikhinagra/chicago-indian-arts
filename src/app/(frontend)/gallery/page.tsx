@@ -12,7 +12,7 @@ const events = [
     title: "Chicago Indian Fashion Week 2026",
     date: "October 10, 2026",
     photographersPageUrl: "/gallery/oct-10",
-    albumsLabel: "Visual Creators' Albums",
+    albumsLabel: "Visual Creators Albums",
     featured: true,
     image: "https://res.cloudinary.com/dist59h0i/image/upload/v1791918944/fashion-week-2026/chicago-indian-fashion-week-2026-gallery-card.webp",
     description:
