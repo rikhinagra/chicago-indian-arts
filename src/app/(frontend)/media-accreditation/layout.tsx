@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Media Accreditation — Chicago Indian Arts Press Access",
+  title: "Media Accreditation | Chicago Indian Arts Press Access",
   description:
     "Apply for media accreditation to cover Indian and South Asian cultural events by Chicago Indian Arts. Press and media professionals are welcome to cover our festivals and exhibitions.",
   keywords: [
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Indian festival media coverage",
   ],
   openGraph: {
-    title: "Media Accreditation — Chicago Indian Arts",
+    title: "Media Accreditation | Chicago Indian Arts",
     description:
       "Apply for media accreditation to cover Indian and South Asian cultural events by Chicago Indian Arts.",
     url: "https://www.chicagoindianarts.org/media-accreditation",

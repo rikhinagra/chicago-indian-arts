@@ -3,7 +3,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title:
-    "Call for Submissions — Chicago Indian Literature Festival",
+    "Call for Submissions | Chicago Indian Literature Festival",
   description:
     "Submit your poetry, fiction, essays, memoir, scripts, or experimental writing to Chicago Indian Literature Festival. Open submissions for authors and writers.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "Indian writing festival",
   ],
   openGraph: {
-    title: "Call for Submissions — Chicago Indian Literature Festival",
+    title: "Call for Submissions | Chicago Indian Literature Festival",
     description:
       "Submit your original work to Chicago Indian Literature Festival. Poetry, fiction, essays, memoir, and more.",
     url: "https://www.chicagoindianarts.org/call-for-submissions",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "https://res.cloudinary.com/dom3oj7ya/image/upload/b_rgb:1a1a1a,c_lpad,w_1200,h_630/v1770980107/CIA-logo-white_gaxtwl.webp",
         width: 1200,
         height: 630,
-        alt: "Call for Submissions — Chicago Indian Literature Festival by Chicago Indian Arts",
+        alt: "Call for Submissions | Chicago Indian Literature Festival by Chicago Indian Arts",
       },
     ],
   },

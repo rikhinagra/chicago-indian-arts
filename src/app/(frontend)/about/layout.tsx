@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Us — Indian Cultural Organization & Nonprofit in Chicago",
+  title: "About Us | Indian Cultural Organization & Nonprofit in Chicago",
   description:
     "Learn about Chicago Indian Arts, a nonprofit celebrating Indian and South Asian cultural heritage. Founded by Jigar Shah, we bring literature, fashion, and art to the Indian diaspora in Chicago.",
   keywords: [
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "Indian community organization Chicago",
   ],
   openGraph: {
-    title: "About Chicago Indian Arts — Nonprofit Cultural Organization",
+    title: "About Chicago Indian Arts | Nonprofit Cultural Organization",
     description:
       "A nonprofit celebrating Indian and South Asian cultural heritage through literature festivals, fashion shows, and photography exhibitions in Chicago.",
     url: "https://www.chicagoindianarts.org/about",

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Events — Indian Cultural Events & Festivals in Chicago",
+  title: "Events | Indian Cultural Events & Festivals in Chicago",
   description:
-    "Discover upcoming Indian and South Asian cultural events in Chicago — literature festivals, fashion shows, art exhibitions, and community gatherings by Chicago Indian Arts.",
+    "Discover upcoming Indian and South Asian cultural events in Chicago: literature festivals, fashion shows, art exhibitions, and community gatherings by Chicago Indian Arts.",
   keywords: [
     "Indian cultural events Chicago",
     "Indian community events Chicago",
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     "Indian cultural festivals Illinois",
   ],
   openGraph: {
-    title: "Events — Indian Cultural Events in Chicago",
+    title: "Events | Indian Cultural Events in Chicago",
     description:
-      "Upcoming Indian and South Asian cultural events in Chicago — literature festivals, fashion shows, art exhibitions, and community gatherings.",
+      "Upcoming Indian and South Asian cultural events in Chicago: literature festivals, fashion shows, art exhibitions, and community gatherings.",
     url: "https://www.chicagoindianarts.org/events",
   },
   alternates: {

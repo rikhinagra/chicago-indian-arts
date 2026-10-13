@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Community Partners — Chicago Indian Arts Collaborators",
+  title: "Community Partners | Chicago Indian Arts Collaborators",
   description:
     "Meet our community partners who collaborate with Chicago Indian Arts to promote Indian and South Asian cultural heritage through events, festivals, and exhibitions in Chicago.",
   keywords: [
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Indian community partners Chicago",
   ],
   openGraph: {
-    title: "Community Partners — Chicago Indian Arts",
+    title: "Community Partners | Chicago Indian Arts",
     description:
       "Our community partners who collaborate to promote Indian and South Asian cultural heritage through events and exhibitions.",
     url: "https://www.chicagoindianarts.org/community-partners",
