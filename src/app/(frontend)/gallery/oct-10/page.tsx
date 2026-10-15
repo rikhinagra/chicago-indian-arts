@@ -20,6 +20,7 @@ const albums = [
   { name: "Visual Creator 11", url: "https://drive.google.com/drive/folders/1IVJTLOTgUld3lBNRw0JGz4UL8n-IePSM?usp=drive_link" },
   { name: "Visual Creator 12", url: "https://drive.google.com/drive/folders/1EvNZo0dXN3aPnifEDxRbXPdazzs86-qx?usp=drive_link" },
   { name: "Visual Creator 13", url: "https://drive.google.com/drive/folders/1y_1jqf63nuvnkFggGtQKYfe_iW1j7qsK?usp=drive_link" },
+  { name: "Visual Creator 14", url: "https://drive.google.com/drive/folders/1xXTNVUN9zTKDl9av15BKXNj3GxQg7suN" },
 ];
 
 export default function Oct10GalleryPage() {
