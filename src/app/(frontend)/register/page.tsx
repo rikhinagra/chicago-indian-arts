@@ -10,12 +10,6 @@ import SectionTag from "@/components/ui/SectionTag";
 
 const interestOptions = [
   {
-    id: "fashion",
-    label: "Chicago Indian Fashion Week",
-    subtitle: "Fashion & Design",
-    icon: Palette,
-  },
-  {
     id: "photography",
     label: "Wildlife Photography & Visual Arts Festival",
     subtitle: "Photography & Visual Arts",
@@ -26,6 +20,12 @@ const interestOptions = [
     label: "Chicago Indian Literature Festival",
     subtitle: "Literature & Storytelling",
     icon: BookOpen,
+  },
+  {
+    id: "fashion",
+    label: "Chicago Indian Fashion Week",
+    subtitle: "Fashion & Design",
+    icon: Palette,
   },
 ];
 
