@@ -336,7 +336,7 @@ function FormLink({
 
 export default function WildlifeFestival2027Page() {
   return (
-    <>
+    <div style={{ fontVariantNumeric: "lining-nums" }}>
       {/* Hero */}
       <section
         data-section="photography-hero"
@@ -647,8 +647,13 @@ export default function WildlifeFestival2027Page() {
               <FadeInSection key={s.label} delay={i * 0.1}>
                 <div style={{ borderLeft: `4px solid ${s.color}`, paddingLeft: "1.1rem" }}>
                   <div
-                    className="font-heading"
-                    style={{ fontSize: "2.4rem", fontWeight: 700, lineHeight: 1.1, color: "#1a1a1a" }}
+                    style={{
+                      fontFamily: "var(--font-lato), 'Lato', sans-serif",
+                      fontSize: "2.4rem",
+                      fontWeight: 700,
+                      lineHeight: 1.1,
+                      color: "#1a1a1a",
+                    }}
                   >
                     {s.value}
                   </div>
@@ -1291,6 +1296,6 @@ export default function WildlifeFestival2027Page() {
           </div>
         </FadeInSection>
       </section>
-    </>
+    </div>
   );
 }

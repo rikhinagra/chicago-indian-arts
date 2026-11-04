@@ -405,6 +405,10 @@ img {
   [data-section="literature-image"],
   [data-section="literature-why"],
   [data-section="literature-highlights"],
+  [data-section="kahani-voices"],
+  [data-section="kahani-conversations"],
+  [data-section="kahani-schedule"],
+  [data-section="kahani-experiences"],
   [data-section="literature-cta"] {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
@@ -988,6 +992,10 @@ img {
   [data-section="literature-about"],
   [data-section="literature-why"],
   [data-section="literature-highlights"],
+  [data-section="kahani-voices"],
+  [data-section="kahani-conversations"],
+  [data-section="kahani-schedule"],
+  [data-section="kahani-experiences"],
   [data-section="literature-cta"] {
     padding: 2.5rem 1.2rem !important;
   }
@@ -1534,6 +1542,10 @@ img {
   [data-section="literature-about"],
   [data-section="literature-why"],
   [data-section="literature-highlights"],
+  [data-section="kahani-voices"],
+  [data-section="kahani-conversations"],
+  [data-section="kahani-schedule"],
+  [data-section="kahani-experiences"],
   [data-section="literature-cta"] {
     padding: 2rem 1rem !important;
   }

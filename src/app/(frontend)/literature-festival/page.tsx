@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Globe, Heart } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Globe, Heart } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
@@ -144,7 +144,7 @@ export default function LiteratureFestivalPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Chicago Indian Literature Festival. May 30, 2026
+              Chicago Indian Literature Festival. April 25, 2027
             </p>
 
             <div className="flex flex-wrap" style={{ gap: "1rem" }}>
@@ -208,6 +208,31 @@ export default function LiteratureFestivalPage() {
                 }}
               >
                 View Literature Festival Schedule
+              </Link>
+              <Link
+                href="/literature-festival/2027"
+                className="inline-flex items-center justify-center font-semibold uppercase text-center"
+                style={{
+                  gap: "0.5rem",
+                  backgroundColor: "#1a1a1a",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.5rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ffffff";
+                  e.currentTarget.style.color = "#1a1a1a";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#1a1a1a";
+                  e.currentTarget.style.color = "#ffffff";
+                }}
+              >
+                Lit Fest &rsquo;27
+                <ArrowRight size={15} />
               </Link>
             </div>
           </FadeInSection>
@@ -559,7 +584,7 @@ export default function LiteratureFestivalPage() {
                 marginBottom: "2rem",
               }}
             >
-              Register your interest for Chicago Indian Literature Festival 2026. May 30, 2026.
+              Register your interest for Chicago Indian Literature Festival 2027. April 25, 2027.
             </p>
             <Link
               href="/register"
