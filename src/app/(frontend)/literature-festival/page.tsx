@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, BookOpen, Globe, Heart } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
+import { LIT_FEST_2027_LIVE } from "@/lib/featureFlags";
 
 const highlights = [
   {
@@ -209,31 +210,35 @@ export default function LiteratureFestivalPage() {
               >
                 View Literature Festival Schedule
               </Link>
-              <Link
-                href="/literature-festival/2027"
-                className="inline-flex items-center justify-center font-semibold uppercase text-center"
-                style={{
-                  gap: "0.5rem",
-                  backgroundColor: "#1a1a1a",
-                  color: "#ffffff",
-                  padding: "0.85rem 2.5rem",
-                  fontSize: "0.85rem",
-                  letterSpacing: "1px",
-                  textDecoration: "none",
-                  transition: "all 0.3s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ffffff";
-                  e.currentTarget.style.color = "#1a1a1a";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "#1a1a1a";
-                  e.currentTarget.style.color = "#ffffff";
-                }}
-              >
-                Lit Fest &rsquo;27
-                <ArrowRight size={15} />
-              </Link>
+              {/* Lit Fest ’27 button: hidden until the client approves the page.
+                  Turn it on with LIT_FEST_2027_LIVE in src/lib/featureFlags.ts */}
+              {LIT_FEST_2027_LIVE && (
+                <Link
+                  href="/literature-festival/2027"
+                  className="inline-flex items-center justify-center font-semibold uppercase text-center"
+                  style={{
+                    gap: "0.5rem",
+                    backgroundColor: "#1a1a1a",
+                    color: "#ffffff",
+                    padding: "0.85rem 2.5rem",
+                    fontSize: "0.85rem",
+                    letterSpacing: "1px",
+                    textDecoration: "none",
+                    transition: "all 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ffffff";
+                    e.currentTarget.style.color = "#1a1a1a";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#1a1a1a";
+                    e.currentTarget.style.color = "#ffffff";
+                  }}
+                >
+                  Lit Fest &rsquo;27
+                  <ArrowRight size={15} />
+                </Link>
+              )}
             </div>
           </FadeInSection>
         </div>

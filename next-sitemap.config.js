@@ -2,7 +2,9 @@
 module.exports = {
   siteUrl: "https://www.chicagoindianarts.org",
   generateRobotsTxt: true,
-  exclude: ["/admin/*", "/api/*", "/privacy-policy", "/terms"],
+  // "/literature-festival/2027" is hidden on purpose until the client approves the page.
+  // Remove it from this list when LIT_FEST_2027_LIVE is switched on (src/lib/featureFlags.ts).
+  exclude: ["/admin/*", "/api/*", "/privacy-policy", "/terms", "/literature-festival/2027"],
   robotsTxtOptions: {
     additionalSitemaps: [],
     policies: [
