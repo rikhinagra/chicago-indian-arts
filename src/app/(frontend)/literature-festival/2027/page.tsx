@@ -457,7 +457,7 @@ export default function LitFest2027Page() {
             >
               <span className="inline-flex items-center" style={{ gap: "0.5rem" }}>
                 <CalendarDays size={18} style={{ color: "#d4af37" }} />
-                Sunday, April 25, 2027
+                Date to be announced
               </span>
               <span className="inline-flex items-center" style={{ gap: "0.5rem" }}>
                 <Clock size={18} style={{ color: "#d4af37" }} />
@@ -924,7 +924,7 @@ export default function LitFest2027Page() {
                 marginBottom: "2rem",
               }}
             >
-              Join us on Sunday, April 25, 2027 for an afternoon of books, cinema, music and
+              Date to be announced. Join us for an afternoon of books, cinema, music and
               laughter.
             </p>
             <div className="flex flex-wrap justify-center" style={{ gap: "1rem" }}>

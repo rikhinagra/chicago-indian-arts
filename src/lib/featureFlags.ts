@@ -8,3 +8,8 @@
 // To publish again: set this to true, and remove "/literature-festival/2027" from the
 // `exclude` list in next-sitemap.config.js, then deploy.
 export const LIT_FEST_2027_LIVE = false;
+
+// Wildlife Photography & Visual Arts Festival 2027: the festival date is not decided yet,
+// so the "Schedule of the Day" section on /photography-festival/2027 is hidden.
+// Set to true (and update the times/date) once the client confirms the date.
+export const WILDLIFE_2027_SCHEDULE_LIVE = false;

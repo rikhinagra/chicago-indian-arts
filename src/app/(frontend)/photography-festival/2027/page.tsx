@@ -6,6 +6,7 @@ import { Tiro_Devanagari_Sanskrit } from "next/font/google";
 import { ArrowLeft, ArrowUpRight, Camera, BookOpen, Heart, Recycle } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
+import { WILDLIFE_2027_SCHEDULE_LIVE } from "@/lib/featureFlags";
 
 const sanskritFont = Tiro_Devanagari_Sanskrit({
   weight: "400",
@@ -252,7 +253,7 @@ const faqs = [
     a: "Yes. Selected work can be printed locally, so no shipping is needed.",
   },
   {
-    q: "Do I need to attend on April 24?",
+    q: "Do I need to attend on the festival day?",
     a: "It is encouraged but not required. Winners who cannot attend are recognized virtually.",
   },
   {
@@ -473,12 +474,12 @@ export default function WildlifeFestival2027Page() {
                 fontWeight: 600,
                 lineHeight: 1.6,
                 color: "rgba(255,255,255,0.95)",
-                maxWidth: "600px",
+                maxWidth: "760px",
                 marginBottom: "2rem",
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Saturday, April 24, 2027 &middot; Exhibition &middot; Talks &middot; Workshops &middot; Awards
+              Coming 2027 &middot; Date to Be Announced &middot; Exhibition &middot; Talks &middot; Workshops &middot; Awards
             </p>
 
             <div className="flex flex-wrap" style={{ gap: "1rem" }}>
@@ -627,7 +628,7 @@ export default function WildlifeFestival2027Page() {
                 Indian Fashion Week.
               </p>
               <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "1.2rem" }}>
-                Held during Earth Month, it connects the forests and grasslands of India with the
+                It connects the forests and grasslands of India with the
                 prairies and lakefront of Illinois. Galleries, talks, workshops and an awards
                 evening turn one day in Chicago into a meeting place for the people who document,
                 paint and protect the living world.
@@ -812,67 +813,70 @@ export default function WildlifeFestival2027Page() {
         </div>
       </section>
 
-      {/* Schedule of the Day */}
-      <section
-        data-section="photography-schedule"
-        style={{ padding: "3rem 3rem", background: darkGreen }}
-      >
-        <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
-          <FadeInSection>
-            <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-              <GoldTag>Saturday, April 24, 2027</GoldTag>
-              <h2
-                data-section="photography-heading"
-                className="font-heading font-semibold"
-                style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#ffffff" }}
-              >
-                Schedule of the Day
-              </h2>
-            </div>
-          </FadeInSection>
-
-          <div>
-            {schedule.map((s, i) => (
-              <FadeInSection key={s.time} delay={i * 0.06}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "0.3rem 2rem",
-                    padding: "1.25rem 0",
-                    borderTop: "1px solid rgba(255,255,255,0.14)",
-                    borderBottom:
-                      i === schedule.length - 1 ? "1px solid rgba(255,255,255,0.14)" : "none",
-                  }}
+      {/* Schedule of the Day: hidden while the festival date is undecided.
+          Turn on with WILDLIFE_2027_SCHEDULE_LIVE in src/lib/featureFlags.ts */}
+      {WILDLIFE_2027_SCHEDULE_LIVE && (
+          <section
+          data-section="photography-schedule"
+          style={{ padding: "3rem 3rem", background: darkGreen }}
+        >
+          <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
+            <FadeInSection>
+              <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+                <GoldTag>Date to be announced</GoldTag>
+                <h2
+                  data-section="photography-heading"
+                  className="font-heading font-semibold"
+                  style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#ffffff" }}
                 >
+                  Schedule of the Day
+                </h2>
+              </div>
+            </FadeInSection>
+
+            <div>
+              {schedule.map((s, i) => (
+                <FadeInSection key={s.time} delay={i * 0.06}>
                   <div
                     style={{
-                      flex: "0 0 8rem",
-                      fontSize: "0.95rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.5px",
-                      color: "#d4af37",
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: "0.3rem 2rem",
+                      padding: "1.25rem 0",
+                      borderTop: "1px solid rgba(255,255,255,0.14)",
+                      borderBottom:
+                        i === schedule.length - 1 ? "1px solid rgba(255,255,255,0.14)" : "none",
                     }}
                   >
-                    {s.time}
-                  </div>
-                  <div style={{ flex: "1 1 16rem", minWidth: 0 }}>
-                    <h3
-                      className="font-heading"
-                      style={{ fontSize: "1.2rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}
+                    <div
+                      style={{
+                        flex: "0 0 8rem",
+                        fontSize: "0.95rem",
+                        fontWeight: 700,
+                        letterSpacing: "0.5px",
+                        color: "#d4af37",
+                      }}
                     >
-                      {s.title}
-                    </h3>
-                    <p style={{ fontSize: "0.93rem", lineHeight: 1.7, color: "rgba(255,255,255,0.7)" }}>
-                      {s.description}
-                    </p>
+                      {s.time}
+                    </div>
+                    <div style={{ flex: "1 1 16rem", minWidth: 0 }}>
+                      <h3
+                        className="font-heading"
+                        style={{ fontSize: "1.2rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.25rem" }}
+                      >
+                        {s.title}
+                      </h3>
+                      <p style={{ fontSize: "0.93rem", lineHeight: 1.7, color: "rgba(255,255,255,0.7)" }}>
+                        {s.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </FadeInSection>
-            ))}
+                </FadeInSection>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Festival Awards */}
       <section
@@ -1264,7 +1268,7 @@ export default function WildlifeFestival2027Page() {
                 marginBottom: "2rem",
               }}
             >
-              Submit your work by January 31, 2027, or join us on April 24 as a volunteer,
+              Submit your work by January 31, 2027, or join us on the day as a volunteer,
               speaker, sponsor or guest. Together, let&apos;s tell the visual stories that matter.
             </p>
             <div className="flex flex-wrap justify-center" style={{ gap: "1rem" }}>

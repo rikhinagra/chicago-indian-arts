@@ -145,7 +145,7 @@ export default function LiteratureFestivalPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Chicago Indian Literature Festival. April 25, 2027
+              Chicago Indian Literature Festival 2027. Date to be announced
             </p>
 
             <div className="flex flex-wrap" style={{ gap: "1rem" }}>
@@ -589,7 +589,7 @@ export default function LiteratureFestivalPage() {
                 marginBottom: "2rem",
               }}
             >
-              Register your interest for Chicago Indian Literature Festival 2027. April 25, 2027.
+              Register your interest for Chicago Indian Literature Festival 2027. Date to be announced.
             </p>
             <Link
               href="/register"
