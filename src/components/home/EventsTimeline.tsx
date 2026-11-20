@@ -355,7 +355,7 @@ export default function EventsTimeline() {
 
         {/* Past events (archive) */}
         {filteredPast.length > 0 && (
-          <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto", marginTop: "3rem" }}>
+          <div id="past-events" style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto", marginTop: "3rem", scrollMarginTop: "6rem" }}>
             <FadeInSection className="text-center" style={{ marginBottom: "1.5rem" }}>
               <h3
                 className="font-heading font-semibold"
