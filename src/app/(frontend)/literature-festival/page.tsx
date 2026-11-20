@@ -145,7 +145,7 @@ export default function LiteratureFestivalPage() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Chicago Indian Literature Festival 2027. Date to be announced
+              Chicago Indian Literature Festival 2027: April 17, 2027
             </p>
 
             <div className="flex flex-wrap" style={{ gap: "1rem" }}>
@@ -187,6 +187,7 @@ export default function LiteratureFestivalPage() {
               >
                 Vendor &amp; Partner Intake Form
               </Link>
+              {/* Hidden: event is over. Restore the Schedule button when the next schedule is decided.
               <Link
                 href="/literature-festival/schedule"
                 className="inline-block font-semibold uppercase"
@@ -210,8 +211,8 @@ export default function LiteratureFestivalPage() {
               >
                 View Literature Festival Schedule
               </Link>
-              {/* Lit Fest ’27 button: hidden until the client approves the page.
-                  Turn it on with LIT_FEST_2027_LIVE in src/lib/featureFlags.ts */}
+              */}
+              {/* Lit Fest ’27 button: shown while LIT_FEST_2027_LIVE is true (src/lib/featureFlags.ts) */}
               {LIT_FEST_2027_LIVE && (
                 <Link
                   href="/literature-festival/2027"
@@ -589,7 +590,7 @@ export default function LiteratureFestivalPage() {
                 marginBottom: "2rem",
               }}
             >
-              Register your interest for Chicago Indian Literature Festival 2027. Date to be announced.
+              Register your interest for Chicago Indian Literature Festival 2027, April 17, 2027.
             </p>
             <Link
               href="/register"

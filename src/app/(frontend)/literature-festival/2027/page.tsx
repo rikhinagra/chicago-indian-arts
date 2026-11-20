@@ -2,222 +2,100 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowLeft,
-  CalendarDays,
-  Clock,
-  MapPin,
-  Coffee,
-  Trophy,
-  Gift,
-  PenLine,
-} from "lucide-react";
+import { ArrowLeft, CalendarDays, MapPin } from "lucide-react";
 import FadeInSection from "@/components/ui/FadeInSection";
 import SectionTag from "@/components/ui/SectionTag";
 
-// Registration goes to the site's own registration page until the client sends
-// the Google Form for Lit Fest '27. Swap this one constant when it arrives.
-const REGISTER_URL = "/register";
+// Lit Fest '27 Google Form (sent by the client on 2026-11-17). All form buttons use it.
+const REGISTER_URL = "https://forms.gle/tnVDYVS3MdDBEJ4H8";
 
 const HERO_IMAGE =
   "https://res.cloudinary.com/dist59h0i/image/upload/v1793773359/lit-fest-2027/kahani-chicago-2027-storytelling-open-book-string-lights-hero.webp";
 const FESTIVAL_PHOTO =
   "https://res.cloudinary.com/dist59h0i/image/upload/v1780906812/Chicago-Indian-Literature-Festival-30May_g8ansz.webp";
 
-const charcoal = "linear-gradient(180deg, #111111 0%, #1a1a1a 100%)";
-const accents = ["#d4af37", "#cd5c5c", "#7a4a9e", "#2a9bb0", "#2e3f8f", "#d4af37"];
+const accents = ["#d4af37", "#cd5c5c", "#7a4a9e", "#2a9bb0", "#2e3f8f"];
 
-const stats = [
-  { value: "4.5 Hours", label: "of stories, music and laughter", color: "#d4af37" },
-  { value: "10", label: "moments across the afternoon", color: "#cd5c5c" },
-  { value: "6", label: "headline voices we are inviting", color: "#7a4a9e" },
-  { value: "5", label: "conversation themes", color: "#2a9bb0" },
+// Content from the client's "Chicago Indian Literature Festival" one-pager (2026-11-18).
+const submissionTypes = [
+  {
+    label: "Poets",
+    title: "Poetry & Shayari",
+    text: "Spoken word, shayari and poetry in English, Hindi, Urdu or any Indian language, with English context.",
+  },
+  {
+    label: "Writers",
+    title: "Fiction & Essays",
+    text: "Short stories, essays and personal writing to read aloud or discuss on stage.",
+  },
+  {
+    label: "Authors",
+    title: "Published Books",
+    text: "Authors who would like to present, read from or sign their books at the festival.",
+  },
+  {
+    label: "Speakers",
+    title: "Talks & Panels",
+    text: "Storytellers, filmmakers and creators with an idea for a talk, panel or conversation.",
+  },
+  {
+    label: "Leaders",
+    title: "Community Voices",
+    text: "Community and cultural leaders with a story about identity, heritage or the Indian diaspora.",
+  },
 ];
 
-const voices: {
-  initials: string;
-  name: string;
-  role: React.ReactNode;
-  sessionLabel: string;
-  session: string;
-  audience?: string;
-}[] = [
+const steps = [
   {
-    initials: "TK",
-    name: "Twinkle Khanna",
-    role: "Author, columnist, former actress and witty conversationalist.",
-    sessionLabel: "Session",
-    session: "Funny, Fearless & Unfiltered: Life, Marriage and Everything in Between",
-    audience: "For women, young professionals, Bollywood fans and book lovers.",
+    title: "Prepare your entry",
+    text: "A sample of your work (a poem, an excerpt, a talk idea or a book), a short bio and a photo.",
   },
   {
-    initials: "CB",
-    name: "Chetan Bhagat",
-    role: "Bestselling novelist whose books connect literature, Bollywood and modern Indian society.",
-    sessionLabel: "Session",
-    session: "From Books to Bollywood: Why Indian Stories Rule",
-    audience: "A recognizable, crowd-pleasing literary headliner.",
+    title: "Fill in the Google Form",
+    text: "Tell us who you are, what you would like to share and add a link to your work. It takes a few minutes.",
   },
   {
-    initials: "AT",
-    name: "Amish Tripathi",
-    role: "Bestselling mythology and historical-fiction author.",
-    sessionLabel: "Session",
-    session: "Shiva, Mythology & Modern India: Why Ancient Stories Still Matter",
-    audience: "For families, mythology enthusiasts and younger readers.",
+    title: "Hear from us",
+    text: "Our team reviews every entry and contacts selected participants with festival details.",
+  },
+];
+
+const faqs: { q: string; a: React.ReactNode }[] = [
+  {
+    q: "Who can submit?",
+    a: "Poets, writers, authors, speakers and community leaders of any level, from anywhere in the world. You do not need to be published.",
   },
   {
-    initials: "VS",
-    name: "Vikas Swarup",
-    role: (
+    q: "Which languages are welcome?",
+    a: "English, Hindi, Urdu and any Indian language. For non-English work, please include a short English summary.",
+  },
+  {
+    q: "Can international participants apply?",
+    a: "Yes. The festival is open to everyone. If you are selected, you are welcome to come to Chicago and share your work in person. It is completely up to you. Please note that the festival does not cover travel, accommodation or any other expenses.",
+  },
+  {
+    q: "Do I need to attend?",
+    a: "Attending is highly recommended, but the choice is yours. Selected participants who come can perform, speak or present on stage and meet the audience. Travel and stay are at your own expense.",
+  },
+  {
+    q: "Do I keep the rights to my work?",
+    a: "Always. Your work is shared with credit, for festival programming and promotion only.",
+  },
+  {
+    q: "When will I hear back?",
+    a: "After submissions close on January 15, 2027, our team reviews every entry and contacts selected participants.",
+  },
+  {
+    q: "Who do I contact with questions?",
+    a: (
       <>
-        Author of <em>Q &amp; A</em>, the novel behind <em>Slumdog Millionaire</em>.
+        Reach the team through the{" "}
+        <Link href="/contact" style={{ color: "#cd5c5c", fontWeight: 600 }}>
+          Chicago Indian Arts contact page
+        </Link>
+        .
       </>
     ),
-    sessionLabel: "Conversation",
-    session: "From literature to cinema",
-  },
-  {
-    initials: "RK",
-    name: "Rupi Kaur",
-    role: "Poetry performer and bestselling author with a young international following.",
-    sessionLabel: "Conversation",
-    session: "Poetry and performance",
-  },
-  {
-    initials: "AD",
-    name: "Abhay Deol",
-    role: "A distinctive cinema and storytelling voice.",
-    sessionLabel: "Conversation",
-    session: "A creative, contemporary take on storytelling",
-  },
-];
-
-const conversations = [
-  {
-    theme: "Contemporary Fiction",
-    title: "Women rewriting the Indian story",
-    invited: "Chitra Banerjee Divakaruni, Anuja Chauhan",
-  },
-  {
-    theme: "Literary Prestige",
-    title: "The stories that shape a nation",
-    invited: "Amitav Ghosh, Vikram Chandra",
-  },
-  {
-    theme: "Diaspora & Identity",
-    title: "Growing up between cultures",
-    invited: "Mindy Kaling, Kal Penn, Alka Joshi",
-  },
-  {
-    theme: "Humor & Performance",
-    title: "Comedy is storytelling",
-    invited: "Vir Das, Zakir Khan",
-  },
-  {
-    theme: "Music & Poetry",
-    title: "The magic of words and music",
-    invited: "Swanand Kirkire, Piyush Mishra",
-  },
-];
-
-const schedule = [
-  {
-    time: "3:00 to 3:25",
-    title: "The Story Bazaar",
-    tag: "Arrival experience",
-    description:
-      "Indian street-food bites, chai, book stalls, photo wall, live instrumental music, interactive story postcards and a kids' corner.",
-  },
-  {
-    time: "3:25 to 3:35",
-    title: "Opening: India in 10 Stories",
-    tag: "Visual storytelling",
-    description:
-      "A fast-paced montage of literature, cinema and Chicago's Indian community, followed by a dynamic emcee welcome.",
-  },
-  {
-    time: "3:35 to 4:15",
-    title: "Celebrity Spotlight: Unscripted",
-    tag: "Headline fireside chat",
-    description:
-      "A headline guest shares fun personal stories, answers surprising questions and takes the audience along.",
-  },
-  {
-    time: "4:15 to 4:35",
-    title: "Kahani Live: Poetry, Music & Laughter",
-    tag: "Performance",
-    description:
-      "A high-energy mix of spoken word, shayari, music and comedy, including multilingual performances with English context.",
-  },
-  {
-    time: "4:35 to 5:10",
-    title: "Bollywood, Books & Beyond",
-    tag: "Interactive panel",
-    description:
-      "Three guests debate why Indian stories travel globally, including books adapted for film and streaming. The audience votes on iconic adaptations.",
-  },
-  {
-    time: "5:10 to 5:35",
-    title: "Chai, Chaat & Chapters",
-    tag: "Festival break",
-    description:
-      "Book signings, meet-the-authors, food, sponsor activations and a quick scavenger hunt with prizes.",
-  },
-  {
-    time: "5:35 to 6:05",
-    title: "Two Worlds, One Story",
-    tag: "Youth and family panel",
-    description:
-      "Funny and heartfelt conversations about identity, parents, dating, language and growing up Indian American.",
-  },
-  {
-    time: "6:05 to 6:30",
-    title: "The Great Chicago Story Slam",
-    tag: "Audience competition",
-    description:
-      "Four preselected storytellers get three minutes each. The audience votes live for the winner.",
-  },
-  {
-    time: "6:30 to 7:00",
-    title: "Stories That Changed My Life",
-    tag: "Inspirational finale",
-    description:
-      "A celebrated author or guest shares memorable stories, then takes rapid-fire audience questions.",
-  },
-  {
-    time: "7:00 to 7:30",
-    title: "The Kahani Celebration",
-    tag: "Closing social",
-    description:
-      "Live music or an upbeat DJ, prize announcements, final book signings, networking and photo opportunities.",
-  },
-];
-
-const experiences = [
-  {
-    icon: Coffee,
-    title: "The Kahani Chai Café",
-    description:
-      "A branded chai lounge where you draw a conversation prompt and share stories with strangers.",
-  },
-  {
-    icon: Trophy,
-    title: "Chicago's Got Stories",
-    description:
-      "A three-minute storytelling contest. Winners get a trophy, a book bundle and a social-media feature.",
-  },
-  {
-    icon: Gift,
-    title: "Blind Date With an Indian Book",
-    description:
-      "Wrapped books with intriguing clues on the cover. Pick one by its story, not its title.",
-  },
-  {
-    icon: PenLine,
-    title: "The Story Wall",
-    description:
-      "Finish the sentence “My Indian story begins with…” and add it to a growing art installation.",
   },
 ];
 
@@ -310,6 +188,20 @@ function PrimaryButton({
       </a>
     );
   }
+  if (href.startsWith("http")) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        style={style}
+        {...handlers}
+      >
+        {children}
+      </a>
+    );
+  }
   return (
     <Link href={href} className={className} style={style} {...handlers}>
       {children}
@@ -329,7 +221,7 @@ export default function LitFest2027Page() {
         <div className="absolute inset-0">
           <Image
             src={HERO_IMAGE}
-            alt="An open book lit by warm string lights, Kahani Chicago 2027 Indian literature festival"
+            alt="An open book lit by warm string lights, Chicago Indian Literature Festival 2027"
             fill
             className="object-cover"
             style={{ objectPosition: "70% center" }}
@@ -386,7 +278,7 @@ export default function LitFest2027Page() {
                 textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1)",
               }}
             >
-              Lit Fest &rsquo;27 &middot; Chicago Indian Literature Festival
+              Chicago Indian Arts Presents &middot; Lit Fest &rsquo;27
             </div>
 
             <h1
@@ -400,7 +292,7 @@ export default function LitFest2027Page() {
                 textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)",
               }}
             >
-              Kahani <strong className="font-bold">Chicago</strong>
+              Chicago Indian <strong className="font-bold">Literature Festival</strong>
             </h1>
 
             <p
@@ -457,34 +349,39 @@ export default function LitFest2027Page() {
             >
               <span className="inline-flex items-center" style={{ gap: "0.5rem" }}>
                 <CalendarDays size={18} style={{ color: "#d4af37" }} />
-                Date to be announced
-              </span>
-              <span className="inline-flex items-center" style={{ gap: "0.5rem" }}>
-                <Clock size={18} style={{ color: "#d4af37" }} />
-                3:00 PM to 7:30 PM
+                April 17, 2027
               </span>
               <span className="inline-flex items-center" style={{ gap: "0.5rem" }}>
                 <MapPin size={18} style={{ color: "#d4af37" }} />
-                Venue to be announced, Chicago
+                Chicago
               </span>
             </div>
 
             <div className="flex flex-wrap" style={{ gap: "1rem" }}>
               <PrimaryButton href={REGISTER_URL} variant="red">
-                Register Now
-              </PrimaryButton>
-              <PrimaryButton href="#schedule" variant="gold">
-                See the Program
+                Submit Your Entry
               </PrimaryButton>
             </div>
+            <p
+              style={{
+                marginTop: "1.25rem",
+                fontSize: "0.9rem",
+                letterSpacing: "0.5px",
+                color: "#ffffff",
+                textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
+              }}
+            >
+              Submit by <strong style={{ color: "#d4af37" }}>January 15, 2027</strong>
+            </p>
           </FadeInSection>
         </div>
       </section>
 
       <ColorStripe />
 
-      {/* About Kahani */}
+      {/* About the Festival */}
       <section
+        id="about"
         data-section="literature-about"
         style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
@@ -494,22 +391,24 @@ export default function LitFest2027Page() {
             style={{ gap: "4rem" }}
           >
             <FadeInSection>
-              <SectionTag>About Kahani</SectionTag>
+              <SectionTag>About the Festival</SectionTag>
               <h2
                 data-section="literature-heading"
                 className="font-heading font-semibold"
                 style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a", marginBottom: "1.5rem" }}
               >
-                Where Books, Cinema and Culture Meet in One Afternoon
+                Where Books, Cinema and Culture Come Together
               </h2>
               <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "1.2rem" }}>
-                Kahani Chicago is the literature pillar of Chicago Indian Arts, alongside Chicago
-                Indian Fashion Week and the Wildlife Photography &amp; Visual Arts Festival.
+                The Chicago Indian Literature Festival is the literature pillar of Chicago Indian
+                Arts, alongside Chicago Indian Fashion Week and the Chicago Visual Arts and
+                Wildlife Photography Festival. It celebrates India&apos;s storytelling traditions,
+                from mythology to modern fiction, poetry to cinema, and the stories of growing up
+                Indian around the world.
               </p>
               <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666" }}>
-                For four and a half hours, authors, poets, filmmakers, comedians and storytellers
-                celebrate India&apos;s storytelling traditions, from mythology to modern fiction,
-                poetry to Bollywood, and the stories of growing up Indian in America.
+                Expect conversations, readings, poetry, performances, book stalls and chai, all in
+                one afternoon in Chicago.
               </p>
             </FadeInSection>
 
@@ -549,65 +448,50 @@ export default function LitFest2027Page() {
               </div>
             </FadeInSection>
           </div>
-
-          <div
-            className="grid grid-cols-2 lg:grid-cols-4"
-            style={{ marginTop: "3.5rem", gap: "2rem" }}
-          >
-            {stats.map((s, i) => (
-              <FadeInSection key={s.label} delay={i * 0.1}>
-                <div style={{ borderLeft: `4px solid ${s.color}`, paddingLeft: "1.1rem" }}>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-lato), 'Lato', sans-serif",
-                      fontSize: "2.4rem",
-                      fontWeight: 700,
-                      lineHeight: 1.1,
-                      color: "#1a1a1a",
-                    }}
-                  >
-                    {s.value}
-                  </div>
-                  <div style={{ fontSize: "0.9rem", lineHeight: 1.5, color: "#666666", marginTop: "0.3rem" }}>
-                    {s.label}
-                  </div>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Headline Voices */}
+      {/* Call for Submissions */}
       <section
-        data-section="kahani-voices"
+        id="call"
+        data-section="kahani-call"
         style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
       >
         <div style={{ maxWidth: "1400px", marginLeft: "auto", marginRight: "auto" }}>
           <FadeInSection>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <SectionTag>Headline Voices</SectionTag>
+              <SectionTag>Call for Submissions</SectionTag>
               <h2
                 data-section="literature-heading"
                 className="font-heading font-semibold"
                 style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a", marginBottom: "0.8rem" }}
               >
-                The Storytellers We Are Inviting
+                Share Your Voice on Our Stage
               </h2>
-              <p style={{ fontSize: "0.95rem", fontStyle: "italic", color: "#666666" }}>
-                Invitations in progress. Final lineup to be announced.
+              <p
+                style={{
+                  fontSize: "1rem",
+                  lineHeight: 1.8,
+                  color: "#666666",
+                  maxWidth: "700px",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                We are looking for storytellers of every kind, from first-time writers to published
+                authors. If you have a story to tell, we want to hear it.
               </p>
             </div>
           </FadeInSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ gap: "1.75rem" }}>
-            {voices.map((v, i) => (
-              <FadeInSection key={v.name} delay={(i % 3) * 0.1}>
+            {submissionTypes.map((t, i) => (
+              <FadeInSection key={t.title} delay={(i % 3) * 0.1}>
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "0.8rem",
+                    gap: "0.7rem",
                     padding: "2rem 1.75rem",
                     backgroundColor: "#ffffff",
                     borderTop: `4px solid ${accents[i]}`,
@@ -624,50 +508,23 @@ export default function LitFest2027Page() {
                   }}
                 >
                   <div
-                    aria-hidden="true"
                     style={{
-                      width: "56px",
-                      height: "56px",
-                      borderRadius: "50%",
-                      backgroundColor: accents[i],
-                      color: "#ffffff",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontWeight: 800,
-                      fontSize: "1.1rem",
-                      letterSpacing: "1px",
+                      fontSize: "0.7rem",
+                      fontWeight: 700,
+                      letterSpacing: "2px",
+                      textTransform: "uppercase",
+                      color: "#cd5c5c",
                     }}
                   >
-                    {v.initials}
+                    {t.label}
                   </div>
                   <h3
                     className="font-heading"
                     style={{ fontSize: "1.6rem", fontWeight: 700, color: "#1a1a1a", lineHeight: 1.2 }}
                   >
-                    {v.name}
+                    {t.title}
                   </h3>
-                  <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#666666" }}>{v.role}</p>
-                  <div style={{ backgroundColor: "#faf8f3", padding: "0.85rem 1rem" }}>
-                    <div
-                      style={{
-                        fontSize: "0.7rem",
-                        fontWeight: 700,
-                        letterSpacing: "2px",
-                        textTransform: "uppercase",
-                        color: "#cd5c5c",
-                        marginBottom: "0.25rem",
-                      }}
-                    >
-                      {v.sessionLabel}
-                    </div>
-                    <div style={{ fontSize: "0.95rem", lineHeight: 1.5, color: "#1a1a1a", fontWeight: 500 }}>
-                      {v.session}
-                    </div>
-                  </div>
-                  {v.audience && (
-                    <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#888888" }}>{v.audience}</p>
-                  )}
+                  <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#666666" }}>{t.text}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -675,223 +532,129 @@ export default function LitFest2027Page() {
         </div>
       </section>
 
-      {/* Conversations */}
+      {/* How to Submit */}
       <section
-        data-section="kahani-conversations"
+        id="submit"
+        data-section="kahani-steps"
         style={{ padding: "3rem 3rem", backgroundColor: "#ffffff" }}
       >
         <div style={{ maxWidth: "1400px", marginLeft: "auto", marginRight: "auto" }}>
           <FadeInSection>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <SectionTag>Conversations</SectionTag>
-              <h2
-                data-section="literature-heading"
-                className="font-heading font-semibold"
-                style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a", marginBottom: "0.8rem" }}
-              >
-                Five Themes, Many Voices
-              </h2>
-              <p style={{ fontSize: "1rem", lineHeight: 1.8, color: "#666666", maxWidth: "640px", marginLeft: "auto", marginRight: "auto" }}>
-                Each conversation is built for a different audience, with authors and artists we are
-                inviting to take the stage.
-              </p>
-            </div>
-          </FadeInSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6" style={{ gap: "1.5rem" }}>
-            {conversations.map((c, i) => (
-              <FadeInSection
-                key={c.title}
-                delay={(i % 3) * 0.1}
-                className={`lg:col-span-2 ${i === 3 ? "lg:col-start-2" : ""}`}
-              >
-                <div
-                  style={{
-                    padding: "2rem 1.75rem",
-                    backgroundColor: "#faf8f3",
-                    borderLeft: `4px solid ${accents[i]}`,
-                    height: "100%",
-                  }}
-                >
-                  <div
-                    style={{
-                      fontSize: "0.72rem",
-                      fontWeight: 700,
-                      letterSpacing: "2px",
-                      textTransform: "uppercase",
-                      color: "#cd5c5c",
-                      marginBottom: "0.7rem",
-                    }}
-                  >
-                    {c.theme}
-                  </div>
-                  <h3
-                    className="font-heading"
-                    style={{ fontSize: "1.45rem", fontWeight: 600, lineHeight: 1.3, color: "#1a1a1a", marginBottom: "0.7rem" }}
-                  >
-                    {c.title}
-                  </h3>
-                  <p style={{ fontSize: "0.93rem", lineHeight: 1.7, color: "#666666" }}>
-                    Invited: {c.invited}
-                  </p>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Program */}
-      <section
-        id="schedule"
-        data-section="kahani-schedule"
-        style={{ padding: "3rem 3rem", background: charcoal, scrollMarginTop: "90px" }}
-      >
-        <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
-          <FadeInSection>
-            <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-              <div
-                style={{
-                  fontSize: "0.9rem",
-                  fontWeight: 800,
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  marginBottom: "0.8rem",
-                  color: "#d4af37",
-                }}
-              >
-                The Program &middot; 3:00 PM to 7:30 PM
-              </div>
-              <h2
-                data-section="literature-heading"
-                className="font-heading font-semibold"
-                style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#ffffff" }}
-              >
-                An Afternoon of Stories
-              </h2>
-            </div>
-          </FadeInSection>
-
-          <div>
-            {schedule.map((s, i) => (
-              <FadeInSection key={s.time} delay={i * 0.05}>
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    gap: "0.3rem 2rem",
-                    padding: "1.4rem 0",
-                    borderTop: "1px solid rgba(255,255,255,0.14)",
-                    borderBottom:
-                      i === schedule.length - 1 ? "1px solid rgba(255,255,255,0.14)" : "none",
-                  }}
-                >
-                  <div
-                    style={{
-                      flex: "0 0 8.5rem",
-                      fontSize: "0.95rem",
-                      fontWeight: 700,
-                      letterSpacing: "0.5px",
-                      color: "#d4af37",
-                    }}
-                  >
-                    {s.time}
-                  </div>
-                  <div style={{ flex: "1 1 16rem", minWidth: 0 }}>
-                    <h3
-                      className="font-heading"
-                      style={{ fontSize: "1.3rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.4rem" }}
-                    >
-                      {s.title}
-                    </h3>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        marginBottom: "0.5rem",
-                        padding: "0.2rem 0.6rem",
-                        fontSize: "0.7rem",
-                        fontWeight: 700,
-                        letterSpacing: "1.5px",
-                        textTransform: "uppercase",
-                        color: "#d4af37",
-                        backgroundColor: "rgba(212,175,55,0.14)",
-                      }}
-                    >
-                      {s.tag}
-                    </span>
-                    <p style={{ fontSize: "0.93rem", lineHeight: 1.7, color: "rgba(255,255,255,0.72)" }}>
-                      {s.description}
-                    </p>
-                  </div>
-                </div>
-              </FadeInSection>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Festival Experiences */}
-      <section
-        data-section="kahani-experiences"
-        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
-      >
-        <div style={{ maxWidth: "1400px", marginLeft: "auto", marginRight: "auto" }}>
-          <FadeInSection>
-            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <SectionTag>Festival Experiences</SectionTag>
+              <SectionTag>How to Submit</SectionTag>
               <h2
                 data-section="literature-heading"
                 className="font-heading font-semibold"
                 style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
               >
-                Not Just to Watch. To Take Part.
+                Three Simple Steps
               </h2>
             </div>
           </FadeInSection>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: "1.5rem" }}>
-            {experiences.map((x, i) => (
-              <FadeInSection key={x.title} delay={i * 0.1}>
+          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: "1.75rem" }}>
+            {steps.map((st, i) => (
+              <FadeInSection key={st.title} delay={i * 0.1}>
                 <div
                   style={{
-                    padding: "2.25rem 1.75rem",
-                    backgroundColor: "#ffffff",
-                    borderTop: "3px solid #d4af37",
+                    padding: "2rem 1.75rem",
+                    backgroundColor: "#faf8f3",
+                    borderTop: `3px solid ${i === 1 ? "#cd5c5c" : "#d4af37"}`,
                     height: "100%",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-4px)";
-                    e.currentTarget.style.boxShadow = "0 12px 32px rgba(0,0,0,0.1)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
                   }}
                 >
                   <div
+                    aria-hidden="true"
                     style={{
-                      width: "48px",
-                      height: "48px",
-                      borderRadius: "50%",
-                      backgroundColor: "rgba(205,92,92,0.1)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      marginBottom: "1.25rem",
+                      fontFamily: "var(--font-lato), 'Lato', sans-serif",
+                      fontSize: "2.4rem",
+                      fontWeight: 700,
+                      lineHeight: 1.1,
+                      color: "#d4af37",
+                      marginBottom: "0.8rem",
                     }}
                   >
-                    <x.icon size={22} style={{ color: "#cd5c5c" }} />
+                    {i + 1}
                   </div>
                   <h3
                     className="font-heading"
-                    style={{ fontSize: "1.35rem", fontWeight: 700, lineHeight: 1.3, color: "#1a1a1a", marginBottom: "0.6rem" }}
+                    style={{ fontSize: "1.35rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.6rem" }}
                   >
-                    {x.title}
+                    {st.title}
                   </h3>
-                  <p style={{ fontSize: "0.93rem", lineHeight: 1.75, color: "#666666" }}>
-                    {x.description}
-                  </p>
+                  <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#666666" }}>{st.text}</p>
+                </div>
+              </FadeInSection>
+            ))}
+          </div>
+
+          <FadeInSection>
+            <div
+              className="flex flex-wrap items-center justify-between"
+              style={{
+                gap: "1.5rem",
+                marginTop: "2.5rem",
+                padding: "2rem 2.25rem",
+                background: "linear-gradient(180deg, #111111 0%, #1a1a1a 100%)",
+                borderLeft: "4px solid #d4af37",
+              }}
+            >
+              <div>
+                <div
+                  className="font-heading"
+                  style={{ fontSize: "1.6rem", fontWeight: 600, color: "#ffffff", marginBottom: "0.3rem" }}
+                >
+                  Submit by January 15, 2027
+                </div>
+                <p style={{ fontSize: "0.95rem", color: "rgba(255,255,255,0.8)" }}>
+                  Open to everyone, anywhere in the world.
+                </p>
+              </div>
+              <PrimaryButton href={REGISTER_URL} variant="red">
+                Open the Submission Form
+              </PrimaryButton>
+            </div>
+          </FadeInSection>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section
+        id="faq"
+        data-section="kahani-faq"
+        style={{ padding: "3rem 3rem", backgroundColor: "#faf8f3" }}
+      >
+        <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
+          <FadeInSection>
+            <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+              <SectionTag>FAQ</SectionTag>
+              <h2
+                data-section="literature-heading"
+                className="font-heading font-semibold"
+                style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#1a1a1a" }}
+              >
+                Questions from Storytellers
+              </h2>
+            </div>
+          </FadeInSection>
+
+          <div>
+            {faqs.map((f, i) => (
+              <FadeInSection key={f.q} delay={i * 0.06}>
+                <div
+                  style={{
+                    padding: "1.4rem 0",
+                    borderTop: "1px solid rgba(0,0,0,0.1)",
+                    borderBottom: i === faqs.length - 1 ? "1px solid rgba(0,0,0,0.1)" : "none",
+                  }}
+                >
+                  <h3
+                    className="font-heading"
+                    style={{ fontSize: "1.25rem", fontWeight: 600, color: "#1a1a1a", marginBottom: "0.4rem" }}
+                  >
+                    {f.q}
+                  </h3>
+                  <p style={{ fontSize: "0.97rem", lineHeight: 1.8, color: "#666666" }}>{f.a}</p>
                 </div>
               </FadeInSection>
             ))}
@@ -899,7 +662,7 @@ export default function LitFest2027Page() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Stay tuned */}
       <section
         data-section="literature-cta"
         style={{
@@ -910,11 +673,23 @@ export default function LitFest2027Page() {
       >
         <FadeInSection>
           <div style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto" }}>
+            <div
+              style={{
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                letterSpacing: "3px",
+                textTransform: "uppercase",
+                color: "rgba(255,255,255,0.9)",
+                marginBottom: "1rem",
+              }}
+            >
+              Chicago Indian Literature Festival &middot; April 17, 2027
+            </div>
             <h2
               className="font-heading font-semibold"
               style={{ fontSize: "2.5rem", lineHeight: 1.3, color: "#ffffff", marginBottom: "1rem" }}
             >
-              Every One of Us Carries a Story. Come Share Yours.
+              Every One of Us Carries a Story. Stay&nbsp;Tuned.
             </h2>
             <p
               style={{
@@ -924,15 +699,12 @@ export default function LitFest2027Page() {
                 marginBottom: "2rem",
               }}
             >
-              Date to be announced. Join us for an afternoon of books, cinema, music and
-              laughter.
+              The venue and full program will be announced soon. Follow Chicago Indian Arts to hear
+              first.
             </p>
             <div className="flex flex-wrap justify-center" style={{ gap: "1rem" }}>
               <PrimaryButton href={REGISTER_URL} variant="white">
-                Register Now
-              </PrimaryButton>
-              <PrimaryButton href={REGISTER_URL} variant="dark">
-                Enter the Story Slam
+                Submit Your Entry
               </PrimaryButton>
             </div>
           </div>

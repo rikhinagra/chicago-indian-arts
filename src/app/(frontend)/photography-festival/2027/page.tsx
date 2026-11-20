@@ -14,7 +14,7 @@ const sanskritFont = Tiro_Devanagari_Sanskrit({
   display: "swap",
 });
 
-const FORM_URL = "https://forms.gle/Yvud1dpUyEJAkGWS7";
+const FORM_URL = "https://forms.gle/nsN2eNLzuGfqqQ9cA";
 const STAG_CRANE_IMAGE =
   "https://res.cloudinary.com/dist59h0i/image/upload/v1793278132/wildlife-festival-2027/wildlife-photography-visual-arts-festival-2027-stag-crane-illustration.webp";
 const CALL_FOR_ARTISTS_IMAGE =
@@ -479,7 +479,7 @@ export default function WildlifeFestival2027Page() {
                 textShadow: "0 2px 10px rgba(0,0,0,0.8), 0 1px 3px rgba(0,0,0,0.6)",
               }}
             >
-              Coming 2027 &middot; Date to Be Announced &middot; Exhibition &middot; Talks &middot; Workshops &middot; Awards
+              April 18, 2027 &middot; Chicago &middot; Exhibition &middot; Talks &middot; Workshops &middot; Awards
             </p>
 
             <div className="flex flex-wrap" style={{ gap: "1rem" }}>
@@ -823,7 +823,7 @@ export default function WildlifeFestival2027Page() {
           <div style={{ maxWidth: "900px", marginLeft: "auto", marginRight: "auto" }}>
             <FadeInSection>
               <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
-                <GoldTag>Date to be announced</GoldTag>
+                <GoldTag>April 18, 2027</GoldTag>
                 <h2
                   data-section="photography-heading"
                   className="font-heading font-semibold"
@@ -950,7 +950,7 @@ export default function WildlifeFestival2027Page() {
                 on the strength of the work.
               </p>
               <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "2rem" }}>
-                Submit by <strong style={{ color: "#1a1a1a" }}>January 31, 2027</strong>.
+                Submit by <strong style={{ color: "#1a1a1a" }}>January 15, 2027</strong>.
               </p>
               <FormLink variant="red">Apply via Google Form</FormLink>
             </FadeInSection>
@@ -1268,7 +1268,7 @@ export default function WildlifeFestival2027Page() {
                 marginBottom: "2rem",
               }}
             >
-              Submit your work by January 31, 2027, or join us on the day as a volunteer,
+              Submit your work by January 15, 2027, or join us on the day as a volunteer,
               speaker, sponsor or guest. Together, let&apos;s tell the visual stories that matter.
             </p>
             <div className="flex flex-wrap justify-center" style={{ gap: "1rem" }}>
@@ -1295,7 +1295,7 @@ export default function WildlifeFestival2027Page() {
               >
                 Register Now
               </Link>
-              <FormLink variant="dark">Submit by January 31, 2027</FormLink>
+              <FormLink variant="dark">Submit by January 15, 2027</FormLink>
             </div>
           </div>
         </FadeInSection>

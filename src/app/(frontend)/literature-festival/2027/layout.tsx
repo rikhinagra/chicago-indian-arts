@@ -9,11 +9,12 @@ const OG_IMAGE =
 const liveMetadata: Metadata = {
   // The parent layout sets a plain-string title, which cancels the site-wide
   // "| Chicago Indian Arts" template for child routes, so the brand is typed in here.
-  title: "Kahani Chicago 2027 | Lit Fest ’27 | Chicago Indian Arts",
+  title: "Chicago Indian Literature Festival 2027 | Lit Fest ’27 | Chicago Indian Arts",
   description:
-    "Kahani Chicago: Stories Without Borders. An Indian literature, cinema and culture festival by Chicago Indian Arts. Date to be announced. Authors, poets, filmmakers, comedians and storytellers in one afternoon.",
+    "Chicago Indian Literature Festival 2027 on April 17, 2027: Stories Without Borders. An Indian literature, cinema and culture festival by Chicago Indian Arts. Call for submissions from poets, writers, authors, speakers and community leaders is open until January 15, 2027.",
   keywords: [
-    "Kahani Chicago 2027",
+    "Chicago Indian Literature Festival 2027",
+    "call for submissions poets writers authors",
     "Lit Fest 27",
     "Indian literature festival Chicago",
     "Indian cinema and culture festival",
@@ -22,16 +23,16 @@ const liveMetadata: Metadata = {
     "Chicago Indian Arts",
   ],
   openGraph: {
-    title: "Kahani Chicago 2027 | Stories Without Borders",
+    title: "Chicago Indian Literature Festival 2027 | Stories Without Borders",
     description:
-      "An Indian literature, cinema and culture festival. Date to be announced. One city. A million stories.",
+      "An Indian literature, cinema and culture festival on April 17, 2027. Submit by January 15, 2027. One city. A million stories.",
     url: "https://www.chicagoindianarts.org/literature-festival/2027",
     images: [
       {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "Kahani Chicago 2027 by Chicago Indian Arts",
+        alt: "Chicago Indian Literature Festival 2027 by Chicago Indian Arts",
       },
     ],
   },
@@ -40,7 +41,7 @@ const liveMetadata: Metadata = {
   },
 };
 
-// While the page is hidden, expose no Kahani title/description at all and tell search
+// While the page is hidden, expose no title/description at all and tell search
 // engines not to index it. When LIT_FEST_2027_LIVE is true the full metadata above is used.
 export function generateMetadata(): Metadata {
   return LIT_FEST_2027_LIVE
@@ -64,7 +65,7 @@ export default function LitFest2027Layout({
         items={[
           { name: "Home", url: "https://www.chicagoindianarts.org" },
           { name: "Literature Festival", url: "https://www.chicagoindianarts.org/literature-festival" },
-          { name: "Kahani Chicago 2027", url: "https://www.chicagoindianarts.org/literature-festival/2027" },
+          { name: "Lit Fest ’27", url: "https://www.chicagoindianarts.org/literature-festival/2027" },
         ]}
       />
       {children}

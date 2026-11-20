@@ -1009,6 +1009,7 @@ export default function LitFestSchedulePage() {
             </div>
           </div>
 
+          {/* Hidden: event is over. Restore the Get Tickets button for the next event.
           <div style={{ marginTop: "2rem" }}>
             <Link
               href="https://www.zeffy.com/en-US/ticketing/chicago-indian-literature-festival"
@@ -1038,6 +1039,7 @@ export default function LitFestSchedulePage() {
               Get your Tickets
             </Link>
           </div>
+          */}
         </div>
       </section>
 

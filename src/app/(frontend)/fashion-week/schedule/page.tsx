@@ -141,6 +141,7 @@ export default function FashionWeekSchedulePage() {
             </div>
           </div>
 
+          {/* Hidden: event is over. Restore the Get Tickets button for the next event.
           <div style={{ marginTop: "2rem" }}>
             <Link
               href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
@@ -166,6 +167,7 @@ export default function FashionWeekSchedulePage() {
               Get Tickets
             </Link>
           </div>
+          */}
         </div>
       </section>
 
@@ -184,21 +186,22 @@ export default function FashionWeekSchedulePage() {
               A New Cultural Chapter in Chicago
             </h2>
             <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "1.2rem" }}>
-              This October, Inaugural Chicago Indian Fashion Week is coming with an unforgettable evening
-              celebrating fashion, culture, creativity, and community in the heart of Chicago.
-              Guests will enjoy runway designer and model shows, a red carpet experience, the
+              On October 10, 2026, the inaugural Chicago Indian Fashion Week brought an unforgettable
+              evening celebrating fashion, culture, creativity, and community to the heart of Chicago.
+              Guests enjoyed runway designer and model shows, a red carpet experience, the
               vibrant Fashion Village, appetizers, and networking with designers, creatives,
               media, and community leaders.
             </p>
             <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "2rem" }}>
-              Arrive in your finest Black Tie, Evening Gown, Formal Wear or Sophisticated Indian attire
-              for the red carpet, then take your seat for a night of glitz, glam, and stunning
+              Guests arrived in their finest Black Tie, Evening Gown, Formal Wear or Sophisticated Indian
+              attire for the red carpet, then took their seats for a night of glitz, glam, and stunning
               modern Indian couture blending rich heritage with bold, contemporary design.
             </p>
             <p style={{ fontSize: "1rem", lineHeight: 1.9, color: "#666666", marginBottom: "2rem" }}>
               CIFW is proud to support Bookwallah Charity which empowers kids and women through
               education. We are also supporting building St Jude&rsquo;s Cancer Hospital in India.
             </p>
+            {/* Hidden: event is over. Restore the early-bird note for the next event.
             <div
               className="inline-flex items-center"
               style={{
@@ -214,7 +217,9 @@ export default function FashionWeekSchedulePage() {
                 Early Bird tickets are limited. Reserve your place today.
               </span>
             </div>
+            */}
 
+            {/* Hidden: event is over. Restore the Get Tickets button for the next event.
             <div style={{ marginTop: "1.5rem" }}>
               <Link
                 href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
@@ -240,6 +245,7 @@ export default function FashionWeekSchedulePage() {
                 Get Tickets
               </Link>
             </div>
+            */}
           </FadeInSection>
         </div>
       </section>
@@ -380,6 +386,7 @@ export default function FashionWeekSchedulePage() {
             ))}
           </div>
 
+          {/* Hidden: event is over (VIP Front Row upsell). Restore for the next event.
           <FadeInSection>
             <div
               className="flex flex-col sm:flex-row items-center"
@@ -420,6 +427,7 @@ export default function FashionWeekSchedulePage() {
               </p>
             </div>
           </FadeInSection>
+          */}
 
           <FadeInSection>
             <p
@@ -431,13 +439,14 @@ export default function FashionWeekSchedulePage() {
                 letterSpacing: "0.3px",
               }}
             >
-              This event is strictly 21+. Valid ID required at entry. RSVP required.
+              This event was strictly 21+, with valid ID required at entry.
             </p>
           </FadeInSection>
         </div>
       </section>
 
       {/* CTA */}
+      {/* Hidden: event is over (Reserve Your Seat banner). Restore this whole section for the next event.
       <section
         data-section="fw-schedule-cta"
         style={{
@@ -492,6 +501,7 @@ export default function FashionWeekSchedulePage() {
           </div>
         </FadeInSection>
       </section>
+      */}
 
       {/* Responsive styles */}
       <style>{`

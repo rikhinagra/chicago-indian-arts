@@ -212,7 +212,7 @@ export default function FashionWeekPage() {
             </p>
 
             <div data-section="fashion-hero-buttons" className="flex flex-wrap" style={{ gap: "1rem" }}>
-              {/* Get Tickets — red, primary action */}
+              {/* Hidden: event is over. Restore Get Tickets when the next event is on sale.
               <Link
                 href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
                 target="_blank"
@@ -229,6 +229,26 @@ export default function FashionWeekPage() {
                 }}
               >
                 Get Tickets
+              </Link>
+              */}
+
+              {/* Model & Designer Intake — moved here from the homepage hero (2026-11-20) */}
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfp4MUh3oeeytstxd_QdxojNBAFMneE5bmO41fudn39ijaJdg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block font-semibold uppercase text-center"
+                style={{
+                  backgroundColor: "#1a1a1a",
+                  color: "#ffffff",
+                  padding: "0.85rem 2.2rem",
+                  fontSize: "0.85rem",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                Model &amp; Designer Intake
               </Link>
 
               {/* Become a Sponsor — dark, opens sponsorship modal */}
@@ -248,7 +268,7 @@ export default function FashionWeekPage() {
                 Become a Sponsor
               </button>
 
-              {/* View Schedule — gold */}
+              {/* Hidden: event is over. Restore the hero View Schedule button for the next event.
               <Link
                 href="/fashion-week/schedule"
                 className="inline-block font-semibold uppercase text-center"
@@ -264,6 +284,7 @@ export default function FashionWeekPage() {
               >
                 View Schedule
               </Link>
+              */}
 
               {/* CIFW Creative Deck — solid white */}
               <Link
@@ -797,6 +818,7 @@ export default function FashionWeekPage() {
               Experience Indian fashion like never before.
             </p>
             <div data-section="fashion-cta-buttons" className="flex flex-wrap justify-center" style={{ gap: "1rem" }}>
+              {/* Hidden: event is over. Restore Secure Your Seat when the next event is on sale.
               <Link
                 href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
                 target="_blank"
@@ -822,6 +844,7 @@ export default function FashionWeekPage() {
               >
                 Secure Your Seat
               </Link>
+              */}
               <Link
                 href="https://drive.google.com/file/d/1PlXgopiZaezIsuat6aQDiHQeWvOUqFLD/view"
                 target="_blank"

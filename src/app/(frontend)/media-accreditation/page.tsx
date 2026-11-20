@@ -40,9 +40,8 @@ const mediaTypes = [
 ];
 
 const events = [
-  "Chicago Indian Literature Festival (May 30)",
-  "Chicago Indian Fashion Week (July 2026)",
-  "Wildlife Photography & Visual Arts Festival (TBD)",
+  "Chicago Indian Literature Festival (April 17, 2027)",
+  "Wildlife Photography & Visual Arts Festival (April 18, 2027)",
   "All Events",
 ];
 

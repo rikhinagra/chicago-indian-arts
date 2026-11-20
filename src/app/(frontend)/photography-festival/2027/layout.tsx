@@ -7,7 +7,7 @@ const OG_IMAGE =
 export const metadata: Metadata = {
   title: "Wildlife Photography & Visual Arts Festival 2027 | Chicago Indian Arts",
   description:
-    "Wildlife Photography & Visual Arts Festival 2027 in Chicago. Date to be announced. One day of exhibition, talks, workshops and awards on the theme Vasudhaiva Kutumbakam, the world is one family. Call for artists open until January 31, 2027.",
+    "Wildlife Photography & Visual Arts Festival 2027 in Chicago on April 18, 2027. One day of exhibition, talks, workshops and awards on the theme Vasudhaiva Kutumbakam, the world is one family. Call for artists open until January 15, 2027.",
   keywords: [
     "Wildlife Photography & Visual Arts Festival 2027",
     "Vasudhaiva Kutumbakam",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wildlife Photography & Visual Arts Festival 2027",
     description:
-      "One day of exhibition, talks, workshops and awards. Date to be announced. Theme: Vasudhaiva Kutumbakam, the world is one family.",
+      "One day of exhibition, talks, workshops and awards. April 18, 2027. Theme: Vasudhaiva Kutumbakam, the world is one family.",
     url: "https://www.chicagoindianarts.org/photography-festival/2027",
     images: [
       {

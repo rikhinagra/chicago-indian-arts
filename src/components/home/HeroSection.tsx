@@ -21,6 +21,52 @@ function CountdownItem({ value, label }: { value: number; label: string }) {
   );
 }
 
+// Call-to-action link that opens a Google Form in a new tab. Uses the site's existing
+// button colours: "red" (#cd5c5c) or "dark" (#1a1a1a, turns gold on hover).
+function SubmitButton({
+  href,
+  variant,
+  children,
+}: {
+  href: string;
+  variant: "red" | "dark";
+  children: React.ReactNode;
+}) {
+  const base = variant === "red" ? "#cd5c5c" : "#1a1a1a";
+  const hover = variant === "red" ? "#b84e4e" : "#d4af37";
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        padding: "0.75rem 1.5rem",
+        fontSize: "0.82rem",
+        fontWeight: 600,
+        letterSpacing: "1px",
+        textTransform: "uppercase",
+        display: "inline-block",
+        textDecoration: "none",
+        textAlign: "center",
+        transition: "all 0.3s ease",
+        cursor: "pointer",
+        backgroundColor: base,
+        color: "#ffffff",
+        border: "none",
+        boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = hover;
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = base;
+      }}
+    >
+      {children}
+    </Link>
+  );
+}
+
 const heroVideos = [
   // Temporarily disabled per client — uncomment to restore (restore in this order, at the top of the list)
   // "https://res.cloudinary.com/dist59h0i/video/upload/v1784722046/chicago-indian-literature-festival-audience-dance-celebration_lzropu.mp4",
@@ -267,12 +313,12 @@ export default function HeroSection() {
             data-section="hero-label" className="uppercase"
             style={{ color: "#ffffff", fontSize: "1rem", fontWeight: 700, letterSpacing: "3px", marginBottom: "1.2rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 50px rgba(0,0,0,0.8), 0 0 2px rgba(0,0,0,1)" }}
           >
-            Chicago Indian Fashion Week &middot; October 10, 2026
+            Chicago Indian Arts &middot; 2027 Festivals
           </div>
 
           {/* Main Heading */}
           <h1 data-section="hero-title" className="font-heading font-light" style={{ fontSize: "3.5rem", lineHeight: 1.15, marginBottom: "1.2rem", maxWidth: "800px", textShadow: "0 3px 15px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)" }}>
-            Threads of India,{" "}
+            Stories of India,{" "}
             <strong className="font-bold">Spirit of Chicago</strong>
           </h1>
 
@@ -281,59 +327,34 @@ export default function HeroSection() {
             className="uppercase"
             style={{ color: "#ffffff", fontSize: "0.85rem", fontWeight: 700, letterSpacing: "2.5px", lineHeight: 1.7, maxWidth: "650px", marginBottom: "0.9rem", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1)" }}
           >
-            Celebrating fashion as emotion, grace, and expression through textures and craftsmanship
+            Literature, wildlife photography and visual arts celebrating Indian culture in Chicago
           </p>
           <p data-section="hero-tagline"
             className="font-heading"
             style={{ fontSize: "1.6rem", fontWeight: 600, fontStyle: "italic", lineHeight: 1.5, maxWidth: "650px", marginBottom: "0.5rem", color: "#d4af37", textShadow: "0 2px 8px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,1), 0 0 40px rgba(212,175,55,0.4)" }}
           >
-            The Home and the World
+            One city. A million stories.
           </p>
           <p data-section="hero-subtitle"
             style={{ color: "rgba(255,255,255,0.88)", fontSize: "1.05rem", fontWeight: 400, lineHeight: 1.7, maxWidth: "650px", marginBottom: "1.8rem", textShadow: "0 2px 10px rgba(0,0,0,1), 0 1px 3px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.9)" }}
           >
-            A new runway for Indian fashion, coming to Chicago
+            Literature Festival April 17, 2027 &middot; Wildlife Festival April 18, 2027
           </p>
 
           {/* CTA Buttons */}
-          <div data-section="hero-buttons" className="flex flex-col sm:flex-row items-center" style={{ gap: "1rem" }}>
-            <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfp4MUh3oeeytstxd_QdxojNBAFMneE5bmO41fudn39ijaJdg/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                padding: "0.75rem 1.5rem",
-                fontSize: "0.82rem",
-                fontWeight: 600,
-                letterSpacing: "1px",
-                textTransform: "uppercase",
-                display: "inline-block",
-                textDecoration: "none",
-                textAlign: "center",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-                backgroundColor: "#1a1a1a",
-                color: "#ffffff",
-                border: "none",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#d4af37";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#1a1a1a";
-                e.currentTarget.style.color = "#ffffff";
-              }}
-            >
-              Model &amp; Designer Intake
-            </Link>
-            <Button href="#events" variant="primary">
-              View Events
-            </Button>
+          <div data-section="hero-buttons" className="flex flex-col sm:flex-row flex-wrap items-center" style={{ gap: "1rem" }}>
+            {/* Model & Designer Intake moved to the Fashion Week page hero (2026-11-20). */}
+            <SubmitButton href="https://forms.gle/tnVDYVS3MdDBEJ4H8" variant="red">Literature: Submit Your Entry</SubmitButton>
+            <SubmitButton href="https://forms.gle/nsN2eNLzuGfqqQ9cA" variant="dark">Wildlife: Submit Your Work</SubmitButton>
+            {/* On tablet/desktop View Events takes the full row, so it sits below the two form buttons */}
+            <div className="sm:basis-full">
+              <Button href="#events" variant="primary">
+                View Events
+              </Button>
+            </div>
           </div>
 
-          {/* Get Tickets */}
+          {/* Hidden: event is over. Restore the Get Tickets button when the next event is on sale.
           <div style={{ marginTop: "1rem" }}>
             <Link
               href="https://www.zeffy.com/en-US/ticketing/chicago-indian-fashion-week"
@@ -365,6 +386,7 @@ export default function HeroSection() {
               Get Tickets
             </Link>
           </div>
+          */}
         </motion.div>
       </div>
     </section>
