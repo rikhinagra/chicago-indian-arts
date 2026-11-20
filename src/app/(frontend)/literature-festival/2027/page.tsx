@@ -63,7 +63,7 @@ const steps = [
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: "Who can submit?",
-    a: "Poets, writers, authors, speakers and community leaders of any level, from anywhere in the world. You do not need to be published.",
+    a: "We invite writers, poets, storytellers, and literary enthusiasts of all nationalities, ethnicities, and cultural identities to share their work. Whether you are of Indian heritage or any other background, your voice and stories are welcome here.",
   },
   {
     q: "Which languages are welcome?",

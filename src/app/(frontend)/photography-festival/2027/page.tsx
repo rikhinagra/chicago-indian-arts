@@ -249,6 +249,10 @@ const getInvolved = [
 
 const faqs = [
   {
+    q: "Who can submit?",
+    a: "Open to all. The Wildlife Festival is open to wildlife enthusiasts, photographers, filmmakers, artists, and conservationists. The Visual Arts Festival is open to artists and creative individuals. Both welcome people of all nationalities, ethnicities, cultures, and backgrounds. Celebrating diverse voices, cultures, and perspectives.",
+  },
+  {
     q: "Can international artists apply?",
     a: "Yes. Selected work can be printed locally, so no shipping is needed.",
   },
